@@ -7,7 +7,7 @@ permalink: design_principles.html
 summary: "Principles which guide the GP Connect Messaging product"
 ---
 
-## Design Principles ##
+## Design principles ##
 
 The following design principles have guided the approach to how updates to GP systems are facilitated.
 
@@ -17,21 +17,21 @@ GP system suppliers have implemented rich workflow solutions to enable managemen
 
 Senders of healthcare events frequently follow business processes which include a requirement that the target organisation not only acknowledges receipt of the message, but also includes expectation of notification of workflow events which cannot immediately be generated upon message receipt.  
 
-Therefore the approach taken to facilitate updates to GP systems originating outside the practice has sought to align closely with these existing practice workflow capabilities and requirements.
+Therefore, the approach taken to facilitate updates to GP systems originating outside the practice has sought to align closely with these existing practice workflow capabilities and requirements.
 
-### Communication paradigm: Asynchronous messaging ###
+### Communication paradigm: asynchronous messaging ###
 
 An asynchronous messaging approach offered a clearest alignment to the long-running workflow processes described above.  
 
-An HTTP synchronous approach, as used by the [GP Connect FHIR API](https://nhsconnect.github.io/gpconnect/), was considered. However a synchronous model fits best the immediacy of a request/response pattern used when reading GP practice data for a direct care use case.  For this reason, the extension of the GP Connect FHIR API to support record updates was not selected.
+An HTTP synchronous approach, as used by the [GP Connect FHIR API](https://nhsconnect.github.io/gpconnect/), was considered. However, a synchronous model fits best the immediacy of a request/response pattern used when reading GP practice data for a direct care use case.  For this reason, the extension of the GP Connect FHIR API to support record updates was not selected.
 
 ### Asynchronous transport: MESH ###
 
-With the choice of an asynchronous communication paradigm, the natural choice for transport was [MESH](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh) which is the strategic platform already in place to support the asynchronous messaging needs of the NHS.
+With the choice of an asynchronous communication paradigm, the natural choice for transport was [MESH](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh), which is the strategic platform already in place to support the asynchronous messaging needs of the NHS.
 
-MESH (and it's predecessor DTS) is a proven platform which has successfully supported NHS messaging requirements for a number of years. One of the main benefits of which MESH brings is excellent reach.
+MESH (and its predecessor DTS) is a proven platform which has successfully supported NHS messaging requirements for a number of years. One of the main benefits of which MESH brings is excellent reach.
 
-MESH connectivity has already been implemented widely across the NHS, and importantly, is already built in to support message flows incoming to GP practices in all GP core clinical system implementations.  
+MESH connectivity has already been implemented widely across the NHS, and importantly, is already built into support message flows incoming to GP practices in all GP core clinical system implementations.  
 
 ### Asynchronous messaging paradigms ###
 
@@ -41,7 +41,7 @@ Messages flowing into GP practices on MESH will arise mainly from the following 
 
 Where the message sender knows which party or parties the message is intended for, a point to point event notification is often used. Here the sender directs the message to a known recipient or set of recipients.
 
-For example, the [Send federated consultation summary](senddocument_fedcon.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The federated practice knows that the consultation summary is intended only for a single known recipient organisation - the registered practice of the patient. Therefore this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern
+For example, the [Send federated consultation summary](senddocument_fedcon.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The federated practice knows that the consultation summary is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern
 
 
 #### 2. Publish/Subscribe event notification ####
@@ -59,16 +59,16 @@ The [HL7 FHIR Message framework](https://www.hl7.org/fhir/messaging.html) was ch
 
 As these messages usually convey information about a clinical event which has taken place in delivering patient healthcare, it is necessary that this message is delivered reliably.
 
-Reliable delivery of a message can be considered from the perspective of the sender and the receiver.
+Reliable delivery of a message can be considered from the perspective of the sender and the receiver:
 
-- A message sender is likely to need confirmation that the message has been successfully delivered and acted upon. In addition, the sender will often need to know if the receiver encountered an issue when processing the message in order to take action.
-- A message receiver is likely to require a capability that the sender can be notified if a technical or business process issue occurs in processing of the message
+- a message sender is likely to need confirmation that the message has been successfully delivered and acted upon. In addition, the sender will often need to know if the receiver encountered an issue when processing the message in order to take action
+- a message receiver is likely to require a capability that the sender can be notified if a technical or business process issue occurs in processing of the message
 
 The [ITK3 Message Distribution Standard](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) provides a standard means of delivering these message reliability requirements. As the ITK3 standard is built using a lightweight FHIR STU3 profile of the FHIR Message framework to deliver these requirements, it was the natural choice as design component to provide message reliability.
 
 ITK3 also makes available a number of message metadata elements which enable better integration with practice workflow systems.
     
-### Re-usability: Payload re-use ###
+### Re-usability: payload re-use ###
 
 In designing a payload to meet a particular use case, care has been taken to design the payload in such a way that it may be re-used to fulfil other identified uses cases through configuration change only.
 
