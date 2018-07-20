@@ -4,7 +4,7 @@ keywords: document, usecase
 tags: [mesh, itk3, use-case]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_example.html
-summary: "Federated Encounter Summary - Example Message."
+summary: "Federated encounter summary - example message"
 ---
 
 The message given below arises from the following fictional scenario:
