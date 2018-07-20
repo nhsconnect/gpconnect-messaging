@@ -4,15 +4,15 @@ keywords: use-case, itk3, mesh
 tags: [use-case, itk3, mesh]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_errors.html
-summary: "Send Federated Consultation Summary - Error Handling"
+summary: "Send federated consultation summary - error handling"
 ---
 
 
 
-## ITK Errors ##
+## ITK errors ##
 
-- Where the received message does not conform to the requirements stated for [ITK3 header](senddocument_fedcon_itk3.html), or for the payload, the message SHALL be considered invalid. 
-- Where a received message is invalid, an ITK3 Response SHALL be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message SHALL NOT be accepted for downstream processing.
+- where the received message does not conform to the requirements stated for [ITK3 header](senddocument_fedcon_itk3.html), or for the payload, the message **SHALL** be considered invalid
+- where a received message is invalid, an ITK3 Response **SHALL** be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message **SHALL NOT** be accepted for downstream processing
 
 The table below indicates which ITK3 Negative Response should be used per error scenario:
 
@@ -28,12 +28,12 @@ The table below indicates which ITK3 Negative Response should be used per error 
 | **Payload business rules** |
 | Payload content business rule violated | 10008 |
 
-Where an ITK3 Response code is used, additional error context SHALL be provided in the `OperationOutcome.diagnostic` element to enable the sender to correctly identify the error which has been found in their sent message.
+Where an ITK3 Response code is used, additional error context **SHALL** be provided in the `OperationOutcome.diagnostic` element to enable the sender to correctly identify the error which has been found in their sent message.
 
  
 ## Errors from MESH Endpoint Lookup ##
 
-The following table describes error codes returned from the MESH server as a result of issues encountered using the facility to [route a message automatically to the registered practice](http://localhost:4006/integration_mesh.html#message-routing-to-registered-practice)
+The following table describes error codes returned from the MESH server as a result of issues encountered using the facility to [route a message automatically to the registered practice](http://localhost:4006/integration_mesh.html#message-routing-to-registered-practice).
 
 | MESH Error Code | Description |
 | --------------- | ----------- |
@@ -44,9 +44,9 @@ The following table describes error codes returned from the MESH server as a res
 | EPL-154 ERROR_NO_DEMOGRAPHICS_MATCH |NHS Number supplied does not match the demographics |
 
 
-MESH will generate these errors in the form of Error Reports which will be placed in the sender's mailbox to await collection and processing by the sending organisation. 
+MESH will generate these errors in the form of error reports which will be placed in the sender's mailbox to await collection and processing by the sending organisation. 
 
-### MESH API Errors ###
+### MESH API errors ###
 
 Please note that, when using the MESH API to send a message, errors encountered when using the automated registered practice routing will not be returned in the API response header or payload, but via a MESH error report .CTL file placed in the sending organisation MESH mailbox.
 
