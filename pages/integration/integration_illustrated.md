@@ -38,7 +38,7 @@ The steps shown in the diagram are detailed below:
 |      |      |
 | 2   | The **[MESH](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh) Client** installed at the federated practice picks up the message from the `/OUT` directory and sends the message securely to the central Spine MESH server. |
 |      |      |
-| 3   | The **Spine MESH server** extracts patient's Surname, Date of Birth and NHS Number from the `To_DTS` field in the MESH message `.CTL` file, an then performs a [PDS](https://digital.nhs.uk/services/demographics) lookup using these details in order to discover the [ODS code](https://digital.nhs.uk/services/organisation-data-service) of the patient's registered practice. |
+| 3   | The **Spine MESH server** extracts patient's Surname, Date of Birth and NHS Number from the `To_DTS` field in the MESH message `.CTL` file, and then performs a [PDS](https://digital.nhs.uk/services/demographics) lookup using these details in order to discover the [ODS code](https://digital.nhs.uk/services/organisation-data-service) of the patient's registered practice. |
 |      |      |
 | 4   | The **Spine MESH server** then uses the ODS code of the patient's registered practice to lookup the MESH mailbox of the registered practice where the message is then placed to await collection. |
 |      |      |
