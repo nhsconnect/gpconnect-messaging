@@ -10,36 +10,39 @@ toc: false
 
 Glossary of common terms and abbreviations used throughout the GP Connect Messaging specification.
 
-#### Direct Patient Care ####
-{{site.data.glossary.direct_patient_care}}
-
-#### First of Type ####
-{{site.data.glossary.first_of_type}}
-
-#### Principal Supplier ####
-{{site.data.glossary.principal_supplier}}
-
 #### Accreditation ####
 {{site.data.glossary.accreditation}}
 
 #### Assurance ####
 {{site.data.glossary.assurance}}
 
-#### GP Connect Licence ####
-{{site.data.glossary.gpconnect_licence}}
-
-#### Spine ####
-{{site.data.glossary.spine}}
-
-#### MESH ####
-{{site.data.glossary.mesh}}
-
-#### ITK3 ####
-{{site.data.glossary.itk3}}
+#### Direct Patient Care ####
+{{site.data.glossary.direct_patient_care}}
 
 #### Federation ####
 {{site.data.glossary.federation}}
 
+#### First of Type ####
+{{site.data.glossary.first_of_type}}
+
+#### GP Connect Licence ####
+{{site.data.glossary.gpconnect_licence}}
+
+#### ITK3 ####
+{{site.data.glossary.itk3}}
+
+#### MESH ####
+{{site.data.glossary.mesh}}
+
 #### ODS Code ####
 {{site.data.glossary.odscode}}
+
+#### Principal Supplier ####
+{{site.data.glossary.principal_supplier}}
+
+#### Spine ####
+{{site.data.glossary.spine}}
+
+
+
 
