@@ -8,15 +8,15 @@ toc: false
 summary: A brief introduction to getting started with GP Connect Messaging Capabilities 
 ---
 
-{% include warning.html content="This site is provided for information only and is intended for those engaged with NHS Digital in First of Type activities, other parties are advised not to develop against these specifications until a formal announcement has been made." %}
+{% include warning.html content="This site is provided for information only and is intended for those engaged with NHS Digital on design and pre-development activities, other parties are advised not to develop against these specifications until a formal announcement has been made." %}
 
 {% comment %}
 [![Semver](http://img.shields.io/badge/semver-2.0.0-yellow.svg)](http://semver.org/spec/v2.0.0.html){:target="_blank" class="no_icon"} [![License](http://img.shields.io/:license-apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html){:target="_blank" class="no_icon"} 
 {% endcomment %}
 
-GP Connect aims to support better clinical care by opening up information and data held within GP Practice IT systems for use across health and social care. The GP Connect vision will be achieved by standardising integration and simplifying the operating model. Find out more on the [NHS Digital GP Connect homepage](https://digital.nhs.uk/article/1275/GP-Connect).
+GP Connect aims to support better clinical care by opening up information and data held within GP Principal Clinical Systems for use across health and social care. The GP Connect vision will be achieved by standardising integration and simplifying the operating model. Find out more on the [NHS Digital GP Connect homepage](https://digital.nhs.uk/article/1275/GP-Connect).
 
-GP Connect has initially focused on delivering HTTP FHIR&reg; APIs. The current GP Connect FHIR API specification is found at [https://nhsconnect.github.io/gpconnect/](https://nhsconnect.github.io/gpconnect/). An additional set of capabilities, called GP Connect Messaging, are described in this specification. These new capabilities are focused on enabling updates to GP practice systems. 
+GP Connect has initially focused on delivering HTTP FHIR&reg; APIs. The current GP Connect FHIR API specification is found at [https://nhsconnect.github.io/gpconnect/](https://nhsconnect.github.io/gpconnect/). An additional set of capabilities, under the badge GP Connect Messaging, are described in this specification. These new capabilities are focused on enabling updates to GP practice systems. 
 
 The resulting full set of capabilities delivered through GP Connect is illustrated below:
 
@@ -24,7 +24,7 @@ The resulting full set of capabilities delivered through GP Connect is illustrat
 
 ## Using Messaging to perform updates ##
 
-In contrast to the synchronous FHIR&reg; API approach which has been taken to enable read-only access to patient information, updates to patient data will be fulfilled through a *messaging* approach.
+In contrast to the synchronous FHIR&reg; API approach which, for example, has been taken to enable read-only access to patient information, updates to patient data will be fulfilled through a *messaging* approach.
 
 Update messages will:
 
@@ -33,7 +33,7 @@ Update messages will:
 - include FHIR&reg; messaging information as defined by the [ITK3 message distribution](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) standard
 
 
-## Who's looking? ##
+## Who's will be interested in these capabilities? ##
 
 Two main audiences will be interested in this specification:
 
