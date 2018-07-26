@@ -43,14 +43,14 @@ The Message Definition for the GP Connect Send Document message payload is provi
 	<meta>
 		<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageDefinition-1"/>
 	</meta>
-	<url value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-SendTask-MessageDefinition-Instance-1"/>
+	<url value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1"/>
 	<identifier>
 		<system value="https://tools.ietf.org/html/rfc4122"/>
 		<value value="425b5f3a-faf0-469f-a2dc-5f716a777e02">
 		</value>
 	</identifier>
 	<version value="1.0.0"/>
-	<title value="GP Connect Writeback Message Definition"/>
+	<title value="GP Connect Send Document Message Definition"/>
 	<status value="active"/>
 	<date value="2018-02-23T16:06:00+00:00"/>
 	<event>
@@ -140,7 +140,7 @@ The Message Definition for the GP Connect Send Document message payload is provi
 					</extension>
 				</extension>
 				
-				<!-- to allow STU3 base Task to be used in the payload -->
+				<!-- to allow STU3 base Task to be used in the payload: TODO this will be CareConnect-Task-1 -->
 				<extension url="utilisedAsset">
 					<extension url="type">
 						<valueCoding>
@@ -216,7 +216,7 @@ The Message Definition for the GP Connect Send Document message payload is provi
 					</extension>
 				</extension>				
 			</extension>
-			<reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1"/>
+			<reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1"/>	<!-- TBC -->	
 		</profile>
 	</focus>
 	
@@ -234,7 +234,6 @@ The Message Definition for the GP Connect Send Document message payload is provi
 	</allowedResponse>
 
 </MessageDefinition>
-
 ```
 
 
