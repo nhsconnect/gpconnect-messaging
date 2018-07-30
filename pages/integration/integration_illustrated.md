@@ -16,7 +16,7 @@ All messages sent in order to update GP systems through GP Connect Messaging cap
 
 - Use of [ITK3](integration_itk3.html) to provide a standard FHIR Message format
 
-Additionally, as most of these messages will be intended to update the care record of the patient's registered practice, most messaging use cases will make use of an additional MESH capability:
+Additionally, as most of these messages will be intended to update the care record at the patient's registered practice, most messaging use cases will make use of an additional MESH capability:
 
 
 
