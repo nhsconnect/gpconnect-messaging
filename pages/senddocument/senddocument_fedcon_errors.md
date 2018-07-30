@@ -1,5 +1,5 @@
 ---
-title: Send Federated Consultation Summary - Error Handling
+title: Error Handling
 keywords: use-case, itk3, mesh
 tags: [use-case, itk3, mesh]
 sidebar: senddocument_sidebar
@@ -7,7 +7,7 @@ permalink: senddocument_fedcon_errors.html
 summary: "Send federated consultation summary - error handling"
 ---
 
-
+The following section describes the error codes and scenarios utilised by Send Document.
 
 ## ITK errors ##
 
