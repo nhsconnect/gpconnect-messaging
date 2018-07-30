@@ -33,7 +33,7 @@ A Task resource **SHALL** be present in the payload, and the following elements 
 | `input`	| **Federated Encounter Summary** <br/>The input element **MUST** contain a federated encounter summary PDF document which is expressed as a input instance of type Attachment. Here `input.type.text` **MUST** be a fixed value of `Federated Encounter Summary`, and `input.value.contentType` **MUST** be set to a fixed value of `application/pdf`. The PDF binary data **MUST** be included in the `input.value.data` element in base 64 encoded format. <br/> <br/> **Additional input elements**<br/>The payload **MAY** also contain additional binary documents each expressed as an additional instance of the task.input element where `input.value[x]` is of type Attachment. For each such instance, `input.type.text` **SHALL** contain text which acts as a label for the binary attachment(e.g. "ECG data"), and `input.value.contentType` **SHALL** define the content type of the attachment. <br/> <br/>Where the creation date of an attachment differs from that of the message, this **SHALL** be specified in the `input.value.creation` element.  |
 
 
-## Organization Resource ##
+## Organization resource ##
 
 Profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
 
@@ -50,7 +50,7 @@ The table below outlines the elements which **MUST** be present in these Organiz
 | `telecom` |	The Organization resource describing the organization at which the encounter took place **SHALL** include the telephone number of that organization. i.e. an instance of a telecom element **SHALL** be present where `telecom.system` is set to a fixed value of phone, and `telecom.value` contains the telephone number |
 
 
-## Practitioner Resource ##
+## Practitioner resource ##
 
 Profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 
@@ -64,7 +64,7 @@ A Practitioner resource **SHALL** be present in the payload, and the following e
 
 The Practitioner resource **SHALL** be referenced from the `requester.agent` element of the Task resource described above
 
-## Patient Resource ##
+## Patient resource ##
 
 Profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
