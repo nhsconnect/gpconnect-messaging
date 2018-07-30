@@ -9,7 +9,7 @@ summary: "Use of ITK3 to support GP Connect Messaging"
 
 ## Using ITK3 to support GP Connect Messaging ##
 
-As described in [Design Principles](design_principles.html#reliability-itk3), the ITK3 Message Distribution standard has been adopted by GP Connect Messaging capabilities to provide message reliability to facilitate alignment with practice workflow.
+As described in [Design Principles](design_principles.html#reliability-itk3), the ITK3 Message Distribution standard has been adopted by GP Connect Messaging capabilities to provide message reliability and to facilitate alignment with practice workflow.
 
 ### FHIR messages ###
 
