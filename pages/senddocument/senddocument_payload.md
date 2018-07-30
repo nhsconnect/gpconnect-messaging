@@ -1,5 +1,5 @@
 ---
-title: Send Document - Payload structure
+title: Payload structure
 keywords: document, payload
 tags: [document]
 sidebar: senddocument_sidebar
@@ -11,7 +11,7 @@ The payload of a GP Connect message which uses the Send Document capability **MU
 
 ![Send Document - Payload](images/senddocument/senddocument_payload.png) 
 
-The Send Document payload recognises that for most scenarios, messages which are intended to update target organisations’ records will result in a task being created in the target system workflow. As a result, the Task resource is used to describe the intent of the message - to request that a task be created in the target organisation to review and perform an update.
+The Send Document payload recognises that for most scenarios messages which are intended to update target organisations’ records will result in a task being created in the target system workflow. As a result, the Task resource is used to describe the intent of the message - to request that a task be created in the target organisation to review and perform an update.
 
 The following requirements describe the structure of the Send Document payload:
 
@@ -22,7 +22,7 @@ The `ITK-Payload-Bundle` **MUST** contain the following resource entries:
 - An instance of the HL7 [Task](https://www.hl7.org/fhir/task.html) base resource.
 - An Organization resource which conforms to the [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) profile describing the organisation which sends the message. The `Task.requester.OnBehalfOf` element **MUST** contain a reference to this resource.
 - Where the message contains patient information, for example as a result of a healthcare event, a patient resource **MUST** be present which conforms to the [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) profile. When present, the `Task.for` element **MUST** contain a reference to this resource.
-- Where the message contains patient information, for example as a result of a healthcare event, a practitioner resource **MUST** be present which conforms to the [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) profile. This resource describes the primary practitioner who delivered care. When present, the `Task.requester.agent` element **MUST** contain a reference to this resource.
+- Where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource **MUST** be present which conforms to the [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) profile. This resource describes the primary practitioner who delivered care. When present, the `Task.requester.agent` element **MUST** contain a reference to this resource.
 - Where the message sender knows the single intended recipient organisation for the message, an Organization resource **MUST** be present which conforms to the [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) profile, describing the organisation which is the target of the message. The `Task.requester.owner` element **MUST** contain a reference to this resource.
  
 
