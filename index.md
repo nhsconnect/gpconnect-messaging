@@ -33,7 +33,7 @@ Update messages will:
 - include FHIR&reg; messaging information as defined by the [ITK3 message distribution](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) standard
 
 
-## Who's will be interested in these capabilities? ##
+## Who will be interested in these capabilities? ##
 
 Two main audiences will be interested in this specification:
 
