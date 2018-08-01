@@ -1,5 +1,5 @@
 ---
-title: Send Federated Consultation Summary - Send Trigger
+title: Send Trigger
 keywords: 
 tags: [document]
 sidebar: senddocument_sidebar
