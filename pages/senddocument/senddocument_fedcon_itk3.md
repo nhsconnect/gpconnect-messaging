@@ -1,5 +1,5 @@
 ---
-title: Send Federated Consultation Summary - ITK3 Header
+title: ITK3 Header
 keywords: itk3
 tags: [itk3]
 sidebar: senddocument_sidebar
