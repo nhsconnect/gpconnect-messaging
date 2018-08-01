@@ -1,5 +1,5 @@
 ---
-title: Send Federated Consultation Summary - MESH configuration
+title: MESH configuration
 keywords: document, mesh
 tags: [messaging, mesh]
 sidebar: senddocument_sidebar
