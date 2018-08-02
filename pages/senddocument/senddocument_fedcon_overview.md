@@ -1,7 +1,7 @@
 ---
 title: Overview
 keywords: document, usecase
-tags: [mesh, itk3, use-case]
+tags: [mesh, itk3, use_case, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_overview.html
 summary: "Overview of the use case to send a federated consultation summary to the registered practice of a patient."
