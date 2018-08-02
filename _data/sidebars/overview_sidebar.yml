@@ -121,6 +121,9 @@ entries:
         - title: Send Document
           url: /tag_send_document.html
           output: web
+        - title: Message
+          url: /tag_message.html
+          output: web
         - title: Design
           url: /tag_design.html
           output: web   
