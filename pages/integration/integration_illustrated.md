@@ -40,7 +40,7 @@ The steps shown in the diagram are detailed below:
 |      |      |
 | 3   | The **Spine MESH server** extracts patient's Surname, Date of Birth and NHS Number from the `To_DTS` field in the MESH message `.CTL` file, and then performs a [PDS](https://digital.nhs.uk/services/demographics) lookup using these details in order to discover the [ODS code](https://digital.nhs.uk/services/organisation-data-service) of the patient's registered practice. |
 |      |      |
-| 4   | The **Spine MESH server** then uses the ODS code of the patient's registered practice to lookup the MESH mailbox of the registered practice where the message is then placed to await collection. |
+| 4   | The **Spine MESH server** then uses the ODS code of the patient's registered practice to lookup the MESH mailbox of the registered practice, where the message is then placed to await collection. |
 |      |      |
 | 5   | The **MESH Client** at the registered practice collects the message from registered practice mailbox and writes the collected message to the `/IN` directory. |
 |      |      |
