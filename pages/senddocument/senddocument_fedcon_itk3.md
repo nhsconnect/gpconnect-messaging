@@ -1,7 +1,7 @@
 ---
 title: ITK3 Header
 keywords: itk3
-tags: [itk3]
+tags: [itk3, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_itk3.html
 summary: "Details of how the ITK3 header is populated to fulfil the Send Federated Consultation use case"
