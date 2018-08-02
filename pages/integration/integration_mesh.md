@@ -22,7 +22,7 @@ Message senders and receivers have two options when connecting to the central ME
 
 ### Message routing to registered practice ###
 
-Where message senders create messages destined for a patient's registered practice, MESH message automated message routing SHOULD be used.
+Where message senders create messages destined for a patient's registered practice, MESH message automated message routing **SHOULD** be used.
 
 Automated message routing enables a message sender to send a message to the
 MESH server without specifying a destination MESH mailbox ID. MESH takes care of routing the message to the mailbox of the patient's registered GP practice. This simplifies the task of message creation for the sending organisation.
@@ -43,7 +43,7 @@ When using the MESH endpoint lookup service, the Mex-To HTTP header is populated
 
 The underscore `_` character is used as the delimeter.
 
-Date of birth is specified in DDMMYYYY format.
+Date of birth is specified in `DDMMYYYY` format.
 
 For example, when sending a message about a patient Mr Brian Smith, born 14 February 2001, with NHS Number 12345678, the Mex_To field will have the following value:
 
