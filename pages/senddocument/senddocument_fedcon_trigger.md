@@ -24,7 +24,7 @@ The following solution is presented as the preferred option:
 
 ### Automated message creation ###
 
-The message creation process is hidden from the clinician – in a similar way that synchronisation with Summary Care Record (SCR) takes place without the involvement of a clinician, the GP IT system is responsible for the background task of ensuring that the registered practice record is updated.
+The message creation process is hidden from the clinician – in a similar way that synchronisation with Summary Care Record (SCR) takes place without the involvement of a clinician, the GP Principal Clinical System is responsible for the background task of ensuring that the registered practice record is updated.
 
 Where the encounter details at a federated practice are updated later (for example, at the end of a clinic), an additional message would result to ensure that the latest complete picture of the encounter was made available to the registered practice. Note that each additional federated encounter summary message would contain a complete encounter summary, and not simply the delta to the previous instance.
 
