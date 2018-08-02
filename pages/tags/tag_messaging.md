@@ -2,7 +2,7 @@
 title: "Message"
 tagName: message
 search: exclude
-permalink: tag_message.html
+permalink: tag_messaging.html
 sidebar: overview_sidebar
 folder: tags
 ---
