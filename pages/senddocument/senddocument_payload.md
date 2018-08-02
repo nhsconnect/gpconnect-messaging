@@ -9,7 +9,7 @@ summary: "Send Document capability - payload structure"
 
 ## Payload message requirements ##
 
-{% include callout.html content="The Send Document payload recognises that for most scenarios messages which are intended to update target organisation's records will result in a task being created in the target system workflow. As a result, the Task resource is used to describe the intent of the message - to request that a task be created in the target organisation to review and perform an update." type="info" %}
+{% include callout.html content="The Send Document payload recognises that for most scenarios messages which are intended to update target organisations' records will result in a task being created in the target system workflow. As a result, the Task resource is used to describe the intent of the message - to request that a task be created in the target organisation to review and perform an update." type="info" %}
 
 The following requirements describe the structure of the Send Document payload.
 
