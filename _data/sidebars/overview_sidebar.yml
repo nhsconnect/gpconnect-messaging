@@ -13,12 +13,6 @@ entries:
     - title: Capabilities
       url: /overview_priority_capabilities.html
       output: web
-    - title: First of Type
-      url: /overview_first_of_type.html
-      output: web
-    - title: Glossary
-      url: /overview_glossary.html
-      output: web
       
       subfolders:
       - title: Release notes
@@ -75,29 +69,70 @@ entries:
     - title: Test environments
       url: /testing_environments.html
       output: web
-      
-  - title: External links
+
+  - title: Help and support
     output: web
-    folderitems:     
-    - title: GPC  - FHIR&reg APIs
-      external_url: https://nhsconnect.github.io/gpconnect/
+    folderitems:
+    - title: Glossary
+      url: /overview_glossary.html
       output: web
-    - title: GPC Messaging repository
-      external_url: https://github.com/nhsconnect/GPConnect-Messaging
-      output: web
-    - title: GPC NHS Digital
-      external_url: https://digital.nhs.uk/article/1275/GP-Connect
-      output: web
-    - title: GPC Developer Network
-      external_url: http://developer.nhs.uk/library/interoperability/gp-connect/
-      output: web
-    - title: MESH
-      external_url: https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh
-      output: web
-    - title: MESH API
-      external_url: https://nhsconnect.github.io/spine-mesh/
-      output: web
-    - title: ITK3
-      external_url: https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/
-      output: web
-      
+
+      subfolders:
+      - title: External links
+        output: web
+        subfolderitems:    
+        - title: GPC  - FHIR&reg APIs
+          external_url: https://nhsconnect.github.io/gpconnect/
+          output: web
+        - title: GPC Messaging repository
+          external_url: https://github.com/nhsconnect/GPConnect-Messaging
+          output: web
+        - title: GPC NHS Digital
+          external_url: https://digital.nhs.uk/article/1275/GP-Connect
+          output: web
+        - title: GPC Developer Network
+          external_url: http://developer.nhs.uk/library/interoperability/gp-connect/
+          output: web
+        - title: MESH
+          external_url: https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh
+          output: web
+        - title: MESH API
+          external_url: https://nhsconnect.github.io/spine-mesh/
+          output: web
+        - title: ITK3
+          external_url: https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/
+          output: web
+
+      - title: Tags
+        output: web
+        subfolderitems:
+        - title: Overview
+          url: /tag_overview.html
+          output: web
+        - title: MESH
+          url: /tag_mesh.html
+          output: web
+        - title: ITK3
+          url: /tag_itk3.html
+          output: web
+        - title: Use case
+          url: /tag_use_case.html
+          output: web
+        - title: Send Document
+          url: /tag_send_document.html
+          output: web
+        - title: Design
+          url: /tag_design.html
+          output: web   
+        - title: Development
+          url: /tag_development.html
+          output: web
+        - title: Integration
+          url: /tag_integration.html
+          output: web
+        - title: Testing
+          url: /tag_testing.html
+          output: web
+        - title: Deployment
+          url: /tag_deployment.html
+          output: web
