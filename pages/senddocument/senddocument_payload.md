@@ -7,7 +7,7 @@ permalink: senddocument_payload.html
 summary: "Send Document capability - payload structure"
 ---
 
-## Payload Message Requirements ##
+## Payload message requirements ##
 
 {% include callout.html content="The Send Document payload recognises that for most scenarios messages which are intended to update target organisation's records will result in a task being created in the target system workflow. As a result, the Task resource is used to describe the intent of the message - to request that a task be created in the target organisation to review and perform an update." type="info" %}
 
@@ -27,13 +27,13 @@ The `ITK-Payload-Bundle` **MUST** contain the following resource entries:
 
 {% include note.html content="Please refer to the particular use case in question for detailed requirements on the population of these payload resources." %} 
 
-## Payload Message Illustration ##
+## Payload message illustration ##
 
 The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below:
 
 ![Send Document - Payload](images/senddocument/senddocument_payload.PNG) 
 
-## Payload Message Definition ##
+## Payload message definition ##
 
 The FHIR MessageDefinition resource provides a formal, machine-readable definition of a message shared between systems. Please refer to [ITK3 Message Definitions](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/explore_defs_overview.html) for an overview of how MessageDefinition resources are used in ITK3 messages.
 
