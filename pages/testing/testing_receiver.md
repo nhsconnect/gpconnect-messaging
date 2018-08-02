@@ -9,7 +9,7 @@ summary: "Overview of the testing approach and tools available to support and as
 
 ## Testing approach ##
 
-GP principal clinical system suppliers wishing to validate their capability to receive and process messages received through GP Connect Messaging use cases will be provided with a "synthetic sender" solution to facilitate their development process.
+GP Principal Clinical System suppliers wishing to validate their capability to receive and process messages received through GP Connect Messaging use cases will be provided with a "synthetic sender" solution to facilitate their development process.
 
 This capability is currently at the design phase. However, it is envisaged that NHS Digital will provide access to a test portal where GP system providers will be able to manually trigger the sending of a test message selected from a set of exemplar messages which conform to the set of messaging use cases defined at the time.  
 
