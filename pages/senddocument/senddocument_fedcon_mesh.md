@@ -1,7 +1,7 @@
 ---
 title: MESH configuration
 keywords: document, mesh
-tags: [messaging, mesh]
+tags: [messaging, mesh, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_mesh.html
 summary: "Federated consultation - MESH configuration"
