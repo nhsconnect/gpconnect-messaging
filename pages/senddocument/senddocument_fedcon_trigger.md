@@ -1,5 +1,5 @@
 ---
-title: Send Trigger
+title: Triggering message creation
 keywords: 
 tags: [send_document]
 sidebar: senddocument_sidebar
