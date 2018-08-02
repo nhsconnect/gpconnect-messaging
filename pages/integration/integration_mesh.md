@@ -15,10 +15,9 @@ Viewed very simply, MESH is like a [post-restante](https://en.wikipedia.org/wiki
 2. MESH server places the message in the destination mailbox
 3. Receiver collects the message from their inbox
 
-For a more complete introduction to MESH, including details on how to get going if your organisation does not yet have MESH connectivity, see [MESH - Message Exchange for Health and Social Care]().
-
 Message senders and receivers have two options when connecting to the central MESH server: MESH API or the MESH client.
 
+{% include note.html content="For a more complete introduction to MESH, including details on how to get going if your organisation does not yet have MESH connectivity, see [MESH - Message Exchange for Health and Social Care]()." %} 
 
 
 ### Message routing to registered practice ###
