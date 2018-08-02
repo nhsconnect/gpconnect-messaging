@@ -1,5 +1,5 @@
 ---
-title: MESH configuration
+title: MESH message configuration
 keywords: document, mesh
 tags: [messaging, mesh, send_document]
 sidebar: senddocument_sidebar
