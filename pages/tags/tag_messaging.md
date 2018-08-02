@@ -1,6 +1,6 @@
 ---
-title: "Message"
-tagName: message
+title: "Messaging"
+tagName: messaging
 search: exclude
 permalink: tag_messaging.html
 sidebar: overview_sidebar
