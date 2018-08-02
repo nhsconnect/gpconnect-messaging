@@ -1,5 +1,5 @@
 ---
-title: Send Document
+title: Send document
 keywords: document
 tags: [send_document, messaging]
 sidebar: senddocument_sidebar
