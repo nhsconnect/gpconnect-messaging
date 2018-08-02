@@ -28,7 +28,7 @@ When using the MESH client to send a message to the MESH server, the `.CTL` file
 | Metadata item | Description |
 | ------------- | ----------- |
 | `From_DTS` | Identifies the MESH mailbox ID of the sender of the message – in this case the federated GP practice.  |
-| `To_DTS` |  The To_DTS field will contain NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox. |
+| `To_DTS` |  The `To_DTS` field will contain NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox. |
 | `Subject` | To contain the following text: <br/>  <br/>  *Federated GP consultation summary for patient {Patient Name} , NHS Number {NHS Number}, with details of encounter which at practice {ODS Code}* |
 
 An example `.CTL` file is given below for a Federated Consultation Summary message regarding a consultation which took place for a fictional patient: Mr Richard Smith, NHS Number 1234567890, Date of birth 9th January 1955.
@@ -60,5 +60,5 @@ The [MESH API Send Message](https://nhsconnect.github.io/spine-mesh/develop_mesh
 | HTTP Header field | Description |
 | ------------- | ----------- |
 | `Mex-From` | Identifies the MESH mailbox ID of the sender of the message – in this case the federated GP practice.  |
-| `Mex-To` |  The To_DTS field will contain NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox. |
+| `Mex-To` |  The `Mex_To` field will contain NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox. |
 | `Mex-Subject` | To contain the following text: <br/>  <br/>  *Federated GP consultation summary for patient {Patient Name} , NHS Number {NHS Number}, with details of encounter which at practice {ODS Code}* |
