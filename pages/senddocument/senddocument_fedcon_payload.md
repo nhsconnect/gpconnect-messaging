@@ -1,7 +1,7 @@
 ---
 title: Payload requirements
-keywords: use-case
-tags: [use-case]
+keywords: use_case
+tags: [use_case, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_payload.html
 summary: "Details of the FHIR resource which make up the payload for the Send Federated Consultation Summary use case."
