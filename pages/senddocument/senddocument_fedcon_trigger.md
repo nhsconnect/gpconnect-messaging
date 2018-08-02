@@ -1,7 +1,7 @@
 ---
 title: Send Trigger
 keywords: 
-tags: [document]
+tags: [send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_trigger.html
 summary: "Options for triggering the creation of a federated consultation summary message"
