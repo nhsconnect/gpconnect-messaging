@@ -1,7 +1,7 @@
 ---
 title: Error Handling
 keywords: use-case, itk3, mesh
-tags: [use-case, itk3, mesh]
+tags: [use_case, itk3, mesh, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_errors.html
 summary: "Send federated consultation summary - error handling"
