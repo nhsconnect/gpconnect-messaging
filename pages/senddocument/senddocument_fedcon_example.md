@@ -1,6 +1,6 @@
 ---
-title: Example Message
-keywords: document, usecase
+title: Example message
+keywords: document, use_case
 tags: [mesh, itk3, use_case, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_example.html
