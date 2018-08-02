@@ -35,7 +35,7 @@ entries:
       url: /senddocument_fedcon_mesh.html      
       output: web, pdf
       
-    - title: Error Handling
+    - title: Error handling
       url: /senddocument_fedcon_errors.html      
       output: web, pdf           
       
