@@ -1,5 +1,5 @@
 ---
-title: ITK3 Header
+title: ITK3 header requirements
 keywords: itk3
 tags: [itk3, send_document]
 sidebar: senddocument_sidebar
