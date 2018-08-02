@@ -17,7 +17,7 @@ GP system suppliers have implemented rich workflow solutions to enable managemen
 
 Senders of healthcare events frequently follow business processes which include a requirement that the target organisation not only acknowledges receipt of the message, but also includes expectation of notification of workflow events which cannot immediately be generated upon message receipt.  
 
-Therefore, the approach taken to facilitate updates to GP systems originating outside the practice has sought to align closely with these existing practice workflow capabilities and requirements.
+Therefore, the approach taken to facilitate updates to GP Principal Clinical Systems originating outside the practice has sought to align closely with these existing practice workflow capabilities and requirements.
 
 ### Communication paradigm: asynchronous messaging ###
 
@@ -41,14 +41,14 @@ Messages flowing into GP practices on MESH will arise mainly from the following 
 
 Where the message sender knows which party or parties the message is intended for, a point to point event notification is often used. Here the sender directs the message to a known recipient or set of recipients.
 
-For example, the [Send federated consultation summary](senddocument_fedcon.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The federated practice knows that the consultation summary is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern
+For example, the [Send federated consultation summary](senddocument_fedcon.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The federated practice knows that the consultation summary is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern.
 
 
 #### 2. Publish/Subscribe event notification ####
 
 This pattern would be more applicable where a healthcare event has taken place, but the message sender does not know all the parties who are interested in that event.
 
-In this model, organisations will subscribe at an event hub to those events in which they have a legitimate interest. The sender publishes an event to this event hub, and all the subscribers to the event will receive the event details.  
+In this model, organisations will subscribe through an event hub to those events in which they have a legitimate interest. The sender publishes an event to this event hub, and all the subscribers to the event will receive the event details.  
 
 
 ### Messaging format : FHIR STU3 Messages ###
@@ -70,7 +70,7 @@ ITK3 also makes available a number of message metadata elements which enable bet
     
 ### Re-usability: payload re-use ###
 
-In designing a payload to meet a particular use case, care has been taken to design the payload in such a way that it may be re-used to fulfil other identified uses cases through configuration change only.
+In designing a payload to meet a particular use case, care has been taken to design the payload in such a way that it may be re-used to fulfil other identified use cases through configuration change only.
 
 For example, the "Send federated encounter summary" use case makes use of the more general payload type [Send Document](senddocument.html). Should a future use case arise where a document needs to be sent, the same payload can be re-used.
 
