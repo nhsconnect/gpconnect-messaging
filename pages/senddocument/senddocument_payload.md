@@ -1,7 +1,7 @@
 ---
 title: Payload structure
 keywords: document, payload
-tags: [document]
+tags: [send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_payload.html
 summary: "Send Document capability - payload structure"
