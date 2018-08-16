@@ -7,7 +7,6 @@ permalink: senddocument_fedcon_overview.html
 summary: "Overview of the use case to send a federated consultation summary to the registered practice of a patient."
 ---
 
-## Overview ##
 One of the main areas of focus for the [GP Connect product as a whole](index.html)  is to support GP practice federated work patterns. 
  
 This use case completes the set of capabilities required to fulfil the following workflow:
@@ -38,7 +37,7 @@ The diagram above depicts a successful message flow where registered practice me
 | 2    | **Infrastructure ackowledgement ITK Response** |
 | <center>2a</center>   | When the federated consultation summary message is passed from the MESH client for processing at the registered practice, the message is first validated to ensure that it's structure is correct. An ITK3 Response message is generated which indicates the success of message processing at a technical level - this is known as an "infrastructure acknowlegement".  |
 |  <center>2b</center>    | The MESH client at the registered practice sends the message to the MESH server where it awaits collection by the federated practice |
-|  <center>2c</center>    | The MESH client at the federated practice collects the message from the MESH server  makes it available to other federated practice system components for onward processing |
+|  <center>2c</center>    | The MESH client at the federated practice collects the message from the MESH server  makes. The ITK Response is then available to other federated practice system components for onward processing |
 |  <center>2d</center>    | The acknowledgement message is processed as appropriate by the federated practice.  |
 |      |      |
 | 3    | **Business ackowledgement ITK Response** |
