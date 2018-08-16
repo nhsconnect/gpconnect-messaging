@@ -31,7 +31,6 @@ Rather than specifying the destination mailbox ID, the message sender simply spe
 
 Refer to details below in the MESH API and MESH client for how to do this. 
 
-TODO: Link out to MESH endpoint lookup service doco which contains error handling info.
 
 ### MESH API ###
 
