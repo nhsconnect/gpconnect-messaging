@@ -7,6 +7,8 @@ permalink: integration_mesh.html
 summary: "Overview of the role of MESH in GP Connect messaging"
 ---
 
+### Overview ### 
+
 MESH is the strategic platform for asynchronous messaging in the NHS.
 
 Viewed very simply, MESH is like a [post-restante](https://en.wikipedia.org/wiki/Poste_restante) service for electronic message delivery. Messages flow around the NHS using MESH as follows:
