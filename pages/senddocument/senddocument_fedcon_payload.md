@@ -4,7 +4,7 @@ keywords: use_case
 tags: [use_case, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_payload.html
-summary: "Details of the FHIR resource which make up the payload for the Send Federated Consultation Summary use case."
+summary: "Details of the FHIR resources which make up the payload for the Send Federated Consultation Summary use case."
 ---
 
 Please refer to [Send Document - Payload structure](senddocument_payload) for a summary of the payload structure which **SHALL** be used to fulfil the "Send Federated Consultation Summary" use case.
