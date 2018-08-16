@@ -8,7 +8,7 @@ toc: false
 summary: A brief introduction to getting started with GP Connect Messaging Capabilities 
 ---
 
-{% include warning.html content="This site is provided for information only and is intended for those engaged with NHS Digital on design and pre-development activities, other parties are advised not to develop against these specifications until a formal announcement has been made." %}
+{% include warning.html content="This site is provided for information only and is intended for those engaged with NHS Digital on NHS Digital in First of Type activities, other parties are advised not to develop against these specifications until a formal announcement has been made." %}
 
 {% comment %}
 [![Semver](http://img.shields.io/badge/semver-2.0.0-yellow.svg)](http://semver.org/spec/v2.0.0.html){:target="_blank" class="no_icon"} [![License](http://img.shields.io/:license-apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html){:target="_blank" class="no_icon"} 
@@ -24,7 +24,7 @@ The resulting full set of capabilities delivered through GP Connect is illustrat
 
 ## Using Messaging to perform updates ##
 
-In contrast to the synchronous FHIR&reg; API approach which, for example, has been taken to enable read-only access to patient information, updates to patient data will be fulfilled through a *messaging* approach.
+In contrast to the synchronous FHIR&reg; API approach which has been taken to enable read-only access to patient information, updates to patient data will be fulfilled through a *messaging* approach.
 
 Update messages will:
 
