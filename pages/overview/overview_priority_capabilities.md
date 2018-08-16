@@ -16,4 +16,4 @@ Following the convention of the GP Connect FHIR&reg; API specification, GP Conne
 
 The Send Document capability is defined in this version of the specification.
 
-{% include roadmap.html content="Send Task and Send Update are roadmap items still to be scoped" %}
+{% include roadmap.html content="Send Task and Send Update are roadmap items." %}
