@@ -104,7 +104,7 @@ sitemap: true
 # needed for sitemap.xml file only
 url: https://nhsconnect.github.io/gpconnect-messaging
 
-repository: nhsconnect/GPConnect-Messaging
+repository: nhsconnect/gpconnect-messaging
 
 gems:
    - jekyll-github-metadata
