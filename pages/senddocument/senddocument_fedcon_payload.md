@@ -74,7 +74,7 @@ A Patient resource **SHALL** be present in the payload, and the following elemen
 | --------------- | -------------- | 
 | `identifier` |The `nhsNumber` identifier slice | 
 | `name` | The name of the patient. A single instance of a name element where use is official |
-| `birthDate` | Date of birth. Date shall be full date represented in `YYYY-MM-DD` format. Birth time is not required. |
+| `birthDate` | Date of birth **SHALL** be represented in `YYYY-MM-DD` format. Birth time is not required. |
 
 The Patient resource **SHALL** be referenced from the `for` element of the Task resource described above.
 
