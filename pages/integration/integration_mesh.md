@@ -19,7 +19,7 @@ Viewed very simply, MESH is like a [post-restante](https://en.wikipedia.org/wiki
 
 Message senders and receivers have two options when connecting to the central MESH server: MESH API or the MESH client.
 
-{% include note.html content="For a more complete introduction to MESH, including details on how to get going if your organisation does not yet have MESH connectivity, see [MESH - Message Exchange for Health and Social Care]()." %} 
+{% include note.html content="For a more complete introduction to MESH, including details on how to get going if your organisation does not yet have MESH connectivity, see [MESH - Message Exchange for Health and Social Care](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh)." %} 
 
 
 ### Message routing to registered practice ###
