@@ -13,6 +13,6 @@ All messages sent using this capability will be FHIR Messages constructed to mee
 
 Each instance of a message which conforms to the Send Document capability will arise in the context of a specific health care use case, the first of which is the [Send Federated Consultation Summary](senddocument_fedcon_overview.html) use case. Specific messaging requirements will be associated with each use case.
 
-**Disambiguation:**
 
-The Send Document capability does not include FHIR messages where the payload is defined as a [FHIR composition](https://www.hl7.org/fhir/composition.html), meeting the requirements of the [FHIR Document](https://www.hl7.org/fhir/documents.html) framework. This capability focuses primarily on facilitating the flow of binary documents across the NHS.
+{% include note.html content="**Disambiguation:**<br/>The Send Document capability does not include FHIR messages where the payload is defined as a [FHIR composition](https://www.hl7.org/fhir/composition.html), meeting the requirements of the [FHIR Document](https://www.hl7.org/fhir/documents.html) framework. This capability focuses primarily on facilitating the flow of binary documents across the NHS.
+" %}
