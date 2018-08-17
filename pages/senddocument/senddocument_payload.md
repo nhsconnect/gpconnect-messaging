@@ -1,10 +1,10 @@
 ---
-title: Payload structure
+title: Send Document - payload structure
 keywords: document, payload
 tags: [send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_payload.html
-summary: "Send Document capability - payload structure"
+summary: "Send Document capability - The structure of the payload to be used for all use cases of the Send Document capability."
 ---
 
 ## Payload message requirements ##
