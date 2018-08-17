@@ -7,8 +7,18 @@ permalink: senddocument_fedcon_overview.html
 summary: "Overview of the use case to send a federated consultation summary to the registered practice of a patient."
 ---
 
+### Supporting federated working patterns ###
+
 One of the main areas of focus for the [GP Connect product as a whole](index.html)  is to support GP practice federated work patterns. 
+
+Firstly, some terms are defined to provide to provide clarity:
+
+- A `federation` is a group of GP practices working together within their local area, in some sort of collective legal or organisational entity to deliver services such as out of hours care. 
+- A `registered practice` is a practice within the federation which at which the patient has a care record of type Regular (GMS/PMS). 
+- A `federated practice` is practice within the federation at which the patient does not have a care record of type Regular (GMS/PMS) 
  
+### Federated appointments use case ###
+
 This use case completes the set of capabilities required to fulfil the following workflow:
 
 1.	The [GP Connect Appointments FHIR API](https://nhsconnect.github.io/gpconnect/appointments.html) enables booking of a consultation at a federated practice.
