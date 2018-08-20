@@ -7,7 +7,7 @@ permalink: senddocument_fedcon_payload.html
 summary: "Details of the FHIR resources which make up the payload for the Send Federated Consultation Summary use case."
 ---
 
-Please refer to [Send Document - Payload structure](senddocument_payload) for a summary of the payload structure which **SHALL** be used to fulfil the "Send Federated Consultation Summary" use case.
+Please refer to [Send Document - Payload structure](senddocument_payload) for a summary of the payload structure which **SHALL** be used to fulfil the [Send Federated Consultation Summary](http://localhost:4006/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
 
 The following sections describe the resources which form the payload. i.e. the resources which will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) resource which acts as a container for the payload. 
 
@@ -30,7 +30,20 @@ A Task resource **SHALL** be present in the payload, and the following elements 
 | `requester.agent` | Reference to federated practice Practitioner resource profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) in the payload. |
 | `requester.onBehalfOf` |Reference to federated practice Organization resource profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) in the payload. |
 | `owner` | Reference to registered practice Organization resource profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) in the payload. |
-| `input`	| **Federated Encounter Summary** <br/>The input element **MUST** contain a federated encounter summary PDF document which is expressed as a input instance of type Attachment. Here `input.type.text` **MUST** be a fixed value of `Federated Encounter Summary`, and `input.value.contentType` **MUST** be set to a fixed value of `application/pdf`. The PDF binary data **MUST** be included in the `input.value.data` element in base 64 encoded format. <br/> <br/> **Additional input elements**<br/>The payload **MAY** also contain additional binary documents each expressed as an additional instance of the task.input element where `input.value[x]` is of type Attachment. For each such instance, `input.type.text` **SHALL** contain text which acts as a label for the binary attachment(e.g. "ECG data"), and `input.value.contentType` **SHALL** define the content type of the attachment. <br/> <br/>Where the creation date of an attachment differs from that of the message, this **SHALL** be specified in the `input.value.creation` element.  |
+| `input`	| [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload) describes how `Task.input` elements are used to include binary documents in the payload. Additional details specific to this use case are described below |
+
+### Including binary documents in the payload ###
+
+**Federated Encounter Summary** <br/>
+
+- The input element **MUST** contain a single binary document which provides a summary of the federated encounter summary as PDF. 
+- `input.type.text` **MUST** be a fixed value of `Federated encounter summary`
+-  The referenced [DocumentReference](https://www.hl7.org/fhir/documentreference.html) resource **MUST** contain the following elements:
+	- `description` set to a a fixed value of `Federated Encounter summary` 
+	
+<br/>**Additional input elements**<br/>
+
+The payload **MAY** also contain additional binary documents each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload)
 
 
 ## Organization resource ##
