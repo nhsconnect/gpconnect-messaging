@@ -1,5 +1,5 @@
 ---
-title: Example message
+title: Message example
 keywords: document, use_case
 tags: [mesh, itk3, use_case, send_document]
 sidebar: senddocument_sidebar
@@ -13,6 +13,8 @@ The message given below arises from the following fictional scenario:
 
 >*After the consultation, the clinical system used by Cumbria Starling Medical Centre sends a message to the clinical system used by Osprey with details of the consultation, in order that Mr Smith's care record is updated.*
 
-Message example:
+### Message example ###
+
+The following FHIR Message would be present as the .DAT file which is sent by the MESH client (or
 
 <script src="https://gist.github.com/briandiggle/bc220057d3e5004fb247a77bf324e6d5.js"></script>
