@@ -97,7 +97,7 @@ entries:
           external_url: https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh
           output: web
         - title: MESH API
-          external_url: https://nhsconnect.github.io/spine-mesh/
+          external_url: https://meshapi.docs.apiary.io/#
           output: web
         - title: ITK3
           external_url: https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/

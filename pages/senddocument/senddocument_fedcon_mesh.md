@@ -55,7 +55,7 @@ An example `.CTL` file is given below for a Federated Consultation Summary messa
 
 ### MESH API configuration ###
 
-The [MESH API Send Message](https://nhsconnect.github.io/spine-mesh/develop_mesh_server_api.html#send-message) API call will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields.
+The [MESH API Send Message](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) API call will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields.
 
 | HTTP Header field | Description |
 | ------------- | ----------- |
