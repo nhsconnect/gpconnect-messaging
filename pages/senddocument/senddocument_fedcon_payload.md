@@ -23,7 +23,7 @@ A Task resource **SHALL** be present in the payload, and the following elements 
 |------|-------------|
 | `intent` | Fixed value : *`plan`* |
 | `status` | Fixed value: *`requested`* |
-| `priority` | Fixed value: *`routine`*. This is the same value specified in the [ITK3 message header](senddocument_fedcon_itk3) |
+| `priority` | Fixed value: *`routine`* <br/><br/>Where a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Federated Consultation Summary use case is simply the act of synchronising with the registered patient record. When the GP Connect [Send Task](sendtask.html) capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record. |
 | `description` |	Summary of request in the following text: *Federated GP consultation summary for patient {Patient Name} , NHS Number {NHS Number}, with details of the encounter at practice {ODS Code}* |
 | `for` | Reference to Patient resource profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) in the payload |
 | `authoredOn` | The date/time when the message was generated. (A separate process such as the MESH client may be responsible for sending the message at a later date/time.) |
