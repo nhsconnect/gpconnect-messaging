@@ -68,7 +68,18 @@ Where the use case requires some form of ITK acknowledgement, an additional Work
 
 Please refer to the applicable messaging use case details page for information on the Workflow ID to be used when generating particular messages. For example, when generating a message for the "Send a federated encounter summary" use case, please refer to [Send federated encounter summary](senddocument_fedcon_mesh.html).
 
+### Configurating MESH to enable message flow ###
 
+The flow of messages through MESH is controlled through rules which are set in the following form:
+
+`Mailbox ID` is allowed to `Send|Receive` messages with `Workflow ID`
+
+For example, to enable a federated encounter summary message to flow from GP0001 to GP0002 (two practices in the same federation), two rules need to be set up in MESH configuration:
+
+- `GP0001` is allowed to `Send` messages with workflow ID `TBC-FedWorkflowID`
+- `GP0002` is allowed to `Receive` messages with workflow ID `TBC-FedWorkflowID`
+
+As GP Connect Messaging capabilities are delivered, MESH will therefore be configured to enable actual message flow between organisations. Note that the approach is based on *explicity opt in* to ensure particularly GP practices receive only those messages which they have consented to receive. 
 
 
 
