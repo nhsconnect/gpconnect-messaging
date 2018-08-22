@@ -66,7 +66,7 @@ Reliable delivery of a message can be considered from the perspective of the sen
 - a message sender is likely to need confirmation that the message has been successfully delivered and acted upon. In addition, the sender will often need to know if the receiver encountered an issue when processing the message in order to take action
 - a message receiver is likely to require a capability that the sender can be notified if a technical or business process issue occurs in processing of the message
 
-The [ITK3 Message Distribution Standard](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) provides a standard means of delivering these message reliability requirements. As the ITK3 standard is built using a lightweight FHIR STU3 profile of the FHIR Message framework to deliver these requirements, it was the natural choice as design component to provide message reliability.
+The [ITK3 Message Distribution Standard, v2.5.0](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/) provides a standard means of delivering these message reliability requirements. As the ITK3 standard is built using a lightweight FHIR STU3 profile of the FHIR Message framework to deliver these requirements, it was the natural choice as design component to provide message reliability.
 
 ITK3 also makes available a number of message metadata elements which enable better integration with practice workflow systems.
     

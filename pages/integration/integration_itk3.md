@@ -9,13 +9,13 @@ summary: "Use of ITK3 to support GP Connect Messaging"
 
 ## Using ITK3 to support GP Connect Messaging ##
 
-As described in [Design Principles](design_principles.html#reliability-itk3), the ITK3 Message Distribution standard has been adopted by GP Connect Messaging capabilities to provide message reliability and to facilitate alignment with practice workflow.
+As described in [Design Principles](design_principles.html#reliability-itk3), the [ITK3 Message Distribution standard, v2.5.0](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/) has been adopted by GP Connect Messaging capabilities to provide message reliability and to facilitate alignment with practice workflow.
 
 ### FHIR messages ###
 
 All messages sent according to the GP Connect Messaging specification will be constructed using the HL7 FHIR STU3 standard using the FHIR Messaging framework.
 
-The ITK3 standard builds on the [FHIR Messaging framework](https://www.hl7.org/fhir/messaging.html) through a set of messaging extensions, which are provided through a [profile of FHIR MessageHeader](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2) resource. 
+The ITK3 standard builds on the [FHIR Messaging framework](https://www.hl7.org/fhir/messaging.html) through a set of messaging extensions, which are provided through a [profile of FHIR MessageHeader](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.1) resource. 
 
 This extension of the FHIR messaging framework provides some messaging options such as:
 

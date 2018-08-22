@@ -13,7 +13,7 @@ summary: "Send Document capability - The structure of the payload to be used for
 
 The following requirements describe the structure of the Send Document payload.
 
-- The ITK3 `MessageHeader.focus` element **MUST** be a reference to a [Bundle](https://www.hl7.org/fhir/bundle.html) resource which conforms to the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) profile.
+- The ITK3 `MessageHeader.focus` element **MUST** be a reference to a [Bundle](https://www.hl7.org/fhir/bundle.html) resource which conforms to the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1) profile.
 
 The `ITK-Payload-Bundle` **MUST** contain the following resource entries:
 
@@ -29,7 +29,7 @@ The `ITK-Payload-Bundle` **MUST** contain the following resource entries:
 Each binary document sent in the payload **MUST** be included as an instance of the `Task.input` element:
 
 -  `task.input.value` **MUST** be a FHIR Reference containing a reference to a [DocumentReference](https://www.hl7.org/fhir/documentreference.html) resource.
-- The DocumentReference resource **MUST** be included as an additional `entry` in the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) and contain the following elements:
+- The DocumentReference resource **MUST** be included as an additional `entry` in the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1) and contain the following elements:
 	- `created` attribute containing the date/time when the binary document was created, or if not available, the date/time when the FHIR Message was created.
 	- `description` attribute containing a description of the document, intended for use as an attachment label for the document as it appears in the GP Principal Clinical System workflow user interface.
 	- `content` attribute containing a FHIR [Attachment](https://www.hl7.org/fhir/datatypes.html#attachment) resource in which the `contentType` defines the MIME type of the document, and `data` contains the binary data of the document in base64 encoded format. 
@@ -45,9 +45,9 @@ The payload of a GP Connect message which uses the Send Document capability **MU
 
 ## Payload message definition ##
 
-The FHIR MessageDefinition resource provides a formal, machine-readable definition of a message shared between systems. Please refer to [ITK3 Message Definitions](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/explore_defs_overview.html) for an overview of how MessageDefinition resources are used in ITK3 messages.
+The FHIR MessageDefinition resource provides a formal, machine-readable definition of a message shared between systems. Please refer to [ITK3 Message Definitions](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/explore_defs_overview.html) for an overview of how MessageDefinition resources are used in ITK3 messages.
 
-The GP Connect Send Document capability has defined a MessageDefinition resource instance which describes the *payload* of the FHIR Message, as defined on at [ITK3 Message Definition Patterns](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/explore_defs_overview.html#message-definition-patterns)
+The GP Connect Send Document capability has defined a MessageDefinition resource instance which describes the *payload* of the FHIR Message, as defined on at [ITK3 Message Definition Patterns](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/explore_defs_overview.html#message-definition-patterns)
 
 The Message Definition for the GP Connect Send Document message payload is provided below. This definition can be used by FHIR tools such as [FHIR Check](http://clarotech.co.uk/products/tool-fhir-check/) to verify that particular instance of a Send Document message is conformant. 
 

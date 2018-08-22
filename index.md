@@ -30,7 +30,7 @@ Update messages will:
 
 - be sent using [MESH](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh "MESH")
 - use the [HL7 FHIR&reg; STU3](http://hl7.org/fhir/stu3/index.html) interoperability standard to define their structure
-- include FHIR&reg; messaging information as defined by the [ITK3 message distribution](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) standard
+- include FHIR&reg; messaging information as defined by the [ITK3 message distribution, v2.5.0](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/) standard
 
 
 ## Who will be interested in these capabilities? ##

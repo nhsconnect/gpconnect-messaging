@@ -7,7 +7,7 @@ permalink: senddocument.html
 summary: "Introduction to the GP Connect Messaging Send Document capability"
 ---
 
-The Send Document capability provides a simple and standardised means of sending a document, such as a PDF, an image, or HTML file to a GP practice system. Each message sent using the Send Document capability makes use of the GP Connect Messaging components MESH and ITK, and [integrates with Spine](integration_illustrated.html) to deliver the message. 
+The Send Document capability provides a simple and standardised means of sending a document, such as a PDF, an image, or HTML file to a GP practice system. Each message sent using the Send Document capability makes use of the GP Connect Messaging components MESH and ITK3, [integrating with Spine](integration_illustrated.html) to deliver the message. 
 
 All messages sent using this capability will be FHIR Messages constructed to meet the ITK3 standard and have a specific [payload](senddocument_payload) structure.
 
