@@ -37,6 +37,11 @@ Each binary document sent in the payload **MUST** be included as an instance of 
 
 {% include note.html content="Please refer to the particular use case in question for detailed requirements on the population of these payload resources. Example FHIR Messages illustrating how payloads look on-the-wire are available for each use case." %} 
 
+### Identifying the use case ###
+
+The ITK3 message handling key `LocalExtension` is used to define the health or social care use case associated with the Send Document message. Please refer to the ITK3 header requirements for your particular use case.   
+
+
 ## Payload message illustration ##
 
 The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below:
