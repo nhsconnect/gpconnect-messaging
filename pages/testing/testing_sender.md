@@ -16,9 +16,9 @@ NHS Digital will provide a "synthetic receiver" solution which will act as follo
 - a message sender sends a message to specific MESH mailbox ID which NHS Digital will provide
 - this message arrives at the test mailbox and is picked up and validated by a FHIR Message validation tool 
 - validation output is sent as a report to the message sender detailing any issues found with the message
-- [TODO  - When the MESH Endpoint lookup service is used - how will test mailbox be targeted?]
-- [TODO  - How is the report delivered? Email, MESH. How is this recipient address identified from the incoming message?]
-- where the message has requested acknowledgements, the message validation tool will generate these responses as exemplars [Is this true?]
+- where the message has requested acknowledgements, the message validation tool will generate these responses as exemplars. Default behaviour is to send positive acknowledgements, but negative acknowledgement can be triggered (guidance can be found on the NHS Developer Network https://developer.nhs.uk/downloads-data/itk3-test-harness-user-guidance )
+
+Note: There are two ways of routing to the synthetic receiver, either through the specific MESH mailbox ID, or through the endpoint lookup service within the test environment. The endpoint lookup uses patient details (NHS No., DOB, Surname) within the MESH .ctl file to identify the synthetic receiver mailbox id, and then subsequently route onwards.
 
 The validation report will indicate conformance to the specification at the following levels:
 1. MESH / ITK requirements
