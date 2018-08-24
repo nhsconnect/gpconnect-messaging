@@ -14,6 +14,6 @@ The Opentest system is a platform based on Spine 2 Core, to which applications d
 More details on opentest and request access can be found here - https://digital.nhs.uk/services/spine/open-access-test-environment-for-spine-opentest
 
 ## Path-to-Live Formal Development and Integration Environments (accessible using N3/HSCN) ##
-The formal path-to-live environments are hosted on N3 and as such the Information Governance Statement of Conformance (IGSoC) is required before use, as this is a predicate to connecting to N3.
+The formal path-to-live environments are hosted on N3/HSCN and as such the Information Governance prerequisites are required before use, as this is a predicate to connecting to N3/HSCN.
 
 More details on the environments can be found here (N3/HSCN link required)- http://www.assurancesupport.digital.nhs.uk
