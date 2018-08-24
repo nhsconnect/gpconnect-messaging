@@ -8,12 +8,12 @@ summary: "Details of what environments are available to support the technical ac
 ---
 
 The following test environments are available for organisations 
+## Opentest (internet accessible using VPN) ##
+The Opentest system is a platform based on Spine 2 Core, to which applications developers can connect their systems. Unlike the formal "path-to-live" environments there are very few pre-conditions (you do not even have to have a working system yet). Opentest is hosted off the NHS "N3/HSCN" network, therefore Information Governance prerequisites are not required before use.
 
-[TODO:  Where is the synthetic sender and receiver? PTL and/or OpenTest]
- 
-[TODO: Is the MESH endpoint lookup service present in OpenTest]?
+More details on opentest and request access can be found here - https://digital.nhs.uk/services/spine/open-access-test-environment-for-spine-opentest
 
-## PTL (Path-to-live) environment details ##
+## Path-to-Live Formal Development and Integration Environments (accessible using N3/HSCN) ##
+The formal path-to-live environments are hosted on N3 and as such the Information Governance Statement of Conformance (IGSoC) is required before use, as this is a predicate to connecting to N3.
 
-
-## OpenTest environment##
+More details on the environments can be found here (N3/HSCN link required)- http://www.assurancesupport.digital.nhs.uk
