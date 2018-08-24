@@ -9,6 +9,13 @@ summary: "Overview of the role of MESH in GP Connect messaging"
 
 ### Overview ### 
 
+<table class="requirement-box">
+  <tr>
+    <td><b>GPCM-C-1</b></td>
+    <td>MESH <b>MUST</b> be used as the message transport mechanism</td>
+  </tr>
+</table>
+
 MESH is the strategic platform for asynchronous messaging in the NHS.
 
 Viewed very simply, MESH is like a [post-restante](https://en.wikipedia.org/wiki/Poste_restante) service for electronic message delivery. Messages flow around the NHS using MESH as follows:
@@ -24,10 +31,9 @@ Message senders and receivers have two options when connecting to the central ME
 
 ### Message routing to registered practice ###
 
-Where message senders create messages destined for a patient's registered practice, MESH message automated message routing **SHOULD** be used.
+Where message senders create messages destined for a patient's registered practice, MESH message automated message routing is encouraged.
 
-Automated message routing enables a message sender to send a message to the
-MESH server without specifying a destination MESH mailbox ID. MESH takes care of routing the message to the mailbox of the patient's registered GP practice. This simplifies the task of message creation for the sending organisation.
+Automated message routing enables a message sender to send a message to the MESH server without specifying a destination MESH mailbox ID. MESH takes care of routing the message to the mailbox of the patient's registered GP practice. This simplifies the task of message creation for the sending organisation.
 
 Rather than specifying the destination mailbox ID, the message sender simply specifies the NHS Number, Surname and Date of Birth of the patient in the message header.
 

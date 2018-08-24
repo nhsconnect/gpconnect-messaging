@@ -1269,11 +1269,39 @@ table.resource-attributes tr td {
 }
 
 .resource-page h3 {
-    border-top: 1px dotted grey;
+       border-left: 4px solid #aaaaaa;border-top: 1px dotted grey;
     padding-top: 20px;
     margin-top: 20px;
     font-weight: bold;
     color: black;
+}
+
+.requirement-box {
+	width: 100%;
+}
+
+.requirement-box b {
+    padding-right: 5px;
+}
+
+.requirement-box tr td {
+	border-right: 1px;
+	border-top: 1px;
+	border-bottom: 1px;
+}
+
+.requirement-box tr td:nth-child(1)
+{
+	background-color: #fcf8e3;
+    border-left: 4px solid #aaaaaa;
+    padding-left: 10px;
+    width: 15%;
+}
+
+.requirement-box tr td:nth-child(2) {
+    background-color: #fcf8e3;
+	border-left: 1px solid #aaaaaa;
+    width: 85%;
 }
 
 h5 {

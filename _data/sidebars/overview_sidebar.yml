@@ -30,6 +30,9 @@ entries:
     - title: Specification versioning
       url: /design_product_versioning.html
       output: web
+    - title: Requirements
+      url: /design_requirements.html
+      output: web      
           
   - title: Implement a capability
     output: web
