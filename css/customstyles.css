@@ -1269,7 +1269,7 @@ table.resource-attributes tr td {
 }
 
 .resource-page h3 {
-       border-left: 4px solid #aaaaaa;border-top: 1px dotted grey;
+    border-left: 4px solid #aaaaaa;border-top: 1px dotted grey;
     padding-top: 20px;
     margin-top: 20px;
     font-weight: bold;
@@ -1292,15 +1292,23 @@ table.resource-attributes tr td {
 
 .requirement-box tr td:nth-child(1)
 {
-	background-color: #fcf8e3;
+	background-color: #fffffa;
+	border-top: 1px solid #dddddd;	
     border-left: 4px solid #aaaaaa;
-    padding-left: 10px;
-    width: 15%;
+	border-bottom: 1px solid #dddddd;	
+	padding-top: 12px;
+    padding-left: 7px;
+	font-size: 10px;
+	font-weight:bold;	
+    width: 8%;
 }
 
 .requirement-box tr td:nth-child(2) {
-    background-color: #fcf8e3;
-	border-left: 1px solid #aaaaaa;
+    background-color: #fffffa;
+	border-top: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;		
+	border-bottom: 1px solid #dddddd;	
     width: 85%;
 }
 
