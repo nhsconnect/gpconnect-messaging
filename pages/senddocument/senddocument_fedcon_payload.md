@@ -1,13 +1,13 @@
 ---
-title: Payload requirements
+title: Send Federated Consultation Report - Payload requirements
 keywords: use_case
 tags: [use_case, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_payload.html
-summary: "Details of the FHIR resources which make up the payload for the Send Federated Consultation Summary use case."
+summary: "Details of the FHIR resources which make up the payload for the Send Federated Consultation Report use case."
 ---
 
-Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the [Send Federated Consultation Summary](http://localhost:4006/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
+Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the [Send Federated Consultation Report](http://localhost:4006/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
 
 The following sections describe the resources which form the payload. i.e. the resources which will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1) resource which acts as a container for the payload. 
 
@@ -35,11 +35,11 @@ The following requirements describe how the Task resource is populated:
   </tr>
   <tr>
     <td>GPCM-SD-17</td>
-    <td><code>priority</code> <b>MUST</b> contain fixed value: <b><code>routine</code></b> <br/><br/>Where a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Federated Consultation Summary use case is simply the act of synchronising with the registered patient record. When the GP Connect <a href="sendtask.html">Send Task</a> capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record.</td>
+    <td><code>priority</code> <b>MUST</b> contain fixed value: <b><code>routine</code></b> <br/><br/>Where a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Federated Consultation Report use case is simply the act of synchronising with the registered patient record. When the GP Connect <a href="sendtask.html">Send Task</a> capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record.</td>
   </tr>
   <tr>
     <td>GPCM-SD-18</td>
-    <td><code>description</code> <b>MUST</b> contain a summary of request in the following text:<br/> <code>Federated GP consultation summary for patient {Patient Name} , NHS Number {NHS Number}, with details of the encounter at practice {ODS Code}</code></td>
+    <td><code>description</code> <b>MUST</b> contain a summary of request in the following format:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code></td>
   </tr>
   <tr>
     <td>GPCM-SD-19</td>
@@ -65,61 +65,102 @@ The following requirements describe how the Task resource is populated:
 
 ### Including binary documents in the payload ###
 
-**Federated Encounter Summary** <br/>
+[Send Document - Including documents in the payload](http://localhost:4006/senddocument_fedcon_payload.html#including-binary-documents-in-the-payload) defines how binary documents are included in the Send Document payload.
 
-- The input element **MUST** contain a single binary document which provides a summary of the federated encounter summary as PDF. 
-- `input.type.text` **MUST** be a fixed value of `Federated encounter summary`
--  The referenced [DocumentReference](https://www.hl7.org/fhir/documentreference.html) resource **MUST** contain the following elements:
-	- `description` set to a a fixed value of `Federated Encounter summary` 
+For this use case, the following specific requirements apply:
+
+**Federated Consultation Report** <br/>
+
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-24</td>
+    <td>The input element <b>MUST</b> contain a binary document which provides a report of the federated consultation in PDF format. </td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-25</td>
+    <td><code>input.type.text</code> <b>MUST</b> be a fixed value of <code>Federated consultation report</code></td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-26</td>
+    <td>The referenced <a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> resource <b>MUST</b> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code> </td>
+  </tr>
+</table>
 	
 <br/>**Additional input elements**<br/>
 
-The payload **MAY** also contain additional binary documents each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload)
+Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload)
 
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-27</td>
+    <td>Where binary documents are included in the payload in addition to the Federated Consulation Report, the <i>Message receiver</i> <b>MUST</b> process these according ensuring all attachments remain in the context of the enounter information delivered to downstream systems.</td>
+  </tr>
+</table>
 
-## Organization resource ##
+## Organization resources ##
 
-Profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-28</td>
+    <td>As described in <a href="senddocument_payload.html">Send Document - Payload structure</a>, the payload <b>MUST</b> contain an organization resource describing both the sending organisation (the federated practice) and the receiving organisation (the patient's registered practice)</td>
+  </tr>
+</table>
 
-An Organization resource which describes the *federated* practice at which the consultation took place **SHALL** be present in the payload. This resource will be referenced from the `requester.onBehalfOf` element of the Task resource described above.
+The table below outlines how these resources are populated:
 
-An Organization resource which describes the *registered* practice of the patient **SHALL** be present in the payload. This resource will be referenced from the `owner` element of the Task resource described above.
-
-The table below outlines the elements which **MUST** be present in these Organization resource instances:
-
-| Organization resource element	| Description |
-| --------------- | ---------------|
-| `identifier` | The `odsOrganisationCode` slice of the identifier element | 
-| `name` | The name of the organisation |
-| `telecom` |	The Organization resource describing the organization at which the encounter took place **SHALL** include the telephone number of that organization. i.e. an instance of a telecom element **SHALL** be present where `telecom.system` is set to a fixed value of phone, and `telecom.value` contains the telephone number |
-
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-29</td>
+    <td>The <code>odsOrganisationCode</code> slice of the <code>identifier</code> element <b>MUST</b> contain the ODS code</td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-30</td>
+    <td>The <code>name</code> element <b>MUST</b> contain the name of the organisation</td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-31</td>
+    <td>The <code>telecom</code> element <b>MUST</b> contain the telephone number of that organization. i.e. where <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number</td>
+  </tr>
+</table>
 
 ## Practitioner resource ##
 
-Profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) resource present in the payload is populated as follows:
 
-A Practitioner resource **SHALL** be present in the payload, and the following elements **SHALL** be present:
-
-| Organization resource element	| Description |
-| ---------------- | ---------------- |
-| `identifier` | The `sdsUserID` slice of the identifier element | 
-| `Name`       | The name of the practitioner. A single instance of a name element where use is official |	
-| `Telecom`	 | **MUST** be present if available. |
-
-The Practitioner resource **SHALL** be referenced from the `requester.agent` element of the Task resource described above
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-32</td>
+    <td>The SDS User ID of the practitioner <b>MUST</b> be present in the <code>sdsUserID</code> slice of the <code>identifier</code> element</td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-33</td>
+    <td>The name of the practitioner <b>MUST</b> be present in the single instance of the <code>name</code> element where <code>name.use</code> is set to <code>official</code></td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-34</td>
+    <td>Telephone contact details <b>MUST</b> be present if available in the <code>Telecom</code> element. i.e. <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number</td>
+  </tr>
+</table>
 
 ## Patient resource ##
 
-Profiled to [https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) in the payload is populated as follows:
 
-A Patient resource **SHALL** be present in the payload, and the following elements **SHALL** be present:
-
-| Patient resource element | Description |
-| --------------- | -------------- | 
-| `identifier` |The `nhsNumber` identifier slice | 
-| `name` | The name of the patient. A single instance of a name element where use is official |
-| `birthDate` | Date of birth **SHALL** be represented in `YYYY-MM-DD` format. Birth time is not required. |
-
-The Patient resource **SHALL** be referenced from the `for` element of the Task resource described above.
-
-These values **SHALL** match those specified in MESH metadata `To_DTS` field (for the MESH client) or `Mex_To` (for the MESH API) as described in [MESH message configuration](senddocument_fedcon_mesh.html).
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-35</td>
+    <td>The NHS Number of the patient <b>MUST</b> be specified in the <code>nhsNumber</code> slice of the <code>identifier</code> element</td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-36</td>
+    <td>The name of the patient <b>MUST</b> be present in the single instance of the <code>name</code> element where <code>name.use</code> is set to <code>official</code></td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-37</td>
+    <td>The date of birth of the patient <b>MUST</b> be specified in <code>YYYY-MM-DD</code> format in the <code>birthDate</code> element. Birth time is not required.</td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-38</td>
+    <td>Values specified in the patient resource for surname, date of birth and NHS Number <b>MUST</b> match those specified in MESH metadata <code>To_DTS</code> field (for the MESH client) or <code>Mex_To</code> (for the MESH API) as described in <a href="senddocument_fedcon_mesh.html">MESH message configuration</a></td>
+  </tr>
+</table>

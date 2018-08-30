@@ -1,10 +1,10 @@
 ---
-title: Send Federated Consultation Summary - Overview
+title: Send Federated Consultation Report - Overview
 keywords: document, use_case
 tags: [mesh, itk3, use_case, send_document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_overview.html
-summary: "Overview of the use case to send a federated consultation summary to the registered practice of a patient."
+summary: "Overview of the use case to send a federated consultation report to the registered practice of a patient."
 ---
 
 ### Supporting federated working patterns ###
@@ -45,13 +45,13 @@ The diagram above depicts a successful message flow where registered practice me
 | <center>1d</center>   | The message is processed at the registered practice. Frequently this will result in a task being created in the practice workflow |
 |      |      |
 | 2    | **Infrastructure ackowledgement ITK Response** |
-| <center>2a</center>   | When the federated consultation summary message is passed from the MESH client for processing at the registered practice, the message is first validated to ensure that it's structure is correct. An ITK3 Response message is generated which indicates the success of message processing at a technical level - this is known as an "infrastructure acknowlegement".  |
+| <center>2a</center>   | When the federated consultation report message is passed from the MESH client for processing at the registered practice, the message is first validated to ensure that it's structure is correct. An ITK3 Response message is generated which indicates the success of message processing at a technical level - this is known as an "infrastructure acknowlegement".  |
 |  <center>2b</center>    | The MESH client at the registered practice sends the message to the MESH server where it awaits collection by the federated practice |
 |  <center>2c</center>    | The MESH client at the federated practice collects the message from the MESH server  makes. The ITK Response is then available to other federated practice system components for onward processing |
 |  <center>2d</center>    | The acknowledgement message is processed as appropriate by the federated practice.  |
 |      |      |
 | 3    | **Business ackowledgement ITK Response** |
-|  <center>3a</center>   | When the federated consultation summary message is passed from the MESH client for processing at the registered practice, after successful message validation, the subject of the message contents - the patient - is looked up to ensure that patient is known and registered at the practice. An ITK3 Response message is generated which indicates the success of patient matching - this is known as a "business acknowlegement".  |
+|  <center>3a</center>   | When the federated consultation report message is passed from the MESH client for processing at the registered practice, after successful message validation, the subject of the message contents - the patient - is looked up to ensure that patient is known and registered at the practice. An ITK3 Response message is generated which indicates the success of patient matching - this is known as a "business acknowlegement".  |
 | <center>3b</center>    | The MESH client at the registered practice sends the message to the MESH server where it awaits collection by the federated practice |
 | <center>3c</center>    | The MESH client at the federated practice collects the message from the MESH server  makes it available to other federated practice system components for onward processing |
 | <center>3d</center>    | The acknowledgement message is processed as appropriate by the federated practice.  |
