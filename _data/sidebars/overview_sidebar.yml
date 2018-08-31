@@ -18,6 +18,9 @@ entries:
       - title: Release notes
         output: web
         subfolderitems:
+        - title: 1.0.0
+          url: /overview_release_notes_1_0_0.html
+          output: web
  
   - title: Design approach
     output: web
