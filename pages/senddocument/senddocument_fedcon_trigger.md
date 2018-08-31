@@ -14,9 +14,16 @@ This page provides guidance on how systems which send a federated consolation su
 
 The following two principles should guide the implementation choice:
 
-1.	Write-back **MUST** take place for 100% of federated practice encounters to ensure that the registered practice care record is an accurate statement of care delivered in a primary care setting.
-
-2.	The write-back send facility **SHOULD** be implemented in such a way as to minimise administrative burden on the federated practice.
+<table class="requirement-box">
+  <tr>
+    <td>GPCM-SD-76</td>
+    <td>A Send Federated Consulation Report message <b>MUST</b> be sent for 100% of federated practice encounters to ensure that the registered practice care record is an accurate statement of care delivered in a primary care setting.</td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-77</td>
+    <td>The Send Federated Consultation Report send facility <b>MUST</b> be implemented in such a way as to minimise administrative burden on the federated practice.</td>
+  </tr>
+</table>
 
 ## Recommended solution ##
 
@@ -30,9 +37,9 @@ Where the encounter details at a federated practice are updated later (for examp
 
 The trigger for the background process would be at or near the time when a federated practice encounter is saved.
 
-Additional write-back could be clearly marked as such. As the GUID of the encounter is present in the ITK3 SenderReference field, all messages associated with that encounter can be identified.
+Any additional federated consultation report could be clearly marked as such. As the GUID of the encounter is present in the ITK3 SenderReference field, all messages associated with that encounter can be identified.
 
-As the write-back process is automated, message priority cannot be set, as this would require a review by the clinician. As a result, the message priority of all messages for this use case will be set to `routine` indicating that the federated practice is simply requesting that information about the federated practice encounter be attached to the registered practice record.
+As the process to generate and sent a federated consultation report is automated, message priority cannot be set, as this would require a review by the clinician. As a result, the message priority of all messages for this use case will be set to `routine` indicating that the federated practice is simply requesting that information about the federated practice encounter be attached to the registered practice record.
 
 Where specific actions are required at the registered practice as a result of the encounter, the federated practice clinician will follow existing business processes.
  

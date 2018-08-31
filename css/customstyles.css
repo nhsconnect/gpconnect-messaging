@@ -1285,9 +1285,11 @@ table.resource-attributes tr td {
 }
 
 .requirement-box tr td {
-	border-right: 1px;
-	border-top: 1px;
-	border-bottom: 1px;
+   background-color: #fffffa;
+	border-top: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;		
+	border-bottom: 1px solid #dddddd;	
 }
 
 .requirement-box tr td:nth-child(1)
@@ -1301,15 +1303,6 @@ table.resource-attributes tr td {
 	font-size: 10px;
 	font-weight:bold;	
     width: 8%;
-}
-
-.requirement-box tr td:nth-child(2) {
-    background-color: #fffffa;
-	border-top: 1px solid #dddddd;
-	border-left: 1px solid #dddddd;
-	border-right: 1px solid #dddddd;		
-	border-bottom: 1px solid #dddddd;	
-    width: 85%;
 }
 
 h5 {
