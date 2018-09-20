@@ -18,7 +18,7 @@ A [message example](senddocument_payload) is provided which illustrates these re
 <table class="requirement-box">
   <tr>
     <td>GPCM-SD-14</td>
-    <td>An <a href="https://www.hl7.org/fhir/task.html">HL7 FHIR Task</a> resource <b>MUST</b> be present in the payload</td>
+    <td>A Task resource profiled to <a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1">https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1</a> resource <b>MUST</b> be present in the payload</td>
   </tr>
 </table>
 
@@ -82,7 +82,7 @@ For this use case, the following specific requirements apply:
   </tr>
   <tr>
     <td>GPCM-SD-26</td>
-    <td>The referenced <a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> resource <b>MUST</b> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code> </td>
+    <td>The referenced <a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code> </td>
   </tr>
 </table>
 	

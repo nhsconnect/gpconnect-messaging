@@ -20,7 +20,7 @@ The following requirements describe the structure of the Send Document payload:
   </tr>
   <tr>
     <td>GPCM-SD-2</td>
-    <td>The <code>ITK-Payload-Bundle</code> <b>MUST</b> contain an HL7 <a href="https://www.hl7.org/fhir/task.html">Task</a> base resource.</td>
+    <td>The <code>ITK-Payload-Bundle</code> <b>MUST</b> contain a Task resource profiled to <a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1">https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1</a> base resource.</td>
   </tr>
   <tr>
     <td>GPCM-SD-3</td>
@@ -61,7 +61,7 @@ Each instance of an binary document will be included as follows:
 <table class="requirement-box">
   <tr>
     <td>GPCM-SD-9</td>
-    <td><code>task.input.value</code> <b>MUST</b> be a FHIR Reference containing a reference to a <a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> resource.</td>
+    <td><code>task.input.value</code> <b>MUST</b> be a FHIR Reference containing a reference to a DocumentReference profiled to <a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1</a>.</td>
   </tr>
   <tr>
     <td>GPCM-SD-10</td>
@@ -97,7 +97,7 @@ The ITK3 message handling key `LocalExtension` is used to define the health or s
 
 ## Payload message illustration ##
 
-The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below:
+The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below. (Context for the Send Federated Consultation Report use case is given in parentheses.)
 
 ![Send Document - Payload](images/senddocument/senddocument_payload.PNG) 
 
