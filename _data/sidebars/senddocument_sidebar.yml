@@ -16,35 +16,39 @@ entries:
       output: web
       
   - title: Use case - Federated consultation
-    output: web, pdf
+    output: web
     url: /senddocument_fedcon.html   
     folderitems:
       
     - title: Overview
       url: /senddocument_fedcon_overview.html      
-      output: web, pdf
+      output: web
+      
+    - title: Business Requirements
+      url: /senddocument_fedcon_busreq.html      
+      output: web      
 
     - title: Payload requirements
       url: /senddocument_fedcon_payload.html      
-      output: web, pdf  
+      output: web  
 
     - title: ITK3 header requirements
       url: /senddocument_fedcon_itk3.html      
-      output: web, pdf
+      output: web
       
     - title: MESH message configuration
       url: /senddocument_fedcon_mesh.html      
-      output: web, pdf
+      output: web
       
     - title: Error handling
       url: /senddocument_fedcon_errors.html      
-      output: web, pdf           
+      output: web          
       
     - title: Triggering message creation
       url: /senddocument_fedcon_trigger.html      
-      output: web, pdf
+      output: web
       
     - title: Message example
       url: /senddocument_fedcon_example.html      
-      output: web, pdf      
+      output: web      
           
