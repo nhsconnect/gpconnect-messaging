@@ -28,7 +28,7 @@ An example is given below of the [Send a federated consultation summary](senddoc
 
 The following diagram illustrates the systems involved, and their responsibilities, in sending the consultation summary document:
 
-![Integration illustrated - send](images/integration/spine_integration_send.png) 
+![Integration illustrated - send](images/integration/spine_integration_send.PNG) 
 
 The steps shown in the diagram are detailed below:
 
