@@ -13,12 +13,13 @@ Business requirements that apply across all of GP Connect Send Document
 ## Send report for correct patient ##
 
 <div>
-<table class='resource-attributes'>
-  <tr>
-    <td><b>ID:</b><code>GPC-SD01</code></td>
-    <td><b>Source:</b> <a href="sendmessage_process.html" target="_blank">Process 4.1</a></td>
-  </tr>
-</table>
+	<table class='resource-attributes'>
+	  <tr>
+		<td><b>ID:</b><code>GPC-SD01</code></td>
+		<td><b>Source:</b> <a href="sendmessage_process.html" target="_blank">Process 4.1</a></td>
+	  </tr>
+	</table>
+
 
 <div class="bs-callout bs-callout-primary">
 	<div>	
@@ -72,10 +73,10 @@ Business requirements that apply across all of GP Connect Send Document
 
 <div>
 <table class='resource-attributes'>
-  <tr>
-    <td><b>ID:</b><code>GPC-SD02</code></td>
-    <td><b>Source:</b> <a href="sendmessage_process.html" target="_blank">Process 4.1</a></td>
-  </tr>
+	  <tr>
+		<td><b>ID:</b><code>GPC-SD02</code></td>
+		<td><b>Source:</b> <a href="sendmessage_process.html" target="_blank">Process 4.1</a></td>
+	  </tr>
 </table>
 
 <div class="bs-callout bs-callout-primary">
@@ -126,58 +127,3 @@ Business requirements that apply across all of GP Connect Send Document
 
 
 
-## Routing the report to the correct practice ##
-
-<div>
-<table class='resource-attributes'>
-  <tr>
-    <td><b>ID:</b><code>GPC-SD02</code></td>
-    <td><b>Source:</b> <a href="sendmessage_process.html" target="_blank">Process 4.1</a></td>
-  </tr>
-</table>
-
-<div class="bs-callout bs-callout-primary">
-	<div>	
-		<p><b>Description</b></p>
-		<p style="margin-left: 30px"><i>As a clinician...</i></p>
-		<p style="margin-left: 30px"><i>I want to send a document containing a patient’s consultation notes  when the patient is registered at another practice within my GP federation...</i></p>
-		<p style="margin-left: 30px"><i>so that the patient’s medical record is kept up to date with a full treatment history.</i></p>
-		<br/>
-	</div>
-
-	<div>	
-		<p><b>Acceptance criteria - provider</b></p>
-		<p>
-			<ol type="1">
-				<li>All federated consultation reports will use MESH automated message routing in order to ensure that the message is routed correctly to the registered practice of the patient. It is not necessary for the provider system to specify a destination MESH mailbox ID.</li>
-				<li>The provider system must specify the patient’s NHS Number, Surname and Date of Birth in the message header and use these to populate the Mex-To HTTP header in the MESH endpoint lookup service.</li>
-				<li>The provider system must be set up so that it allows the flow of MESH messages to all consumer systems within their GP federation (or group of GP practices).</li>
-				<li>The provider system must be allocated a MESH Workflow ID to be associated solely with the GP Connect Send Document capability.</li>
-			</ol>
-		</p>
-		<br/>
-		<p><b>Acceptance criteria - consumer</b></p>
-		<p>
-			<ol type="1">
-				<li>Where the message received is for a patient who is not registered at the GP practice, the consumer system must send an error message back to the sending GP practice.</li>
-				<li>The consumer system must be set up so that it allows the flow of MESH messages from all provider systems within their GP federation (or group of GP practices).</li>
-				<li>The consumer system must be allocated a MESH Workflow ID to be associated solely with the GP Connect Send Document capability.</li>
-			</ol>
-		</p>
-		<br/>
-	</div>
-
-	<div>	
-		<p><b>Notes</b></p>
-		<p>
-			None
-		</p>
-		<br/>
-		<p><b>Related requirements</b></p>
-		<p>
-			None
-		</p>
-	</div>	
-
-</div>
-</div>
