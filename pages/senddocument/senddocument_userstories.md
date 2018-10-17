@@ -21,7 +21,7 @@ Business requirements that apply across all of GP Connect Send Document
 	</table>
 
 
-<div class="bs-callout bs-callout-primary">
+<div>
 	<div>	
 		<p><b>Description</b></p>
 		<p style="margin-left: 30px"><i>As a clinician at the federated practice...</i></p>
@@ -79,7 +79,7 @@ Business requirements that apply across all of GP Connect Send Document
 	  </tr>
 </table>
 
-<div class="bs-callout bs-callout-primary">
+<div>
 	<div>	
 		<p><b>Description</b></p>
 		<p style="margin-left: 30px"><i>As a clinician...</i></p>
