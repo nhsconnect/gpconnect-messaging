@@ -61,15 +61,15 @@ Each instance of an binary document will be included as follows:
 <table class="requirement-box">
   <tr>
     <td>GPCM-SD-9</td>
-    <td><code>task.input.value</code> <b>MUST</b> be a FHIR Reference containing a reference to a <a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> resource.</td>
+    <td><code>task.input.value</code> <b>MUST</b> be a FHIR Reference containing a reference to a <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource.</td>
   </tr>
   <tr>
     <td>GPCM-SD-10</td>
-    <td>The DocumentReference resource <b>MUST</b> be included as an additional <code>entry</code> in the <a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1">ITK-Payload-Bundle</a> </td>
+    <td>The GPConnect-DocumentReference-1 resource <b>MUST</b> be included as an additional <code>entry</code> in the <a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1">ITK-Payload-Bundle</a> </td>
   </tr>
 </table>
 
-The DocumentReference resource will be specified as follows:
+The GPConnect-DocumentReference-1 resource will be specified as follows:
 
 <table class="requirement-box">
   <tr>
@@ -81,9 +81,14 @@ The DocumentReference resource will be specified as follows:
     <td><code>DocumentReference.description</code> attribute <b>MUST</b> contain a description of the document, intended for use as an attachment label for the document as it appears in the GP Principal Clinical System workflow user interface.</td>
   </tr>
   <tr>
+    <td>GPCM-SD-79</td>
+    <td><code>DocumentReference.indexed</code> attribute <b>MUST</b> contain the date/time when the FHIR message was created.</td>
+  </tr>
+  <tr>
     <td>GPCM-SD-13</td>
     <td><code>Document.content</code> attribute <b>MUST</b> contain a FHIR <a href="https://www.hl7.org/fhir/datatypes.html#attachment">Attachment</a> resource in which the <code>contentType</code> defines the MIME type of the document, and <code>data</code> contains the binary data of the document in base64 encoded format.</td>
   </tr>
+ 
 </table>
 
 <br>

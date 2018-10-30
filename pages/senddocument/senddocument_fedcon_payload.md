@@ -82,18 +82,33 @@ For this use case, the following specific requirements apply:
   </tr>
   <tr>
     <td>GPCM-SD-26</td>
-    <td>The referenced <a href="https://www.hl7.org/fhir/documentreference.html">DocumentReference</a> resource <b>MUST</b> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code> </td>
+    <td>The referenced <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code> </td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-78</td>
+    <td>The referenced <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain a <code>status</code> element set to a fixed value of <code>current</code> </td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-80</td>
+    <td>The referenced <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain a <code>subject</code> element containing a reference to a Patient resource profiled to <a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1">CareConnect-Patient-1</a>.<br/>
+    This is the same resource refered to by <code>task.for</code></td>
+  </tr>
+  <tr>
+    <td>GPCM-SD-81</td>
+    <td>The referenced <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain an <code>author</code> element containing a reference to a <a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-">CareConnect-Practitioner-1</a> resource. <br/>
+      This is the same resource refered to by <code>task.requester.agent</code></td>
   </tr>
 </table>
 	
-<br/>**Additional input elements**<br/>
+<br/>
+**Additional input elements**
 
 Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload)
 
 <table class="requirement-box">
   <tr>
     <td>GPCM-SD-27</td>
-    <td>Where binary documents are included in the payload in addition to the Federated Consulation Report, the <i>Message receiver</i> <b>MUST</b> process these according ensuring all attachments remain in the context of the enounter information delivered to downstream systems.</td>
+    <td>Where binary documents are included in the payload in addition to the Federated Consulation Report, the <i>Message receiver</i> <b>MUST</b> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems.</td>
   </tr>
 </table>
 
