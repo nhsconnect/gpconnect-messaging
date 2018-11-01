@@ -20,7 +20,7 @@ GP Connect has initially focused on delivering HTTP FHIR&reg; APIs. The current 
 
 The resulting full set of capabilities delivered through GP Connect is illustrated below:
 
-![GP Connect capabilities - FHIR&reg; and messaging](images/overview/gpconnect_product_capabilities.png) 
+![GP Connect capabilities - FHIR&reg; and messaging]({{site.url}}/images/overview/gpconnect_product_capabilities.png) 
 
 ## Using Messaging to perform updates ##
 

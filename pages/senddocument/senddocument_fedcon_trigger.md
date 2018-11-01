@@ -54,3 +54,8 @@ The message sender performs the following steps to ascertain whether a message s
 3. The system at the appointment hosting practice determines whether the registered practice is in the same federation as the hosting organisation ODS code using the local federation definition. If this check passes, the message is sent.
 
 Steps 2 and 3 are required as should the message not be destined for another practice in the federation, MESH mailbox configuration at the target practice would cause any message to be undeliverable. MESH will be [configured to allow message flow](integration_mesh.html#configurating-mesh-to-enable-message-flow) for this use case only within a federation boundary.
+
+## PDF Format and business process ##
+
+Please refer to [Send Federated Consultation Report - Business Requirements](senddocument_fedcon_busreq.html) for business requirement context for the creation of the message together with details of the PDF format to be used.
+

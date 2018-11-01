@@ -26,4 +26,4 @@ The second section, `{C|SD|ST|SU}` provides a capability identifier where `SD` r
 
 The keywords ‘**MUST**’ and ‘**MUST NOT**’ on this site are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 
-{% include download.html content="Spreadsheet containing full list of [requirement ID](downloads/GPConnectMessaging-Requirements.xlsx) found in this specification." %}
+{% include download.html content="Spreadsheet containing full list of [requirement identifiers](downloads/GPConnectMessaging-Requirements.xlsx) found in this specification." %}
