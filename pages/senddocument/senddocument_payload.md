@@ -20,7 +20,7 @@ The following requirements describe the structure of the Send Document payload:
   </tr>
   <tr>
     <td>GPCM-SD-2</td>
-    <td>The <code>ITK-Payload-Bundle</code> <b>MUST</b> contain an HL7 <a href="https://www.hl7.org/fhir/task.html">Task</a> base resource.</td>
+    <td>The <code>ITK-Payload-Bundle</code> <b>MUST</b> contain a Task resource profiled to <a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1">GPConnect-Task-1</a>.</td>
   </tr>
   <tr>
     <td>GPCM-SD-3</td>
