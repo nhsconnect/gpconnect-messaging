@@ -71,6 +71,8 @@ For this use case, the following specific requirements apply:
 
 **Federated Consultation Report** <br/>
 
+Message senders will include the federated consultation report as an instance of the task.input element as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload)
+
 <table class="requirement-box">
   <tr>
     <td>GPCM-SD-24</td>
@@ -98,9 +100,15 @@ For this use case, the following specific requirements apply:
     <td>The referenced <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain an <code>author</code> element containing a reference to a <a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-">CareConnect-Practitioner-1</a> resource. <br/>
       This is the same resource refered to by <code>task.requester.agent</code></td>
   </tr>
+  <tr>
+    <td>GPCM-SD-82</td>
+    <td>The referenced <a href="https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1">GPConnect-DocumentReference-1</a> resource <b>MUST</b> contain a <code>type</code> element where <code>type.coding.code</code> is set to a fixed value of <code>371531000</code>, <code>type.coding.system</code> is set to a fixed value of <code>https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1</code> and <code>type.coding.display</code> is set to a fixed value <code>Report of clinical encounter</code><br/>
+      </td>
+  </tr>
 </table>
 	
 <br/>
+
 **Additional input elements**
 
 Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload)

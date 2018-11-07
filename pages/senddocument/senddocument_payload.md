@@ -87,7 +87,7 @@ The GPConnect-DocumentReference-1 resource will be specified as follows:
   </tr>
   <tr>
     <td>GPCM-SD-13</td>
-    <td><code>Document.content</code> attribute <b>MUST</b> contain a FHIR <a href="https://www.hl7.org/fhir/datatypes.html#attachment">Attachment</a> resource in which the <code>contentType</code> defines the MIME type of the document, and <code>data</code> contains the binary data of the document in base64 encoded format.</td>
+    <td><code>DocumentReference.content</code> attribute <b>MUST</b> contain a FHIR <a href="https://www.hl7.org/fhir/datatypes.html#attachment">Attachment</a> resource in which the <code>contentType</code> defines the MIME type of the document, and <code>data</code> contains the binary data of the document in base64 encoded format.</td>
   </tr>
  
 </table>
