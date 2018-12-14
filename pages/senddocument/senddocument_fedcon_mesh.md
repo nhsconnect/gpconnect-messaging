@@ -25,11 +25,11 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
 <table class="requirement-box">
   <tr>
     <td>GPCM-SD-57</td>
-    <td>Each instance of a Send Federated Consultation Report message <b>MUST</b> include the following MESH Workflow ID in the MESH message metadata: <code>TBC:WorkflowID</code></td>
+    <td>Each instance of a Send Federated Consultation Report message <b>MUST</b> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code></td>
   </tr>
   <tr>
     <td>GPCM-SD-58</td>
-    <td>Each instance of an acknowledgement message generated as a result of receipt of a Send Federated Consultation Report message <b>MUST</b> include the following Workflow ID in the MESH message metadata: <code>TBC:WorkflowID_ACK</code></td>
+    <td>Each instance of an acknowledgement message generated as a result of receipt of a Send Federated Consultation Report message <b>MUST</b> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code></td>
   </tr>
 </table>
 
@@ -53,7 +53,7 @@ When using the MESH client to send a message to the MESH server, the `.CTL` file
 </table>
 
 
-An example `.CTL` file is given below for a Federated Consultation Summary message regarding a consultation which took place for a fictional patient: Mr Richard Smith, NHS Number 1234567890, Date of birth 9th January 1955.
+An example `.CTL` file is given below for a Federated Consultation Report message regarding a consultation which took place for a fictional patient: Mr Richard Smith, NHS Number 1234567890, Date of birth 9th January 1955.
 
 ```xml
 <DTSControl>
@@ -68,7 +68,7 @@ An example `.CTL` file is given below for a Federated Consultation Summary messa
 <PartnerId></PartnerId>
 <Compress>Y</Compress>
 <Encrypted>N</Encrypted>
-<WorkflowId>TBC-GPCONNECT_FEDERATED_CONSULTATION</WorkflowId>
+<WorkflowId>GPFED_CONSULT_REPORT</WorkflowId>
 <ProcessId></ProcessId>
 <DataChecksum></DataChecksum>
 <IsCompressed>Y</IsCompressed>
