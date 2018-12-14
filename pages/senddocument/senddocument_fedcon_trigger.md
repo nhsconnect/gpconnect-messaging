@@ -55,6 +55,8 @@ The message sender performs the following steps to ascertain whether a message s
 
 Steps 2 and 3 are required as should the message not be destined for another practice in the federation, MESH mailbox configuration at the target practice would cause any message to be undeliverable. MESH will be [configured to allow message flow](integration_mesh.html#configurating-mesh-to-enable-message-flow) for this use case only within a federation boundary.
 
+Additionally, in a scenario where both the sending and receiving practice are operating the same GP principal clinical system, updating the registered practice may be performed directly within that system infrastructure.
+
 ## PDF Format and business process ##
 
 Please refer to [Send Federated Consultation Report - Business Requirements](senddocument_fedcon_busreq.html) for business requirement context for the creation of the message together with details of the PDF format to be used.
