@@ -9,7 +9,7 @@ toc: false
 ---
 
 
-## Clinical engagement ##
+## Engagement support ##
 
 To help ensure that the functionality being developed will be able to support GP practices, GP Connect has engaged with a range of GP practice staff to get an understanding of how that data may be used and what is required to support that use. 
 
