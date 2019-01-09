@@ -30,14 +30,14 @@ entries:
         output: web
         subfolderitems:
 
-        - title: Process map
-          url: /sendmessage_process.html
-          output: web
         - title: User stories
           url: /senddocument_userstories.html
           output: web
         - title: PDF layout
           url: /senddocument_fedcon_busreq_pdf.html 
+          output: web
+        - title: Process map
+          url: /sendmessage_process.html
           output: web
         - title: Clinical engagement
           url: /senddocument_fedcon_busreq_clinical.html 
