@@ -20,7 +20,7 @@ GP Connect has initially focused on delivering HTTP FHIR&reg; APIs. The current 
 
 The resulting full set of capabilities delivered through GP Connect is illustrated below:
 
-![GP Connect capabilities - FHIR&reg; and messaging]({{site.url}}/images/overview/gpconnect_product_capabilities.png) 
+![GP Connect capabilities - FHIR&reg; and messaging]({{site.url}}/images/overview/gpconnect_product_capabilities.png "GP Connect capabilities illustration") 
 
 ## Using Messaging to perform updates ##
 
@@ -37,8 +37,8 @@ Update messages will:
 
 Two main audiences will be interested in this specification:
 
-1. Message senders: NHS organisations seeking to send messages
-2. Message receivers: GP practices seeking to receive and process messages
+1. message senders: NHS organisations seeking to send messages
+2. message receivers: GP practices seeking to receive and process messages
 
 This specification is primarily aimed at message senders. Where information is aimed at message receivers only, this is made clear.
 
