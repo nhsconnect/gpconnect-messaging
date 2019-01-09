@@ -1,29 +1,29 @@
 ---
-title: Send Federated Consultation Report - Overview
-keywords: document, use_case
-tags: [mesh, itk3, use_case, send_document]
+title: Overview
+keywords: document, use-case
+tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_overview.html
 summary: "Overview of the use case to send a federated consultation report to the registered practice of a patient."
 ---
 
-### Supporting federated working patterns ###
+## Supporting federated working patterns ##
 
 One of the main areas of focus for the [GP Connect product as a whole](index.html)  is to support GP practice federated work patterns. 
 
 Firstly, some terms are defined to provide to provide clarity:
 
-- A `federation` is a group of GP practices working together within their local area, in some sort of collective legal or organisational entity to deliver services such as out of hours care. 
-- A `registered practice` is a practice within the federation which at which the patient has a care record of type Regular (GMS/PMS). 
-- A `federated practice` is practice within the federation at which the patient does not have a care record of type Regular (GMS/PMS) 
+- a `federation` is a group of GP practices working together within their local area, in some sort of collective legal or organisational entity to deliver services such as out of hours care
+- a `registered practice` is a practice within the federation which at which the patient has a care record of type Regular (GMS/PMS)
+- a `federated practice` is practice within the federation at which the patient does not have a care record of type Regular (GMS/PMS) 
  
-### Federated appointments use case ###
+## Federated appointments use case ##
 
 This use case completes the set of capabilities required to fulfil the following workflow:
 
-1.	The [GP Connect Appointments FHIR API](https://nhsconnect.github.io/gpconnect/appointments.html) enables booking of a consultation at a federated practice.
-2.	The [GP Connect Access Record HTML FHIR API](https://developer.nhs.uk/apis/gpconnect-0-5-0/accessrecord.html) enables an amenable consultation to take place at the federated practice through access to the patient record stored at the patient’s registered practice.
-3.	After the consultation, the [Send Document](senddocument.html) GP Connect Messaging enables the details of this consultation to be written back to the registered practice so that the registered practice patient record continues to provide an up-to-date view of care which the patient receives in a GP practice setting.
+1.	the [GP Connect Appointments FHIR API](https://nhsconnect.github.io/gpconnect/appointments.html) enables booking of a consultation at a federated practice
+2.	the [GP Connect Access Record HTML FHIR API](https://developer.nhs.uk/apis/gpconnect-0-5-0/accessrecord.html) enables an amenable consultation to take place at the federated practice through access to the patient record stored at the patient’s registered practice
+3.	after the consultation, the [Send Document](senddocument.html) GP Connect Messaging enables the details of this consultation to be written back to the registered practice so that the registered practice patient record continues to provide an up-to-date view of care which the patient receives in a GP practice setting
 
 {% include callout.html content="It is worth emphasising that the first two steps above use synchronous [GP Connect FHIR API](https://nhsconnect.github.io/gpconnect/) capabilities, and that an asynchronous messaging approach is taken to facilitate the update made at the registered practice by the final step." type="info" %}
 
@@ -32,7 +32,7 @@ This use case completes the set of capabilities required to fulfil the following
 
 The following diagram illustrates how messages flow between the federated practice and the registered practice via MESH to fulfil this use case:
 
-![Federated Consultation Sequence Diagram](images/senddocument/federated_consultation_sequence.png) 
+![Federated Consultation Sequence Diagram](images/senddocument/federated_consultation_sequence.png "Message flow illustration") 
 
 The diagram above depicts a successful message flow where registered practice message processing validates and matches the initial message successfully to a patient. This is involves the following steps:
 

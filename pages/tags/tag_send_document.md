@@ -1,6 +1,6 @@
 ---
 title: "Send Document"
-tagName: send_document
+tagName: send-document
 search: exclude
 permalink: tag_send_document.html
 sidebar: overview_sidebar

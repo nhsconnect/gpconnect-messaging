@@ -1,7 +1,7 @@
 ---
-title: Send Federated Consultation Report - Error handling
-keywords: use_case, itk3, mesh
-tags: [use_case, itk3, mesh, send_document]
+title: Error handling
+keywords: use-case, itk3, mesh
+tags: [use-case, itk3, mesh, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_errors.html
 summary: "Error handling details for the Send Federated Consultation Report use case"
@@ -12,14 +12,14 @@ The following section describes error scenarios and associated error codes for t
 ## ITK3 errors ##
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'error' %}
   <tr>
-    <td>GPCM-SD-65</td>
-    <td>Where the received message does not conform to the requirements stated for <a href="senddocument_fedcon_itk3.html">ITK3 header</a>, or for the payload, the message <b>MUST</b> be considered invalid</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
-  <tr>
-    <td>GPCM-SD-66</td>
-    <td>Where a received message is invalid, an ITK3 Response <b>MUST</b> be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message <b>MUST NOT</b> be accepted for downstream processing</td>
-  </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 Details are given below of the ITK3 Negative Response which is used per error scenario:
@@ -27,49 +27,41 @@ Details are given below of the ITK3 Negative Response which is used per error sc
 ### ITK3 Header errors ### 
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'error1' %}
   <tr>
-    <td>GPCM-SD-67</td>
-    <td>Mandated element not present (BusAck, InfAck, RecipientType, Priority, SenderReference, MessageDefinition, Timestamp, Event) - reponse code 10008 <b>MUST</b> be used</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
-  <tr>
-    <td>GPCM-SD-68</td>
-    <td>InfAck element not set to <code>true</code> - response code 10002 <b>MUST</b> be used</td>
-  </tr>
-  <tr>
-    <td>GPCM-SD-69</td>
-    <td>BusAck element not set to <code>true</code> - response code 10003 <b>MUST</b> be used</td>
-  </tr>
-  <tr>
-    <td>GPCM-SD-70</td>
-    <td>RecipientType element not set to <code>FA</code> - response code 10010 <b>MUST</b> be used</td>
-  </tr>
-  <tr>
-    <td>GPCM-SD-71</td>
-    <td>Priority element not set to <code>routine</code> - response code 10006 <b>MUST</b> be used</td>
-  </tr>
-  <tr>
-    <td>GPCM-SD-72</td>
-    <td>Event element not set to <code>ITK007C</code> - response code 10008 <b>MUST</b> be used</td>
-  </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 
 ### ITK3 Payload business rules errors ###
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'error2' %}
   <tr>
-    <td>GPCM-SD-73</td>
-    <td>Payload content business rule violated - response code 10008 <b>MUST</b> be used</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 ## Diagnostic information ##
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'error3' %}
   <tr>
-    <td>GPCM-SD-74</td>
-    <td>Error context and description <b>MUST</b> be provided in the <code>OperationOutcome.diagnostic</code> element to enable the sender to correctly identify the error which has been found in their sent message.</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 ## Errors from MESH Endpoint Lookup ##
@@ -77,10 +69,14 @@ Details are given below of the ITK3 Negative Response which is used per error sc
 The following table describes error codes returned from the MESH server as a result of issues encountered using the facility to [route a message automatically to the registered practice](integration_mesh.html#message-routing-to-registered-practice). 
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'error4' %}
   <tr>
-    <td>GPCM-SD-75</td>
-    <td>The following errors, when encountered, <b>MUST</b> be handled gracefully by the message sending system</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 | Status Code | MESH Error Code | Description |

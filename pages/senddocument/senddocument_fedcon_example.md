@@ -1,7 +1,7 @@
 ---
 title: Message example
-keywords: document, use_case
-tags: [mesh, itk3, use_case, send_document]
+keywords: document, use-case
+tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_example.html
 summary: "Send Federated Consultation Report - example message."

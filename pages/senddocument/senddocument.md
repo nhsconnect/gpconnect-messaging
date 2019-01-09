@@ -1,7 +1,7 @@
 ---
 title: Send Document
 keywords: document
-tags: [send_document, messaging]
+tags: [send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument.html
 summary: "Introduction to the GP Connect Messaging Send Document capability"

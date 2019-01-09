@@ -32,7 +32,7 @@ This extension of the FHIR messaging framework provides some messaging options s
 
 Please refer to the [messaging capability](senddocument.html) and [messaging use case](senddocument_fedcon_overview.html) pages for details of which of these options is mandated or recommended for the particular message being created.
 
-### ITK3 Response processing ###
+### ITK3 response processing ###
 
 Where the message sender requests an ITK3 acknowledgement (known as ITK3 Response), the sending system is responsible for processing the received acknowledgement and acting accordingly.
 

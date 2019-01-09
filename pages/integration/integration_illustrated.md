@@ -11,10 +11,10 @@ All messages sent in order to update GP systems through GP Connect Messaging cap
 
 
 
-- Use of [MESH](integration_mesh.html) to send messages
+- use of [MESH](integration_mesh.html) to send messages
 
 
-- Use of [ITK3](integration_itk3.html) to provide a standard FHIR Message format
+- use of [ITK3](integration_itk3.html) to provide a standard FHIR Message format
 
 Additionally, as most of these messages will be intended to update the care record at the patient's registered practice, most messaging use cases will make use of an additional MESH capability:
 
@@ -28,7 +28,7 @@ An example is given below of the [Send a federated consultation summary](senddoc
 
 The following diagram illustrates the systems involved, and their responsibilities, in sending the consultation summary document:
 
-![Integration illustrated - send](images/integration/spine_integration_send.PNG) 
+![Integration illustrated - send](images/integration/spine_integration_send.PNG "System integration illustration") 
 
 The steps shown in the diagram are detailed below:
 
