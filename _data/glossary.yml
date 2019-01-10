@@ -1,4 +1,3 @@
-glossary:
 - title: Accreditation
   value: "The action or process used to ensure that a system provider meets necessary criteria to use the GP Connect services."
 - title: Assurance
@@ -6,13 +5,12 @@ glossary:
 - title: Direct Patient Care
   value: "Defined by the Caldicott Review as a clinical, social or public health activity concerned with the prevention, investigation and treatment of illness and the alleviation of suffering of individuals. It includes supporting individuals' ability to function and improve their participation in life and society. It also includes the assurance of safe and high quality care and treatment through local audit, the management of untoward or adverse incidents, personal satisfaction including measurement of outcomes undertaken by one or more registered and regulated health or social care professionals and their team with whom the individual has a legitimate relationship for their care."
 - title: End User Organisation (EUO)
-  value: "An organisation that uses a GP Connect service (or commissions the development of a new GP Connect service ) to access GP data from more than one clinical system provider to improve direct patient care. For example:<ul><li>a GP practice that is part of a federation, club or hub and is sharing data with other practices in the group</li><li>a Commissioning Support Unit (CSU)</li><li>an acute or mental health trust that is receiving GP data from a group of practices in its area</li><li>an A&E or 111 service that is receiving data or booking appointments on behalf of a patient</li></ul>"
+  value: "An organisation that uses a GP Connect service (or commissions the development of a new GP Connect service ) to access GP data from more than one clinical system provider to improve direct patient care. For example:"
+  html: "<ul><li>a GP practice that is part of a federation, club or hub and is sharing data with other practices in the group</li><li>a Commissioning Support Unit (CSU)</li><li>an acute or mental health trust that is receiving GP data from a group of practices in its area</li><li>an A&E or 111 service that is receiving data or booking appointments on behalf of a patient</li></ul>"
 - title: Federation
   value: "A group of GP practices working together within their local area, in some sort of collective legal or organisational entity to deliver services such as out of hours care."
-- id: first-of-type-fot
-  title: First of Type (FoT)
+- title: First of Type (FoT)
   value: "A scheme that facilitates the onboarding, testing, governance, assurance and live deployment stage of an end user organisation and its consuming system on its journey to consuming a GP Connect FHIR® API. FoT also represents the process by which the provider API fulfilment is proven to meet set criteria prior to gaining approval for wider rollout and piloting."
-  tooltip: "a scheme that facilitates the onboarding, testing, governance, assurance and live deployment stage of an end user organisation and its consuming system on its journey to consuming a GP Connect FHIR® API"
 - title: GPSoC contract
   value: "GP Systems of Choice: a contractual framework to supply IT systems and services to GP practices and associated organisations in England. Suppliers gain approval to offer services through a centrally controlled contract."
 - title: ITK3
@@ -24,29 +22,20 @@ glossary:
 - title: ODS code
   value: "The identifier of an NHS organisation as defined and published by the NHS Organisation Data Service."
 - title: GP principal clinical systems suppliers
-  value: "The name given to a group of suppliers that provide GPs with the core system available under the GPSoC contract. The current suppliers are:<ul><li>EMIS Health</li><li>Microtest</li><li>TPP</li><li>Vision</li></ul>"
+  value: "The name given to a group of suppliers that provide GPs with the core system available under the GPSoC contract. The current suppliers are:"
+  html: "<ul><li>EMIS Health</li><li>Microtest</li><li>TPP</li><li>Vision</li></ul>"
 - title: Proxy server
   value: "A server that acts as an intermediary for requests from clients seeking resources from other servers."
 - title: Receiver
   value: "A system which receives messages through MESH with an ITK3 FHIR message header."
 - title: Sender
   value: "A system which sends messages through MESH with an ITK3 FHIR message header."
-- id: spine
-  title: Spine
+- title: Spine
   value: "Is a collection of national applications, services and directories which support the health and social care sector in the exchange of information in national and local IT systems."
-  tooltip: "a collection of national applications, services and directories which support the health and social care sector in the exchange of information in national and local IT systems"
-- id: fhir
-  title: FHIR&reg;
+- title: FHIR&reg;
   value: "Fast Healthcare Interoperability Resources: a standard describing data formats and elements (known as ‘resources’) and an application programming interface (API) for exchanging electronic health records. The standard was created by the Health Level Seven International (HL7) health-care standards organisation."
-  tooltip: "Fast Healthcare Interoperability Resources: a standard describing data formats and elements, and an API for exchanging electronic health records"
-- id: clinical-safety
-  title: Clinical safety
+- title: Clinical safety
   value: "The process of evaluating clinical safety risk. See <a href='https://digital.nhs.uk/services/solution-assurance/the-clinical-safety-team/clinical-risk-management-standards' target='_blank'>clinical risk management standards</a>."
-  tooltip: "the process of evaluating clinical safety"
 - title: Capability
-  value: "The GP Connect FHIR® APIs are managed within ‘capabilities’ that focus on a particular business area of general practice and wider cross-organisational interoperability. Capabilities are organised within ‘capability packs’, which include: <br/>
-    <ul>
-        <li> Appointment Management </li>
-        <li> Access Record HTML </li>
-        <li> Access Record Structured </li>
-    </ul>"
+  value: "The GP Connect FHIR® APIs are managed within 'capabilities' that focus on a particular business area of general practice and wider cross-organisational interoperability. Capabilities are organised within 'capability packs', which include:"
+  html: "<ul><li> Appointment Management </li><li> Access Record HTML </li><li> Access Record Structured </li></ul>"
