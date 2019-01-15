@@ -10,13 +10,31 @@ toc: true
 
 ## Purpose ##
 
-The PDF layout defines the detail of the document layout and detailed information about data that is used to populate the document. 
+The PDF layout defines the requirements of the document layout and detailed information about data that is used to populate the document. 
+
+
+## Requirements ##
+
+Requirements are given below which define how the PDF is populated for this use case:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'pdf' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
 
 ## Layout ##
 
 The PDF below defines the expected document layout, to download click the download icon:
 
 <embed src="pages/senddocument/GP Connect Messaging - PDF Layout.pdf" width="847px" height="2200px" />
+
 
 ## Field descriptions ##
 

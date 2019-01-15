@@ -5,6 +5,7 @@ tags: [design,messaging]
 sidebar: overview_sidebar
 permalink: design_requirements.html
 summary: "Details of how requirements are presented in the GP Connect Specification"
+toc: false
 ---
 
 ## Requirements ##

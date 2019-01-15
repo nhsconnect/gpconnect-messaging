@@ -81,8 +81,8 @@ The flow of messages through MESH is controlled through rules which are set in t
 
 For example, to enable a federated encounter summary message to flow from GP0001 to GP0002 (two practices in the same federation), two rules need to be set up in MESH configuration:
 
-- `GP0001` is allowed to `Send` messages with workflow ID `TBC-FedWorkflowID`
-- `GP0002` is allowed to `Receive` messages with workflow ID `TBC-FedWorkflowID`
+- `GP0001` is allowed to `Send` messages with workflow ID `GPFED_CONSULT_REPORT`
+- `GP0002` is allowed to `Receive` messages with workflow ID `GPFED_CONSULT_REPORT_ACK`
 
 As GP Connect Messaging capabilities are delivered, MESH will therefore be configured to enable actual message flow between organisations. Note that the approach is based on *explicity opt in* to ensure particularly GP practices receive only those messages which they have consented to receive. 
 

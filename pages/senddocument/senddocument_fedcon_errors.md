@@ -105,3 +105,14 @@ For example, where an invalid NHS Number has been supplied in the `Mex_To` HTTP 
     <Description>Invalid NHS Number</Description>
   </StatusRecord>
 ``` 
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'error5' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>

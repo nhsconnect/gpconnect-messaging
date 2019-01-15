@@ -38,17 +38,22 @@ The purpose of this page is to document the user stories that apply across all o
 	</div>
 
 	<div>	
-		<p><strong>Acceptance criteria - provider</strong></p>
-		{{item.provider}}
+		<p><strong>Acceptance criteria - sender</strong></p>
+		{{item.sender}}
 		<br/>
 	</div>
 
 	<div>	
-		<p><strong>Acceptance criteria - consumer</strong></p>
-		{{item.consumer}}
+		<p><strong>Acceptance criteria - receiver</strong></p>
+		{{item.receiver}}
 	</div>
-	<hr style="width:100%">
-</div>
+	
+	<div class="bs-callout bs-callout-success">
+		<strong>Linked requirements: </strong>{% include requirement.html type=item.requirement1 %} {% include requirement.html type=item.requirement2 %} {% include requirement.html type=item.requirement3 %} {% include requirement.html type=item.requirement4 %} {% include requirement.html type=item.requirement5 %} {% include requirement.html type=item.requirement6 %}
+	</div>
 
+	<hr style="width:100%">
+	
+</div>
 
 {% endfor %}

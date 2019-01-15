@@ -49,13 +49,39 @@ Irrespective of the means of triggering message creation, the first step the sen
 
 The message sender performs the following steps to ascertain whether a message should be sent to the registered practice:
 
-1. if the patient registration type of the patient record at the appointment hosting practice is Regular (GMS/PMS) then no further action is required. (I.e. the registered practice care record is already up-to-date)
-2. perform a PDS lookup of the patient to determine the ODS code of the registered practice of the patient
-3. the system at the appointment hosting practice determines whether the registered practice is in the same federation as the hosting organisation ODS code using the local federation definition. If this check passes, the message is sent
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'trigger2' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
 
 Steps 2 and 3 are required as should the message not be destined for another practice in the federation, MESH mailbox configuration at the target practice would cause any message to be undeliverable. MESH will be [configured to allow message flow](integration_mesh.html#configurating-mesh-to-enable-message-flow) for this use case only within a federation boundary.
 
 Additionally, in a scenario where both the sending and receiving practice are operating the same GP principal clinical system, updating the registered practice may be performed directly within that system infrastructure.
+
+## Defining when message should be sent ##
+
+The message sender <strong>MUST</strong> fulfil these time period requirements:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'trigger3' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+The message sender must adhere to the following requirements:
+
+
 
 ## PDF Format and business process ##
 
