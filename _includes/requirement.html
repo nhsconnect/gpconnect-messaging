@@ -1,0 +1,5 @@
+{% for item in site.data.senddoc_requirements.requirements %}
+	 {% if item.id == {{include.type}} %}
+	 		<a href="{{item.page}}#{{item.id}}" data-toggle="tooltip" data-original-title="{{item.tooltip}}">{{item.id}}&nbsp;</a>
+	{% endif %}
+{% endfor %}
