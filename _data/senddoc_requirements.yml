@@ -3,6 +3,7 @@ requirements:
   area: senddocpayload
   description: "The ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1\">ITK-Payload-Bundle</a> profile"
   tooltip: "The ITK3 MessageHeader.focus element MUST be a reference to a Bundle resource which conforms to the ITK-Payload-Bundle profile"
+  page: senddocument_payload.html
 - id: GPCM-SD-02
   area: senddocpayload
   description: "The <code>ITK-Payload-Bundle</code> <strong>MUST</strong> contain a Task resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> base resource"
@@ -33,28 +34,28 @@ requirements:
   tooltip: "Each binary document sent in the payload MUST be included as an instance of the Task.input element"
 - id: GPCM-SD-09
   area: senddocpayload3
-  description: "<code>task.input.value</code> <strong>MUST</strong> be a FHIR Reference containing a reference to a DocumentReference profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a>."
-  tooltip: "task.input.value MUST be a FHIR Reference containing a reference to a DocumentReference profiled to GPConnect-DocumentReference-1."
+  description: "<code>task.input.value</code> <strong>MUST</strong> be a FHIR Reference containing a reference to a DocumentReference profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a>"
+  tooltip: "task.input.value MUST be a FHIR Reference containing a reference to a DocumentReference profiled to GPConnect-DocumentReference-1"
 - id: GPCM-SD-10
   area: senddocpayload3
-  description: "The GPConnect-DocumentReference-1 resource <strong>MUST</strong> be included as an additional <code>entry</code> in the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1\">ITK-Payload-Bundle</a>."
-  tooltip: "The DocumentReference resource MUST be included as an additional entry in the ITK-Payload-Bundle."
+  description: "The GPConnect-DocumentReference-1 resource <strong>MUST</strong> be included as an additional <code>entry</code> in the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1\">ITK-Payload-Bundle</a>"
+  tooltip: "The DocumentReference resource MUST be included as an additional entry in the ITK-Payload-Bundle"
 - id: GPCM-SD-11
   area: senddocpayload4
-  description: "<code>DocumentReference.created</code> attribute <strong>MUST</strong> contain the date/time when the binary document was created, or if not available, the date/time when the FHIR Message was created."
-  tooltip: "DocumentReference.created attribute MUST contain the date/time when the binary document was created, or if not available, the date/time when the FHIR Message was created."
+  description: "<code>DocumentReference.created</code> attribute <strong>MUST</strong> contain the date/time when the binary document was created, or if not available, the date/time when the FHIR Message was created"
+  tooltip: "DocumentReference.created attribute MUST contain the date/time when the binary document was created, or if not available, the date/time when the FHIR Message was created"
 - id: GPCM-SD-12
   area: senddocpayload4
-  description: "<code>DocumentReference.description</code> attribute <strong>MUST</strong> contain a description of the document, intended for use as an attachment label for the document as it appears in the GP Principal Clinical System workflow user interface."
-  tooltip: "DocumentReference.description attribute MUST contain a description of the document, intended for use as an attachment label for the document as it appears in the GP Principal Clinical System workflow user interface."
+  description: "<code>DocumentReference.description</code> attribute <strong>MUST</strong> contain a description of the document, intended for use as an attachment label for the document as it appears in the GP Principal Clinical System workflow user interface"
+  tooltip: "DocumentReference.description attribute MUST contain a description of the document, intended for use as an attachment label for the document as it appears in the GP Principal Clinical System workflow user interface"
 - id: GPCM-SD-13
   area: senddocpayload4
   description: "<code>DocumentReference.content</code> attribute <strong>MUST</strong> contain a FHIR <a href=\"https://www.hl7.org/fhir/datatypes.html#attachment\">Attachment</a> resource in which the <code>contentType</code> defines the MIME type of the document, and <code>data</code> contains the binary data of the document in base64 encoded format."
   tooltip: "DocumentReference.content attribute MUST contain a FHIR Attachment resource in which the contentType defines the MIME type of the document, and data contains the binary data of the document in base64 encoded format."
 - id: GPCM-SD-14
   area: payload
-  description: "A Task resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> resource <strong>MUST</strong> be present in the payload."
-  tooltip: "A Task resource profiled to GPConnect-Task-1 resource MUST be present in the payload."
+  description: "A Task resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> resource <strong>MUST</strong> be present in the payload"
+  tooltip: "A Task resource profiled to GPConnect-Task-1 resource MUST be present in the payload"
 - id: GPCM-SD-15
   area: payload1
   description: "<code>intent</code> <strong>MUST</strong> contain fixed value <strong><code>plan</code></strong>"
@@ -69,7 +70,7 @@ requirements:
   tooltip: "priority MUST contain fixed value: routine \n\nWhere a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Federated Consultation Report use case is simply the act of synchronising with the registered patient record. When the GP Connect Send Task capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record."
 - id: GPCM-SD-18
   area: payload1
-  description: "<code>description</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  description: "<code>description</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}</code>"
 - id: GPCM-SD-19
   area: payload1
   description: "<code>for</code> <strong>MUST</strong> contain a reference to Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a>"
@@ -96,7 +97,7 @@ requirements:
   description: "The referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code>"
 - id: GPCM-SD-27
   area: payload3
-  description: "Where binary documents are included in the payload in addition to the Federated Consultation Report, the <em>Message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
+  description: "Where binary documents are included in the payload in addition to the Federated Consultation Report, the <em>message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
 - id: GPCM-SD-28
   area: payload4
   description: "As described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain an organization resource describing both the sending organisation (the federated practice) and the receiving organisation (the patient's registered practice)"
@@ -262,3 +263,82 @@ requirements:
 - id: GPCM-SD-82
   area: payload2
   description: "The referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>type</code> element where <code>type.coding.code</code> is set to a fixed value of <code>371531000</code>, <code>type.coding.system</code> is set to a fixed value of <code>https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1</code> and <code>type.coding.display</code> is set to a fixed value <code>Report of clinical encounter</code><br/>"
+- id: GPCM-SD-83
+  area: trigger2
+  description: "<strong>Step 1</strong> - if the patient registration type of the patient record at the appointment hosting practice is Regular (GMS/PMS), meaning, the registered practice care record is already up-to-date, then a message <strong>MUST NOT</strong> be sent"
+- id: GPCM-SD-84
+  area: trigger2
+  description: "<strong>Step 2</strong> - a PDS lookup of the patient <strong>MUST</strong> be performed to determine the ODS code of the registered practice of the patient"
+- id: GPCM-SD-85
+  area: trigger2
+  description: "<strong>Step 3</strong> - the system at the appointment hosting practice determines whether the registered practice is in the same federation as the hosting organisation ODS code using the local federation definition; this check <strong>MUST</strong> pass for the message to be sent, else the message <strong>MUST NOT</strong> be sent "
+- id: GPCM-C-01
+  area: core
+  description: "MESH <strong>MUST</strong> be used as the message transport mechanism"
+  tooltip: MESH MUST be used as the message transport mechanism
+  page: integration_mesh.html  
+- id: GPCM-C-02
+  area: core
+  description: "all FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.5.0"
+  tooltip: All FHIR Messages MUST conform to the ITK3 Message Distribution Standard, v2.5.0
+  page: integration_itk3.html
+- id: GPCM-SD-86
+  area: pdf
+  description: "the provider system <strong>MUST</strong> include all data entered by the clinician at the federated practice into the 'Clinical notes [notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation"
+  tooltip: the provider system MUST include all data entered by the clinician at the federated practice into the 'Clinical notes [notes]' section of the PDF document
+  page: senddocument_fedcon_busreq_pdf.html
+- id: GPCM-SD-87
+  area: pdf
+  description: "data <strong>MUST</strong> be displayed in a format that matches how the consultation is displayed on screen or when printed"
+  tooltip: data MUST be displayed in a format that matches how the consultation is displayed on screen or when printed
+  page: senddocument_fedcon_busreq_pdf.html
+- id: GPCM-SD-88
+  area: pdf
+  description: "the provider system <strong>MUST</strong> include in the message all attachments relating to the consultation"
+  tooltip: the provider system MUST include in the message all attachments relating to the consultation
+  page: senddocument_fedcon_busreq_pdf.html
+- id: GPCM-SD-89
+  area: pdf
+  description: "where the system does not have a concept of a consultation in its architecture, then the provider system <strong>MUST</strong> consider all data asserted about the patient for a specified date as part of the same consultation (this follows the same model as GP2GP)"
+  tooltip: where the system does not have a concept of a consultation in its architecture, then the provider system MUST consider all data asserted about the patient for a specified date as part of the same consultation
+  page: senddocument_fedcon_busreq_pdf.html
+- id: GPCM-SD-90
+  area: pdf
+  description: "the layout and content of the PDF <strong>MUST</strong> conform to the template and logical field model contained in the Layout section below"
+  tooltip: the layout and content of the PDF MUST conform to the template and logical field model contained on the PDF layout page
+  page: senddocument_fedcon_busreq_pdf.html
+- id: GPCM-SD-91
+  area: pdf
+  description: "the version number <strong>MUST</strong> be displayed in the PDF in the relevant field and within the Subject of the MESH .CTL file (version 1 is the original report with each subsequent report that relates to the same consultation incrementing by 1)"
+  tooltip: the version number MUST be displayed in the PDF in the relevant field and within the Subject of the MESH .CTL file
+  page: senddocument_fedcon_busreq_pdf.html
+- id: GPCM-SD-92
+  area: payload2
+  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+- id: GPCM-SD-93
+  area: payload2
+  description: "the <em>message receiver</em> <strong>MUST</strong> make any attachments included with the federated consultation report available to the end user"
+- id: GPCM-SD-94
+  area: error5
+  description: "where a federated consultation report is not successfully received/managed by the message receiver, the sender system <strong>MUST</strong> inform an appropriate person"
+- id: GPCM-SD-95
+  area: error5
+  description: "where either the infrastructure or business acknowledgements, or both, are not received for a federated consultation report, the sender system <strong>MUST</strong> inform an appropriate person"
+- id: GPCM-SD-96
+  area: trigger3
+  description: "the message sender system <strong>MUST</strong> send the federated consultation report a configurable time period after the consultation was created or last update"
+- id: GPCM-SD-97
+  area: trigger3
+  description: "where a consultation is updated within the configurable time period of the last update, the time delay to sending the consultation report <strong>MUST</strong> be from the later update"
+- id: GPCM-SD-98
+  area: trigger3
+  description: "where a consultation is updated after the configurable time period (and therefore the consultation report has already been sent) a new consultation report <strong>MUST</strong> be sent (after the configurable time period)"  
+- id: GPCM-SD-99
+  area: trigger3
+  description: "each GP practice <strong>MUST</strong> be able to set its own a configurable time period"  
+- id: GPCM-SD-100
+  area: trigger3
+  description: "where a GP practice has not set its own configurable time period the value <strong>MUST</strong> default to three hours"  
+- id: "None applicable"
+  area: na
+  description: "None applicable" 
