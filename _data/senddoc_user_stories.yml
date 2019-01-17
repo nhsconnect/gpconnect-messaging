@@ -109,6 +109,5 @@
   sothat: "it is available to support ongoing care of the patient and to review if there are any legal or clinical challenges about the care given."
   sender: "<p><ol type=\"1\"><li>the sender system must retain a copy of every consultation report that is sent</li><li>for every consultation where a consultation report is produced, the sender system must retain a copy of the consultation in the format is was originally recorded</li></ol></p>"
   receiver: "<p>N/A</p>"
-  requirement1: ""
-  requirement2: ""
-  requirement3: ""
+  requirement1: "ITK"
+  requirement2: "Generic FHIR receiver"

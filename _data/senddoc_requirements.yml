@@ -615,4 +615,16 @@ requirements:
   area: na
   description: "None applicable"
   tooltip: "no technical requirements are associated with this user story"
+  page:
+  
+- id: "Generic FHIR receiver"
+  area: na
+  description: "Generic FHIR receiver"
+  tooltip: "requirements delivered by the Generic FHIR receiver"
+  page: 
+  
+- id: "ITK"
+  area: na
+  description: "ITK"
+  tooltip: "requirements delivered by ITK"
   page: 
