@@ -7,6 +7,13 @@ permalink: senddocument_fedcon_overview.html
 summary: "Overview of the use case to send a federated consultation report to the registered practice of a patient."
 ---
 
+## Introduction ##
+
+Federated working is where a group of GP practices work together to deliver common GP services to their patients. So, for example, where a patient cannot get a GP appointment with their registered GP practice, they are offered a GP appointment with another GP practice in the federation.
+
+When a patient is seen by another GP practice it is necessary for information on from that consultation to be sent back to the patient’s registered GP practice. This is so the information can be recorded in the patient’s clinical record and is available during future consultations.
+
+
 ## Supporting federated working patterns ##
 
 One of the main areas of focus for the [GP Connect product as a whole](index.html)  is to support GP practice federated work patterns. 
@@ -16,7 +23,8 @@ Firstly, some terms are defined to provide to provide clarity:
 - a `federation` is a group of GP practices working together within their local area, in some sort of collective legal or organisational entity to deliver services such as out of hours care
 - a `registered practice` is a practice within the federation which at which the patient has a care record of type Regular (GMS/PMS)
 - a `federated practice` is practice within the federation at which the patient does not have a care record of type Regular (GMS/PMS) 
- 
+
+
 ## Federated appointments use case ##
 
 This use case completes the set of capabilities required to fulfil the following workflow:

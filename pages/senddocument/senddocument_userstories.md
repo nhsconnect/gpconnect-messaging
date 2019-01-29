@@ -28,32 +28,37 @@ The purpose of this page is to document the user stories that apply across all o
   </tr>
 </table>
 
-<div>
+
 	<div>	
 		<p><strong>Description</strong></p>
-		<p style="margin-left: 30px"><em>As <strong>{{item.as}}</strong>...</em></p>
-		<p style="margin-left: 30px"><em>I want <strong>{{item.iwant}}</strong>...</em></p>
-		<p style="margin-left: 30px"><em>so that <strong>{{item.sothat}}</strong></em></p>
+		<p style="margin-left: 20px"><em>As <strong>{{item.as}}</strong>...</em></p>
+		<p style="margin-left: 20px"><em>I want <strong>{{item.iwant}}</strong>...</em></p>
+		<p style="margin-left: 20px"><em>so that <strong>{{item.sothat}}</strong></em></p>
 		<br/>
 	</div>
-
 	<div>	
 		<p><strong>Acceptance criteria - sender</strong></p>
 		{{item.sender}}
 		<br/>
 	</div>
-
 	<div>	
 		<p><strong>Acceptance criteria - receiver</strong></p>
 		{{item.receiver}}
-	</div>
-	
+	</div>	
+	<div>	
+		{{item.notes}}
+	</div>	
 	<div class="bs-callout bs-callout-success">
-		<strong>Linked requirements: </strong>{% include requirement.html type=item.requirement1 %} {% include requirement.html type=item.requirement2 %} {% include requirement.html type=item.requirement3 %} {% include requirement.html type=item.requirement4 %} {% include requirement.html type=item.requirement5 %} {% include requirement.html type=item.requirement6 %}
+		<p><strong>Linked requirements</strong></p>
+		<p style="font-size:12px">{% include requirements.html type=item.requirements %} </p>
 	</div>
-
-	<hr style="width:100%">
+	<div class="bs-callout bs-callout-primary">
+		<p><strong>Supporting technical requirements</strong></p>
+		<p style="font-size:12px">{% include requirements.html type=item.technical %} </p>
+	</div>
 	
-</div>
+	<hr style="width:100%">
+		
+
 
 {% endfor %}

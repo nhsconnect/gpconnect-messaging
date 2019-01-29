@@ -11,8 +11,8 @@ summary: "Use of ITK3 to support GP Connect Messaging"
 
 <table class="requirement-box">
   <tr>
-    <td><b>GPCM-C-2</b></td>
-    <td>All FHIR Messages <b>MUST</b> conform to the ITK3 Message Distribution Standard, v2.5.0</td>
+    <td><strong>GPCM-C-2</strong></td>
+    <td>All FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.5.0</td>
   </tr>
 </table>
 

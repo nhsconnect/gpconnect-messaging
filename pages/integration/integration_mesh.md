@@ -11,8 +11,8 @@ summary: "Overview of the role of MESH in GP Connect messaging"
 
 <table class="requirement-box">
   <tr>
-    <td><b>GPCM-C-1</b></td>
-    <td>MESH <b>MUST</b> be used as the message transport mechanism</td>
+    <td><strong>GPCM-C-1</strong></td>
+    <td>MESH <strong>MUST</strong> be used as the message transport mechanism</td>
   </tr>
 </table>
 

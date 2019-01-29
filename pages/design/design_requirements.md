@@ -14,7 +14,7 @@ Where specific mandated requirements exist in the GP Connect Messaging specifica
 
 <table class="requirement-box">
   <tr>
-    <td><b>ID</b></td>
+    <td><strong>ID</strong></td>
     <td>Requirement description</td>
   </tr>
 </table> 
