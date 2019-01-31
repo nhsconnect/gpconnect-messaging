@@ -84,8 +84,8 @@
   sender: "<ol type=\"1\"><li>the clinician must be able to set a consultation as confidential (or the clinical system’s equivalent)</li><li>the consultation record held at the federated GP practice is recorded as confidential (or equivalent) and its access restricted to the clinician who made the record</li><li>where a consultation has been marked as confidential, the message is still sent to the patient’s GP practice stating the consultation took place; it will contain no information on what took place in the consultation<ol type=\"i\"><li>information on the patient and when the consultation took place are still included</li><li>information on the clinician and where the consultation took place are not included</li><li>the clinical notes are replaced by the text 'The details of this consultation have been set as confidential'</li></ol></li><li>confidentially is applied on a per consultation basis. A request for confidentiality for one consultation will have no impact on the messages sent for any other consultation</li></ol>"
   receiver: "N/A"
   notes: <br/><p><strong>Notes</strong></p><p>This is the equivalent of a clinician setting a consultation as confidential and restricting the members of the GP practice who can view the details</p>
-  requirements: "None"
-  technical: "None"
+  requirements: "GPCM-SD-102"
+  technical: "GPCM-SD-018,GPCM-SD-092"
   
 - id: GPC-SD09
   title: "Local record retention"

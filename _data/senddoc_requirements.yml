@@ -103,7 +103,7 @@ requirements:
 
 - id: GPCM-SD-018
   area: payload1
-  description: "<code>description</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}</code>"
+  description: "<code>description</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*, Version {Version Number}</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
   tooltip: "'description' MUST contain a summary of request in the following format: Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}"
   page: senddocument_fedcon_payload.html
 
@@ -559,7 +559,7 @@ requirements:
 
 - id: GPCM-SD-092
   area: payload2
-  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
   tooltip: "when displaying the federated consultation report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_payload.html
 
@@ -615,6 +615,12 @@ requirements:
   area: pdf
   description: "version 1 is the original report, each subsequent report that relates to the same consultation <strong>MUST</strong> increment by 1"
   tooltip: "version 1 is the original report, each subsequent report that relates to the same consultation MUST increment by 1"
+  page: senddocument_fedcon_busreq_pdf.html
+
+- id: GPCM-SD-102
+  area: pdf
+  description: "if the patient has requested that the consultation is confidential then following data items <strong>MUST NOT</strong> be send in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
+  tooltip: "if the patient has requested that the consultation is confidential then following data items MUST NOT be send in the PDF: Clinical Notes, Clinician, Surgery Tel No., Surgery Email, Place of consultation"
   page: senddocument_fedcon_busreq_pdf.html
   
 - id: "None"
