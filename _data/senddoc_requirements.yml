@@ -133,7 +133,7 @@ requirements:
 
 - id: GPCM-SD-023
   area: payload1
-  description: "<code>owner</code> <strong>MUST</strong> contain a reference to a registered practice Organization resource profiled to <a href=\"[https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
+  description: "<code>owner</code> <strong>MUST</strong> contain a reference to a registered practice Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
   tooltip: "'owner' MUST contain a reference to a registered practice Organization resource profiled to CareConnect-Organization-1"
   page: senddocument_fedcon_payload.html
 
@@ -619,7 +619,7 @@ requirements:
 
 - id: GPCM-SD-102
   area: pdf
-  description: "if the patient has requested that the consultation is confidential then following data items <strong>MUST NOT</strong> be send in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
+  description: "if the patient has requested that the consultation is confidential then following data items <strong>MUST NOT</strong> be sent in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
   tooltip: "if the patient has requested that the consultation is confidential then following data items MUST NOT be send in the PDF: Clinical Notes, Clinician, Surgery Tel No., Surgery Email, Place of consultation"
   page: senddocument_fedcon_busreq_pdf.html
   
