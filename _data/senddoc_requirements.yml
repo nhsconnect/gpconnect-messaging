@@ -619,7 +619,7 @@ requirements:
 
 - id: GPCM-SD-102
   area: pdf
-  description: "if the patient has requested that the consultation is confidential then following data items <strong>MUST NOT</strong> be sent in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
+  description: "if the patient has requested that the consultation is confidential then the following data items <strong>MUST NOT</strong> be sent in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
   tooltip: "if the patient has requested that the consultation is confidential then following data items MUST NOT be send in the PDF: Clinical Notes, Clinician, Surgery Tel No., Surgery Email, Place of consultation"
   page: senddocument_fedcon_busreq_pdf.html
   
