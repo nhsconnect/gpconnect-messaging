@@ -355,7 +355,7 @@ requirements:
 
 - id: GPCM-SD-060
   area: mesh2
-  description: "<code>To_DTS</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox"
+  description: "<code>To_DTS</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_'. This enables automatic routing of the message to the registered GP MESH mailbox"
   tooltip: "'To_DTS' MUST contain the NHS Number, DOB and Surname of the patient delimited by the underscore character '_'"
   page: senddocument_fedcon_mesh.html
 
@@ -373,7 +373,7 @@ requirements:
 
 - id: GPCM-SD-063
   area: mesh3
-  description: "<code>Mex-To</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox"
+  description: "<code>Mex-To</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_'. This enables automatic routing of the message to the registered GP MESH mailbox"
   tooltip: "'Mex-To' MUST contain the NHS Number, DOB and Surname of the patient delimited by the underscore character '_'"
   page: senddocument_fedcon_mesh.html
 
