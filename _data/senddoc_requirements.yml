@@ -121,7 +121,7 @@ requirements:
 
 - id: GPCM-SD-021
   area: payload1
-  description: "<code>requester.agent</code> <strong>MUST</strong> contain a reference to a federated practice Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-\">CareConnect-Practitioner-1</a>"
+  description: "<code>requester.agent</code> <strong>MUST</strong> contain a reference to a federated practice Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a>"
   tooltip: "'requester.agent' MUST contain a reference to a federated practice Practitioner resource profiled to CareConnect-Practitioner-1"
   page: senddocument_fedcon_payload.html
 
@@ -481,7 +481,7 @@ requirements:
 
 - id: GPCM-SD-081
   area: payload2
-  description: "the referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain an <code>author</code> element containing a reference to a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-\">CareConnect-Practitioner-1</a> resource. <br/> This is the same resource referred to by <code>task.requester.agent</code>"
+  description: "the referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain an <code>author</code> element containing a reference to a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> resource. <br/> This is the same resource referred to by <code>task.requester.agent</code>"
   tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain an 'author' element containing a reference to a CareConnect-Practitioner-1 resource"
   page: senddocument_fedcon_payload.html
 
