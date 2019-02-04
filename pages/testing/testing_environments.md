@@ -17,4 +17,4 @@ More details on opentest and request access can be found here - [https://digital
 ## Path-to-Live Formal Development and Integration Environments (accessible using N3/HSCN) ##
 The formal path-to-live environments are hosted on N3/HSCN and as such the Information Governance prerequisites are required before use, as this is a predicate to connecting to N3/HSCN.
 
-More details on the environments can be found here (N3/HSCN link required)- [https://digital.nhs.uk/services/solution-assurance#contact-details](https://digital.nhs.uk/services/solution-assurance#contact-details).
+More details on the environments can be found here (N3/HSCN link required)- [http://www.assurancesupport.digital.nhs.uk](http://www.assurancesupport.digital.nhs.uk).
