@@ -50,11 +50,11 @@ The purpose of this page is to document the user stories that apply across all o
 	</div>	
 	<div class="bs-callout bs-callout-success">
 		<p><strong>Linked requirements</strong></p>
-		<p style="font-size:12px">{% include requirements.html type=item.requirements %} </p>
+		<p style="font-size:14px">{% include requirements.html type=item.requirements %} </p>
 	</div>
 	<div class="bs-callout bs-callout-primary">
 		<p><strong>Supporting technical requirements</strong></p>
-		<p style="font-size:12px">{% include requirements.html type=item.technical %} </p>
+		<p style="font-size:14px">{% include requirements.html type=item.technical %} </p>
 	</div>
 	
 	<hr style="width:100%">
