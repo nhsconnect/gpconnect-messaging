@@ -14,29 +14,29 @@ Changing fonts can be useful for you if you have low vision, and need larger fon
 
 #### Changing fonts in Internet Explorer
 
-- If you are using Internet Explorer on a PC, select the View menu at the top of your window
-- To change font size, scroll down and select the Text size option
-- Alternatively, if you have a wheel mouse, hold down the CTRL key and use the wheel to interactively scale the font size
-- To ignore font and background colours choose the Internet options from the Tools menu at the top of the window
-- On the general tab of the window that appears, click the Accessibility button
-- This takes you to a menu where you can choose to ignore the way the page is formatted
-- Then return to the Internet options menu, and use the Colours and Fonts buttons to set your preferences
+- if you are using Internet Explorer on a PC, select the View menu at the top of your window
+- to change font size, scroll down and select the Text size option
+- alternatively, if you have a wheel mouse, hold down the CTRL key and use the wheel to interactively scale the font size
+- to ignore font and background colours choose the Internet options from the Tools menu at the top of the window
+- on the general tab of the window that appears, click the Accessibility button
+- this takes you to a menu where you can choose to ignore the way the page is formatted
+- then return to the Internet options menu, and use the Colours and Fonts buttons to set your preferences
 
 #### Changing fonts in Firefox
 
-- Click on 'View' on the menubar
-- Then select 'Zoom'
-- Select 'Zoom In' or 'Zoom Out'
-- Alternatively, if you have a wheel mouse, hold down the CTRL key and use the wheel to interactively scale the font size
-- Keyboard shortcuts of CTRL plus - and CTRL plus + are also available
-- To change the font style, size or colour, choose 'Tools', 'Options' and then the 'Content' tab
+- click on 'View' on the menubar
+- then select 'Zoom'
+- select 'Zoom In' or 'Zoom Out'
+- alternatively, if you have a wheel mouse, hold down the CTRL key and use the wheel to interactively scale the font size
+- keyboard shortcuts of CTRL plus - and CTRL plus + are also available
+- to change the font style, size or colour, choose 'Tools', 'Options' and then the 'Content' tab
 
 #### Changing fonts in Chrome
 
-- From the browser, select Preferences from the Edit menu at the top of the window
-- Click on Web content and uncheck the Show style sheets option
-- Return to the list of preferences and choose Web browser
-- Click on Language/Fonts and choose the size you need
+- from the browser, select Preferences from the Edit menu at the top of the window
+- click on Web content and uncheck the Show style sheets option
+- return to the list of preferences and choose Web browser
+- click on Language/Fonts and choose the size you need
 
 ## Keyboard navigation
 

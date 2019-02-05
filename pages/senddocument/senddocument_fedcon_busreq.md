@@ -1,34 +1,31 @@
 ---
-title: Send Federated Consultation Report - Business Requirements
-keywords: use_case
-tags: [use_case, ]
+title: Business requirements
+keywords: use-case, send-document, messaging
+tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_busreq.html
 summary: "Business requirements for Send Federated Consultation Report use case"
 ---
 
+## User stories and PDF layout ##
 
-### User Stories and PDF Layout ###
+The full set of business requirements that need to be met to support the sending of a Consultation Report to a patient’s registered GP practice after they have been seen by another GP practice in the same federation, can be found [here](senddocument_userstories.html).
 
-The spreadsheet available for download below contains the full set of business requirements that need to be met to support the sending of a Consultation Report to a patient’s registered GP practice after they have been seen by another GP practice in the same federation.
+The requirements are described as a set of user stories with separate acceptance criteria for the provider and consumer systems, where applicable.
 
-The requirements are described as a set of user stories with separate acceptance criteria for the provider and consumer systems. 
+The PDF layout defines the document layout and the data in that document. The PDF layout and field descriptions can be found [here](senddocument_fedcon_busreq_pdf.html).
 
-The PDF Layout defines the document layout and the data in that document. 
-
-{% include download.html content=" [Business Requirements including PDF layout](downloads/BusinessRequirements.xlsx)." %}
-
-### Business Process ###
+## Business process ##
 
 The business process defines how the Send Federated Consultation Report functionality will be used in a clinical context. It contains the following key components:
 
-- Process Description
-- Process Map
-- Process Steps
+- process description
+- process map
+- process steps
 
-{% include download.html content="Word document defining the [Send Federated Consultation Report Process](downloads/SendFederatedConsultationReportProcessv1.3.docx)." %}
+Further detail about the business process can be found [here](sendmessage_process.html).  
 
-### Clinical Engagement ###
+## Clinical engagement ##
 
 To help ensure that the functionality being developed will be able to support GP practices, GP Connect has engaged with a range of GP practice staff to get an understanding of how that data may be used and what is required to support that use. 
 

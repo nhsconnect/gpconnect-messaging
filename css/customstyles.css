@@ -696,7 +696,6 @@ span.otherProgrammingLanguages {
 
 a[data-toggle="tooltip"] {
     color: #649345;
-    font-style: italic;
     cursor: default;
 }
 
@@ -1285,7 +1284,7 @@ table.resource-attributes tr td {
 }
 
 .requirement-box tr td {
-   background-color: #fffffa;
+   background-color: #fafafa;
 	border-top: 1px solid #dddddd;
 	border-left: 1px solid #dddddd;
 	border-right: 1px solid #dddddd;		
@@ -1294,7 +1293,7 @@ table.resource-attributes tr td {
 
 .requirement-box tr td:nth-child(1)
 {
-	background-color: #fffffa;
+	background-color: #fafafa;
 	border-top: 1px solid #dddddd;	
     border-left: 4px solid #aaaaaa;
 	border-bottom: 1px solid #dddddd;	
@@ -1317,4 +1316,12 @@ body ul, body ol {
 body ol {
     list-style: decimal;
 }
+
+body ol ol {
+    list-style: lower-roman;
+}
 /* end fix */
+
+.newlines {
+	white-space: pre-wrap; 
+}
