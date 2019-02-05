@@ -1,39 +1,23 @@
 ---
-title: Send Message - Send Federated Consultation Report Process Document
-keywords: 
-tags: [messaging]
+title: Process map
+keywords: use-case
+tags: [use-case]
 sidebar: senddocument_sidebar
 permalink: sendmessage_process.html
-summary: "Send Federated Consultation Report Process Document"
+summary: "Process map for Send Federated Consultation Report"
 ---
 
-## Introduction ##
+## Purpose ##
 
-GP Connect aims to support better clinical care by opening up information and data held within GP Practice IT systems for use across health and social care. The GP Connect vision will be achieved by standardising integration and simplifying the operating model, making medical information about patients available to the right clinician, across care settings. 
-
-Health and care data will be connected through:
-- access to the detailed patient record of every practice, at the point of care
-- quicker and more efficient appointment management between practices
-- the ability to book an appointment at a practice from another care setting
-
-GP Connect has initially focused on delivering HTTP FHIR® APIs. An additional set of capabilities, under the badge GP Connect Messaging, are focused on enabling updates to GP practice systems.
-Send Document is one such capability being developed as part of GP Connect Messaging. It provides a simple and standardised means of sending a document, such as a PDF, an image, or HTML file to a GP practice system. It uses ITK3, MESH and Spine integration to deliver the message.
-
-Send Federated Consultation Report is a specific use case for Send Document, arising when a patient attends a GP appointment outside their registered GP practice (for example an extended hours appointment in a federation). It will allow a clinician to send the details of that consultation back to the registered practice to be added to the patient GP record.
-In the first phase of the project these details will be sent as a PDF (and any associated attachments that relate to the consultation) which will arrive in the workflow of the patient’s registered GP practice.
-
-
-## Purpose of Document ##
-
-This document will describe the business process for the Send Federated Consultation Report use case in order to help develop the business requirements.
+This page describes the business process for the Send Federated Consultation Report use case in order to fully understand the business requirements.
  
 ## Process ##
 
 This process describes the steps/actions involved in the Federated Consultation Report use case where a consultation is written within the provider system and is sent to the consumer system at the patient’s registered GP practice.
 
 Two common requirements must be met for this process to proceed:
-- The clinician writes a consultation for a patient; and
-- The patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice within the same federation (or a group of GP practices working together to deliver a service).
+- the clinician writes a consultation for a patient; and
+- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice within the same federation (or a group of GP practices working together to deliver a service)
 
 Federated consultation reports will be sent three hours (locally configurable) after the consultation is saved and committed to the patient’s clinical record.
  
@@ -44,11 +28,12 @@ Where the consultation notes are edited after the report has already been sent, 
 Additional reports are clearly marked with a version number. 
  
  
-## Process map ##
+### Process map ###
 
-<img src="images/senddocument/sendmessage_process.jpg"/>  
+![Send Federated Consultation Report process map](images/senddocument/sendmessage_process.jpg "Send Federated Consultation Report process map") 
+
  
-## Steps ##
+### Steps ###
 
 **1. Write consultation**
 
@@ -75,11 +60,11 @@ If the user makes changes to the consultation notes in the patient record within
 Otherwise, the process moves on to step 6.
 
 There may be many reasons why the consultation is not completed when initially saved: 
-- The clinician may not have time to finish the consultation notes and must continue with treating other patients
-- The clinician may wish to ask a colleague for advice
-- The clinician may be offsite and will finish writing the consultation notes when they have returned to the GP practice
-- The results of a test may be required before the clinician can complete their notes
-- The clinician may have forgotten to add some important information when originally writing the consultation notes
+- the clinician may not have time to finish the consultation notes and must continue with treating other patients
+- the clinician may wish to ask a colleague for advice
+- the clinician may be off-site and will finish writing the consultation notes when they have returned to the GP practice
+- the results of a test may be required before the clinician can complete their notes
+- the clinician may have forgotten to add some important information when originally writing the consultation notes
 
 **6. Generate PDF and metadata**
 
@@ -89,12 +74,12 @@ The ITK3 FHIR Message is generated, which must include:
 - FHIR MessageHeader
 - FHIR STU3 task
 - PDF file, its contents and metadata
-- All attachments/documents recorded with the consultation
+- all attachments/documents recorded with the consultation
 
 Further details on the message content can be found at:
 [Send Document Payload](senddocument_payload.html)
 
-When the PDF is generated, the provider system checks for previous versions of the PDF linked to this consultation. A previous version will exist if the clinician updates the consultation more than three hours after it was initially saved and committed. If there are no previous versions, the PDF is designated as [version 1]. If there are previous versions, the PDF is designated [version 2/3/4…n]. The version number is displayed in the title of the PDF (“Federated Consultation Report Version x”) and version field within the document itself. 
+When the PDF is generated, the provider system checks for previous versions of the PDF linked to this consultation. A previous version will exist if the clinician updates the consultation more than three hours after it was initially saved and committed. If there are no previous versions, the PDF is designated as [version 1]. If there are previous versions, the PDF is designated [version 2/3/4…n]. The version number is displayed in the title of the PDF ("Federated Consultation Report Version x") and version field within the document itself. 
 
 **7. Send message via MESH**
 
@@ -116,7 +101,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **11. Receive infrastructure acknowledgement**
 
-The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable timeframe (to be defined by system supplier), the provider system notifies an appropriate end user.
+The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable time-frame (to be defined by system supplier), the provider system notifies an appropriate end user.
 
 **12.	Add message into workflow**
 
@@ -130,7 +115,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **14. Receive business acknowledgement**
 
-The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable timeframe (configurable), the provider system notifies an appropriate end user.
+The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable time-frame (configurable), the provider system notifies an appropriate end user.
 
 
 

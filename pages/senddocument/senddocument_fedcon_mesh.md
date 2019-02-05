@@ -1,7 +1,7 @@
 ---
 title: MESH message configuration
 keywords: document, mesh
-tags: [messaging, mesh, send_document]
+tags: [messaging, mesh, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_mesh.html
 summary: "Federated consultation - MESH configuration"
@@ -12,10 +12,14 @@ Please refer to [Integration to MESH](integration_mesh.html) for an introduction
 ## MESH message routing ##
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'mesh' %}
   <tr>
-    <td>GPCM-SD-56</td>
-    <td>All messages sent through this use case <b>MUST</b> use MESH automated message routing in order to ensure that the message is routed correctly to the registered practice of the patient.</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 Please refer to [Message routing to registered practice](integration_mesh.html#message-routing-to-registered-practice) for details of how to use this facility.
@@ -23,14 +27,14 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
 ## Workflow groups and Workflow ID ##
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'mesh1' %}
   <tr>
-    <td>GPCM-SD-57</td>
-    <td>Each instance of a Send Federated Consultation Report message <b>MUST</b> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code></td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
-  <tr>
-    <td>GPCM-SD-58</td>
-    <td>Each instance of an acknowledgement message generated as a result of receipt of a Send Federated Consultation Report message <b>MUST</b> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code></td>
-  </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 ### MESH client configuration 
@@ -38,18 +42,14 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
 When using the MESH client to send a message to the MESH server, the `.CTL` file will contain the following metadata about the message:
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'mesh2' %}
   <tr>
-    <td>GPCM-SD-59</td>
-    <td><code>From_DTS</code> <b>MUST</b> contain the MESH mailbox ID of the sender of the message – in this case the federated GP practice.</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
-  <tr>
-    <td>GPCM-SD-60</td>
-    <td><code>To_DTS</code> <b>MUST</b> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox.</td>
-  </tr>
-  <tr>
-    <td>GPCM-SD-61</td>
-    <td><code>Subject</code> <b>MUST</b> contain To contain text in the following format:<br/><br/><code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code></td>
-  </tr>
+  {% endif %}
+  {% endfor %}
 </table>
 
 
@@ -80,16 +80,12 @@ An example `.CTL` file is given below for a Federated Consultation Report messag
 Whe using the [MESH API](https://meshapi.docs.apiary.io/) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
 
 <table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'mesh3' %}
   <tr>
-    <td>GPCM-SD-62</td>
-    <td><code>Mex-From</code>  <b>MUST</b> contain  the MESH mailbox ID of the sender of the message – in this case the federated GP practice.</td>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
   </tr>
-  <tr>
-    <td>GPCM-SD-63</td>
-    <td><code>Mex-To</code> <b>MUST</b> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_’. This enables automatic routing of the message to the registered GP MESH mailbox.</td>
-  </tr>
-  <tr>
-    <td>GPCM-SD-64</td>
-    <td><code>Mex-Subject</code> <b>MUST</b> contain To contain text in the following format:<br/><br/><code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code></td>
-  </tr>
+  {% endif %}
+  {% endfor %}
 </table>

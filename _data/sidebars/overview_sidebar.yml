@@ -23,6 +23,9 @@ entries:
           output: web
         - title: 1.1.0
           url: /overview_release_notes_1_1_0.html
+          output: web
+        - title: 1.2.0
+          url: /overview_release_notes_1_2_0.html
           output: web          
  
   - title: Design approach
@@ -46,10 +49,10 @@ entries:
     - title: Send Document
       url: /senddocument.html
       output: web
-    - title: <b class="capability-not-available">Send Task</b>
+    - title: <strong class="capability-not-available">Send Task</strong>
       url: /sendtask.html
       output: web
-    - title: <b class="capability-not-available">Send Update</b>
+    - title: <strong class="capability-not-available">Send Update</strong>
       url: /sendupdate.html
       output: web
 
@@ -90,26 +93,26 @@ entries:
       - title: External links
         output: web
         subfolderitems:    
-        - title: GPC  - FHIR&reg APIs
-          external_url: https://nhsconnect.github.io/gpconnect/
+        - title: GPC  - FHIR&reg; APIs
+          url: https:&#47;&#47;nhsconnect.github.io&#47;gpconnect
           output: web
         - title: GPC Messaging repository
-          external_url: https://github.com/nhsconnect/gpconnect-messaging
+          url: https:&#47;&#47;github.com&#47;nhsconnect&#47;gpconnect-messaging
           output: web
         - title: GPC NHS Digital
-          external_url: https://digital.nhs.uk/article/1275/GP-Connect
+          url: https:&#47;&#47;digital.nhs.uk&#47;services&#47;gp-connect
           output: web
         - title: GPC Developer Network
-          external_url: http://developer.nhs.uk/library/interoperability/gp-connect/
+          url: https:&#47;&#47;developer.nhs.uk&#47;library&#47;interoperability&#47;gp-connect
           output: web
         - title: MESH
-          external_url: https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh
+          url: https:&#47;&#47;digital.nhs.uk&#47;services&#47;message-exchange-for-social-care-and-health-mesh
           output: web
         - title: MESH API
-          external_url: https://meshapi.docs.apiary.io/#
+          url: https:&#47;&#47;meshapi.docs.apiary.io&#47;
           output: web
         - title: ITK3
-          external_url: https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/
+          url: https:&#47;&#47;nhsconnect.github.io&#47;ITK3-FHIR-Messaging-Distribution
           output: web
 
       - title: Tags

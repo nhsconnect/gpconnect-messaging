@@ -11,8 +11,8 @@ summary: "Use of ITK3 to support GP Connect Messaging"
 
 <table class="requirement-box">
   <tr>
-    <td><b>GPCM-C-2</b></td>
-    <td>All FHIR Messages <b>MUST</b> conform to the ITK3 Message Distribution Standard, v2.5.0</td>
+    <td><strong>GPCM-C-2</strong></td>
+    <td>All FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.5.0</td>
   </tr>
 </table>
 
@@ -32,7 +32,7 @@ This extension of the FHIR messaging framework provides some messaging options s
 
 Please refer to the [messaging capability](senddocument.html) and [messaging use case](senddocument_fedcon_overview.html) pages for details of which of these options is mandated or recommended for the particular message being created.
 
-### ITK3 Response processing ###
+### ITK3 response processing ###
 
 Where the message sender requests an ITK3 acknowledgement (known as ITK3 Response), the sending system is responsible for processing the received acknowledgement and acting accordingly.
 

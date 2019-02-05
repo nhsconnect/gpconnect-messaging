@@ -8,15 +8,15 @@ summary: "Glossary of terms used by the GP Connect Messaging specification"
 toc: false
 ---
 
-<div>
-{% assign gs = site.data.glossary | sort:[0] %}
-{% for kv in gs %}
-<dl>
-  <dt>{{ kv[0] }}</dt>
-  <dd>{{ kv[1] }}</dd>
-</dl>
+{% assign gloss = site.data.glossary | sort:'title' %}
+{% for item in gloss %}
+
+### {{ item.title }} ###
+
+<p> {{ item.value }} </p>
+ {{ item.html }} 
+
 {% endfor %}
-</div>
 
 
 

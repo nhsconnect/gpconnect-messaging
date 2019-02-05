@@ -1,0 +1,110 @@
+- id: GPC-SD01
+  title: "Send report for correct patient"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician at the federated practice"
+  iwant: "to send a document containing a patient's consultation notes  when the patient is registered at another practice within my GP federation"
+  sothat: "the patient's medical record is kept up to date with a full treatment history."
+  sender: "<ol type=\"1\"><li>the sender system must send a federated consultation report when the patient in question is registered at another GP practice within the federation (or group of GP practices working together to deliver a service)<ol type=\"i\"><li>the sender system must follow the method stated in the specification to determine whether a patient is registered at another GP practice within the same federation. Details can be found <a href=\"senddocument_fedcon_trigger.html#defining-whether-message-should-be-sent\">here</a></li><li>if the sender system determines the registered practice is outside the GP federation (or group of GP practices), no federated consultation report is sent and usual business processes should be followed</li></ol></li><li>where the sender system supports an alternative method for communicating the consultation information back to the patient's registered GP practice, this method may be used in the place of GP Connect Messaging (based on local agreement)<ol type=\"i\"><li>where an alternative method is used, the GP Connect Messaging requirements do not apply</li></ol></li></ol>"
+  receiver: "N/A"
+  requirements: GPCM-SD-083,GPCM-SD-084,GPCM-SD-085
+  technical: GPCM-SD-001,GPCM-SD-002,GPCM-SD-003,GPCM-SD-004,GPCM-SD-005,GPCM-SD-006,GPCM-SD-007,GPCM-SD-008,GPCM-SD-009,GPCM-SD-010,GPCM-SD-011,GPCM-SD-012,GPCM-SD-013,GPCM-SD-014,GPCM-SD-015,GPCM-SD-016,GPCM-SD-017,GPCM-SD-018,GPCM-SD-019,GPCM-SD-020,GPCM-SD-021,GPCM-SD-022,GPCM-SD-023,GPCM-SD-024,GPCM-SD-025,GPCM-SD-026,GPCM-SD-078,GPCM-SD-079,GPCM-SD-080,GPCM-SD-081,GPCM-SD-082,GPCM-SD-092,GPCM-SD-093,GPCM-SD-027,GPCM-SD-028,GPCM-SD-029,GPCM-SD-030,GPCM-SD-031,GPCM-SD-032,GPCM-SD-033,GPCM-SD-034,GPCM-SD-035,GPCM-SD-036,GPCM-SD-037,GPCM-SD-038
+
+- id: GPC-SD02
+  title: "Routing the report to the correct practice"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician"
+  iwant: "the federated consultation report to be routed to the patient's registered practice"
+  sothat: "the patient's medical record is kept up to date with a full history."
+  sender: "<ol type=\"1\"><li>all federated consultation reports will use MESH automated message routing in order to ensure that the message is routed correctly to the registered practice of the patient. It is not necessary for the sender system to specify a destination MESH mailbox ID</li><li>the sender system must specify the patient's NHS Number, Surname and Date of Birth in the message header and use these to populate the Mex-To HTTP header in the MESH endpoint lookup service</li><li>the sender system must use the allocated MESH Workflow ID associated solely with the GP Connect Send Document capability</li></ol>"
+  receiver: "<ol type=\"1\"><li>where the message received is for a patient who is not registered at the GP practice, the receiver system must send a response back to the sending GP practice</li><li>the receiver system must use the allocated MESH Workflow ID associated solely with the GP Connect Send Document capability</li></ol>"
+  requirements: GPCM-C-01,GPCM-SD-056,GPCM-SD-018,GPCM-SD-057,GPCM-C-02,GPCM-SD-058
+  technical: GPCM-SD-039,GPCM-SD-040,GPCM-SD-041,GPCM-SD-042,GPCM-SD-043,GPCM-SD-044,GPCM-SD-045,GPCM-SD-046,GPCM-SD-047,GPCM-SD-048,GPCM-SD-049,GPCM-SD-050,GPCM-SD-051,GPCM-SD-052,GPCM-SD-053,GPCM-SD-054,GPCM-SD-055,GPCM-SD-059,GPCM-SD-060,GPCM-SD-061,GPCM-SD-062,GPCM-SD-063,GPCM-SD-064
+  
+- id: GPC-SD03
+  title: "Generate PDF and associated metadata"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician"
+  iwant: "a full and complete record of the consultation to be sent and the data entered in to the local record to exactly match what is received at the patient's registered GP practice"
+  sothat: "the patient's medical record is kept up to date with a full history."
+  sender: "<ol type=\"1\"><li>the sender system must include all data entered by the clinician at the federated practice into the 'Clinical notes [notes]' section of the PDF document; this includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation</li><li>the sender system must include in the message all attachments relating to the consultation</li><li>where the system does not have a concept of a consultation in its architecture, then the sender system will consider all data asserted about the patient for a specified date as part of the same consultation (this follows the same model as GP2GP)</li><li>the layout and content of the PDF must conform to the template and logical field model contained within this requirements catalogue</li><li>the version number must be displayed in the PDF in the relevant field and within the Subject of the MESH .CTL file<ol type=\"i\"><li>version 1 is the original report with each subsequent report that relates to the same consultation incrementing by 1</li></ol></li></ol>"
+  receiver: "N/A"
+  requirements: GPCM-SD-086,GPCM-SD-087,GPCM-SD-088,GPCM-SD-089,GPCM-SD-090,GPCM-SD-091
+  technical: GPCM-SD-024,GPCM-SD-025,GPCM-SD-026,GPCM-SD-027,GPCM-SD-078,GPCM-SD-080,GPCM-SD-081,GPCM-SD-082
+
+- id: GPC-SD04
+  title: "Receiving the federated consultation report"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a member of staff at the registered practice"
+  iwant: "a full and complete report of our patient's consultation when they are receiving care at another practice in our GP federation"
+  sothat: "the patient's medical record is kept up to date with a full history."
+  sender: "N/A"
+  receiver: "<ol type=\"1\"><li>the receiver system must route federated consultation reports into the practice workflow and display it as a task</li><li>when displaying the federated consultation report in the practice workflow/task list, the receiver system must display the Subject from the MESH .CTL file: \"Federated consultation report for {patient name}, NHS Number {NHS Number}, seen at {Practice name}, {ODS Code}, Version {Version Number}\"</li><li>the receiver system must display all data in the same form as supplied by the sender system</li><li>the receiver system must make any attachments included with the federated consultation report available to the end user</li></ol>"
+  requirements:  GPCM-SD-027,GPCM-SD-090,GPCM-SD-093
+  technical: GPCM-SD-092
+  
+- id: GPC-SD05
+  title: "Alert staff of errors"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a member of the admin staff at the federated practice"
+  iwant: "to be informed when a federated consultation report is not sent successfully"
+  sothat: "I can take appropriate measures to get the data to the patient's registered practice."
+  sender: "<ol type=\"1\"><li>where a federated consultation report is not successfully received/managed by the receiver system, the sender system must inform an appropriate person</li><li>where either the infrastructure or business acknowledgements, or both, are not received for a federated consultation report, the sender system must inform an appropriate person</li></ol>"
+  receiver: "<ol type=\"1\"><li>the receiver system must return an error code when the processing of the message is unsuccessful</li></ol>"
+  requirements: GPCM-SD-094,GPCM-SD-095,GPCM-SD-066
+  technical: GPCM-SD-065,GPCM-SD-066,GPCM-SD-067,GPCM-SD-068,GPCM-SD-069,GPCM-SD-070,GPCM-SD-071,GPCM-SD-072,GPCM-SD-073,GPCM-SD-074,GPCM-SD-075
+  
+- id: GPC-SD06
+  title: "Report version number"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician at the receiving GP practice"
+  iwant: "to know what version/iteration of the PDF document has been received"
+  sothat: "I am informed of updates to previous federated consultation reports and to understand that there are earlier versions that can be discarded/updated."
+  sender: "<ol type=\"1\"><li>the sender system must identify if there are multiple federated consultation report documents sent for a specific consultation and patient. The version number must be displayed within the relevant section of the PDF document and in the subject of the MESH .CTL file in the format \"Federated consultation report for {patient name}, NHS Number {NHS Number}, seen at {Practice code}, {ODS Code}, Version {Version Number}\"<ol type=\"i\"><li>version 1 is the original report with each subsequent report that relates to the same consultation incrementing by 1</li></ol></li></ol>"
+  receiver: "<ol type=\"1\"><li>when displaying the federated consultation report in the practice workflow/task list, the receiving system must display the Subject of the MESH .CTL file in the format \"Federated consultation report for {patient name}, NHS Number {NHS Number}, seen at {Practice code}, {ODS Code}, Version {Version Number}\"</li></ol>"
+  requirements: GPCM-SD-018,GPCM-SD-091,GPCM-SD-092
+  technical: GPCM-SD-098
+  
+- id: GPC-SD07
+  title: "Send federated consultation report"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "the authoring clinician"
+  iwant: "the system to automate the process of generating and sending the federated consultation report to the registered practice"
+  sothat: "the federated consultation report document is sent for 100% of federated consultations."
+  sender: "<ol type=\"1\"><li>the sender system must send the federated consultation report a configurable time period after the consultation was created or last updated<ol type=\"i\"><li>where a consultation is updated within the configurable time period of the last update, the time delay to sending the consultation report will be from the later update</li><li>where a consultation is updated after the configurable time period (and therefore the consultation report has already been sent) a new consultation report will be sent (after the configurable time period)</li><li>each GP practice must be able to set its own a configurable time period</li><li>where a GP practice has not set its own configurable time period the value will default to three hours</li></ol></li></ol>"
+  receiver: "N/A"
+  requirements: GPCM-SD-096,GPCM-SD-097,GPCM-SD-099,GPCM-SD-100,GPCM-SD-101
+  technical: "None"
+  
+- id: GPC-SD08
+  title: "Patient confidentiality"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a patient"
+  iwant: "to be able to request that the details of the consultation are kept private"
+  sothat: "the data is not shared with someone I do not want to see it."
+  sender: "<ol type=\"1\"><li>the clinician must be able to set a consultation as confidential (or the clinical system's equivalent)</li><li>the consultation record held at the federated GP practice is recorded as confidential (or equivalent) and its access restricted to the clinician who made the record</li><li>where a consultation has been marked as confidential, the message is still sent to the patient's GP practice stating the consultation took place; it will contain no information on what took place in the consultation<ol type=\"i\"><li>information on the patient and when the consultation took place are still included</li><li>information on the clinician and where the consultation took place are not included</li><li>the clinical notes are replaced by the text 'The details of this consultation have been set as confidential'</li></ol></li><li>confidentially is applied on a per consultation basis. A request for confidentiality for one consultation will have no impact on the messages sent for any other consultation</li></ol>"
+  receiver: "N/A"
+  notes: <br/><p><strong>Notes</strong></p><p>This is the equivalent of a clinician setting a consultation as confidential and restricting the members of the GP practice who can view the details</p>
+  requirements: "GPCM-SD-102"
+  technical: "GPCM-SD-018,GPCM-SD-092"
+  
+- id: GPC-SD09
+  title: "Local record retention"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician"
+  iwant: "the original record of the consultation recorded on the local system"
+  sothat: "it is available to support ongoing care of the patient and to review if there are any legal or clinical challenges about the care given."
+  sender: "<ol type=\"1\"><li>the sender system must retain a copy of every consultation report that is sent</li><li>for every consultation where a consultation report is produced, the sender system must retain a copy of the consultation in the format is was originally recorded</li></ol>"
+  receiver: "N/A"
+  requirements: ITK,"GFR"
+  technical: "None"
+  
+- id: GPC-SD10
+  title: "Data sharing"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician (and data controller) sending a point-to-point targeted communication"
+  iwant: "sending and receiving the consultation report to not be restricted by any data sharing controls"
+  sothat: "the federated consultation report document is sent and received for 100% of federated consultations."
+  sender: "<ol type=\"1\"><li>data sharing controls must not prevent the consultation message being sent</li></ol>"
+  receiver: "<ol type=\"1\"><li>data sharing controls must not prevent the consultation message being received and made available to the GP practice</li></ol>"
+  requirements: "None"
+  technical: "None" 

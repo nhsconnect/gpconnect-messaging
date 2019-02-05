@@ -18,9 +18,9 @@
     <td><a href="{{  example.permalink  }}#{{ row.name | downcase }}">{{ row.name }}</a></td>
     <td>{{ row.description }}</td>
     {% assign xml_file = row.name | append: '.xml' | url_encode %}
-    <td><a target="_blank" href="{{ include.path }}/{{ xml_file }}"><image src="images/profiles/file-xml-xs.png"/></a></td>
+    <td><a target="_blank" href="{{ include.path }}/{{ xml_file }}"><emmage src="images/profiles/file-xml-xs.png"/></a></td>
     {% assign json_file = row.name | append: '.json' | url_encode %}
-    <td><a target="_blank" href="{{ include.path }}/{{ json_file }}"><image src="images/profiles/file-json-xs.png"/></a></td>
+    <td><a target="_blank" href="{{ include.path }}/{{ json_file }}"><emmage src="images/profiles/file-json-xs.png"/></a></td>
   </tr>
   {% endfor %}
   </tbody>

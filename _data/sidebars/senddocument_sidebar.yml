@@ -11,38 +11,50 @@ entries:
     - title: Introduction
       url: /senddocument.html
       output: web
-    - title: Message Payload
+    - title: Message payload
       url: /senddocument_payload.html
       output: web
+    - title: ITK3 header requirements
+      url: /senddocument_fedcon_itk3.html      
+      output: web
+    - title: MESH message configuration
+      url: /senddocument_fedcon_mesh.html      
+      output: web
+    - title: Error handling
+      url: /senddocument_fedcon_errors.html      
+      output: web       
       
   - title: Use case - Federated consultation
-    output: web
-    url: /senddocument_fedcon.html   
+    output: web  
     folderitems:
       
     - title: Overview
       url: /senddocument_fedcon_overview.html      
       output: web
-      
-    - title: Business Requirements
-      url: /senddocument_fedcon_busreq.html      
-      output: web      
+
+      subfolders:
+
+      - title: Business requirements
+        url: /senddocument_fedcon_busreq.html
+        output: web
+        subfolderitems:
+
+        - title: Process map
+          url: /sendmessage_process.html
+          output: web
+        - title: User stories
+          url: /senddocument_userstories.html
+          output: web
+        - title: PDF layout
+          url: /senddocument_fedcon_busreq_pdf.html 
+          output: web
+        - title: Clinical engagement
+          url: /senddocument_fedcon_busreq_clinical.html 
+          output: web
 
     - title: Payload requirements
       url: /senddocument_fedcon_payload.html      
-      output: web  
-
-    - title: ITK3 header requirements
-      url: /senddocument_fedcon_itk3.html      
-      output: web
-      
-    - title: MESH message configuration
-      url: /senddocument_fedcon_mesh.html      
-      output: web
-      
-    - title: Error handling
-      url: /senddocument_fedcon_errors.html      
-      output: web          
+      output: web   
       
     - title: Triggering message creation
       url: /senddocument_fedcon_trigger.html      
