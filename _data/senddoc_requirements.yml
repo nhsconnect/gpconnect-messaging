@@ -559,7 +559,7 @@ requirements:
 
 - id: GPCM-SD-092
   area: payload2
-  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>SHOULD</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
   tooltip: "when displaying the federated consultation report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_payload.html
 
