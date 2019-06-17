@@ -128,10 +128,10 @@ entries:
           url: /tag_itk3.html
           output: web
         - title: Use case
-          url: /tag_use_case.html
+          url: /tag_use-case.html
           output: web
         - title: Send Document
-          url: /tag_send_document.html
+          url: /tag_send-document.html
           output: web
         - title: Messaging
           url: /tag_messaging.html
