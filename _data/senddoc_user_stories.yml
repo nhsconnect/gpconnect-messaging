@@ -51,7 +51,7 @@
   sender: "<ol type=\"1\"><li>where a federated consultation report is not successfully received/managed by the receiver system, the sender system must inform an appropriate person</li><li>where either the infrastructure or business acknowledgements, or both, are not received for a federated consultation report, the sender system must inform an appropriate person</li></ol>"
   receiver: "<ol type=\"1\"><li>the receiver system must return an error code when the processing of the message is unsuccessful</li></ol>"
   requirements: GPCM-SD-094,GPCM-SD-095,GPCM-SD-066
-  technical: GPCM-SD-065,GPCM-SD-066,GPCM-SD-067,GPCM-SD-068,GPCM-SD-069,GPCM-SD-070,GPCM-SD-071,GPCM-SD-072,GPCM-SD-073,GPCM-SD-074,GPCM-SD-075
+  technical: GPCM-SD-065,GPCM-SD-066,GPCM-SD-074,GPCM-SD-075
   
 - id: GPC-SD06
   title: "Report version number"
