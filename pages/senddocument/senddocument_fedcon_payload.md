@@ -8,9 +8,9 @@ summary: "Details of the FHIR resources which make up the payload for the Send F
 ---
 
 
-Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the [Send Federated Consultation Report](http://localhost:4006/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
+Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the [Send Federated Consultation Report](/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
 
-The following sections describe the resources which form the payload. i.e. the resources which will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1) resource which acts as a container for the payload. 
+The following sections describe the resources which form the payload. i.e. the resources which will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) resource which acts as a container for the payload. 
 
 A [message example](senddocument_payload) is provided which illustrates these requirements to aid understanding.
 
@@ -42,7 +42,7 @@ The following requirements describe how the Task resource is populated:
 
 ### Including binary documents in the payload ###
 
-[Send Document - Including documents in the payload](http://localhost:4006/senddocument_fedcon_payload.html#including-binary-documents-in-the-payload) defines how binary documents are included in the Send Document payload.
+[Send Document - Including documents in the payload](/senddocument_fedcon_payload.html#including-binary-documents-in-the-payload) defines how binary documents are included in the Send Document payload.
 
 For this use case, the following specific requirements apply:
 

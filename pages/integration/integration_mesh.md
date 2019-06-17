@@ -41,7 +41,7 @@ Refer to details below in the MESH API and MESH client for how to do this.
 
 ### MESH API ###
 
-The [MESH API](https://nhsconnect.github.io/spine-mesh/) is a simple REST HTTP API which enables message senders to send messages through MESH. Please refer to the [MESH API](https://nhsconnect.github.io/spine-mesh/) specification for details.
+The [MESH API](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh/technical-information-for-message-exchange-for-social-care-and-health-mesh#integrate-systems-using-the-mesh-server-api) is a simple REST HTTP API which enables message senders to send messages through MESH. Please refer to the [MESH API](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh/technical-information-for-message-exchange-for-social-care-and-health-mesh#integrate-systems-using-the-mesh-server-api) specification for details.
 
 When using the MESH endpoint lookup service, the Mex-To HTTP header is populated according to following syntactic conventions.
 
