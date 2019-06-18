@@ -31,7 +31,7 @@ Requirements are given below which define how the PDF is populated for this use 
 
 ## Layout ##
 
-The PDF below defines the expected document layout, if your browser is not compatible to display the PDF please right click and select "Save as" to download:
+The PDF below defines the expected document layout, if your browser is not compatible to display the PDF please right click and select "Save as" to download, or use this [link](GP_Connect_Messaging_-_PDF_Layout.pdf):
 
 <object
   data="pages/senddocument/GP_Connect_Messaging_-_PDF_Layout.pdf"
