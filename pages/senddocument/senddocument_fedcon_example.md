@@ -18,4 +18,4 @@ The message given below arises from the following fictional scenario:
 The following FHIR Message would be present as the .DAT file which is sent by the MESH client (or in the body of the HTTP response when [downloading a message from the MESH API](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/download-message))
 
 
-{% include Send_Federated_Consultation_Report.json %}
+{% include senddocument/Send_Federated_Consultation_Report.xml %}
