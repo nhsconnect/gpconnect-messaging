@@ -325,7 +325,7 @@ requirements:
 
 - id: GPCM-SD-055
   area: itk2
-  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the message was generated. (A separate process such as the MESH client may be responsible for sending the message at a later date/time.)"
+  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
   tooltip: "'Timestamp' MUST contain the date/time when the message was generated"
   page: senddocument_fedcon_itk3.html
  
@@ -591,8 +591,8 @@ requirements:
   area: senddocpayload4
   description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
   tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
-  page: senddocument_payload.html  
-  
+  page: senddocument_payload.html 
+
 - id: GPCM-SD-105
   area: itk
   description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
