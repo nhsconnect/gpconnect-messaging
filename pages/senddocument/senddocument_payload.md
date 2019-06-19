@@ -48,7 +48,7 @@ Each instance of an binary document will be included as follows:
   {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'senddocpayload3' %}
   <tr>
-    <td>{{item.id}}</td>
+    <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
   </tr>
   {% endif %}
@@ -61,7 +61,7 @@ The GPConnect-DocumentReference-1 resource will be specified as follows:
   {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'senddocpayload4' %}
   <tr>
-    <td>{{item.id}}</td>
+    <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
   </tr>
   {% endif %}
