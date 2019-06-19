@@ -588,42 +588,48 @@ requirements:
   page: senddocument_payload.html
 
 - id: GPCM-SD-104
+  area: senddocpayload4
+  description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
+  tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
+  page: senddocument_payload.html  
+  
+- id: GPCM-SD-105
   area: itk
   description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
   tooltip: "MessageHeader.meta MUST contain a reference to the ITK3 Message Header profile"
   page: senddocument_fedcond_itk3.html
 
-- id: GPCM-SD-105
+- id: GPCM-SD-106
   area: itk2
   description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
   tooltip: "MessageHeader.meta MUST contain a reference to the ITK3 Message Header profile"
   page: senddocument_fedcond_itk3.html  
   
-- id: GPCM-SD-106
+- id: GPCM-SD-107
   area: payload1
   description: "<code>Task.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> profile"
   tooltip: "Task.meta MUST contain a reference to the GPConnect-Task-1 profile"
   page: senddocument_fedcon_payload.html
   
-- id: GPCM-SD-107
+- id: GPCM-SD-108
   area: payload2
   description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
   tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
   page: senddocument_fedcon_payload.html
 
-- id: GPCM-SD-108
+- id: GPCM-SD-109
   area: payload5
   description: "<code>Organization.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile"
   tooltip: "Organization.meta MUST contain a reference to the CareConnect-Organization-1 profile"
   page: senddocument_fedcon_payload.html
 
-- id: GPCM-SD-109
+- id: GPCM-SD-110
   area: payload6
   description: "<code>Practitioner.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile"
   tooltip: "Practitioner.meta MUST contain a reference to the CareConnect-Practitioner-1 profile"
   page: senddocument_fedcon_payload.html
 
-- id: GPCM-SD-110
+- id: GPCM-SD-111
   area: payload7
   description: "<code>Patient.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
   tooltip: "Patient.meta MUST contain a reference to the CareConnect-Patient-1 profile"
