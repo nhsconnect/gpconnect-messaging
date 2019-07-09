@@ -22,7 +22,7 @@ Additionally, as most of these messages will be intended to update the care reco
 
 - MESH Endpoint Lookup Service
 
-An example is given below of the [Send a federated consultation summary](senddocument_fedcon.html) messaging use case which makes use of all three of these NHS SPINE integration options.
+An example is given below of the [Send a federated consultation summary](senddocument_fedcon_overview.html) messaging use case which makes use of all three of these NHS SPINE integration options.
 
 ## Example: Integrate with Spine to send a consultation summary as a document ##
 

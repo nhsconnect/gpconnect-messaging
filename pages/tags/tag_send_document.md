@@ -2,7 +2,7 @@
 title: "Send Document"
 tagName: send-document
 search: exclude
-permalink: tag_send_document.html
+permalink: tag_send-document.html
 sidebar: overview_sidebar
 folder: tags
 ---
