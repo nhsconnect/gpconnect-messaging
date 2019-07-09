@@ -48,7 +48,7 @@ Each instance of an binary document will be included as follows:
   {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'senddocpayload3' %}
   <tr>
-    <td>{{item.id}}</td>
+    <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
   </tr>
   {% endif %}
@@ -61,7 +61,7 @@ The GPConnect-DocumentReference-1 resource will be specified as follows:
   {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'senddocpayload4' %}
   <tr>
-    <td>{{item.id}}</td>
+    <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
   </tr>
   {% endif %}
@@ -91,4 +91,4 @@ The GP Connect Send Document capability has defined a MessageDefinition resource
 
 The Message Definition for the GP Connect Send Document message payload is provided below. This definition can be used by FHIR tools such as [FHIR Check](http://clarotech.co.uk/products/tool-fhir-check/) to verify that particular instance of a Send Document message is conformant. 
 
-<script src="https://gist.github.com/briandiggle/b0a11ccc49ad81f2f7a9edec88d8c10f.js"></script>
+{% include senddocument/Message_definition.xml %}

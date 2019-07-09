@@ -1,7 +1,7 @@
 requirements:
 - id: GPCM-SD-001
   area: senddocpayload
-  description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1\">ITK-Payload-Bundle</a> profile"
+  description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1\">ITK-Payload-Bundle</a> profile"
   tooltip: "the ITK3 MessageHeader.focus element MUST be a reference to a Bundle resource which conforms to the ITK-Payload-Bundle profile"
   page: senddocument_payload.html
 
@@ -55,7 +55,7 @@ requirements:
 
 - id: GPCM-SD-010
   area: senddocpayload3
-  description: "The GPConnect-DocumentReference-1 resource <strong>MUST</strong> be included as an additional <code>entry</code> in the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1\">ITK-Payload-Bundle</a>"
+  description: "The GPConnect-DocumentReference-1 resource <strong>MUST</strong> be included as an additional <code>entry</code> in the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1\">ITK-Payload-Bundle</a>"
   tooltip: "The 'DocumentReference' resource MUST be included as an additional entry in the ITK-Payload-Bundle"
   page: senddocument_payload.html
 
@@ -229,43 +229,43 @@ requirements:
 
 - id: GPCM-SD-039
   area: itk
-  description: "<code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> (“For action”) taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1/_history/1.1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take the action of attaching the payload contents to the patient record. (\"For information\" is analogous to an email \"CC\" where no action is expected from the recipient, and the message could be deleted.) <br/>  <br/>  This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>."
+  description: "<code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> (“For action”) taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take the action of attaching the payload contents to the patient record. (\"For information\" is analogous to an email \"CC\" where no action is expected from the recipient, and the message could be deleted.) <br/>  <br/>  This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
   tooltip: "'RecipientType' MUST be set to fixed value of 'FA<' (For action) taken from FHIR ValueSet ITK-RecipientType-1"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-040
   area: itk
-  description: "<code>BusAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 30001 to 30003.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>BusAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 30001 to 30003.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'BusAckRequested' MUST be set to fixed value of 'true'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-041
   area: itk
-  description: "<code>InfAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 10001 to 20013.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>InfAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 10001 to 20013.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'InfAckRequested' MUST be set to fixed value of 'true'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-042
   area: itk
-  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the federated practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the federated practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the federated practice"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-043
   area: itk
-  description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'MessageDefinition' MUST be set to fixed value of 'https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-044
   area: itk
-  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-FederatedConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-FederatedConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'LocalExtension' MUST be set to fixed value of 'SendDocument-FederatedConsultationReport'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-045
   area: itk
-  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1/_history/1.1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle"
+  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle"
   tooltip: "'Sender' MUST contain a reference to the CareConnect-ITK-Header-Organization-1 resource present in the FHIR message bundle"
   page: senddocument_fedcon_itk3.html
 
@@ -277,7 +277,7 @@ requirements:
 
 - id: GPCM-SD-047
   area: itk
-  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK007C</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2/_history/2.5\">ITK-MessageEvent-2</a>"
+  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK007C</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"
   tooltip: "'Event' MUST contain a fixed value of 'ITK007C' from code system ITK-MessageEvent-2"
   page: senddocument_fedcon_itk3.html
 
@@ -295,37 +295,37 @@ requirements:
 
 - id: GPCM-SD-050
   area: itk2
-  description: "<code>BusAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>BusAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'BusAckRequested' MUST contain a fixed value of 'false'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-051
   area: itk2
-  description: "<code>InfAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>InfAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'InfAckRequested' MUST ontain a fixed value of 'false'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-052
   area: itk2
-  description: "<code>SenderReference</code> <strong>MUST</strong> contain the unique identifier of the encounter which has taken place at the federated practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.12\">ITK3 Message Header</a>"
+  description: "<code>SenderReference</code> <strong>MUST</strong> contain the unique identifier of the encounter which has taken place at the federated practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   tooltip: "'SenderReference' MUST contain the unique identifier of the encounter which has taken place at the federated practice"
   page: senddocument_fedcon_itk3.html
   
 - id: GPCM-SD-053
   area: itk2
-  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to an <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1/_history/1.1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle" 
+  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to an <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle" 
   tooltip: "'Sender' MUST contain a reference to an CareConnect-ITK-Header-Organization-1 resource present in the FHIR message bundle" 
   page: senddocument_fedcon_itk3.html
  
 - id: GPCM-SD-054
   area: itk2
-  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK008M</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2/_history/2.5\">ITK-MessageEvent-2</a>"  
+  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK008M</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"  
   tooltip: "'Event<' MUST contain a fixed value of 'ITK008M' from code system ITK-MessageEvent-2"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-055
   area: itk2
-  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the message was generated. (A separate process such as the MESH client may be responsible for sending the message at a later date/time.)"
+  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
   tooltip: "'Timestamp' MUST contain the date/time when the message was generated"
   page: senddocument_fedcon_itk3.html
  
@@ -394,49 +394,7 @@ requirements:
   description: "where a received message is invalid, an ITK3 Response <strong>MUST</strong> be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message <strong>MUST NOT</strong> be accepted for downstream processing"
   tooltip: "where a received message is invalid, an ITK3 Response MUST be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message MUST NOT be accepted for downstream processing"
   page: senddocument_fedcon_errors.html
-   
-- id: GPCM-SD-067
-  area: error1
-  description: "mandated element not present (BusAck, InfAck, RecipientType, Priority, SenderReference, MessageDefinition, Timestamp, Event) - response code 10008 <strong>MUST</strong> be used"
-  tooltip: "mandated element not present (BusAck, InfAck, RecipientType, Priority, SenderReference, MessageDefinition, Timestamp, Event) - response code 10008 MUST be used"
-  page: senddocument_fedcon_errors.html
-    
-- id: GPCM-SD-068
-  area: error1
-  description: "InfAck element not set to <code>true</code> - response code 10002 <strong>MUST</strong> be used"
-  tooltip: "InfAck element not set to 'true' - response code 10002 MUST be used"
-  page: senddocument_fedcon_errors.html
   
-- id: GPCM-SD-069
-  area: error1
-  description: "BusAck element not set to <code>true</code> - response code 10003 <strong>MUST</strong> be used"
-  tooltip: "BusAck element not set to 'true' - response code 10003 MUST be used"
-  page: senddocument_fedcon_errors.html
-    
-- id: GPCM-SD-070
-  area: error1
-  description: "RecipientType element not set to <code>FA</code> - response code 10010 <strong>MUST</strong> be used"
-  tooltip: "RecipientType element not set to 'FA' - response code 10010 MUST be used"
-  page: senddocument_fedcon_errors.html
-    
-- id: GPCM-SD-071
-  area: error1
-  description: "Priority element not set to <code>routine</code> - response code 10006 <strong>MUST</strong> be used"
-  tooltip: "Priority element not set to 'routine' - response code 10006 MUST be used"
-  page: senddocument_fedcon_errors.html
-    
-- id: GPCM-SD-072
-  area: error1
-  description: "Event element not set to <code>ITK007C</code> - response code 10008 <strong>MUST</strong> be used"
-  tooltip: "Event element not set to 'ITK007C' - response code 10008 MUST be used"
-  page: senddocument_fedcon_errors.html
-    
-- id: GPCM-SD-073
-  area: error2
-  description: "Payload content business rule violated - response code 10008 <strong>MUST</strong> be used"
-  tooltip: "Payload content business rule violated - response code 10008 MUST be used"
-  page: senddocument_fedcon_errors.html
-   
 - id: GPCM-SD-074
   area: error3
   description: "error context and description <strong>MUST</strong> be provided in the <code>OperationOutcome.diagnostic</code> element to enable the sender to correctly identify the error which has been found in their sent message"
@@ -463,7 +421,7 @@ requirements:
   
 - id: GPCM-SD-078
   area: payload2
-  description: "the referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>status</code> element set to a fixed value of <code>current</code>"
+  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>status</code> element set to a fixed value of <code>current</code>"
   tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain a 'status' element set to a fixed value of 'current'"
   page: senddocument_fedcon_payload.html
 
@@ -475,19 +433,19 @@ requirements:
 
 - id: GPCM-SD-080
   area: payload2
-  description: "the referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>subject</code> element containing a reference to a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a>.<br/> This is the same resource referred to by <code>task.for</code>"
+  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>subject</code> element containing a reference to a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a>.<br/> This is the same resource referred to by <code>task.for</code>"
   tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain a 'subject<' element containing a reference to a Patient resource profiled to CareConnect-Patient-1"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-081
   area: payload2
-  description: "the referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain an <code>author</code> element containing a reference to a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> resource. <br/> This is the same resource referred to by <code>task.requester.agent</code>"
+  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain an <code>author</code> element containing a reference to a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> resource. <br/> This is the same resource referred to by <code>task.requester.agent</code>"
   tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain an 'author' element containing a reference to a CareConnect-Practitioner-1 resource"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-082
   area: payload2
-  description: "the referenced <a href=\"https://fhir-test.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>type</code> element where <code>type.coding.code</code> is set to a fixed value of <code>371531000</code>, <code>type.coding.system</code> is set to a fixed value of <code>https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1</code> and <code>type.coding.display</code> is set to a fixed value <code>Report of clinical encounter</code><br/>"
+  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>type</code> element where <code>type.coding.code</code> is set to a fixed value of <code>371531000</code>, <code>type.coding.system</code> is set to a fixed value of <code>https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1</code> and <code>type.coding.display</code> is set to a fixed value <code>Report of clinical encounter</code><br/>"
   tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain a 'type' element where 'type.coding.code' is set to a fixed value of '371531000', 'type.coding.system' is set to a fixed value of 'https://fhir.nhs.uk/STU3/ValueSet/DocumentType-1' and 'type.coding.display' is set to a fixed value 'Report of clinical encounter'"
   page: senddocument_fedcon_payload.html
 
@@ -559,7 +517,7 @@ requirements:
 
 - id: GPCM-SD-092
   area: payload2
-  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>SHOULD</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
   tooltip: "when displaying the federated consultation report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_payload.html
 
@@ -622,6 +580,60 @@ requirements:
   description: "if the patient has requested that the consultation is confidential then the following data items <strong>MUST NOT</strong> be sent in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
   tooltip: "if the patient has requested that the consultation is confidential then following data items MUST NOT be send in the PDF: Clinical Notes, Clinician, Surgery Tel No., Surgery Email, Place of consultation"
   page: senddocument_fedcon_busreq_pdf.html
+  
+- id: GPCM-SD-103
+  area: senddocpayload
+  description: "<code>Bundle.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1\">ITK-Payload-Bundle</a> profile"
+  tooltip: "Bundle.meta MUST contain a reference to the ITK-Payload-Bundle profile"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-104
+  area: senddocpayload4
+  description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
+  tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
+  page: senddocument_payload.html 
+
+- id: GPCM-SD-105
+  area: itk
+  description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
+  tooltip: "MessageHeader.meta MUST contain a reference to the ITK3 Message Header profile"
+  page: senddocument_fedcond_itk3.html
+
+- id: GPCM-SD-106
+  area: itk2
+  description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
+  tooltip: "MessageHeader.meta MUST contain a reference to the ITK3 Message Header profile"
+  page: senddocument_fedcond_itk3.html  
+  
+- id: GPCM-SD-107
+  area: payload1
+  description: "<code>Task.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> profile"
+  tooltip: "Task.meta MUST contain a reference to the GPConnect-Task-1 profile"
+  page: senddocument_fedcon_payload.html
+  
+- id: GPCM-SD-108
+  area: payload2
+  description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
+  tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
+  page: senddocument_fedcon_payload.html
+
+- id: GPCM-SD-109
+  area: payload5
+  description: "<code>Organization.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile"
+  tooltip: "Organization.meta MUST contain a reference to the CareConnect-Organization-1 profile"
+  page: senddocument_fedcon_payload.html
+
+- id: GPCM-SD-110
+  area: payload6
+  description: "<code>Practitioner.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile"
+  tooltip: "Practitioner.meta MUST contain a reference to the CareConnect-Practitioner-1 profile"
+  page: senddocument_fedcon_payload.html
+
+- id: GPCM-SD-111
+  area: payload7
+  description: "<code>Patient.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
+  tooltip: "Patient.meta MUST contain a reference to the CareConnect-Patient-1 profile"
+  page: senddocument_fedcon_payload.html
   
 - id: "None"
   area: na
