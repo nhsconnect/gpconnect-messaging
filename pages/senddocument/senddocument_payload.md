@@ -9,7 +9,6 @@ summary: "Send Document capability - The structure of the payload to be used for
 
 ## Payload message requirements ##
 
-{% include callout.html content="The Send Document payload recognises that for most scenarios messages which are intended to update target organisations' records will result in a task being created in the target system workflow. As a result, the Task resource is used to describe the intent of the message - to request that a task be created in the target organisation to review and perform an update." type="info" %}
 
 The following requirements describe the structure of the Send Document payload:
 
@@ -47,19 +46,6 @@ Each instance of an binary document will be included as follows:
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'senddocpayload3' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-The GPConnect-DocumentReference-1 resource will be specified as follows:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'senddocpayload4' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>

@@ -4,7 +4,7 @@ keywords: document, use-case
 tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_example.html
-summary: "Send Federated Consultation Report - example message."
+summary: "Send Consultation Report - example message."
 ---
 
 The message given below arises from the following fictional scenario:

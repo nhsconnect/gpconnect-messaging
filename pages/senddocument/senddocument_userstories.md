@@ -4,7 +4,7 @@ keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_userstories.html
-summary: "User stories for Send Federated Consultation Report"
+summary: "User stories for Send Consultation Report"
 toc: true
 ---
 

@@ -24,7 +24,7 @@ entries:
       url: /senddocument_fedcon_errors.html      
       output: web       
       
-  - title: Use case - Federated consultation
+  - title: Use case - Consultation
     output: web  
     folderitems:
       

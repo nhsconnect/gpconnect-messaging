@@ -1,62 +1,62 @@
 requirements:
-- id: GPCM-SD-001
+- id: GPCM-SD-103
   area: senddocpayload
-  description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1\">ITK-Payload-Bundle</a> profile"
-  tooltip: "the ITK3 MessageHeader.focus element MUST be a reference to a Bundle resource which conforms to the ITK-Payload-Bundle profile"
+  description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1\">ITK-Document-Bundle</a> profile"
+  tooltip: "the ITK3 MessageHeader.focus element MUST be a reference to a Bundle resource which conforms to the ITK-Document-Bundle profile"
   page: senddocument_payload.html
 
-- id: GPCM-SD-002
+- id: GPCM-SD-104
   area: senddocpayload
-  description: "the <code>ITK-Payload-Bundle</code> <strong>MUST</strong> contain a Task resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> base resource"
-  tooltip: "the ITK-Payload-Bundle MUST contain a Task resource profiled to GPConnect-Task-1 base resource"
+  description: "the <code>ITK-Document-Bundle</code> <strong>MUST</strong> contain a Composition resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> base resource"
+  tooltip: "the ITK-Document-Bundle MUST contain a Composition resource profiled to CareConnect-Composition-1 base resource"
   page: senddocument_payload.html
 
-- id: GPCM-SD-003
+- id: GPCM-SD-105
   area: senddocpayload
-  description: "the <code>ITK-Payload-Bundle</code> <strong>MUST</strong> contain an Organization resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile describing the organisation which sends the message. The <code>Task.requester.OnBehalfOf</code> element <strong>MUST</strong> contain a reference to this resource"
-  tooltip: "the ITK-Payload-Bundle MUST contain an Organization resource which conforms to the CareConnect-Organization-1 profile describing the organisation which sends the message. The Task.requester.OnBehalfOf element MUST contain a reference to this resource"
+  description: "the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> <code>Composition.custodian</code> element <strong>MUST</strong> contain an Organization resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile describing the organisation which sends the message"
+  tooltip: "the CareConnect-Composition-1 MUST contain an Organization resource which conforms to the CareConnect-Organization-1 profile describing the organisation which sends the message"
   page: senddocument_payload.html
 
-- id: GPCM-SD-004
+- id: GPCM-SD-106
   area: senddocpayload
-  description: "the <code>Task.requester.OnBehalfOf</code> element <strong>MUST</strong> contain a reference to the Organization resource"
-  tooltip: "the 'Task.requester.OnBehalfOf' element MUST contain a reference to the Organization resource"
+  description: "where the message contains patient information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> <code>Composition.subject</code> element <strong>MUST</strong> contain a patient resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
+  tooltip: "where the message contains patient information, for example as a result of a healthcare event, a patient resource MUST be present which conforms to the CareConnect-Patient-1"
   page: senddocument_payload.html
 
-- id: GPCM-SD-005
+- id: GPCM-SD-107
   area: senddocpayload
-  description: "where the message contains patient information, for example as a result of a healthcare event, a patient resource <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile. When this patient resource is present, the <code>Task.for</code> element <strong>MUST</strong> contain a reference to this resource."
-  tooltip: "where the message contains patient information, for example as a result of a healthcare event, a patient resource MUST be present which conforms to the CareConnect-Patient-1. When this patient resource is present, the Task.for element MUST contain a reference to this resource"
+  description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
+  tooltip: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource MUST be present which conforms to the CareConnect-Practitioner-1 profile. This resource describes the primary practitioner who delivered care."
+  page: senddocument_payload.html  
+  
+- id: GPCM-SD-108
+  area: senddocpayload
+  description: "all <code>Meta</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
+  tooltip: "all Meta elements MUST be treated as mandatory and populated with the associated resource"
   page: senddocument_payload.html
 
-- id: GPCM-SD-006
-  area: senddocpayload
-  description: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care. When this practitioner resource is present, the <code>Task.requester.agent</code> element <strong>MUST</strong> contain a reference to this resource."
-  tooltip: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource MUST be present which conforms to the CareConnect-Practitioner-1 profile. This resource describes the primary practitioner who delivered care. When this practitioner resource is present, the Task.requester.agent element MUST contain a reference to this resource."
-  page: senddocument_payload.html
-
-- id: GPCM-SD-007
-  area: senddocpayload
-  description: "where the message sender knows the single intended recipient organisation for the message, an Organization resource <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile, describing the organisation which is the target of the message. The <code>Task.requester.owner</code> element <strong>MUST</strong> contain a reference to this resource."
-  tooltip: "where the message sender knows the single intended recipient organisation for the message, an Organization resource MUST be present which conforms to the CareConnect-Organization-1 profile, describing the organisation which is the target of the message. The Task.requester.owner element MUST contain a reference to this resource"
-  page: senddocument_payload.html
-
-- id: GPCM-SD-008
+- id: GPCM-SD-109
   area: senddocpayload2
-  description: "each binary document sent in the payload <strong>MUST</strong> be included as an instance of the <code>Task.input</code> element"
-  tooltip: "each binary document sent in the payload MUST be included as an instance of the Task.input element"
+  description: "each binary document sent in the payload <strong>MUST</strong> be included as an instance of the <code>Composition.section</code> element"
+  tooltip: "each binary document sent in the payload MUST be included as an instance of the Composition.section element"
   page: senddocument_payload.html
 
-- id: GPCM-SD-009
+- id: GPCM-SD-110
   area: senddocpayload3
-  description: "<code>task.input.value</code> <strong>MUST</strong> be a FHIR Reference containing a reference to a DocumentReference profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a>"
-  tooltip: "'task.input.value' MUST be a FHIR Reference containing a reference to a DocumentReference profiled to GPConnect-DocumentReference-1"
+  description: "each <code>Composition.section.entry</code> <strong>MUST</strong> be a FHIR Reference containing a reference to an attachment profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1\">ITK-Attachment-Binary-1</a>"
+  tooltip: "each 'Composition.section.entry' MUST be a FHIR Reference containing a reference to an attachment profiled to ITK-Attachment-Binary-1"
   page: senddocument_payload.html
 
-- id: GPCM-SD-010
+- id: GPCM-SD-111
   area: senddocpayload3
-  description: "The GPConnect-DocumentReference-1 resource <strong>MUST</strong> be included as an additional <code>entry</code> in the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1\">ITK-Payload-Bundle</a>"
-  tooltip: "The 'DocumentReference' resource MUST be included as an additional entry in the ITK-Payload-Bundle"
+  description: "all attachments <strong>MUST</strong> be Base64 encoded"
+  tooltip: "all attachments MUST be Base64 encoded"
+  page: senddocument_payload.html
+  
+- id: GPCM-SD-112
+  area: senddocpayload3
+  description: "the primary attachment <strong>MUST</strong> be the first <code>Composition.section.entry</code> in the payload"
+  tooltip: "the primary attachment MUST be the first 'Composition.section.entry' in the payload"
   page: senddocument_payload.html
 
 - id: GPCM-SD-011
@@ -97,14 +97,14 @@ requirements:
 
 - id: GPCM-SD-017
   area: payload1
-  description: "<code>priority</code> <strong>MUST</strong> contain fixed value: <strong><code>routine</code></strong> <br/><br/>Where a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Federated Consultation Report use case is simply the act of synchronising with the registered patient record. When the GP Connect <a href=\"sendtask.html\">Send Task</a> capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record."
-  tooltip: "'priority' MUST contain fixed value: routine \n\nWhere a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Federated Consultation Report use case is simply the act of synchronising with the registered patient record. When the GP Connect Send Task capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record."
+  description: "<code>priority</code> <strong>MUST</strong> contain fixed value: <strong><code>routine</code></strong> <br/><br/>Where a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Consultation Report use case is simply the act of synchronising with the registered patient record. When the GP Connect <a href=\"sendtask.html\">Send Task</a> capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record."
+  tooltip: "'priority' MUST contain fixed value: routine \n\nWhere a specific action beyond attachment to the patient record at the registered practice is expected or required, existing business processes should be used as the Send Consultation Report use case is simply the act of synchronising with the registered patient record. When the GP Connect Send Task capability has been implemented, this could be used to request specific tasks to raised at the registered practice beyond attachment to the registered practice record."
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-018
   area: payload1
-  description: "<code>description</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*, Version {Version Number}</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
-  tooltip: "'description' MUST contain a summary of request in the following format: Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}"
+  description: "<code>description</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*, Version {Version Number}</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  tooltip: "'description' MUST contain a summary of request in the following format: Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-019
@@ -121,14 +121,14 @@ requirements:
 
 - id: GPCM-SD-021
   area: payload1
-  description: "<code>requester.agent</code> <strong>MUST</strong> contain a reference to a federated practice Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a>"
-  tooltip: "'requester.agent' MUST contain a reference to a federated practice Practitioner resource profiled to CareConnect-Practitioner-1"
+  description: "<code>requester.agent</code> <strong>MUST</strong> contain a reference to a practice Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a>"
+  tooltip: "'requester.agent' MUST contain a reference to a practice Practitioner resource profiled to CareConnect-Practitioner-1"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-022
   area: payload1
-  description: "<code>requester.onBehalfOf</code> <strong>MUST</strong> contain a reference to a federated practice Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
-  tooltip: "'requester.onBehalfOf' MUST contain a reference to a federated practice Organization resource profiled to CareConnect-Organization-1"
+  description: "<code>requester.onBehalfOf</code> <strong>MUST</strong> contain a reference to a practice Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
+  tooltip: "'requester.onBehalfOf' MUST contain a reference to a practice Organization resource profiled to CareConnect-Organization-1"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-023
@@ -139,31 +139,31 @@ requirements:
 
 - id: GPCM-SD-024
   area: payload2
-  description: "The input element <strong>MUST</strong> contain a binary document which provides a report of the federated consultation in PDF format"
-  tooltip: "The input element MUST contain a binary document which provides a report of the federated consultation in PDF format"
+  description: "The input element <strong>MUST</strong> contain a binary document which provides a report of the consultation in PDF format"
+  tooltip: "The input element MUST contain a binary document which provides a report of the consultation in PDF format"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-025
   area: payload2
-  description: "<code>input.type.text</code> <strong>MUST</strong> be a fixed value of <code>Federated consultation report</code>"
-  tooltip: "'input.type.text' MUST be a fixed value of 'Federated consultation report'"
+  description: "<code>input.type.text</code> <strong>MUST</strong> be a fixed value of <code>Consultation report</code>"
+  tooltip: "'input.type.text' MUST be a fixed value of 'Consultation report'"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-026
   area: payload2
-  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>description</code> element set to a fixed value of <code>Federated Consultation Report</code>"
-  tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain a 'description' element set to a fixed value of 'Federated Consultation Report'"
+  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>description</code> element set to a fixed value of <code>Consultation Report</code>"
+  tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain a 'description' element set to a fixed value of 'Consultation Report'"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-027
   area: payload3
-  description: "where binary documents are included in the payload in addition to the Federated Consultation Report, the <em>message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
-  tooltip: "where binary documents are included in the payload in addition to the Federated Consultation Report, the message receiver MUST process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
+  description: "where binary documents are included in the payload in addition to the Consultation Report, the <em>message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
+  tooltip: "where binary documents are included in the payload in addition to the Consultation Report, the message receiver MUST process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-028
   area: payload4
-  description: "as described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain an organization resource describing both the sending organisation (the federated practice) and the receiving organisation (the patient's registered practice)"
+  description: "as described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain an organization resource describing both the sending organisation (the originating practice) and the receiving organisation (the patient's registered practice)"
   tooltip: "as described in Send Document - Payload structure, the payload MUST contain an organization resource describing both the sending organisation and the receiving organisation"
   page: senddocument_fedcon_payload.html
 
@@ -247,8 +247,8 @@ requirements:
 
 - id: GPCM-SD-042
   area: itk
-  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the federated practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the federated practice"
+  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the practice"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-043
@@ -259,8 +259,8 @@ requirements:
 
 - id: GPCM-SD-044
   area: itk
-  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-FederatedConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'LocalExtension' MUST be set to fixed value of 'SendDocument-FederatedConsultationReport'"
+  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-ConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'LocalExtension' MUST be set to fixed value of 'SendDocument-ConsultationReport'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-045
@@ -271,8 +271,8 @@ requirements:
 
 - id: GPCM-SD-046
   area: itk
-  description: "<code>source</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender"
-  tooltip: "'source' MUST contain the MESH mailbox ID of the sender"
+  description: "<code>Source</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender"
+  tooltip: "'Source' MUST contain the MESH mailbox ID of the sender"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-047
@@ -307,8 +307,8 @@ requirements:
 
 - id: GPCM-SD-052
   area: itk2
-  description: "<code>SenderReference</code> <strong>MUST</strong> contain the unique identifier of the encounter which has taken place at the federated practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'SenderReference' MUST contain the unique identifier of the encounter which has taken place at the federated practice"
+  description: "<code>SenderReference</code> <strong>MUST</strong> contain the unique identifier of the encounter which has taken place at the originating practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST contain the unique identifier of the encounter which has taken place at the originating practice"
   page: senddocument_fedcon_itk3.html
   
 - id: GPCM-SD-053
@@ -337,19 +337,19 @@ requirements:
 
 - id: GPCM-SD-057
   area: mesh1
-  description: "Each instance of a Send Federated Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
-  tooltip: "each instance of a Send Federated Consultation Report message MUST include the following MESH Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT'"
+  description: "Each instance of a Send Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
+  tooltip: "each instance of a Send Consultation Report message MUST include the following MESH Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-058
   area: mesh1
-  description: "each instance of an acknowledgement message generated as a result of receipt of a Send Federated Consultation Report message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
-  tooltip: "each instance of an acknowledgement message generated as a result of receipt of a Send Federated Consultation Report message MUST include the following Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT_ACK'"
+  description: "each instance of an acknowledgement message generated as a result of receipt of a Send Consultation Report message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
+  tooltip: "each instance of an acknowledgement message generated as a result of receipt of a Send Consultation Report message MUST include the following Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT_ACK'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-059
   area: mesh2
-  description: "<code>From_DTS</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the federated GP practice"
+  description: "<code>From_DTS</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating GP practice"
   tooltip: "'From_DTS' MUST contain the MESH mailbox ID of the sender of the message"
   page: senddocument_fedcon_mesh.html
 
@@ -361,13 +361,13 @@ requirements:
 
 - id: GPCM-SD-061
   area: mesh2
-  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
-  tooltip: "'Subject' MUST contain 'To 'text in the following format: 'Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  tooltip: "'Subject' MUST contain 'To 'text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-062
   area: mesh3
-  description: "<code>Mex-From</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the federated GP practice"
+  description: "<code>Mex-From</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating GP practice"
   tooltip: "'Mex-From' MUST contain the MESH mailbox ID of the sender of the message"
   page: senddocument_fedcon_mesh.html
 
@@ -379,8 +379,8 @@ requirements:
 
 - id: GPCM-SD-064
   area: mesh3
-  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
-  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-065
@@ -409,14 +409,14 @@ requirements:
 
 - id: GPCM-SD-076
   area: trigger
-  description: "a Send Federated Consultation Report message <strong>MUST</strong> be sent for 100% of federated practice encounters to ensure that the registered practice care record is an accurate statement of care delivered in a primary care setting"
-  tooltip: "a Send Federated Consultation Report message MUST be sent for 100% of federated practice encounters to ensure that the registered practice care record is an accurate statement of care delivered in a primary care setting"
+  description: "a Send Consultation Report message <strong>MUST</strong> be sent for 100% of practice encounters to ensure that the registered practice care record is an accurate statement of care delivered in a primary care setting"
+  tooltip: "a Send Consultation Report message MUST be sent for 100% of practice encounters to ensure that the registered practice care record is an accurate statement of care delivered in a primary care setting"
   page: senddocument_fedcon_trigger.html
  
 - id: GPCM-SD-077
   area: trigger
-  description: "the Send Federated Consultation Report send facility <strong>MUST</strong> be implemented in such a way as to minimise administrative burden on the federated practice"
-  tooltip: "the Send Federated Consultation Report send facility MUST be implemented in such a way as to minimise administrative burden on the federated practice"
+  description: "the Send Consultation Report send facility <strong>MUST</strong> be implemented in such a way as to minimise administrative burden on the practice"
+  tooltip: "the Send Consultation Report send facility MUST be implemented in such a way as to minimise administrative burden on the practice"
   page: senddocument_fedcon_trigger.html
   
 - id: GPCM-SD-078
@@ -481,8 +481,8 @@ requirements:
 
 - id: GPCM-SD-086
   area: pdf
-  description: "the provider system <strong>MUST</strong> include all data entered by the clinician at the federated practice into the 'Clinical notes [notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation"
-  tooltip: "the provider system MUST include all data entered by the clinician at the federated practice into the 'Clinical notes [notes]' section of the PDF document"
+  description: "the provider system <strong>MUST</strong> include all data entered by the clinician at the practice into the 'Clinical notes [notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation"
+  tooltip: "the provider system MUST include all data entered by the clinician at the practice into the 'Clinical notes [notes]' section of the PDF document"
   page: senddocument_fedcon_busreq_pdf.html
 
 - id: GPCM-SD-087
@@ -517,32 +517,32 @@ requirements:
 
 - id: GPCM-SD-092
   area: payload2
-  description: "when displaying the federated consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
-  tooltip: "when displaying the federated consultation report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Federated consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "when displaying the consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  tooltip: "when displaying the consultation report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-093
   area: payload2
-  description: "the <em>message receiver</em> <strong>MUST</strong> make any attachments included with the federated consultation report available to the end user"
-  tooltip: "the message receiver MUST make any attachments included with the federated consultation report available to the end user"
+  description: "the <em>message receiver</em> <strong>MUST</strong> make any attachments included with the consultation report available to the end user"
+  tooltip: "the message receiver MUST make any attachments included with the consultation report available to the end user"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-094
   area: error5
-  description: "where a federated consultation report is not successfully received/managed by the message receiver, the sender system <strong>MUST</strong> inform an appropriate person"
-  tooltip: "where a federated consultation report is not successfully received/managed by the message receiver, the sender system MUST inform an appropriate person"
+  description: "where a consultation report is not successfully received/managed by the message receiver, the sender system <strong>MUST</strong> inform an appropriate person"
+  tooltip: "where a consultation report is not successfully received/managed by the message receiver, the sender system MUST inform an appropriate person"
   page: senddocument_fedcon_errors.html
 
 - id: GPCM-SD-095
   area: error5
-  description: "where either the infrastructure or business acknowledgements, or both, are not received for a federated consultation report, the sender system <strong>MUST</strong> inform an appropriate person"
-  tooltip: "where either the infrastructure or business acknowledgements, or both, are not received for a federated consultation report, the sender system MUST inform an appropriate person"
+  description: "where either the infrastructure or business acknowledgements, or both, are not received for a consultation report, the sender system <strong>MUST</strong> inform an appropriate person"
+  tooltip: "where either the infrastructure or business acknowledgements, or both, are not received for a consultation report, the sender system MUST inform an appropriate person"
   page: senddocument_fedcon_errors.html
 
 - id: GPCM-SD-096
   area: trigger3
-  description: "the message sender system <strong>MUST</strong> send the federated consultation report a configurable time period after the consultation was created or last update"
-  tooltip: "the message sender system MUST send the federated consultation report a configurable time period after the consultation was created or last update"
+  description: "the message sender system <strong>MUST</strong> send the consultation report a configurable time period after the consultation was created or last update"
+  tooltip: "the message sender system MUST send the consultation report a configurable time period after the consultation was created or last update"
   page: senddocument_fedcon_trigger.html
 
 - id: GPCM-SD-097
@@ -580,12 +580,6 @@ requirements:
   description: "if the patient has requested that the consultation is confidential then the following data items <strong>MUST NOT</strong> be sent in the PDF: <code>Clinical Notes</code>, <code>Clinician</code>, <code>Surgery Tel No.</code>, <code>Surgery Email</code>, <code>Place of consultation</code>"
   tooltip: "if the patient has requested that the consultation is confidential then following data items MUST NOT be send in the PDF: Clinical Notes, Clinician, Surgery Tel No., Surgery Email, Place of consultation"
   page: senddocument_fedcon_busreq_pdf.html
-  
-- id: GPCM-SD-103
-  area: senddocpayload
-  description: "<code>Bundle.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1\">ITK-Payload-Bundle</a> profile"
-  tooltip: "Bundle.meta MUST contain a reference to the ITK-Payload-Bundle profile"
-  page: senddocument_payload.html
 
 - id: GPCM-SD-104
   area: senddocpayload4
@@ -595,44 +589,44 @@ requirements:
 
 - id: GPCM-SD-105
   area: itk
-  description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
-  tooltip: "MessageHeader.meta MUST contain a reference to the ITK3 Message Header profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
+  tooltip: "Meta MUST contain a reference to the ITK3 Message Header profile"
   page: senddocument_fedcond_itk3.html
 
 - id: GPCM-SD-106
   area: itk2
-  description: "<code>MessageHeader.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
-  tooltip: "MessageHeader.meta MUST contain a reference to the ITK3 Message Header profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a> profile"
+  tooltip: "Meta MUST contain a reference to the ITK3 Message Header profile"
   page: senddocument_fedcond_itk3.html  
   
 - id: GPCM-SD-107
   area: payload1
-  description: "<code>Task.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> profile"
-  tooltip: "Task.meta MUST contain a reference to the GPConnect-Task-1 profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1\">GPConnect-Task-1</a> profile"
+  tooltip: "Meta MUST contain a reference to the GPConnect-Task-1 profile"
   page: senddocument_fedcon_payload.html
   
 - id: GPCM-SD-108
   area: payload2
-  description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
-  tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
+  tooltip: "Meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-109
   area: payload5
-  description: "<code>Organization.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile"
-  tooltip: "Organization.meta MUST contain a reference to the CareConnect-Organization-1 profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile"
+  tooltip: "Meta MUST contain a reference to the CareConnect-Organization-1 profile"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-110
   area: payload6
-  description: "<code>Practitioner.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile"
-  tooltip: "Practitioner.meta MUST contain a reference to the CareConnect-Practitioner-1 profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile"
+  tooltip: "Meta MUST contain a reference to the CareConnect-Practitioner-1 profile"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-111
   area: payload7
-  description: "<code>Patient.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
-  tooltip: "Patient.meta MUST contain a reference to the CareConnect-Patient-1 profile"
+  description: "<code>Meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
+  tooltip: "Meta MUST contain a reference to the CareConnect-Patient-1 profile"
   page: senddocument_fedcon_payload.html
   
 - id: "None"
