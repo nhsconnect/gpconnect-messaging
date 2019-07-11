@@ -12,7 +12,7 @@
   <version value="1.1.0" />
   <title value="GP Connect Send Document Message Definition" />
   <status value="active" />
-  <date value="2018-02-23T16:06:00+00:00" />
+  <date value="2019-07-10T00:00:00+00:00" />
   <event>
     <system value="https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2" />
     <code value="ITK007C" />
@@ -23,18 +23,32 @@
     <code value="Bundle" />
     <profile>
       <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ITK-BundledAssets-1">
-        <!-- to allow STU3 ITK-Payload-Bundle-1 to be used in the payload -->
+        <!-- to allow STU3 ITK-Document-Bundle-1 to be used in the payload -->
         <extension url="utilisedAsset">
           <extension url="type">
             <valueCode value="StructureDefinition" />
           </extension>
           <extension url="reference">
             <valueReference>
-              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1" />
+              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1" />
             </valueReference>
           </extension>
           <extension url="version">
-            <valueString value="1.0.0" />
+            <valueString value="1.1.0" />
+          </extension>
+        </extension>
+		<!-- to allow STU3 CareConnect-Composition-1 to be used in the payload -->
+        <extension url="utilisedAsset">
+          <extension url="type">
+            <valueCode value="StructureDefinition" />
+          </extension>
+          <extension url="reference">
+            <valueReference>
+              <reference value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1" />
+            </valueReference>
+          </extension>
+          <extension url="version">
+            <valueString value="1.2.0" />
           </extension>
         </extension>
         <!-- to allow STU3 CareConnect-Patient-1 to be used in the payload -->
@@ -48,7 +62,7 @@
             </valueReference>
           </extension>
           <extension url="version">
-            <valueString value="1.0.0" />
+            <valueString value="1.3.0" />
           </extension>
         </extension>
         <!-- to allow STU3 CareConnect-Practitioner-1 to be used in the payload -->
@@ -62,7 +76,7 @@
             </valueReference>
           </extension>
           <extension url="version">
-            <valueString value="1.0.0" />
+            <valueString value="1.1.0" />
           </extension>
         </extension>
         <!-- to allow STU3 CareConnect-Organization-1 to be used in the payload -->
@@ -76,35 +90,21 @@
             </valueReference>
           </extension>
           <extension url="version">
-            <valueString value="1.0.0" />
+            <valueString value="1.1.0" />
           </extension>
         </extension>
-        <!-- To allow STU3 GPConnect-Task-1 to be used in the payload (in the absense of a Level 2 care connect task profile -->
+        <!-- To allow STU3 ITK-Attachment-Binary-1 to be used in the payload -->
         <extension url="utilisedAsset">
           <extension url="type">
             <valueCode value="StructureDefinition" />
           </extension>
           <extension url="reference">
             <valueReference>
-              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1" />
+              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1" />
             </valueReference>
           </extension>
           <extension url="version">
-            <valueString value="1.0.0" />
-          </extension>
-        </extension>
-        <!-- To allow STU3 GPConnect-DocumentReference-1 to be used in the payload (in the absense of a Level 2 care connect task profile -->
-        <extension url="utilisedAsset">
-          <extension url="type">
-            <valueCode value="StructureDefinition" />
-          </extension>
-          <extension url="reference">
-            <valueReference>
-              <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1" />
-            </valueReference>
-          </extension>
-          <extension url="version">
-            <valueString value="1.0.0" />
+            <valueString value="1.1.0" />
           </extension>
         </extension>
         <!-- to allow SNOMED CT to be used in the payload -->
@@ -150,7 +150,7 @@
           </extension>
         </extension>
       </extension>
-      <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1" />
+      <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1" />
     </profile>
   </focus>
   <allowedResponse>

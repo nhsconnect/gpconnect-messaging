@@ -4,11 +4,11 @@ keywords: send-document
 tags: [send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_trigger.html
-summary: "Options for triggering the creation of a consultation summary message"
+summary: "Options for triggering the creation of a consultation report message"
 ---
 
 
-This page provides guidance on how systems which send a consultation summary should initiate the message creation action.
+This page provides guidance on how systems which send a consultation report should initiate the message creation action.
 
 ## Guiding principles ##
 
@@ -60,9 +60,7 @@ The message sender performs the following steps to ascertain whether a message s
   {% endfor %}
 </table>
 
-Steps 2 and 3 are required as should the message not be destined for another practice in the federation, MESH mailbox configuration at the target practice would cause any message to be undeliverable. MESH will be [configured to allow message flow](integration_mesh.html#configurating-mesh-to-enable-message-flow) for this use case only within a federation boundary.
-
-Additionally, in a scenario where both the sending and receiving practice are operating the same GP principal clinical system, updating the registered practice may be performed directly within that system infrastructure.
+In a scenario where both the sending and receiving practice are operating the same GP principal clinical system, updating the registered practice may be performed directly within that system infrastructure.
 
 ## Defining when message should be sent ##
 

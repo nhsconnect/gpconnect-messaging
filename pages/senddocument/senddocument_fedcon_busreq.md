@@ -9,7 +9,7 @@ summary: "Business requirements for Send Consultation Report use case"
 
 ## User stories and PDF layout ##
 
-The full set of business requirements that need to be met to support the sending of a Consultation Report to a patient’s registered GP practice after they have been seen by another GP practice in the same federation, can be found [here](senddocument_userstories.html).
+The full set of business requirements that need to be met to support the sending of a Consultation Report to a patient’s registered GP practice after they have been seen by another GP practice, can be found [here](senddocument_userstories.html).
 
 The requirements are described as a set of user stories with separate acceptance criteria for the provider and consumer systems, where applicable.
 

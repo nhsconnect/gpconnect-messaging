@@ -1,9 +1,7 @@
 {% highlight xml %}
 
 <Bundle xmlns="http://hl7.org/fhir">
-
   <!-- =====START of the ITK FHIR message (bundle of type "message"  ===== -->
-  
   <id value="d12dc439-ca5c-4177-bb70-4fece88edab0" />
   <meta>
     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Message-Bundle-1" />
@@ -13,9 +11,7 @@
     <value value="0bcb5098-ce5a-4a85-a547-2574f90310e4" />
   </identifier>
   <type value="message" />
-  
   <!-- =====ITK message header (always the first resource in the FHIR message bundle)===== -->
-  
   <entry>
     <fullUrl value="urn:uuid:ea7221b8-3cc0-4b11-bc95-585b056b5428" />
     <resource>
@@ -53,7 +49,7 @@
           </extension>
           <!-- LocalExtension - Conveys the identifier of the GP Connect Send Document health or social care use case -->
           <extension url="LocalExtension">
-            <valueString value="SendDocument-FederatedConsultationSummary" />
+            <valueString value="SendDocument-ConsultationSummary" />
           </extension>
         </extension>
         <!-- MESH mailbox ID of message sender -->
@@ -76,9 +72,7 @@
       </MessageHeader>
     </resource>
   </entry>
-  
   <!--- ITK3 message header reference to message sender  -->
-  
   <entry>
     <fullUrl value="urn:uuid:c0bee62f-9932-4468-9508-71c67a9f0c2c" />
     <resource>
@@ -101,78 +95,69 @@
       <bundle>
         <id value="70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
         <meta>
-          <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1" />
+          <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1" />
         </meta>
-        <type value="collection" />
-		
-        <!-- =====Task in Payload Bundle - request to create new task at registered practice===== -->
-		
+        <type value="document" />
+        <!-- =====Composition in Payload Bundle ===== -->
         <entry>
           <fullUrl value="urn:uuid:e1580b71-99bd-4c5b-8d54-9b420418135f" />
           <resource>
-            <Task>
+            <Composition>
               <id value="e1580b71-99bd-4c5b-8d54-9b420418135f" />
               <meta>
-                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Task-1" />
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1/" />
               </meta>
-              <intent value="plan" />
-              <status value="requested" />
-              <description value="Request to update patient record with NHS Number {NHS Number} with the details of the encounter which took place at practice {ODS Code}" />
-              <for>
-                <!-- Patient reference -->
+              <status value="final" />
+              <type>
+                <!--Consultation report document type-->
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="325851000000107" />
+                  <display value="Consultation encounter type (record artifact)" />
+                </coding>
+              </type>
+              <date value="2019-07-10T10:00:00+00:00" />
+              <confidentiality value="normal" />
+              <title value="Consultation report" />
+              <text value="Request to update patient record with NHS Number {NHS Number} with the details of the encounter which took place at practice {ODS Code}" />
+              <!-- Patient reference -->
+              <subject>
                 <reference value="Patient/31686b67-9f20-4644-9a54-193d2f91de11" />
-              </for>
-              <requester>
-                <agent>
-                  <!-- Federated practice Practitioner reference -->
-                  <reference value="Practitioner/d0269177-3edc-468b-9f70-971189158bcb" />
-                </agent>
-                <onBehalfOf>
-                  <!-- Federated practice Organization reference -->
-                  <reference value="Organization/ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
-                </onBehalfOf>
-              </requester>
-              <owner>
-                <!-- Registered practice Organization reference -->
-                <reference value="Organization/31686b67-9f20-4644-9a54-193d2f91de22" />
-              </owner>
-              <input>
-                <!-- Embedded PDF encounter details -->
-                <type>
-                  <text value="Federated consultation report" />
-                </type>
-                <valueReference>
-                  <reference value="DocumentReference/72d56948-3efe-4627-bf4a-a11c5120a681" />
-                </valueReference>
-              </input>
-            </Task>
+              </subject>
+              <!-- Practice Practitioner reference -->
+              <author>
+                <reference value="Practitioner/d0269177-3edc-468b-9f70-971189158bcb" />
+              </author>
+              <!-- Practice Organization reference -->
+              <custodian>
+                <reference value="Organization/ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
+              </custodian>
+              <!-- Consultation report pdf attachment -->
+              <section>
+                <title value="Consultation report" />
+                <entry>
+                  <reference value="Binary/caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
+                </entry>
+              </section>
+            </Composition>
           </resource>
         </entry>
-		
-        <!-- =====DocumentReference from task input which contains the consultation summary===== -->
-		
+        <!-- =====Attachment consultation report===== -->
         <entry>
-          <fullUrl value="urn:uuid:72d56948-3efe-4627-bf4a-a11c5120a681" />
+          <fullUrl value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
           <resource>
-            <DocumentReference>
-              <id value="72d56948-3efe-4627-bf4a-a11c5120a681" />
+            <Binary>
+              <id value="caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
               <meta>
-                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1" />
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1" />
               </meta>
-              <created value="2018-07-12T10:30:16+00:00" />
-              <description value="Federated consultation report" />
-              <content>
-                <Attachment>
-                  <contentType value="application/pdf" />
-                  <data value="Tm90IHdvcnRoIGRlY29kaW5nIQTm90IHTm90IHdvcnRoIGRlY29kaW5nIQdvcnRoIGRlY29kaW5nIQTm90IHdvcnRoIGRlY29kaW5nIQTm90IHdvcnRoIGRlY29kaW5nIQTm90IHdvcnRoIGRlY29kaW5nIQTm90IHdvcnRoIGRlY29kaW5nIQ==" />
-                </Attachment>
-              </content>
-            </DocumentReference>
+              <contentType value="application/pdf" />
+              <!-- The content (pdf) base64 encoded, NB: has been edited to make the example reasonable size -->
+              <content value="Tm90IHdvcnRoIGRlY29kaW5nIQTm90IHTm90IHdvcnRoIGRlY2W5nIQdvcnRoIGRlY29kaW5nIQTmQ==" />
+            </Binary>
           </resource>
         </entry>
-		
         <!-- =====Practitioner in Payload Bundle - Practitioner who delivered care===== -->
-		
         <entry>
           <fullUrl value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
           <resource>
@@ -198,9 +183,7 @@
             </Practitioner>
           </resource>
         </entry>
-		
-        <!-- =====Organization in Payload Bundle - Federated practice where encounter took place===== -->
-		
+        <!-- =====Organization in Payload Bundle - practice where encounter took place===== -->
         <entry>
           <fullUrl value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
           <resource>
@@ -222,33 +205,7 @@
             </Organization>
           </resource>
         </entry>
-		
-        <!-- =====Organization in Payload Bundle- Registered practice of patient===== -->
-		
-        <entry>
-          <fullUrl value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de22" />
-          <resource>
-            <Organization>
-              <id value="31686b67-9f20-4644-9a54-193d2f91de22" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
-              </meta>
-              <identifier>
-                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
-                <value value="GP0002" />
-              </identifier>
-              <name value="Cumbria Osprey Medical Centre" />
-              <telecom>
-                <system value="phone" />
-                <value value="01136323201" />
-                <use value="work" />
-              </telecom>
-            </Organization>
-          </resource>
-        </entry>
-		
-        <!-- =====Patient in Payload Bundle- Subject of encounter at federated practice===== -->
-		
+        <!-- =====Patient in Payload Bundle- Subject of encounter at practice===== -->
         <entry>
           <fullUrl value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
           <resource>

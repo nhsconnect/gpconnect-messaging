@@ -13,19 +13,19 @@ requirements:
 
 - id: GPCM-SD-105
   area: senddocpayload
-  description: "the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> <code>Composition.custodian</code> element <strong>MUST</strong> contain an Organization resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile describing the organisation which sends the message"
+  description: "the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.custodian</code> element <strong>MUST</strong> contain an Organization resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile describing the organisation which sends the message"
   tooltip: "the CareConnect-Composition-1 MUST contain an Organization resource which conforms to the CareConnect-Organization-1 profile describing the organisation which sends the message"
   page: senddocument_payload.html
 
 - id: GPCM-SD-106
   area: senddocpayload
-  description: "where the message contains patient information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> <code>Composition.subject</code> element <strong>MUST</strong> contain a patient resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
+  description: "where the message contains patient information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.subject</code> element <strong>MUST</strong> contain a patient resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
   tooltip: "where the message contains patient information, for example as a result of a healthcare event, a patient resource MUST be present which conforms to the CareConnect-Patient-1"
   page: senddocument_payload.html
 
 - id: GPCM-SD-107
   area: senddocpayload
-  description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
+  description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
   tooltip: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource MUST be present which conforms to the CareConnect-Practitioner-1 profile. This resource describes the primary practitioner who delivered care."
   page: senddocument_payload.html  
   
@@ -459,12 +459,6 @@ requirements:
   area: trigger2
   description: "<strong>Step 2</strong> - a PDS lookup of the patient <strong>MUST</strong> be performed to determine the ODS code of the registered practice of the patient"
   tooltip: "a PDS lookup of the patient MUST be performed to determine the ODS code of the registered practice of the patient"
-  page: senddocument_fedcon_trigger.html
-
-- id: GPCM-SD-085
-  area: trigger2
-  description: "<strong>Step 3</strong> - the system at the appointment hosting practice determines whether the registered practice is in the same federation as the hosting organisation ODS code using the local federation definition; this check <strong>MUST</strong> pass for the message to be sent, else the message <strong>MUST NOT</strong> be sent"
-  tooltip: "the system at the appointment hosting practice determines whether the registered practice is in the same federation as the hosting organisation ODS code using the local federation definition; this check MUST pass for the message to be sent, else the message MUST NOT be sent"
   page: senddocument_fedcon_trigger.html
 
 - id: GPCM-C-01

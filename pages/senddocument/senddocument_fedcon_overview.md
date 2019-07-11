@@ -27,13 +27,13 @@ This use case completes the set of capabilities required to fulfil the following
 
 The following diagram illustrates how messages flow between the practice and the registered practice via MESH to fulfil this use case:
 
-![Consultation Sequence Diagram](images/senddocument/federated_consultation_sequence.png "Message flow illustration") 
+![Consultation Sequence Diagram](images/senddocument/sequence.png "Message flow illustration") 
 
 The diagram above depicts a successful message flow where registered practice message processing validates and matches the initial message successfully to a patient. This is involves the following steps:
 
 | Event / Step | Description |
 |------|-------------|
-| 1    | **Consultation summary message** |
+| 1    | **Consultation report message** |
 | 1a   | After the consultation is complete, a trigger at the originating practice results in a FHIR Message being constructed which includes a PDF describing the consultation  |
 | 1b   | The MESH client at the originating practice sends the message to the MESH server where it awaits collection by the registered practice |
 | 1c   | The MESH client at the registered practice collects the message from the MESH server and makes it available to other registered practice system components for onward processing |
@@ -58,7 +58,7 @@ The following processing steps must take place at the originating practice syste
 
 | Step | Description |
 |------|-------------|
-| 1   | Initiate process to create for consultation summary message. Refer to [Send Trigger](senddocument_fedcon_trigger.html) for guidance on available options |	
+| 1   | Initiate process to create for consultation report message. Refer to [Send Trigger](senddocument_fedcon_trigger.html) for guidance on available options |	
 | 2   | Create [ITK3 payload](senddocument_fedcon_payload.html): Construct a PDF description of the encounter |
 | 3   | Wrap the payload as an [ITK3 message](senddocument_fedcon_itk3.html), requesting infrastructure and business acknowledgements. |
 | 4   | Create [MESH message](senddocument_fedcon_mesh.html). Specify NHS Number, DOB and Surname in MESH metadata to enable MESH to route to registered practice. |

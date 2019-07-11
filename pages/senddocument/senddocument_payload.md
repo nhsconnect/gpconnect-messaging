@@ -65,9 +65,9 @@ The ITK3 message handling key `LocalExtension` is used to define the health or s
 
 ## Payload message illustration ##
 
-The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below. (Context for the Send Federated Consultation Report use case is given in parentheses.).
+The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below:
 
-![Send Document - Payload](images/senddocument/senddocument_payload.PNG "Send Document - Payload message illustration") 
+![Send Document - Payload](images/senddocument/send_doc_payload_illusatration.png "Send Document - Payload message illustration") 
 
 ## Payload message definition ##
 
@@ -77,4 +77,4 @@ The GP Connect Send Document capability has defined a MessageDefinition resource
 
 The Message Definition for the GP Connect Send Document message payload is provided below. This definition can be used by FHIR tools such as [FHIR Check](http://clarotech.co.uk/products/tool-fhir-check/) to verify that particular instance of a Send Document message is conformant. 
 
-{% include senddocument/Message_definition.xml %}
+{% include senddocument/definition.xml %}

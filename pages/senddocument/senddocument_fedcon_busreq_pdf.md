@@ -66,7 +66,7 @@ The following describe each of the fields used in the PDF:
 |	`Date seen`	|	The date and time of the patient's appointment at the GP practice in the format `dd-Mmm-yyyy`	|
 |	`Date consultation sent`	|	The date and time the consultation report was sent by the practice in the format `dd-Mmm-yyyy  hh:mm`	|
 |	`Clinician`	|	The full name and role of the treating clinician for the consultation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
-|	`Surgery Tel No.`	|	The main telephone number of the practice available for other GP practices in the federation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
+|	`Surgery Tel No.`	|	The main telephone number of the practice available for other GP practices. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Surgery email`	|	The main email address of the practice. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Place of consultation`	|	The name of the practice and the town specified in its full address. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 
