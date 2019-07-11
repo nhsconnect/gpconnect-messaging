@@ -14,7 +14,7 @@ The following sections describe the resources which form the payload. i.e. the r
 
 A [message example](senddocument_payload) is provided which illustrates these requirements to aid understanding.
 
-## Task resource ##
+## Composition resource ##
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -27,7 +27,7 @@ A [message example](senddocument_payload) is provided which illustrates these re
   {% endfor %}
 </table>
 
-The following requirements describe how the Task resource is populated:
+The following requirements describe how the Composition resource is populated:
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -48,7 +48,7 @@ For this use case, the following specific requirements apply:
 
 **Consultation Report** <br/>
 
-Message senders will include the consultation report as an instance of the task.input element as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
+Message senders will include the consultation report as an instance of the composition.section element as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -64,7 +64,7 @@ Message senders will include the consultation report as an instance of the task.
 <br/>
 **Additional input elements**
 
-Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
+Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the composition.section as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}

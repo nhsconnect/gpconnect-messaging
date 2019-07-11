@@ -71,7 +71,7 @@ A FHIR message is generated which contains a PDF which contains all the informat
 
 The ITK3 FHIR Message is generated, which must include:
 - FHIR MessageHeader
-- FHIR STU3 task
+- FHIR STU3 composition
 - PDF file, its contents and metadata
 - all attachments/documents recorded with the consultation
 
