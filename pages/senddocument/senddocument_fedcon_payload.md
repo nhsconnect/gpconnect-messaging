@@ -39,27 +39,6 @@ The following requirements describe how the Composition resource is populated:
   {% endif %}
   {% endfor %}
 </table>
-
-### Including binary documents in the payload ###
-
-[Send Document - Including documents in the payload](/senddocument_fedcon_payload.html#including-binary-documents-in-the-payload) defines how binary documents are included in the Send Document payload.
-
-For this use case, the following specific requirements apply:
-
-**Consultation Report** <br/>
-
-Message senders will include the consultation report as an instance of the composition.section element as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'payload2' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
 	
 <br/>
 **Additional input elements**

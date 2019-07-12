@@ -77,9 +77,6 @@ The message sender <strong>MUST</strong> fulfil these time period requirements:
   {% endfor %}
 </table>
 
-The message sender must adhere to the following requirements:
-
-
 
 ## PDF Format and business process ##
 

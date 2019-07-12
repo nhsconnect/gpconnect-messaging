@@ -112,14 +112,14 @@
                 <!--Consultation report document type-->
                 <coding>
                   <system value="http://snomed.info/sct" />
-                  <code value="325851000000107" />
-                  <display value="Consultation encounter type (record artifact)" />
+                  <code value="371531000" />
+                  <display value="Report of clinical encounter" />
                 </coding>
               </type>
               <date value="2019-07-10T10:00:00+00:00" />
               <confidentiality value="normal" />
               <title value="Consultation report" />
-              <text value="Request to update patient record with NHS Number {NHS Number} with the details of the encounter which took place at practice {ODS Code}" />
+              <text value="Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*, Version {Version Number}" />
               <!-- Patient reference -->
               <subject>
                 <reference value="Patient/31686b67-9f20-4644-9a54-193d2f91de11" />

@@ -20,6 +20,9 @@ entries:
     - title: MESH message configuration
       url: /senddocument_fedcon_mesh.html      
       output: web
+    - title: Document replacement
+      url: /senddocument_fedcon_resend.html      
+      output: web
     - title: Error handling
       url: /senddocument_fedcon_errors.html      
       output: web       
