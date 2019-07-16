@@ -514,46 +514,45 @@ requirements:
   area: senddocpayload4
   description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"
   tooltip: "DocumentReference.meta MUST contain a reference to the GPConnect-DocumentReference-1 profile"
-  page: senddocument_payload.html 
+  page: senddocument_payload.html
 
-
-- id: GPCM-SD-xxx
+- id: GPCM-SD-126
   area: resend
   description: "Receivers of replacement documents <strong>MUST</strong> process the replacement document and archive the replaced document"
   tooltip: "Receivers of replacement documents MUST process the replacement document and archive the replaced document"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-xxx
+- id: GPCM-SD-127
   area: resend2
   description: "the receiver of the new document <strong>SHOULD</strong> mark the original and replacement document as null and void and report a error to the sender using the ITK Response message and appropriate code see <a href=\"https://developer.nhs.uk/apis/itk3messagedistribution/explore_response_codes.html\">ITK3 response codes</a> for further information"
   tooltip: "the receiver of the new document SHOULD mark the original and replacement document as null and void and report a error to the sender using the ITK Response message and appropriate code see ITK3 response codes for further information"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-xxx
+- id: GPCM-SD-128
   area: resend2
   description: "the sender of the new document <strong>SHOULD</strong> mark the original and replacement document as null and void once it receives the ITK3 Response indicating that the replacement document could not be processed"
   tooltip: "the sender of the new document SHOULD mark the original and replacement document as null and void once it receives the ITK3 Response indicating that the replacement document could not be processed"
   page: senddocument_fedcon_resend.html
   
-- id: GPCM-SD-xxx
+- id: GPCM-SD-129
   area: resend3
   description: "replacements <strong>MAY</strong> be done more than once and the new document always refers to the previous document, multiple replacements <strong>SHOULD</strong> be avoided due to complexity of maintaining the audit trail"
   tooltip: "replacements MAY be done more than once and the new document always refers to the previous document, multiple replacements SHOULD be avoided due to complexity of maintaining the audit trail"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-xxx
+- id: GPCM-SD-130
   area: resend3
   description: "replacement documents <strong>SHOULD</strong> be sent within 24 hours of the original document"
   tooltip: "replacement documents <strong>SHOULD</strong> be sent within 24 hours of the original document"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-xxx
+- id: GPCM-SD-131
   area: resend4
   description: "<code>Composition.relatesTo.code</code> <strong>MUST</strong> contain the fixed value <code>replaces</code>"
   tooltip: "Composition.relatesTo.code MUST contain the fixed value replaces"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-xxx
+- id: GPCM-SD-132
   area: resend4
   description: "<code>Composition.relatesTo.targetIdentifier</code> <strong>MUST</strong> contain the identifier of the old document - UUID of original document"
   tooltip: "Composition.relatesTo.targetIdentifier MUST contain the identifier of the old document - UUID of original document"
