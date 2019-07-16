@@ -313,7 +313,7 @@ requirements:
 
 - id: GPCM-SD-057
   area: mesh1
-  description: "Each instance of a Send Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
+  description: "each instance of a Send Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
   tooltip: "each instance of a Send Consultation Report message MUST include the following MESH Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT'"
   page: senddocument_fedcon_mesh.html
 
