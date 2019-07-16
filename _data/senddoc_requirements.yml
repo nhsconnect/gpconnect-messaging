@@ -278,7 +278,7 @@ requirements:
 - id: GPCM-SD-051
   area: itk2
   description: "<code>InfAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'InfAckRequested' MUST ontain a fixed value of 'false'"
+  tooltip: "'InfAckRequested' MUST contain a fixed value of 'false'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-052
