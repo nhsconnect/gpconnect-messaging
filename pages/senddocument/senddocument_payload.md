@@ -4,7 +4,7 @@ keywords: document, payload
 tags: [send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_payload.html
-summary: "Send Document capability - The structure of the payload to be used for all use cases of the Send Document capability."
+summary: "Send Document capability - the structure of the payload to be used for all use cases of the Send Document capability"
 ---
 
 ## Payload message requirements ##
@@ -41,7 +41,7 @@ The following requirements describe how binary documents are included in the pay
   {% endfor %}
 </table>
 
-Each instance of an binary document will be included as follows:
+Each instance of a binary document will be included as follows:
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -56,7 +56,7 @@ Each instance of an binary document will be included as follows:
 
 <br>
 
-{% include note.html content="Please refer to the particular use case in question for detailed requirements on the population of these payload resources. Example FHIR Messages illustrating how payloads look on-the-wire are available for each use case." %} 
+{% include note.html content="Please refer to the particular use case in question for detailed requirements on the population of these payload resources. Example FHIR&reg; Messages illustrating how payloads look on-the-wire are available for each use case." %} 
 
 ### Identifying the use case ###
 
@@ -73,7 +73,7 @@ The payload of a GP Connect message which uses the Send Document capability **MU
 
 The FHIR MessageDefinition resource provides a formal, machine-readable definition of a message shared between systems. Please refer to [ITK3 Message Definitions](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/explore_defs_overview.html) for an overview of how MessageDefinition resources are used in ITK3 messages.
 
-The GP Connect Send Document capability has defined a MessageDefinition resource instance which describes the *payload* of the FHIR Message, as defined on at [ITK3 Message Definition Patterns](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/explore_defs_overview.html#message-definition-patterns)
+The GP Connect Send Document capability has defined a MessageDefinition resource instance which describes the *payload* of the FHIR Message, as defined at [ITK3 Message Definition Patterns](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/explore_defs_overview.html#message-definition-patterns).
 
 The Message Definition for the GP Connect Send Document message payload is provided below. This definition can be used by FHIR tools such as [FHIR Check](http://clarotech.co.uk/products/tool-fhir-check/) to verify that particular instance of a Send Document message is conformant. 
 
