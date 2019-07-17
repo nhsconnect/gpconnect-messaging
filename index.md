@@ -5,7 +5,7 @@ tags: [messaging, overview, mesh, itk3]
 sidebar: home_sidebar
 permalink: index.html
 toc: false
-summary: A brief introduction to getting started with GP Connect Messaging Capabilities 
+summary: A brief introduction to getting started with GP Connect Messaging capabilities 
 ---
 
 {% include warning.html content="This site is intended primarily for those engaged with NHS Digital on NHS Digital in First of Type activities. Other parties are advised not to develop against these specifications until a formal announcement has been made." %}
@@ -14,7 +14,7 @@ summary: A brief introduction to getting started with GP Connect Messaging Capab
 [![Semver](http://img.shields.io/badge/semver-2.0.0-yellow.svg)](http://semver.org/spec/v2.0.0.html){:target="_blank" class="no_icon"} [![License](http://img.shields.io/:license-apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html){:target="_blank" class="no_icon"} 
 {% endcomment %}
 
-GP Connect aims to support better clinical care by opening up information and data held within GP Principal Clinical Systems for use across health and social care. The GP Connect vision will be achieved by standardising integration and simplifying the operating model. Find out more on the [NHS Digital GP Connect homepage](https://digital.nhs.uk/services/gp-connect).
+GP Connect aims to support better clinical care by opening up information and data held within GP principal clinical systems for use across health and social care. The GP Connect vision will be achieved by standardising integration and simplifying the operating model. Find out more on the [NHS Digital GP Connect homepage](https://digital.nhs.uk/services/gp-connect).
 
 GP Connect has initially focused on delivering HTTP FHIR&reg; APIs. The current GP Connect FHIR API specification is found at [https://nhsconnect.github.io/gpconnect/](https://nhsconnect.github.io/gpconnect/). An additional set of capabilities, under the badge GP Connect Messaging, are described in this specification. These new capabilities are focused on enabling updates to GP practice systems. 
 
