@@ -73,7 +73,7 @@ requirements:
 
 - id: GPCM-SD-115
   area: payload1
-  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code 371531000 (Report of clinical encounter)"
+  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>371531000</code> (Report of clinical encounter)"
   tooltip: "'type' MUST contain the SNOMED code 371531000 (Report of clinical encounter)"
   page: senddocument_fedcon_payload.html
 
