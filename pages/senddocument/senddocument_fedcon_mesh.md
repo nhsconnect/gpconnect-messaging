@@ -77,7 +77,7 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 
 ### MESH API configuration ###
 
-Whe using the [MESH API](https://meshapi.docs.apiary.io/) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
+When using the [MESH API](https://meshapi.docs.apiary.io/) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
