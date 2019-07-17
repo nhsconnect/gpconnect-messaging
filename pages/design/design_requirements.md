@@ -4,7 +4,7 @@ keywords: design, messaging
 tags: [design,messaging]
 sidebar: overview_sidebar
 permalink: design_requirements.html
-summary: "Details of how requirements are presented in the GP Connect Specification"
+summary: "Details of how requirements are presented in the GP Connect specification"
 toc: false
 ---
 
