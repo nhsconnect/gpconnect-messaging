@@ -17,10 +17,11 @@ This process describes the steps/actions involved in the Consultation Report use
 
 Two common requirements must be met for this process to proceed:
 - the clinician writes a consultation for a patient; and
-- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice elsewhere.
+- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice elsewhere
+
 Consultation reports will be sent three hours (locally configurable) after the consultation is saved and committed to the patient’s clinical record.
  
-Where a clinician makes further updates to the consultation notes before the three hour gap, a single report is sent.
+Where a clinician makes further updates to the consultation notes before the three-hour gap, a single report is sent.
 
 Where the consultation notes are edited after the report has already been sent, an updated version of the report is sent.
  
@@ -36,7 +37,7 @@ Additional reports are clearly marked with a version number.
 
 **1. Write consultation**
 
-Clinician inputs the details of the consultation into the GP provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the GP practice.
+Clinician inputs the details of the consultation into the GP provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example, pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the GP practice.
 
 **2. Save consultation**
 
@@ -100,7 +101,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **11. Receive infrastructure acknowledgement**
 
-The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable time-frame (to be defined by system supplier), the provider system notifies an appropriate end user.
+The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable timeframe (to be defined by system supplier), the provider system notifies an appropriate end user.
 
 **12.	Add message into workflow**
 
@@ -114,7 +115,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **14. Receive business acknowledgement**
 
-The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable time-frame (configurable), the provider system notifies an appropriate end user.
+The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable timeframe (configurable), the provider system notifies an appropriate end user.
 
 
 
