@@ -157,3 +157,6 @@ entries:
         - title: Deployment
           url: /tag_deployment.html
           output: web
+        - title: Support
+          url: /tag_support.html
+          output: web
