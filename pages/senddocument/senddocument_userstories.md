@@ -11,7 +11,7 @@ toc: true
 
 ## Purpose ##
 
-The purpose of this page is to document the user stories that apply across all of GP Connect Send Document capability. To avoid duplication links to the requirements within the specification have be provided where applicable.
+The purpose of this page is to document the user stories that apply across all of GP Connect Send Document capability. To avoid duplication, links to the requirements within the specification have been provided where applicable.
 
 ## User stories ##
 
