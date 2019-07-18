@@ -31,7 +31,7 @@ The following solution is presented as the preferred option:
 
 ### Automated message creation ###
 
-The message creation process is hidden from the clinician – in a similar way that synchronisation with Summary Care Record (SCR) takes place without the involvement of a clinician, the GP Principal Clinical System is responsible for the background task of ensuring that the registered practice record is updated.
+The message creation process is hidden from the clinician – in a similar way that synchronisation with Summary Care Record (SCR) takes place without the involvement of a clinician, the GP principal clinical system is responsible for the background task of ensuring that the registered practice record is updated.
 
 Where the encounter details at a practice are updated later (for example, at the end of a clinic), an additional message would result to ensure that the latest complete picture of the encounter was made available to the registered practice. Note that each additional encounter summary message would contain a complete encounter summary, and not simply the delta to the previous instance.
 
@@ -39,7 +39,7 @@ The trigger for the background process would be at or near the time when a pract
 
 Any additional consultation report could be clearly marked as such. As the GUID of the encounter is present in the ITK3 SenderReference field, all messages associated with that encounter can be identified.
 
-As the process to generate and sent a consultation report is automated, message priority cannot be set, as this would require a review by the clinician. As a result, the message priority of all messages for this use case will be set to `routine` indicating that the practice is simply requesting that information about the practice encounter be attached to the registered practice record.
+As the process to generate and send a consultation report is automated, message priority cannot be set, as this would require a review by the clinician. As a result, the message priority of all messages for this use case will be set to `routine` indicating that the practice is simply requesting that information about the practice encounter be attached to the registered practice record.
 
 Where specific actions are required at the registered practice as a result of the encounter, the practice clinician will follow existing business processes.
  
