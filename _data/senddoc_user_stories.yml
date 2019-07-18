@@ -107,4 +107,26 @@
   sender: "<ol type=\"1\"><li>data sharing controls must not prevent the consultation message being sent</li></ol>"
   receiver: "<ol type=\"1\"><li>data sharing controls must not prevent the consultation message being received and made available to the GP practice</li></ol>"
   requirements: "None"
+  technical: "None"
+
+- id: GPC-SD11
+  title: "Patient confidentiality"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a patient"
+  iwant: "to be able to request that the details of the consultation are kept private"
+  sothat: "the data is not shared with someone I do not want to see it."
+  sender: "<ol type=\"1\"><li>the clinician may be able to set items in a consultation as confidential (this will depend on the local clinical system)</li><li>the items in the consultation record held at the originating GP practice are recorded as confidential (or equivalent) and its access restricted following the local clinical system's processes and standards</li><li>each confidential item in a consultation will be replaced in the consultation report with the warning text \"Confidential item\"</li><li>where there are multiple confidential items in a consultation, the warning text will be repeated for each item</li></ol>"
+  receiver: "N/A"
+  requirements: "GPCM-SD-133,GPCM-SD-134"
+  technical: "None" 
+  
+- id: GPC-SD12
+  title: "Deleted consultation"
+  source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
+  as: "a clinician at the originating practice"
+  iwant: "the patient's registered GP practice to be informed if I delete a consultation"
+  sothat: "the patient's medical record is kept up-to-date."
+  sender: "<ol type=\"1\"><li>when a user deletes a consultation where a consultation report has been sent, the sending system must give a warning message to the user <ol type=\"i\"><li>the warning message must include the patient name and NHS number, the consultation date and the GP practice the consultation report has been sent to(the patient's registered GP practice)</li></ol></li><li>where a consultation is deleted it is the responsibility of the GP practice that recorded the consultation to inform the registered GP practice<ol type=\"i\"><li>there is no requirement for the sending system to send an automated messages to inform the registered GP practice about the deletion</li><li>the sending system should assist the GP practice in managing and tracking the process of informing other organisations</li></ol></li></ol>"
+  receiver: "N/A"
+  requirements: "None"
   technical: "None" 

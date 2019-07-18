@@ -497,6 +497,12 @@ requirements:
   description: "the message sender system <strong>MUST</strong> send the consultation report within 3 hours after the consultation was created or last update"
   tooltip: "the message sender system MUST send the consultation report within 3 hours after the consultation was created or last update"
   page: senddocument_fedcon_trigger.html
+
+- id: GPCM-SD-135
+  area: trigger4
+  description: "the sender system <strong>MUST</strong> give a warning message to the user. The warning message <strong>MUST</strong> include the <code>patient name</code>, <code>NHS number</code>, <code>consultation date</code> and the patient's registered <code>GP practice</code>"
+  tooltip: "when a user deletes a consultation where a consultation report has been sent, the sender system must give a warning message to the user"
+  page: senddocument_fedcon_trigger.html
   
 - id: GPCM-SD-098
   area: pdf
@@ -510,6 +516,18 @@ requirements:
   tooltip: "if the patient has requested that the consultation is confidential then following data items MUST NOT be send in the PDF: Clinical Notes, Clinician, Surgery Tel No., Surgery Email, Place of consultation"
   page: senddocument_fedcon_busreq_pdf.html
 
+- id: GPCM-SD-133
+  area: pdf
+  description: "if the local system supports setting individual data items as confidential, then each item flagged as confidential <strong>MUST</strong> contain the warning text <code>Confidential item</code> when sent in the consultation report"
+  tooltip: "if the local system supports setting individual data items as confidential, then any item flagged as confidential MUST contain the warning text 'Confidential item' when sent in the consultation report"
+  page: senddocument_fedcon_busreq_pdf.html  
+
+- id: GPCM-SD-134
+  area: pdf
+  description: "if multiple data items are flagged as confidential, the warning text <code>Confidential item</code> <strong>MUST</strong> be repeated for each item"
+  tooltip: "if multiple data items are flagged as confidential, the warning text 'Confidential item' MUST be repeated for each item"
+  page: senddocument_fedcon_busreq_pdf.html
+  
 - id: GPCM-SD-104
   area: senddocpayload4
   description: "<code>DocumentReference.meta</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> profile"

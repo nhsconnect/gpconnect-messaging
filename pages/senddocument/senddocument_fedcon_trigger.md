@@ -77,6 +77,22 @@ The message sender <strong>MUST</strong> fulfil these time period requirements:
   {% endfor %}
 </table>
 
+## Dealing with deleted consultations ##
+
+Deletions are rare but do happen. For example, where a consultation was recorded against the wrong patient. In the event of a deletion the following sender requirement <strong>MUST</strong> be fulfilled:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'trigger4' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+{% include note.html content="It is the responsibility of the GP practice that recorded the consultation to inform the registered GP practice. There is no requirement for the sending system to send an automated messages to inform the registered GP practice about the deletion. The sender system should assist the GP practice in managing and tracking the process of informing other organisations." %} 
 
 ## PDF Format and business process ##
 
