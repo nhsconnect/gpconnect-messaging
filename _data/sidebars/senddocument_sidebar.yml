@@ -48,6 +48,9 @@ entries:
         - title: User stories
           url: /senddocument_userstories.html
           output: web
+        - title: Requirements list
+          url: /senddocument_fedcon_reqs.html
+          output: web
         - title: PDF layout
           url: /senddocument_fedcon_busreq_pdf.html 
           output: web

@@ -61,8 +61,8 @@ requirements:
 
 - id: GPCM-SD-113
   area: payload
-  description: "A Composition resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> resource <strong>MUST</strong> be present in the payload"
-  tooltip: "A Composition resource profiled to CareConnect-Composition-1 resource MUST be present in the payload"
+  description: "a Composition resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> resource <strong>MUST</strong> be present in the payload"
+  tooltip: "a Composition resource profiled to CareConnect-Composition-1 resource MUST be present in the payload"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-114
@@ -205,7 +205,7 @@ requirements:
 
 - id: GPCM-SD-039
   area: itk
-  description: "<code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> (“For action”) taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take the action of attaching the payload contents to the patient record. (\"For information\" is analogous to an email \"CC\" where no action is expected from the recipient, and the message could be deleted.) <br/>  <br/>  This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
+  description: "<code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> ('For action') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take the action of attaching the payload contents to the patient record. (\"For information\" is analogous to an email \"CC\" where no action is expected from the recipient, and the message could be deleted.) <br/>  <br/>  This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
   tooltip: "'RecipientType' MUST be set to fixed value of 'FA<' (For action) taken from FHIR ValueSet ITK-RecipientType-1"
   page: senddocument_fedcon_itk3.html
 
@@ -395,19 +395,6 @@ requirements:
   tooltip: "the Send Consultation Report send facility MUST be implemented in such a way as to minimise administrative burden on the practice"
   page: senddocument_fedcon_trigger.html
   
-- id: GPCM-SD-078
-  area: payload2
-  description: "the referenced <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-DocumentReference-1\">GPConnect-DocumentReference-1</a> resource <strong>MUST</strong> contain a <code>status</code> element set to a fixed value of <code>current</code>"
-  tooltip: "the referenced GPConnect-DocumentReference-1 resource MUST contain a 'status' element set to a fixed value of 'current'"
-  page: senddocument_fedcon_payload.html
-
-- id: GPCM-SD-079
-  area: senddocpayload4
-  description: "<code>DocumentReference.indexed</code> attribute <strong>MUST</strong> contain the date/time when the FHIR message was created"
-  tooltip: "'DocumentReference.indexed' attribute MUST contain the date/time when the FHIR message was created"
-  page: senddocument_payload.html
-
-
 - id: GPCM-SD-083
   area: trigger2
   description: "<strong>Step 1</strong> - if the patient registration type of the patient record at the appointment hosting practice is Regular (GMS/PMS), meaning, the registered practice care record is already up-to-date, then a message <strong>MUST NOT</strong> be sent"
