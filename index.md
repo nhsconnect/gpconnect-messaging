@@ -18,9 +18,6 @@ GP Connect aims to support better clinical care by opening up information and da
 
 GP Connect has initially focused on delivering HTTP FHIR&reg; APIs. The current GP Connect FHIR API specification is found at [https://nhsconnect.github.io/gpconnect/](https://nhsconnect.github.io/gpconnect/). An additional set of capabilities, under the badge GP Connect Messaging, are described in this specification. These new capabilities are focused on enabling updates to GP practice systems. 
 
-The resulting full set of capabilities delivered through GP Connect is illustrated below:
-
-![GP Connect capabilities - FHIR&reg; and messaging]({{site.url}}/images/overview/gpconnect_product_capabilities.png "GP Connect capabilities illustration") 
 
 ## Using Messaging to perform updates ##
 
