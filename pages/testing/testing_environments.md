@@ -5,6 +5,7 @@ tags: [testing,deployment]
 sidebar: overview_sidebar
 permalink: testing_environments.html
 summary: "Details of what environments are available to support the technical accreditation and solution assurance process"
+toc: false
 ---
 
 The following test environments are available:
@@ -17,4 +18,4 @@ More details on Opentest and request access can be found here - [https://digital
 ## Path-to-Live formal development and integration environments (accessible using N3/HSCN) ##
 The formal path-to-live environments are hosted on N3/HSCN and as such the information governance prerequisites are required before use, as this is a predicate to connecting to N3/HSCN.
 
-More details on the environments can be found here (N3/HSCN link required) - [http://www.assurancesupport.digital.nhs.uk](http://www.assurancesupport.digital.nhs.uk).
+More details on the environments can be found here (N3/HSCN connection required) - [http://www.assurancesupport.digital.nhs.uk](http://www.assurancesupport.digital.nhs.uk).

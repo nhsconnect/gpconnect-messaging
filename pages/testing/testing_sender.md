@@ -5,6 +5,7 @@ tags: [testing, itk3, mesh]
 sidebar: overview_sidebar
 permalink: testing_sender.html
 summary: "Overview of the testing approach and tools available to support and assure message senders"
+toc: false
 ---
 
 ## Testing approach ##

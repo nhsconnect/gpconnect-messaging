@@ -5,6 +5,7 @@ tags: [testing, mesh, itk]
 sidebar: overview_sidebar
 permalink: testing_receiver.html
 summary: "Overview of the testing approach and tools available to support and assure message receivers"
+toc: false
 ---
 
 ## Testing approach ##
