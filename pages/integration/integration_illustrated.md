@@ -34,9 +34,9 @@ The steps shown in the diagram are detailed below:
 
 | Step | Description |
 |------|-------------|
-| 1   | The **originating practice GP system** constructs a [FHIR Message](https://www.hl7.org/fhir/messaging.html) according to the [ITK3](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) standard which contains the details of the consultation which has taken place. The message is placed in the `/OUT` directory.  |
+| 1   | The **sender practice GP system** constructs a [FHIR Message](https://www.hl7.org/fhir/messaging.html) according to the [ITK3](https://nhsconnect.github.io/ITK3-FHIR-Messaging-Distribution/) standard which contains the details of the consultation which has taken place. The message is placed in the `/OUT` directory.  |
 |      |      |
-| 2   | The **[MESH](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh) Client** installed at the practice picks up the message from the `/OUT` directory and sends the message securely to the central Spine MESH server. |
+| 2   | The **[MESH](https://digital.nhs.uk/services/message-exchange-for-social-care-and-health-mesh) Client** installed at the sender practice picks up the message from the `/OUT` directory and sends the message securely to the central Spine MESH server. |
 |      |      |
 | 3   | The **Spine MESH server** extracts patient's Surname, Date of Birth and NHS Number from the `To_DTS` field in the MESH message `.CTL` file, and then performs a [PDS](https://digital.nhs.uk/services/demographics) lookup using these details in order to discover the [ODS code](https://digital.nhs.uk/services/organisation-data-service) of the patient's registered practice. |
 |      |      |

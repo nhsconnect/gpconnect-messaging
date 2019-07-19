@@ -1,4 +1,16 @@
 requirements:
+- id: GPCM-C-01
+  area: core
+  description: "MESH <strong>MUST</strong> be used as the message transport mechanism"
+  tooltip: "MESH MUST be used as the message transport mechanism"
+  page: integration_mesh.html
+  
+- id: GPCM-C-02
+  area: core
+  description: "all FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.5.0"
+  tooltip: "All FHIR Messages MUST conform to the ITK3 Message Distribution Standard, v2.5.0"
+  page: integration_itk3.html
+  
 - id: GPCM-SD-103
   area: senddocpayload
   description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1\">ITK-Document-Bundle</a> profile"
@@ -115,8 +127,8 @@ requirements:
 
 - id: GPCM-SD-122
   area: payload1
-  description: "<code>Composition.custodian</code> <strong>MUST</strong> contain a reference to the sending practice Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
-  tooltip: "'custodian' MUST contain a reference to the sending practice Organization resource profiled to CareConnect-Organization-1"
+  description: "<code>Composition.custodian</code> <strong>MUST</strong> contain a reference to the sender practice Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
+  tooltip: "'custodian' MUST contain a reference to the sender practice Organization resource profiled to CareConnect-Organization-1"
   page: senddocument_fedcon_payload.html
   
 - id: GPCM-SD-123
@@ -139,8 +151,8 @@ requirements:
 
 - id: GPCM-SD-028
   area: payload4
-  description: "as described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain an organization resource describing the sending organisation (the originating practice)"
-  tooltip: "as described in Send Document - Payload structure, the payload MUST contain an organization resource describing the sending organisation"
+  description: "as described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain an organization resource describing the sender organisation (the originating practice)"
+  tooltip: "as described in Send Document - Payload structure, the payload MUST contain an organization resource describing the sender organisation"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-029
@@ -223,8 +235,8 @@ requirements:
 
 - id: GPCM-SD-042
   area: itk
-  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the practice"
+  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the sender practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the sender practice"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-043
@@ -265,7 +277,7 @@ requirements:
 
 - id: GPCM-SD-049
   area: itk1
-  description: "<code>destination</code> and <code>receiver</code> <strong>MUST NOT</strong> be present. Rather, <a href=\"senddocument_fedcon_mesh.html\">MESH message routing</a> will be used to route message to registered practice by NHS Number, DOB and Surname"
+  description: "<code>destination</code> and <code>receiver</code> <strong>MUST NOT</strong> be present. Rather, <a href=\"senddocument_fedcon_mesh.html\">MESH message routing</a> will be used to route message to registered GP practice by NHS Number, DOB and Surname"
   tooltip: "'destination' and 'receiver' MUST NOT be present"
   page: senddocument_fedcon_itk3.html
 
@@ -283,8 +295,8 @@ requirements:
 
 - id: GPCM-SD-052
   area: itk2
-  description: "<code>SenderReference</code> <strong>MUST</strong> contain the unique identifier of the encounter which has taken place at the originating practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'SenderReference' MUST contain the unique identifier of the encounter which has taken place at the originating practice"
+  description: "<code>SenderReference</code> <strong>MUST</strong> contain the unique identifier of the encounter which has taken place at the sender practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST contain the unique identifier of the encounter which has taken place at the sender practice"
   page: senddocument_fedcon_itk3.html
   
 - id: GPCM-SD-053
@@ -407,22 +419,10 @@ requirements:
   tooltip: "a PDS lookup of the patient MUST be performed to determine the ODS code of the registered practice of the patient"
   page: senddocument_fedcon_trigger.html
 
-- id: GPCM-C-01
-  area: core
-  description: "MESH <strong>MUST</strong> be used as the message transport mechanism"
-  tooltip: "MESH MUST be used as the message transport mechanism"
-  page: integration_mesh.html
-  
-- id: GPCM-C-02
-  area: core
-  description: "all FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.5.0"
-  tooltip: "All FHIR Messages MUST conform to the ITK3 Message Distribution Standard, v2.5.0"
-  page: integration_itk3.html
-
 - id: GPCM-SD-086
   area: pdf
-  description: "the provider system <strong>MUST</strong> include all data entered by the clinician at the practice into the 'Clinical notes [notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation"
-  tooltip: "the provider system MUST include all data entered by the clinician at the practice into the 'Clinical notes [notes]' section of the PDF document"
+  description: "the provider system <strong>MUST</strong> include all data entered by the clinician at the sender practice into the 'Clinical notes [notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation"
+  tooltip: "the provider system MUST include all data entered by the clinician at the sender practice into the 'Clinical notes [notes]' section of the PDF document"
   page: senddocument_fedcon_busreq_pdf.html
 
 - id: GPCM-SD-087
