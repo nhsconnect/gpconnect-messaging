@@ -43,11 +43,11 @@ Refer to details below in the MESH API and MESH client for how to do this.
 
 The [MESH API](https://nhsconnect.github.io/spine-mesh/) is a simple REST HTTP API which enables message senders to send messages through MESH. Please refer to the [MESH API](https://nhsconnect.github.io/spine-mesh/) specification for details.
 
-When using the MESH endpoint lookup service, the Mex-To HTTP header is populated according to following syntactic conventions.
+When using the MESH endpoint lookup service, the Mex-To HTTP header is populated according to the following syntactic conventions.
 
 `<GPPROVIDER>[delimiter]<Nhs No>[delimiter]<d.o.b>[delimiter]<Surname>`
 
-The underscore `_` character is used as the delimeter.
+The underscore `_` character is used as the delimiter.
 
 Date of birth is specified in `DDMMYYYY` format.
 
@@ -84,7 +84,7 @@ For example, to enable a federated encounter summary message to flow from GP0001
 - `GP0001` is allowed to `Send` messages with workflow ID `GPFED_CONSULT_REPORT`
 - `GP0002` is allowed to `Receive` messages with workflow ID `GPFED_CONSULT_REPORT_ACK`
 
-As GP Connect Messaging capabilities are delivered, MESH will therefore be configured to enable actual message flow between organisations. Note that the approach is based on *explicity opt in* to ensure particularly GP practices receive only those messages which they have consented to receive. 
+As GP Connect Messaging capabilities are delivered, MESH will therefore be configured to enable actual message flow between organisations. Note that the approach is based on *explicit opt in* to ensure particularly GP practices receive only those messages which they have consented to receive. 
 
 
 
