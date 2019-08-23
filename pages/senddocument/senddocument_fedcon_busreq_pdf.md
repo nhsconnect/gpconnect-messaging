@@ -52,7 +52,7 @@ The following describe each of the fields used in the PDF:
 |	Field name  	|	Description 	|	Confidential item  |
 |	-------------	|	-------------	| :----------------: |
 |	`Version [x]` |	The version of the consultation report sent	|
-|	`Number of related documents`	|	The number of documents attached to the message, for example, pain point diagram, ECG, photo. These will be all documents recorded on the GP system that are linked to the consultation	|
+|	`Number of related documents`	|	The number of documents attached to the message - for example, pain point diagram, ECG, photo. These will be all documents recorded on the GP system that are linked to the consultation	|
 |	`Page [x] of [y]`	|	The page number and total pages of the PDF	|
 |	`Surname, Forename(s)`	|	The surname and forename(s) of the patient. This may wrap over multiple lines depending on the length of the name	|
 |	`D.O.B.`	|	The date of birth of the patient in the format `dd-Mmm-yyyy	`|
