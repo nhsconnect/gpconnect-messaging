@@ -4,7 +4,7 @@ keywords: document, payload
 tags: [send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_payload.html
-summary: "Send Document capability - The structure of the payload to be used for all use cases of the Send Document capability."
+summary: "Send Document capability - the structure of the payload to be used for all use cases of the Send Document capability"
 ---
 
 ## Payload message requirements ##
@@ -42,7 +42,7 @@ The following requirements describe how binary documents are included in the pay
   {% endfor %}
 </table>
 
-Each instance of an binary document will be included as follows:
+Each instance of a binary document will be included as follows:
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
