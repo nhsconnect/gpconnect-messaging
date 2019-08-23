@@ -31,7 +31,7 @@ With the choice of an asynchronous communication paradigm, the natural choice fo
 
 MESH (and its predecessor DTS) is a proven platform which has successfully supported NHS messaging requirements for a number of years. One of the main benefits of which MESH brings is excellent reach.
 
-MESH connectivity has already been implemented widely across the NHS, and importantly, is already built into support message flows incoming to GP practices in all GP core clinical system implementations.  
+MESH connectivity has already been implemented widely across the NHS and, importantly, is already built into support message flows incoming to GP practices in all GP core clinical system implementations.  
 
 ### Asynchronous messaging paradigms ###
 
