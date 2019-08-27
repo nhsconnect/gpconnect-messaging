@@ -55,8 +55,8 @@ The following describe each of the fields used in the PDF:
 |	`Number of related documents`	|	The number of documents attached to the message - for example, pain point diagram, ECG, photo. These will be all documents recorded on the GP system that are linked to the consultation.	|
 |	`Page [x] of [y]`	|	The page number and total pages of the PDF.	|
 |	`Surname, Forename(s)`	|	The surname and forename(s) of the patient. This may wrap over multiple lines depending on the length of the name.	|
-|	`D.O.B.`	|	The date of birth of the patient in the format `dd-Mmm-yyyy	`|
-|	`NHS no.`	|	The NHS Number of the patient in the format `### ### ####`	|
+|	`D.O.B.`	|	The date of birth of the patient in the format `dd-Mmm-yyyy`. |
+|	`NHS no.`	|	The NHS Number of the patient in the format `### ### ####`.	|
 |	`Gender`	|	The gender of the patient.	|
 |	`Tel No.`	|	The patient's contact telephone number(s).	|
 |	`Current Tel No.`	|	If the patient is currently staying at a temporary location, the number(s) for contacting the patient at that location. If the patient is not at a temporary location this will be blank and the 'Current Tel No.' label will not be shown.	|
@@ -64,7 +64,7 @@ The following describe each of the fields used in the PDF:
 |	`Current Address`	|	If the patient is currently staying at a temporary location, the address of that location. If the patient is not at a temporary location this will be blank and the 'Current Address' label will not be shown.	|
 |	`Clinical Notes`	|	All data entered by the clinician at the federated practice into the 'Clinical notes [notes]' section of the PDF document. Where the consultation has been set to confidential the data from the consultation is not displayed. It is replaced by the text 'The details of this consultation have been set as confidential'. | x |
 |	`Date seen`	|	The date and time of the patient's appointment at the federated GP practice in the format `dd-Mmm-yyyy`	|
-|	`Date consultation sent`	|	The date and time the consultation report was sent by the federated practice in the format `dd-Mmm-yyyy  hh:mm`	|
+|	`Date consultation sent`	|	The date and time the consultation report was sent by the federated practice in the format `dd-Mmm-yyyy  hh:mm`.	|
 |	`Clinician`	|	The full name and role of the treating clinician for the consultation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Surgery Tel No.`	|	The main telephone number of the federated practice available for other GP practices in the federation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Surgery email`	|	The main email address of the federated practice. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
