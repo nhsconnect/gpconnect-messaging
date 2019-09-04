@@ -235,8 +235,8 @@ requirements:
 
 - id: GPCM-SD-042
   area: itk
-  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the sender practice, appended with a timestamp of when the message was generated.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the sender practice, appended with a timestamp of when the message was generated"
+  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the sender practice.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the sender practice
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-043
