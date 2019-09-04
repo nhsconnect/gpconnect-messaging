@@ -42,7 +42,7 @@ The diagram above depicts a successful message flow where registered practice me
 | 2    | **Infrastructure acknowledgement ITK Response** |
 | 2a   | When the consultation report message is passed from the MESH client for processing at the registered practice, the message is first validated to ensure that its structure is correct. An ITK3 Response message is generated which indicates the success of message processing at a technical level - this is known as an "infrastructure acknowledgement".  |
 | 2b   | The MESH client at the registered practice sends the message to the MESH server where it awaits collection by the originating practice. |
-| 2c   | The MESH client at the originating practice collects the message from the MESH server  makes. The ITK Response is then available to other originating practice system components for onward processing. |
+| 2c   | The MESH client at the originating practice collects the message from the MESH server. The ITK Response is then available to other originating practice system components for onward processing. |
 | 2d   | The acknowledgement message is processed as appropriate by the originating practice.  |
 |      |      |
 | 3    | **Business acknowledgement ITK Response** |
