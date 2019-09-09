@@ -54,7 +54,7 @@ The following describe each of the fields used in the PDF:
 |	`Version [x]` |	The version of the consultation report sent.	|
 |	`Number of related documents`	|	The number of documents attached to the message - for example, pain point diagram, ECG, photo. These will be all documents recorded on the GP system that are linked to the consultation.	|
 |	`Page [x] of [y]`	|	The page number and total pages of the PDF.	|
-|	`Surname, Forename(s)`	|	The surname and forename(s) of the patient. This may wrap over multiple lines depending on the length of the name.<br>Format all names in the document as follow:<br>`SURNAME <uppercase>, Forename(s) (Title)`	|
+|	`Surname, Forename(s)`	|	The surname and forename(s) of the patient. <br>Format all names in the document as follows:<br>`SURNAME <uppercase>, Forename(s) (Title)`<br>This may wrap over multiple lines depending on the length of the name.	|
 |	`D.O.B.`	|	The date of birth of the patient in the format `DD-Mmm-YYYY	`.|
 |	`NHS no.`	|	The NHS Number of the patient in the format `### ### ####`.	|
 |	`Gender`	|	The gender of the patient.	|
