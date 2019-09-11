@@ -54,7 +54,7 @@ The following describe each of the fields used in the PDF:
 |	`Version [x]` |	The version of the consultation report sent.	|
 |	`Number of related documents`	|	The number of documents attached to the message - for example, pain point diagram, ECG, photo. These will be all documents recorded on the GP system that are linked to the consultation.	|
 |	`Page [x] of [y]`	|	The page number and total pages of the PDF.	|
-|	`Surname, Forename(s)`	|	The surname and forename(s) of the patient. <br>Format all names in the document as follows:<br>`SURNAME <uppercase>, Forename(s) (Title)`<br>This may wrap over multiple lines depending on the length of the name.	|
+|	`Surname, Forename(s), Title`	|	The surname, forename(s) and title of the patient. <br>Format all names in the document as follows:<br>`SURNAME <uppercase>, Forename(s), (Title)`<br>This may wrap over multiple lines depending on the length of the name.	|
 |	`D.O.B.`	|	The date of birth of the patient in the format `DD-Mmm-YYYY	`.|
 |	`NHS no.`	|	The NHS Number of the patient in the format `### ### ####`.	|
 |	`Gender`	|	The gender of the patient.	|
@@ -63,11 +63,11 @@ The following describe each of the fields used in the PDF:
 |	`Home/Registered Address`	|	The registered address of the patient, presented line by line, including post code. This may wrap over multiple lines depending on the length of the address.	|
 |	`Current Address`	|	If the patient is currently staying at a temporary location, the address of that location. If the patient is not at a temporary location this will be blank and the 'Current Address' label will not be shown.	|
 |	`Clinical Notes`	|	All data entered by the clinician at the sending practice into the 'Clinical notes [notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation. This data must be displayed in a format that matches how the consultation is displayed on screen or when printed. Where the entire consultation has been set to confidential the data from the consultation is not displayed. It is replaced by the text `The details of this consultation have been set as confidential`. Where individual items in the consultation have been set to confidential those items are not displayed and replaced by the text `Confidential item`. | x |
-|	`Date seen`	|	The date and time of the patient's appointment at the GP practice in the format `DD-Mmm-YYYY hh:mm`.	|
-|	`Date consultation sent`	|	The date and time the consultation report was sent by the practice in the format `DD-Mmm-YYYY  hh:mm`.	|
+|	`Date of consultation`	|	The date and time of the patient's appointment at the GP practice in the format `DD-Mmm-YYYY hh:mm`.	|
+|	`Date consultation letter sent`	|	The date and time the consultation report was sent by the practice in the format `DD-Mmm-YYYY  hh:mm`.	|
 |	`Clinician`	|	The full name and role of the treating clinician for the consultation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
-|	`Surgery Tel No.`	|	The main telephone number of the practice available for other GP practices. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
-|	`Surgery email`	|	The main email address of the practice. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
+|	`Consultation surgery Tel No.`	|	The main telephone number of the practice available for other GP practices. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
+|	`Consultation surgery email`	|	The main email address of the practice. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Place of consultation`	|	The name of the practice and the town specified in its full address. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 
 
