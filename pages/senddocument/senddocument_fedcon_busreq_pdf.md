@@ -31,16 +31,16 @@ Requirements are given below which define how the PDF is populated for this use 
 
 ## Layout ##
 
-The PDF below defines the expected document layout. If your browser is not compatible and unable to display the PDF, please right click and select "Save as" to download, or use this [link](GP_Connect_Messaging_-_PDF_Layout.pdf):
+The PDF below defines the expected document layout. If your browser is not compatible and unable to display the PDF, please right click and select "Save as" to download, or use this link to [get the PDF]({{ site.url }}/GP_Connect_Messaging_-_PDF_Layout.pdf) directly.
 
 <object
-  data="pages/senddocument/GP_Connect_Messaging_-_PDF_Layout.pdf"
+  data="GP_Connect_Messaging_-_PDF_Layout.pdf"
   type="application/pdf"
   width="847"
   height="2200">
 </object>
 
-<object data="pages/senddocument/GP_Connect_Messaging_-_PDF_Layout.pdf" type="application/pdf" width="847" height="0">      
+<object data="GP_Connect_Messaging_-_PDF_Layout.pdf" type="application/pdf" width="847" height="0">      
 </object>
 
 
