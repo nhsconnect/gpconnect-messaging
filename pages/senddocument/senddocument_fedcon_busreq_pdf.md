@@ -31,16 +31,16 @@ Requirements are given below which define how the PDF is populated for this use 
 
 ## Layout ##
 
-The PDF below defines the expected document layout. If your browser is not compatible and unable to display the PDF, please right click and select "Save as" to download, or use this link to [get the PDF]({{ site.url }}/GP_Connect_Messaging_-_PDF_Layout.pdf) directly.
+The PDF below defines the expected document layout. If your browser is not compatible and unable to display the PDF, please right click and select "Save as" to download, or use this link to <a href="https://developer.nhs.uk/apis/gpconnect-messaging-1-3/pages/senddocument/GP_Connect_Messaging_-_PDF_Layout.pdf">get the PDF </a>directly.
 
 <object
-  data="GP_Connect_Messaging_-_PDF_Layout.pdf"
+  data="https://developer.nhs.uk/apis/gpconnect-messaging-1-3/pages/senddocument/GP_Connect_Messaging_-_PDF_Layout.pdf"
   type="application/pdf"
   width="847"
   height="2200">
 </object>
 
-<object data="GP_Connect_Messaging_-_PDF_Layout.pdf" type="application/pdf" width="847" height="0">      
+<object data="https://developer.nhs.uk/apis/gpconnect-messaging-1-3/pages/senddocument/GP_Connect_Messaging_-_PDF_Layout.pdf" type="application/pdf" width="847" height="0">      
 </object>
 
 
