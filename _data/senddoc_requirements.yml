@@ -456,13 +456,13 @@ requirements:
   page: senddocument_fedcon_busreq_pdf.html
 
 - id: GPCM-SD-092
-  area: payload2
+  area: payload3
   description: "when displaying the consultation report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
   tooltip: "when displaying the consultation report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-093
-  area: payload2
+  area: payload3
   description: "the <em>message receiver</em> <strong>MUST</strong> make any attachments included with the consultation report available to the end user"
   tooltip: "the message receiver MUST make any attachments included with the consultation report available to the end user"
   page: senddocument_fedcon_payload.html
