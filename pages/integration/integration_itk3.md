@@ -22,7 +22,7 @@ As described in [Design Principles](design_principles.html#reliability-itk3), th
 
 All messages sent according to the ITK3 standard specification are constructed using the HL7 FHIR&reg; STU3 standard using the FHIR Messaging framework.
 
-The ITK3 standard builds on the [FHIR Messaging framework](https://www.hl7.org/fhir/messaging.html) through a set of messaging extensions, which are provided through a [profile of FHIR MessageHeader](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.1) resource. 
+The ITK3 standard builds on the [FHIR Messaging framework](https://www.hl7.org/fhir/STU3/messaging.html) through a set of messaging extensions, which are provided through a [profile of FHIR MessageHeader](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2/_history/2.1) resource. 
 
 This extension of the FHIR messaging framework provides some messaging options such as:
 

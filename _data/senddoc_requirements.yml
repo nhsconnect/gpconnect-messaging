@@ -13,7 +13,7 @@ requirements:
   
 - id: GPCM-SD-103
   area: senddocpayload
-  description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1\">ITK-Document-Bundle</a> profile"
+  description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/STU3/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1\">ITK-Document-Bundle</a> profile"
   tooltip: "the ITK3 MessageHeader.focus element MUST be a reference to a Bundle resource which conforms to the ITK-Document-Bundle profile"
   page: senddocument_payload.html
 

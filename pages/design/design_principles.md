@@ -23,7 +23,7 @@ Therefore, the approach taken to facilitate updates to GP principal clinical sys
 
 An asynchronous messaging approach offered a clearest alignment to the long-running workflow processes described above.  
 
-An HTTP synchronous approach, as used by the [GP Connect FHIR&reg; API](https://nhsconnect.github.io/gpconnect/), was considered. However, a synchronous model fits best the immediacy of a request/response pattern used when reading GP practice data for a direct care use case.  For this reason, the extension of the GP Connect FHIR API to support record updates was not selected.
+An HTTP synchronous approach, as used by the [GP Connect FHIR&reg; API](https://digital.nhs.uk/services/gp-connect/gp-connect-specifications-for-developers), was considered. However, a synchronous model fits best the immediacy of a request/response pattern used when reading GP practice data for a direct care use case.  For this reason, the extension of the GP Connect FHIR API to support record updates was not selected.
 
 ### Asynchronous transport: MESH ###
 
@@ -53,7 +53,7 @@ In this model, organisations will subscribe through an event hub to those events
 
 ### Messaging format : FHIR STU3 Messages ###
 
-The [HL7 FHIR Message framework](https://www.hl7.org/fhir/messaging.html) was chosen as the messaging format. 
+The [HL7 FHIR Message framework](https://www.hl7.org/fhir/STU3/messaging.html) was chosen as the messaging format. 
 
 HL7 have defined FHIR STU3 as a standard to enable interoperable on-the-wire communication of healthcare data. Within the FHIR STU3 standard, a framework is defined for the exchange of healthcare information in an asynchronous messaging scenario - the HL7 FHIR Message Framework. This therefore was a natural choice for the message format, and also aligns with the approach taken by the ITK3 Message Distribution Standard.
 

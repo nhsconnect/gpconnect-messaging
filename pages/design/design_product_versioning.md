@@ -10,4 +10,4 @@ toc: false
 
 ## Versioning approach ##
 
-The GP Connect Messaging specification is versioned according to the principles described at [GP Connect FHIR&reg; API specification versioning](https://nhsconnect.github.io/gpconnect/design_product_versioning.html).
+The GP Connect Messaging specification is versioned according to the principles described at [GP Connect FHIR&reg; API specification versioning](https://digital.nhs.uk/services/gp-connect/gp-connect-specifications-for-developers).
