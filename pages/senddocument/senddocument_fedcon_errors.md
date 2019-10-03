@@ -4,7 +4,7 @@ keywords: use-case, itk3, mesh
 tags: [use-case, itk3, mesh, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_errors.html
-summary: "Error handling details for the Send Federated Consultation Report use case"
+summary: "Error handling details for the Send Consultation Report use case"
 ---
 
 The following section describes error scenarios and associated error codes for this messaging use case.
@@ -14,35 +14,6 @@ The following section describes error scenarios and associated error codes for t
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'error' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-Details are given below of the ITK3 Negative Response which is used per error scenario:
-
-### ITK3 Header errors ### 
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'error1' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-
-### ITK3 Payload business rules errors ###
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'error2' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>

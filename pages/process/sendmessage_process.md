@@ -4,24 +4,24 @@ keywords: use-case
 tags: [use-case]
 sidebar: senddocument_sidebar
 permalink: sendmessage_process.html
-summary: "Process map for Send Federated Consultation Report"
+summary: "Process map for Send Consultation Report"
 ---
 
 ## Purpose ##
 
-This page describes the business process for the Send Federated Consultation Report use case in order to fully understand the business requirements.
+This page describes the business process for the Send Consultation Report use case in order to fully understand the business requirements.
  
 ## Process ##
 
-This process describes the steps/actions involved in the Federated Consultation Report use case where a consultation is written within the provider system and is sent to the consumer system at the patient’s registered GP practice.
+This process describes the steps/actions involved in the Consultation Report use case where a consultation is written within the provider system and is sent to the consumer system at the patient’s registered GP practice.
 
 Two common requirements must be met for this process to proceed:
 - the clinician writes a consultation for a patient; and
-- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice within the same federation (or a group of GP practices working together to deliver a service)
+- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice elsewhere
 
-Federated consultation reports will be sent three hours (locally configurable) after the consultation is saved and committed to the patient’s clinical record.
+Consultation reports will be sent three hours (locally configurable) after the consultation is saved and committed to the patient’s clinical record.
  
-Where a clinician makes further updates to the consultation notes before the three hour gap, a single report is sent.
+Where a clinician makes further updates to the consultation notes before the three-hour gap, a single report is sent.
 
 Where the consultation notes are edited after the report has already been sent, an updated version of the report is sent.
  
@@ -30,14 +30,14 @@ Additional reports are clearly marked with a version number.
  
 ### Process map ###
 
-![Send Federated Consultation Report process map](images/senddocument/sendmessage_process.jpg "Send Federated Consultation Report process map") 
+![Send Consultation Report process map](images/senddocument/process.png "Send Consultation Report process map") 
 
  
 ### Steps ###
 
 **1. Write consultation**
 
-Clinician inputs the details of the consultation into the GP provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the GP practice.
+Clinician inputs the details of the consultation into the GP provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example, pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the GP practice.
 
 **2. Save consultation**
 
@@ -45,7 +45,7 @@ The clinician manually saves the consultation notes and commits them to the pati
 
 **3. Save consultation into patient record**
 
-The provider system saves the consultation notes into the patient’s electronic record at the federated GP practice.
+The provider system saves the consultation notes into the patient’s electronic record at the GP practice.
 
 **4. Wait three hours (locally configurable)**
 
@@ -72,14 +72,14 @@ A FHIR message is generated which contains a PDF which contains all the informat
 
 The ITK3 FHIR Message is generated, which must include:
 - FHIR MessageHeader
-- FHIR STU3 task
+- FHIR STU3 composition
 - PDF file, its contents and metadata
 - all attachments/documents recorded with the consultation
 
 Further details on the message content can be found at:
 [Send Document Payload](senddocument_payload.html)
 
-When the PDF is generated, the provider system checks for previous versions of the PDF linked to this consultation. A previous version will exist if the clinician updates the consultation more than three hours after it was initially saved and committed. If there are no previous versions, the PDF is designated as [version 1]. If there are previous versions, the PDF is designated [version 2/3/4…n]. The version number is displayed in the title of the PDF ("Federated Consultation Report Version x") and version field within the document itself. 
+When the PDF is generated, the provider system checks for previous versions of the PDF linked to this consultation. A previous version will exist if the clinician updates the consultation more than three hours after it was initially saved and committed. If there are no previous versions, the PDF is designated as [version 1]. If there are previous versions, the PDF is designated [version 2/3/4…n]. The version number is displayed in the title of the PDF ("Consultation Report Version x") and version field within the document itself. 
 
 **7. Send message via MESH**
 
@@ -101,7 +101,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **11. Receive infrastructure acknowledgement**
 
-The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable time-frame (to be defined by system supplier), the provider system notifies an appropriate end user.
+The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable timeframe (to be defined by system supplier), the provider system notifies an appropriate end user.
 
 **12.	Add message into workflow**
 
@@ -115,7 +115,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **14. Receive business acknowledgement**
 
-The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable time-frame (configurable), the provider system notifies an appropriate end user.
+The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable timeframe (configurable), the provider system notifies an appropriate end user.
 
 
 

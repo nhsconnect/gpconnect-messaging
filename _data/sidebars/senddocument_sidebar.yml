@@ -20,11 +20,14 @@ entries:
     - title: MESH message configuration
       url: /senddocument_fedcon_mesh.html      
       output: web
+    - title: Document replacement
+      url: /senddocument_fedcon_resend.html      
+      output: web
     - title: Error handling
       url: /senddocument_fedcon_errors.html      
       output: web       
       
-  - title: Use case - Federated consultation
+  - title: Use case - Consultation
     output: web  
     folderitems:
       
@@ -44,6 +47,9 @@ entries:
           output: web
         - title: User stories
           url: /senddocument_userstories.html
+          output: web
+        - title: Requirements list
+          url: /senddocument_fedcon_reqs.html
           output: web
         - title: PDF layout
           url: /senddocument_fedcon_busreq_pdf.html 

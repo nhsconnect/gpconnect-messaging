@@ -5,10 +5,7 @@
 - title: Direct Patient Care
   value: "Defined by the Caldicott Review as a clinical, social or public health activity concerned with the prevention, investigation and treatment of illness and the alleviation of suffering of individuals. It includes supporting individuals' ability to function and improve their participation in life and society. It also includes the assurance of safe and high quality care and treatment through local audit, the management of untoward or adverse incidents, personal satisfaction including measurement of outcomes undertaken by one or more registered and regulated health or social care professionals and their team with whom the individual has a legitimate relationship for their care."
 - title: End User Organisation (EUO)
-  value: "An organisation that uses a GP Connect service (or commissions the development of a new GP Connect service ) to access GP data from more than one clinical system provider to improve direct patient care. For example:"
-  html: "<ul><li>a GP practice that is part of a federation, club or hub and is sharing data with other practices in the group</li><li>a Commissioning Support Unit (CSU)</li><li>an acute or mental health trust that is receiving GP data from a group of practices in its area</li><li>an A&E or 111 service that is receiving data or booking appointments on behalf of a patient</li></ul>"
-- title: Federation
-  value: "A group of GP practices working together within their local area, in some sort of collective legal or organisational entity to deliver services such as out of hours care."
+  value: "An organisation that uses a GP Connect service (or commissions the development of a new GP Connect service ) to access GP data from more than one clinical system provider to improve direct patient care."
 - title: First of Type (FoT)
   value: "A scheme that facilitates the onboarding, testing, governance, assurance and live deployment stage of an end user organisation and its consuming system on its journey to consuming a GP Connect FHIR® API. FoT also represents the process by which the provider API fulfilment is proven to meet set criteria prior to gaining approval for wider rollout and piloting."
 - title: GPSoC contract

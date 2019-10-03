@@ -5,11 +5,12 @@ tags: [testing, itk3, mesh]
 sidebar: overview_sidebar
 permalink: testing_sender.html
 summary: "Overview of the testing approach and tools available to support and assure message senders"
+toc: false
 ---
 
 ## Testing approach ##
 
-As part of the development process, message senders will need to verify that the messages being created are valid, and meet the requirements as stated in this specification for the use case in question
+As part of the development process, message senders will need to verify that the messages being created are valid, and meet the requirements as stated in this specification for the use case in question.
 
 NHS Digital will provide a "synthetic receiver" solution which will act as follows:
 

@@ -13,17 +13,17 @@ The following design principles have guided the approach to how updates to GP sy
 
 ### Business process integration ###
 
-GP system suppliers have implemented rich workflow solutions to enable management of incoming healthcare events. Frequently these incoming events result in the creation of tasks with associated workflows, which are assigned in a flexible and configurable way by each practice to suit their particular requirements. These solutions provide options for practices to define how this information is treated according to message type and content - enabling the definition of rules to automate the application of updates where this is deemed appropriate.
+GP system suppliers have implemented rich workflow solutions to enable management of incoming healthcare events. Frequently, these incoming events result in the creation of tasks with associated workflows, which are assigned in a flexible and configurable way by each practice to suit their particular requirements. These solutions provide options for practices to define how this information is treated according to message type and content - enabling the definition of rules to automate the application of updates where this is deemed appropriate.
 
 Senders of healthcare events frequently follow business processes which include a requirement that the target organisation not only acknowledges receipt of the message, but also includes expectation of notification of workflow events which cannot immediately be generated upon message receipt.  
 
-Therefore, the approach taken to facilitate updates to GP Principal Clinical Systems originating outside the practice has sought to align closely with these existing practice workflow capabilities and requirements.
+Therefore, the approach taken to facilitate updates to GP principal clinical systems originating outside the practice has sought to align closely with these existing practice workflow capabilities and requirements.
 
 ### Communication paradigm: asynchronous messaging ###
 
 An asynchronous messaging approach offered a clearest alignment to the long-running workflow processes described above.  
 
-An HTTP synchronous approach, as used by the [GP Connect FHIR API](https://nhsconnect.github.io/gpconnect/), was considered. However, a synchronous model fits best the immediacy of a request/response pattern used when reading GP practice data for a direct care use case.  For this reason, the extension of the GP Connect FHIR API to support record updates was not selected.
+An HTTP synchronous approach, as used by the [GP Connect FHIR&reg; API](https://digital.nhs.uk/services/gp-connect/gp-connect-specifications-for-developers), was considered. However, a synchronous model fits best the immediacy of a request/response pattern used when reading GP practice data for a direct care use case.  For this reason, the extension of the GP Connect FHIR API to support record updates was not selected.
 
 ### Asynchronous transport: MESH ###
 
@@ -31,7 +31,7 @@ With the choice of an asynchronous communication paradigm, the natural choice fo
 
 MESH (and its predecessor DTS) is a proven platform which has successfully supported NHS messaging requirements for a number of years. One of the main benefits of which MESH brings is excellent reach.
 
-MESH connectivity has already been implemented widely across the NHS, and importantly, is already built into support message flows incoming to GP practices in all GP core clinical system implementations.  
+MESH connectivity has already been implemented widely across the NHS and, importantly, is already built into support message flows incoming to GP practices in all GP core clinical system implementations.  
 
 ### Asynchronous messaging paradigms ###
 
@@ -41,7 +41,7 @@ Messages flowing into GP practices on MESH will arise mainly from the following 
 
 Where the message sender knows which party or parties the message is intended for, a point-to-point event notification is often used. Here the sender directs the message to a known recipient or set of recipients.
 
-For example, the [Send federated consultation summary](senddocument_fedcon_overview.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The federated practice knows that the consultation summary is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern.
+For example, the [Send Consultation Report](senddocument_fedcon_overview.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The sending practice knows that the consultation report is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern.
 
 
 #### 2. Publish/Subscribe event notification ####
@@ -53,7 +53,7 @@ In this model, organisations will subscribe through an event hub to those events
 
 ### Messaging format : FHIR STU3 Messages ###
 
-The [HL7 FHIR Message framework](https://www.hl7.org/fhir/messaging.html) was chosen as the messaging format. 
+The [HL7 FHIR Message framework](https://www.hl7.org/fhir/STU3/messaging.html) was chosen as the messaging format. 
 
 HL7 have defined FHIR STU3 as a standard to enable interoperable on-the-wire communication of healthcare data. Within the FHIR STU3 standard, a framework is defined for the exchange of healthcare information in an asynchronous messaging scenario - the HL7 FHIR Message Framework. This therefore was a natural choice for the message format, and also aligns with the approach taken by the ITK3 Message Distribution Standard.
 
@@ -74,4 +74,4 @@ ITK3 also makes available a number of message metadata elements which enable bet
 
 In designing a payload to meet a particular use case, care has been taken to design the payload in such a way that it may be re-used to fulfil other identified use cases through configuration change only.
 
-For example, the [Send federated consultation summary](senddocument_fedcon_overview.html) use case makes use of the more general payload type [Send Document](senddocument.html). Should a future use case arise where a document needs to be sent, the same payload can be re-used.
+For example, the [Send Consultation Report](senddocument_fedcon_overview.html) use case makes use of the more general payload type [Send Document](senddocument.html). Should a future use case arise where a document needs to be sent, the same payload can be re-used.

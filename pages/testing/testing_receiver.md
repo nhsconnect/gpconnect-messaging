@@ -5,6 +5,7 @@ tags: [testing, mesh, itk]
 sidebar: overview_sidebar
 permalink: testing_receiver.html
 summary: "Overview of the testing approach and tools available to support and assure message receivers"
+toc: false
 ---
 
 ## Testing approach ##
@@ -14,7 +15,7 @@ GP principal clinical system suppliers wishing to validate their capability to r
 This capability is currently at the design phase. However, it is envisaged that NHS Digital will provide access to a test portal where GP system providers will be able to manually trigger the sending of a test message selected from a set of exemplar messages which conform to the set of messaging use cases defined at the time.  
 
 For example, the following steps would represent validation that a message receiver appropriately handles a particular messaging use case:
-1. GP System Supplier tester logs on to NHS Digital portal, selects the GP Connect Message "Send Federated Consultation Summary" use case, and triggers sending of an exemplar message for this use case
+1. GP system supplier tester logs on to NHS Digital portal, selects the GP Connect Message "Send Consultation Report" use case, and triggers sending of an exemplar message for this use case
 2. the exemplar message is sent to the MESH mailbox associated with the portal login context
 3. the GP system supplier retrieves the message from the MESH inbox, and processes the message
 4. during message processing, any requested acknowledgements are sent by the GP provider system to a test mailbox ID specified by NHSD

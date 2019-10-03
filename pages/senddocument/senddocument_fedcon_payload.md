@@ -4,17 +4,17 @@ keywords: use-case
 tags: [use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_payload.html
-summary: "Details of the FHIR resources which make up the payload for the Send Federated Consultation Report use case."
+summary: "Details of the FHIR&reg; resources which make up the payload for the Send Consultation Report use case."
 ---
 
 
-Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the [Send Federated Consultation Report](http://localhost:4006/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
+Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the [Send Consultation Report](/senddocument_fedcon_overview.html#federated-appointments-use-case) use case.
 
-The following sections describe the resources which form the payload. i.e. the resources which will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1/_history/1.1) resource which acts as a container for the payload. 
+The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) resource, which acts as a container for the payload. 
 
 A [message example](senddocument_payload) is provided which illustrates these requirements to aid understanding.
 
-## Task resource ##
+## Composition resource ##
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -27,7 +27,7 @@ A [message example](senddocument_payload) is provided which illustrates these re
   {% endfor %}
 </table>
 
-The following requirements describe how the Task resource is populated:
+The following requirements describe how the Composition resource is populated:
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -39,32 +39,11 @@ The following requirements describe how the Task resource is populated:
   {% endif %}
   {% endfor %}
 </table>
-
-### Including binary documents in the payload ###
-
-[Send Document - Including documents in the payload](http://localhost:4006/senddocument_fedcon_payload.html#including-binary-documents-in-the-payload) defines how binary documents are included in the Send Document payload.
-
-For this use case, the following specific requirements apply:
-
-**Federated Consultation Report** <br/>
-
-Message senders will include the federated consultation report as an instance of the task.input element as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'payload2' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
 	
 <br/>
 **Additional input elements**
 
-Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the task.input as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
+Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the composition.section as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
