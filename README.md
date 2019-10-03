@@ -4,9 +4,9 @@
 
 This is the source repository for the GP Connect Messaging specification.
 
-The current specification version is held in the master branch, and published to <a href="https://nhsconnect.github.io/gpconnect-messaging/">GitHub pages</a>.
+The current specification version is held in the master branch, and published to the <a href="https://developer.nhs.uk/apis/gpconnect-messaging/">NHS Developer Network</a>.
 
-Previous versions of the specification are held in release/* branches (and tagged), and published to the <a href="https://developer.nhs.uk/gp-connect-specification-versions/">NHS Developer Network</a>.
+Previous versions of the specification are held in release/* branches (and tagged), and published to the <a href="https://digital.nhs.uk/services/gp-connect/gp-connect-specifications-for-developers">NHS Digital website</a>.
 
 ## Building the specification
 
