@@ -16,11 +16,11 @@ When a patient is seen by another GP practice it is necessary for information fr
 
 This use case completes the set of capabilities required to fulfil the following workflow:
 
-1.	the [GP Connect Appointments FHIR&reg; API](https://nhsconnect.github.io/gpconnect/appointments.html) enables booking of a consultation at an alternative practice
-2.	the [GP Connect Access Record HTML FHIR API](https://developer.nhs.uk/apis/gpconnect-0-5-0/accessrecord.html) enables an amenable consultation to take place at the alternative practice through access to the patient record stored at the patient’s registered practice
+1.	the GP Connect Appointments FHIR&reg; API enables booking of a consultation at an alternative practice
+2.	the GP Connect Access Record HTML FHIR&reg; API enables an amenable consultation to take place at the alternative practice through access to the patient record stored at the patient’s registered practice
 3.	after the consultation, the [Send Document](senddocument.html) GP Connect Messaging enables the details of this consultation to be written back to the registered practice so that the registered practice patient record continues to provide an up-to-date view of care which the patient receives in a GP practice setting
 
-{% include callout.html content="It is worth emphasising that the first two steps above use synchronous [GP Connect FHIR API](https://nhsconnect.github.io/gpconnect/) capabilities, and that an asynchronous messaging approach is taken to facilitate the update made at the registered practice by the final step." type="info" %}
+{% include callout.html content="It is worth emphasising that the first two steps above use synchronous GP Connect FHIR&reg; API capabilities, and that an asynchronous messaging approach is taken to facilitate the update made at the registered practice by the final step." type="info" %}
 
 
 ## Message flows in Send Consultation use case ##
