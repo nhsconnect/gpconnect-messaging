@@ -42,14 +42,15 @@ toc: false
     	<p><a href="senddocument_fedcon_overview">Overview</a></p>
     	<p><a href="senddocument_fedcon_payload.html">Payload requirements</a></p>
     	<p><a href="senddocument_fedcon_trigger">Triggering message creation</a></p>
-    	<p><a href="senddocument_fedcon_example.html">Message example</a></p>      
-   <p style="padding-top:8px">Business requirements</p>
+    	<p><a href="senddocument_fedcon_example.html">Message example</a></p>  
+  </div> 
+  <div class="column">
+   <p style="font-size:18px">Business requirements</p>
     	<p><a href="sendmessage_process.html">Process map</a></p>
     	<p><a href="senddocument_userstories.html">User stories</a></p>
     	<p><a href="senddocument_fedcon_reqs.html">Requirements list</a></p>
     	<p><a href="senddocument_fedcon_busreq_pdf.html">PDF layout</a></p>
     	<p><a href="senddocument_fedcon_busreq_clinical.html">Clinical engagement</a></p>
   </div>
- 
 </div>
 
