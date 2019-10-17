@@ -36,15 +36,15 @@ toc: false
     	<p><a href="overview_release_notes_1_3_0.html">1.3.0</a></p>
     	<p><a href="overview_release_notes_1_2_0.html">1.2.0</a></p>
     	<p><a href="overview_release_notes_1_1_0.html">1.1.0</a></p>
-    	<p><a href="overview_release_notes_1_0_0.html">1.0.0</a></p>      
-    <p style="font-size:18px; padding-top:15px">Design approach</p>
-    	<p><a href="design_principles.html">Design principles</a></p>
-	<p><a href="design_product_versioning.html.html">Specification versioning</a></p>
-	<p><a href="design_requirements.html">Requirements</a></p>
+    	<p><a href="overview_release_notes_1_0_0.html">1.0.0</a></p>          
   </div>
   <div class="column">
-    <p style="font-size:18px">Implement a capability</p>
-    	<p><a href="senddocument.html">Send document</a></p>
+    <p style="font-size:18px">Design approach</p>
+    	<p><a href="design_principles.html">Design principles</a></p>
+	<p><a href="design_product_versioning.html.html">Specification versioning</a></p>
+	<p><a href="design_requirements.html">Requirements</a></p>    
+    <p style="font-size:18px; padding-top:15px">Implement a capability</p>
+    	<p><a href="sitemap_send_document.html">Send document (sitemap)</a></p>
     <p style="font-size:18px; padding-top:15px">Integrate with Spine</p>
     	<p><a href="integration_illustrated.html">Spine integration illustrated</a></p>
 	<p><a href="integration_mesh.html">Using MESH</a></p>
