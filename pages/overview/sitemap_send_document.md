@@ -45,7 +45,7 @@ toc: false
     	<p><a href="senddocument_fedcon_example.html">Message example</a></p>  
   </div> 
   <div class="column">
-   <p style="font-size:18px">Business requirements</p>
+   <p>Business requirements</p>
     	<p><a href="sendmessage_process.html">Process map</a></p>
     	<p><a href="senddocument_userstories.html">User stories</a></p>
     	<p><a href="senddocument_fedcon_reqs.html">Requirements list</a></p>
