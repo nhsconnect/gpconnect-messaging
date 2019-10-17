@@ -26,6 +26,9 @@ entries:
     - title: Error handling
       url: /senddocument_fedcon_errors.html      
       output: web       
+    - title: Sitemap
+      url: /sitemap_send_document.html     
+      output: web       
       
   - title: Use case - Consultation
     output: web  
