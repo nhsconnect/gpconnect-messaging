@@ -3,7 +3,7 @@ title: Send Document sitemap
 keywords: sitemap
 summary: A collection of links to GP Connect Send Document information
 permalink: sitemap_send_document.html
-sidebar: foundations_sidebar
+sidebar: senddocument_sidebar
 toc: false
 ---
 <style>
