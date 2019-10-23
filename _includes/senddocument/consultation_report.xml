@@ -62,12 +62,12 @@
           <display value="ITK GP Connect Send Document" />
         </event>
         <sender>
-          <reference value="Organization/c0bee62f-9932-4468-9508-71c67a9f0c2c" />
+          <reference value="urn:uuid:c0bee62f-9932-4468-9508-71c67a9f0c2c" />
         </sender>
         <timestamp value="2018-07-12T10:30:16+00:00" />
         <!--- The ITK3 message payload contained within the resource referenced -->
         <focus>
-          <reference value="Bundle/70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
+          <reference value="urn:uuid:70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
         </focus>
       </MessageHeader>
     </resource>
@@ -133,21 +133,21 @@
 			  </text>
               <!-- Patient reference -->
               <subject>
-                <reference value="Patient/31686b67-9f20-4644-9a54-193d2f91de11" />
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
               </subject>
               <!-- Practice Practitioner reference -->
               <author>
-                <reference value="Practitioner/d0269177-3edc-468b-9f70-971189158bcb" />
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
               </author>
               <!-- Practice Organization reference -->
               <custodian>
-                <reference value="Organization/ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
+                <reference value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
               </custodian>
               <!-- Consultation report pdf attachment -->
               <section>
                 <title value="Consultation report" />
                 <entry>
-                  <reference value="Binary/caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
+                  <reference value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
                 </entry>
               </section>
             </Composition>
