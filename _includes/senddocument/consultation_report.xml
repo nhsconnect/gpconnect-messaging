@@ -40,7 +40,7 @@
           <!-- Message payload definition for GP Connect -->
           <extension url="MessageDefinition">
             <valueReference>
-              <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1" />
+              <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1" />
             </valueReference>
           </extension>
           <!-- Sender Reference - unique identifier of consultation -->
