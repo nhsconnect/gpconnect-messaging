@@ -241,8 +241,8 @@ requirements:
 
 - id: GPCM-SD-043
   area: itk
-  description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
-  tooltip: "'MessageDefinition' MUST be set to fixed value of 'https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-Instance-1'"
+  description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'MessageDefinition' MUST be set to fixed value of 'https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1'"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-044
