@@ -56,7 +56,6 @@ toc: false
 	<p><a href="testing_receiver.html">Message Receiver testing</a></p>
 	<p><a href="testing_environments.html">Test environments</a></p>
     <p style="font-size:18px; padding-top:15px">Help and support</p>
-    	<p><a href="support_faq.html">Frequently asked questions</a></p>
     	<p><a href="overview_glossary.html">Glossary</a></p>
     	<p><a href="support_communications.html">Communication channels</a></p>
   </div>
