@@ -70,19 +70,6 @@
                </extension>
                <extension url="reference">
                   <valueReference>
-                     <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1"/>
-                  </valueReference>
-               </extension>
-               <extension url="version">
-                  <valueString value="1.4.0"/>
-               </extension>
-            </extension>
-            <extension url="utilisedAsset">
-               <extension url="type">
-                  <valueCode value="StructureDefinition"/>
-               </extension>
-               <extension url="reference">
-                  <valueReference>
                      <reference value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1"/>
                   </valueReference>
                </extension>

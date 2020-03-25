@@ -40,7 +40,9 @@ The following requirements describe how the Composition resource is populated:
   {% endfor %}
 </table>
 	
+
 <br/>
+
 **Additional input elements**
 
 Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the composition.section as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).

@@ -142,6 +142,12 @@ requirements:
   description: "<code>Composition.section.entry</code> <strong>MUST</strong> reference a binary document which provides a report of the consultation in PDF format"
   tooltip: "'Composition.section.entry' MUST reference a binary document which provides a report of the consultation in PDF format"
   page: senddocument_fedcon_payload.html
+  
+- id: GPCM-SD-136
+  area: payload1
+  description: "<code>Composition.identifier</code> <strong>MUST</strong> contain the local identifier (UUID) of the composition"
+  tooltip: "Composition.identifier MUST contain the local identifier of the composition"
+  page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-125
   area: payload3
@@ -574,3 +580,15 @@ requirements:
   description: "ITK"
   tooltip: "requirements delivered by ITK"
   page: 
+
+- id: GPCM-SD-137
+  area: urgent
+  description: "each Observation sent in the payload <strong>MUST</strong> be included as an instance of the <code>Composition.section</code> element"
+  tooltip: "each Observation sent in the payload MUST be included as an instance of the Composition.section element"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-138
+  area: urgent1
+  description: "each <code>Composition.section.entry</code> <strong>MUST</strong> be a FHIR Reference containing a reference to an Observation profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1\">CareConnect-GPC-Observation-1</a>"
+  tooltip: "each 'Composition.section.entry' MUST be a FHIR Reference containing a reference to an Observation profiled to CareConnect-GPC-Observation-1"
+  page: senddocument_payload.html
