@@ -411,19 +411,7 @@ requirements:
   area: trigger
   description: "the Send Consultation Report send facility <strong>MUST</strong> be implemented in such a way as to minimise administrative burden on the practice"
   tooltip: "the Send Consultation Report send facility MUST be implemented in such a way as to minimise administrative burden on the practice"
-  page: senddocument_fedcon_trigger.html
-  
-- id: GPCM-SD-083
-  area: trigger2
-  description: "<strong>Step 1</strong> - if the patient registration type of the patient record at the appointment hosting practice is Regular (GMS/PMS), meaning, the registered practice care record is already up-to-date, then a message <strong>MUST NOT</strong> be sent"
-  tooltip: "if the patient registration type of the patient record at the appointment hosting practice is Regular (GMS/PMS), meaning, the registered practice care record is already up-to-date, then a message MUST NOT be sent"
-  page: senddocument_fedcon_trigger.html
-
-- id: GPCM-SD-084
-  area: trigger2
-  description: "<strong>Step 2</strong> - a PDS lookup of the patient <strong>MUST</strong> be performed to determine the ODS code of the registered practice of the patient"
-  tooltip: "a PDS lookup of the patient MUST be performed to determine the ODS code of the registered practice of the patient"
-  page: senddocument_fedcon_trigger.html
+  page: senddocument_fedcon_trigger.html 
 
 - id: GPCM-SD-086
   area: pdf

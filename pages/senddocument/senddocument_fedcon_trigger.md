@@ -45,21 +45,6 @@ Where specific actions are required at the registered practice as a result of th
  
 ## Defining whether message should be sent ##
 
-Irrespective of the means of triggering message creation, the first step the sending system must perform is to ascertain whether a message must be sent to the registered practice.
-
-The message sender performs the following steps to ascertain whether a message should be sent to the registered practice:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'trigger2' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
 In a scenario where both the sending and receiving practice are operating the same GP principal clinical system, updating the registered practice may be performed directly within that system infrastructure.
 
 ## Defining when message should be sent ##

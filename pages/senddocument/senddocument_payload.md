@@ -55,7 +55,10 @@ Each instance of a binary document will be included as follows:
 </table>
 
 
+
 ### Including structured Observations in the payload ###
+
+{% include warning.html content="The requirements below have been introduced to support the **COVID-19 pandemic**. All COVID-19 related codes **MUST** be sent as an Observation within the payload." %} 
 
 The following requirements describe how structured Observations are included in the payload:
 

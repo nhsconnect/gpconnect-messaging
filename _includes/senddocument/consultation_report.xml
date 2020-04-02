@@ -124,7 +124,7 @@
                   <display value="Report of clinical encounter" />
                 </coding>
               </type>
-              <date value="2019-07-10T10:00:00+00:00" />
+              <date value="2020-03-25T10:00:00+00:00" />
               <confidentiality value="N" />
               <title value="Consultation report" />
               <text>
@@ -195,13 +195,13 @@
                 <coding>
                   <system value="http://snomed.info/sct" />
                   <code value="1240761000000102" />
-                  <display value="Suspected disease caused by 2019-nCoV (novel coronavirus)" />
+                  <display value="Suspected COVID-19" />
                 </coding>
               </code>
               <subject>
                 <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
               </subject>
-              <issued value="2019-03-28T10:30:00+00:00" />
+              <issued value="2020-03-25T10:00:00+00:00" />
               <performer>
                 <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
               </performer>
