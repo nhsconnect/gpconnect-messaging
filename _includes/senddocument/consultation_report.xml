@@ -152,7 +152,7 @@
                   <reference value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
                 </entry>
               </section>
-			  <!-- Observation reference -->
+              <!-- Observation reference -->
               <section>
                 <title value="Observation" />
                 <entry>
@@ -225,6 +225,7 @@
                 <family value="Pritchard" />
                 <given value="Gary" />
                 <prefix value="Dr" />
+                <use value="official" />
               </name>
               <telecom>
                 <system value="phone" />
@@ -266,6 +267,19 @@
                 <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
               </meta>
               <active value="true" />
+              <identifier>
+                <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                  <valueCodeableConcept>
+                    <coding>
+                      <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1" />
+                      <code value="01" />
+                      <display value="Number present and verified" />
+                    </coding>
+                  </valueCodeableConcept>
+                </extension>
+                <system value="https://fhir.nhs.uk/Id/nhs-number" />
+                <value value="9989453456" />
+              </identifier>
               <name>
                 <use value="official" />
                 <family value="Smith" />
