@@ -9,10 +9,7 @@ summary: "Send Document capability - the structure of the payload to be used for
 
 ## Payload message requirements ##
 
-
 The following requirements describe the structure of the Send Document payload:
-
-
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}
@@ -55,7 +52,6 @@ Each instance of a binary document will be included as follows:
 </table>
 
 
-
 ### Including structured Observations in the payload ###
 
 {% include warning.html content="The requirements below have been introduced to support the **COVID-19 pandemic**. All COVID-19 related codes **MUST** be sent as an Observation within the payload." %} 
@@ -91,6 +87,7 @@ Each instance of an Observation will be included as follows:
 
 {% include note.html content="Please refer to the particular use case in question for detailed requirements on the population of these payload resources. Example FHIR&reg; Messages illustrating how payloads look on-the-wire are available for each use case." %} 
 
+
 ### Identifying the use case ###
 
 The ITK3 message handling key `LocalExtension` is used to define the health or social care use case associated with the Send Document message. Please refer to the ITK3 header requirements for your particular use case.   
@@ -101,6 +98,7 @@ The ITK3 message handling key `LocalExtension` is used to define the health or s
 The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below:
 
 ![Send Document - Payload](images/senddocument/send_doc_payload_illusatration.png "Send Document - Payload message illustration") 
+
 
 ## Payload message definition ##
 

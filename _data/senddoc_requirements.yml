@@ -547,8 +547,8 @@ requirements:
 
 - id: GPCM-SD-132
   area: resend4
-  description: "<code>Composition.relatesTo.targetIdentifier</code> <strong>MUST</strong> contain the identifier of the old document - UUID of original document"
-  tooltip: "Composition.relatesTo.targetIdentifier MUST contain the identifier of the old document - UUID of original document"
+  description: "<code>Composition.relatesTo.targetIdentifier</code> <strong>MUST</strong> contain the identifier of the old document - UUID of previous document"
+  tooltip: "Composition.relatesTo.targetIdentifier MUST contain the identifier of the old document - UUID of previous document"
   page: senddocument_fedcon_resend.html
     
 - id: "None"
@@ -580,3 +580,9 @@ requirements:
   description: "each <code>Composition.section.entry</code> <strong>MUST</strong> be a FHIR Reference containing a reference to an Observation profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1\">CareConnect-GPC-Observation-1</a>"
   tooltip: "each 'Composition.section.entry' MUST be a FHIR Reference containing a reference to an Observation profiled to CareConnect-GPC-Observation-1"
   page: senddocument_payload.html
+  
+- id: GPCM-SD-139
+  area: payload1
+  description: "<code>Composition.section.entry</code> <strong>MUST</strong> reference an Observation instance, if being sent as part of the payload"
+  tooltip: "'Composition.section.entry' MUST reference an Observation instance, if being sent as part of the payload"
+  page: senddocument_fedcon_payload.html
