@@ -484,6 +484,12 @@ requirements:
   description: "the sender system <strong>MUST</strong> give a warning message to the user. The warning message <strong>MUST</strong> include the <code>patient name</code>, <code>NHS number</code>, <code>consultation date</code> and the patient's <code>registered GP practice</code>"
   tooltip: "when a user deletes a consultation where a consultation report has been sent, the sender system must give a warning message to the user"
   page: senddocument_fedcon_trigger.html
+
+- id: GPCM-SD-140
+  area: trigger5
+  description: "the message sender system <strong>MUST</strong> send the consultation report containing an Observation based on a configurable list of SNOMED codes"
+  tooltip: "the message sender system MUST send the consultation report containing an Observation based on a configurable list of SNOMED codes"
+  page: senddocument_fedcon_trigger.html
   
 - id: GPCM-SD-098
   area: pdf

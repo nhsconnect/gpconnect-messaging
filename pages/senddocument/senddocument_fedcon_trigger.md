@@ -62,6 +62,21 @@ The message sender <strong>MUST</strong> fulfil these time period requirements:
   {% endfor %}
 </table>
 
+## Defining when message should include an Observation ##
+
+To support sending COVID-19 related codes back to the patient's registered GP practice in a structured format the sender <strong>MUST</strong> fulfil these requirements:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'trigger5' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
 ## Dealing with deleted consultations ##
 
 Deletions are rare but do happen. For example, where a consultation was recorded against the wrong patient. In the event of a deletion the following sender requirement <strong>MUST</strong> be fulfilled:
