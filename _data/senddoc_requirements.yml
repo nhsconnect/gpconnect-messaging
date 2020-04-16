@@ -487,8 +487,8 @@ requirements:
 
 - id: GPCM-SD-140
   area: trigger5
-  description: "the message sender system <strong>MUST</strong> send the consultation report containing an Observation based on a configurable list of SNOMED codes"
-  tooltip: "the message sender system MUST send the consultation report containing an Observation based on a configurable list of SNOMED codes"
+  description: "the message sender system <strong>MUST</strong> send the payload containing an Observation based on a configurable list of SNOMED codes"
+  tooltip: "the message sender system MUST send the payload containing an Observation based on a configurable list of SNOMED codes"
   page: senddocument_fedcon_trigger.html
   
 - id: GPCM-SD-098
