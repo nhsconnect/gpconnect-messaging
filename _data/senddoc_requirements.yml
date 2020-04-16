@@ -103,7 +103,7 @@ requirements:
 
 - id: GPCM-SD-118
   area: payload1
-  description: "<code>Composition.title</code> <strong>MUST</strong> contain the fixed value <code>Consultation report</code>"
+  description: "<code>Composition.title</code> <strong>MUST</strong> contain the fixed value <code>Consultation report</code>, or if triggered by <a href=\"senddocument_fedcon_trigger.html#GPCM-SD-140\">GPCM-SD-140</a> then <code>Composition.title</code> <strong>MUST</strong> contain the fixed value <code>URGENT COVID - Consultation report</code>"
   tooltip: "'title' MUST contain fixed value Consultation report"
   page: senddocument_fedcon_payload.html  
   
@@ -484,12 +484,6 @@ requirements:
   description: "the sender system <strong>MUST</strong> give a warning message to the user. The warning message <strong>MUST</strong> include the <code>patient name</code>, <code>NHS number</code>, <code>consultation date</code> and the patient's <code>registered GP practice</code>"
   tooltip: "when a user deletes a consultation where a consultation report has been sent, the sender system must give a warning message to the user"
   page: senddocument_fedcon_trigger.html
-
-- id: GPCM-SD-140
-  area: trigger5
-  description: "the message sender system <strong>MUST</strong> send the payload containing an Observation based on a configurable list of SNOMED codes"
-  tooltip: "the message sender system MUST send the payload containing an Observation based on a configurable list of SNOMED codes"
-  page: senddocument_fedcon_trigger.html
   
 - id: GPCM-SD-098
   area: pdf
@@ -592,3 +586,9 @@ requirements:
   description: "<code>Composition.section.entry</code> <strong>MUST</strong> reference an Observation instance, if being sent as part of the payload"
   tooltip: "'Composition.section.entry' MUST reference an Observation instance, if being sent as part of the payload"
   page: senddocument_fedcon_payload.html
+  
+- id: GPCM-SD-140
+  area: trigger5
+  description: "the message sender system <strong>MUST</strong> send the payload containing an Observation based on a configurable list of SNOMED codes"
+  tooltip: "the message sender system MUST send the payload containing an Observation based on a configurable list of SNOMED codes"
+  page: senddocument_fedcon_trigger.html
