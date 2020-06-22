@@ -49,7 +49,7 @@ When using the MESH endpoint lookup service, the Mex-To HTTP header is populated
 
 The underscore `_` character is used as the delimiter.
 
-Date of birth is specified in `DDMMYYYY` format.
+Date of birth is specified in `yyyyMMdd` format.
 
 For example, when sending a message about a patient Mr Brian Smith, born 14 February 2001, with NHS Number 12345678, the Mex_To field will have the following value:
 
