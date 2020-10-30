@@ -42,7 +42,7 @@ Any additional consultation report could be clearly marked as such. As the GUID 
 As the process to generate and send a consultation report is automated, message priority cannot be set, as this would require a review by the clinician. As a result, the message priority of all messages for this use case will be set to `routine` indicating that the practice is simply requesting that information about the practice encounter be attached to the registered practice record.
 
 Where specific actions are required at the registered practice as a result of the encounter, the practice clinician will follow existing business processes.
- 
+
 ## Defining whether message should be sent ##
 
 Irrespective of the means of triggering message creation, the first step the sending system must perform is to ascertain whether a message must be sent to the registered practice.
