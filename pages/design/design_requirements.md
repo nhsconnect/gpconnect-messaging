@@ -1,5 +1,5 @@
 ---
-title: GP Connect Messaging - Requirements
+title: Requirements
 keywords: design, messaging
 tags: [design,messaging]
 sidebar: overview_sidebar

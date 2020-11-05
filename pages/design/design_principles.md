@@ -1,5 +1,5 @@
 ---
-title: GP Connect Messaging - Design Principles
+title: Design Principles
 keywords: design, messaging
 tags: [design,messaging, itk3, mesh]
 sidebar: overview_sidebar

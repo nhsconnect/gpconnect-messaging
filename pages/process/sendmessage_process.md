@@ -10,14 +10,14 @@ summary: "Process map for Send Consultation Report"
 ## Purpose ##
 
 This page describes the business process for the Send Consultation Report use case in order to fully understand the business requirements.
- 
+
 ## Process ##
 
-This process describes the steps/actions involved in the Consultation Report use case where a consultation is written within the provider system and is sent to the consumer system at the patient’s registered GP practice.
+This process describes the steps/actions involved in the Consultation Report use case where a consultation is written within the a provider system and is sent to the consumer system at the patient’s registered GP practice.
 
 Two common requirements must be met for this process to proceed:
 - the clinician writes a consultation for a patient; and
-- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice elsewhere
+- the patient being treated is not registered at the organisation where the consultation is written AND is registered at a GP practice elsewhere
 
 Consultation reports will be sent three hours (locally configurable) after the consultation is saved and committed to the patient’s clinical record.
  
@@ -37,7 +37,7 @@ Additional reports are clearly marked with a version number.
 
 **1. Write consultation**
 
-Clinician inputs the details of the consultation into the GP provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example, pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the GP practice.
+Clinician inputs the details of the consultation into the provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example, pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the organisation.
 
 **2. Save consultation**
 
@@ -45,13 +45,13 @@ The clinician manually saves the consultation notes and commits them to the pati
 
 **3. Save consultation into patient record**
 
-The provider system saves the consultation notes into the patient’s electronic record at the GP practice.
+The provider system saves the consultation notes into the patient’s electronic record at the organisation.
 
 **4. Wait three hours (locally configurable)**
 
 The provider system waits three hours before the process moves on. This gives time for the clinician to make any necessary updates to the consultation to reduce the chance of the report being sent multiple times.
 
-The period of time that the clinical system waits before sending a message can be configured by each GP practice to meet their local needs.
+The period of time that the clinical system waits before sending a message can be configured by each organisation to meet their local needs.
 
 **5. Further updates to the consultation?**
 
@@ -62,7 +62,7 @@ Otherwise, the process moves on to step 6.
 There may be many reasons why the consultation is not completed when initially saved: 
 - the clinician may not have time to finish the consultation notes and must continue with treating other patients
 - the clinician may wish to ask a colleague for advice
-- the clinician may be off-site and will finish writing the consultation notes when they have returned to the GP practice
+- the clinician may be off-site and will finish writing the consultation notes when they have returned to the organisation
 - the results of a test may be required before the clinician can complete their notes
 - the clinician may have forgotten to add some important information when originally writing the consultation notes
 
@@ -101,7 +101,7 @@ The consumer system sends an ITK3 FHIR Message to the provider system containing
 
 **11. Receive infrastructure acknowledgement**
 
-The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable timeframe (to be defined by system supplier), the provider system notifies an appropriate end user.
+The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable time frame (to be defined by system supplier), the provider system notifies an appropriate end user.
 
 **12.	Add message into workflow**
 
