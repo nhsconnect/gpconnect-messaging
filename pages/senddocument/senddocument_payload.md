@@ -97,7 +97,8 @@ The ITK3 message handling key `LocalExtension` is used to define the health or s
 
 The payload of a GP Connect message which uses the Send Document capability **MUST** have the structure illustrated in the diagram below:
 
-![Send Document - Payload](images/senddocument/send_doc_payload_illusatration.png "Send Document - Payload message illustration") 
+<object type="image/svg+xml" data="images/senddocument/payload.svg" style="max-width:100%;max-height:100%;" alt="Payload message illustration"></object>
+<br/>
 
 
 ## Payload message definition ##

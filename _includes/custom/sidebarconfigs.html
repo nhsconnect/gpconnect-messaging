@@ -1,17 +1,18 @@
 {% assign showbackbutton = true %}
-{% assign backbuttontext = "To GP Connect Messaging" %}
+{% assign backbuttontext = "GP Connect Messaging" %}
 
 {% if page.sidebar == "overview_sidebar" or page.sidebar == "home_sidebar" %}
-{% assign sidebar = site.data.sidebars.overview_sidebar.entries; %}
+{% assign sidebar = site.data.sidebars.overview_sidebar %}
 {% assign showbackbutton = false %}
 
 {% elsif page.sidebar == "senddocument_sidebar" %}
-{% assign sidebar = site.data.sidebars.senddocument_sidebar.entries %}
+{% assign sidebar = site.data.sidebars.senddocument_sidebar %}
 
 {% else %}
-{% assign sidebar = site.data.sidebars.overview_sidebar.entries %}
+{% assign sidebar = site.data.sidebars.overview_sidebar %}
 {% endif %}
 
+{% assign the_sidebar = "sidebar_menu_list_items.liquid" %}
 
 
 {% comment %}

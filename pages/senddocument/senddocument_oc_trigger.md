@@ -3,7 +3,7 @@ title: Triggering message creation
 keywords: send-document
 tags: [send-document]
 sidebar: senddocument_sidebar
-permalink: senddocument_fedcon_trigger.html
+permalink: senddocument_oc_trigger.html
 summary: "Options for triggering the creation of a consultation report message"
 ---
 
