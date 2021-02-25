@@ -36,7 +36,7 @@ children:
     url: /sitemap_send_document.html     
     output: web       
     
-- title: Use case - Consultation
+- title: Use case - Consultation Summary
   output: web  
   children: 
   - title: Overview
@@ -105,3 +105,38 @@ children:
   - title: Message example
     url: /senddocument_oc_example.html      
     output: web
+    
+- title: Use case - Generic Send
+  output: web  
+  children: 
+  - title: Overview
+    url: /senddocument_generic_overview.html      
+    output: web
+  - title: Business requirements
+    url: /senddocument_generic_busreq.html
+    output: web
+    children:
+    - title: Process map
+      url: /sendmessage_generic_process.html
+      output: web
+    - title: User stories
+      url: /senddocument_generic_userstories.html
+      output: web
+    - title: Requirements list
+      url: /senddocument_generic_reqs.html
+      output: web
+    - title: PDF layout
+      url: /senddocument_generic_busreq_pdf.html 
+      output: web
+    - title: Clinical engagement
+      url: /senddocument_generic_busreq_clinical.html 
+      output: web
+  - title: Payload requirements
+    url: /senddocument_generic_payload.html      
+    output: web    
+  - title: Triggering message creation
+    url: /senddocument_generic_trigger.html      
+    output: web
+  - title: Message example
+    url: /senddocument_generic_example.html      
+    output: web    

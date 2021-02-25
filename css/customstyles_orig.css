@@ -384,8 +384,8 @@ ul#mysidebar, #mysidebar ul{
 }
 
 #mysidebar li{
-  margin-top:.1em;
-  line-height:1.1em;
+  margin-top: 1px;
+  line-height: 1px;
 }
 
 #mysidebar li a {
@@ -480,7 +480,7 @@ ul#mysidebar, #mysidebar ul{
 /* navgoco sidebar styles (customized)*/
 
 .nav a {
-    color: #333 !important;
+    color: #333;
     display: block;
     outline: none;
     text-decoration: none;
@@ -491,12 +491,14 @@ ul#mysidebar, #mysidebar ul{
     font-size: 19px;
     font-weight: bolder;
 }
-
-
+/*
+.nav li > a > span { 
+	float: left; 
+	margin-right: 4px; 
+	font-size: 19px; 
+	font-weight: bolder; }
+*/
 /* \25b4 up arrow, \25be down arrow, \25b8 right arrow */
-
-.content_wrap a {
-  color: #000000 !important; }
 
 
 .nav li > a > span:after {
@@ -508,16 +510,12 @@ ul#mysidebar, #mysidebar ul{
 }
 
 .nav a:hover, .nav li.active > a {
-    background-color: #ffffff !important;
-    color: #ffffff !important;
+    background-color: #ffffff;
+    color: #ffffff;
 }
 
-.nav > li.active > a {
-    background-color: #005eb8 !important;
-}
-
-.nav > li > a:hover {
-    background-color: #005eb8 !important;
+.nav > li.active > a  {
+    background-color: #ffffff;
 }
 
 .nav li a {
@@ -1128,7 +1126,7 @@ span.label.label-primary {
     }
 
 a code {
-    color: #000000;
+    color: #248EC2;
 }
 
 code + a > code {
@@ -1324,8 +1322,8 @@ table > tbody > tr.tableSubHeading {
 }
 
 .capability-not-available {
-    color: #8c0023!important;
-    font-weight: bold!important;
+    color: #aaaaaa;
+    font-weight: normal;
 }
 
 @media (max-width:700px) {
@@ -1621,24 +1619,31 @@ a.no_icon:after
     margin-right: 20px;
 } 
 
+.requirement-box {
+	width: 100%;
+}
 
-.screen-reader, .screen-reader-focusable { 
-	border: 0; 
-	clip: rect(0 0 0 0); 
-	height: 1px; 
-	margin: -1px; 
-	overflow: hidden; 
-	padding: 0; 
-	position: absolute; 
-	white-space: nowrap; 
-	width: 1px; } 
+.requirement-box b {
+    padding-right: 5px;
+}
 
-.screen-reader-focusable:active, 
-.screen-reader-focusable:focus { 
-	clip: auto; 
-	height: auto; 
-	margin: 0; 
-	overflow: visible; 
-	position: static; 
-	white-space: normal; 
-	width: auto; }
+.requirement-box tr td {
+   background-color: #fafafa;
+	border-top: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;		
+	border-bottom: 1px solid #dddddd;	
+}
+
+.requirement-box tr td:nth-child(1)
+{
+	background-color: #fafafa;
+	border-top: 1px solid #dddddd;	
+    border-left: 4px solid #aaaaaa;
+	border-bottom: 1px solid #dddddd;	
+	padding-top: 12px;
+    padding-left: 7px;
+	font-size: 10px;
+	font-weight:bold;	
+    width: 8%;
+}
