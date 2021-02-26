@@ -15,7 +15,7 @@ This page provides guidance on how systems which send a consultation report shou
 The following two principles should guide the implementation choice:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'trigger' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -50,7 +50,7 @@ Irrespective of the means of triggering message creation, the first step the sen
 The message sender performs the following steps to ascertain whether a message should be sent to the registered practice:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'trigger2' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -67,7 +67,7 @@ In a scenario where both the sending and receiving practice are operating the sa
 The message sender <strong>MUST</strong> fulfil these time period requirements:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'trigger3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -82,7 +82,7 @@ The message sender <strong>MUST</strong> fulfil these time period requirements:
 Deletions are rare but do happen. For example, where a consultation was recorded against the wrong patient. In the event of a deletion the following sender requirement <strong>MUST</strong> be fulfilled:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'trigger4' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

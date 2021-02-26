@@ -13,7 +13,7 @@ The Send Document capability allows for the replacement of a previously sent doc
 - the sender has more up-to-date or complete information - the original is correct but further information is now available to make the document more complete or detailed
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'resend' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -27,7 +27,7 @@ The Send Document capability allows for the replacement of a previously sent doc
 When the new document cannot be processed then:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'resend2' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -40,7 +40,7 @@ When the new document cannot be processed then:
 Replacement guidance:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'resend3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -53,7 +53,7 @@ Replacement guidance:
 FHIR&reg; elements used for replacement:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'resend4' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

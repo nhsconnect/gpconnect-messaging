@@ -12,7 +12,7 @@ Please refer to [Integration to MESH](integration_mesh.html) for an introduction
 ## MESH message routing ##
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'mesh' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -27,7 +27,7 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
 ## Workflow groups and Workflow ID ##
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'mesh1' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -42,7 +42,7 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
 When using the MESH client to send a message to the MESH server, the `.CTL` file will contain the following metadata about the message:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'mesh2' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -80,7 +80,7 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 When using the [MESH API](https://meshapi.docs.apiary.io/) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'mesh3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

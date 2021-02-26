@@ -16,7 +16,7 @@ The purpose of this page is to document the user stories that apply across all o
 ## User stories ##
 
 <div>
-{% assign stories = site.data.senddoc_user_stories | sort:'id' %}
+{% assign stories = site.data.oc_user_stories | sort:'id' %}
 {% for item in stories %}
 
 <h3> {{item.title}} </h3>
