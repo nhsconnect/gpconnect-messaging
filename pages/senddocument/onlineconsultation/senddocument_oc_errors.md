@@ -4,7 +4,7 @@ keywords: use-case, itk3, mesh
 tags: [use-case, itk3, mesh, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_oc_errors.html
-summary: "Error handling details for the Send Consultation Report use case"
+summary: "Error handling details for the Online Consultation Report use case"
 ---
 
 The following section describes error scenarios and associated error codes for this messaging use case.

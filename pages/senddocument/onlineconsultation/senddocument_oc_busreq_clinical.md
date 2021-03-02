@@ -4,7 +4,7 @@ keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_oc_busreq_clinical.html
-summary: "Clinical engagement for Send Consultation Report"
+summary: "Clinical engagement for Online Consultation Report"
 toc: false
 ---
 
@@ -16,8 +16,8 @@ To help ensure that the functionality being developed will be able to support GP
 This engagement has included:
 - General Practitioners
 - GP Nurses
-- GP Pharmacists
+- Community Pharmacists
 - Practice Managers
 - GP Practice Administration Staff
 
-The feedback from these stakeholders has been used to develop the [business process](sendmessage_process.html), [user stories](senddocument_userstories.html) and [PDF layout](senddocument_oc_busreq_pdf.html ) available above.
+The feedback from these stakeholders has been used to develop the [business process](sendmessage_oc_process.html) and [user stories](senddocument_oc_userstories.html).

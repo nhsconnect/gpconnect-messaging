@@ -54,8 +54,6 @@ Each instance of a binary document will be included as follows:
 
 ### Including structured Observations in the payload ###
 
-{% include warning.html content="The requirements below have been introduced to support the **COVID-19 pandemic**. All COVID-19 related codes **MUST** be sent as an Observation within the payload." %} 
-
 The following requirements describe how structured Observations are included in the payload:
 
 <table class="requirement-box">
@@ -82,6 +80,51 @@ Each instance of an Observation will be included as follows:
   {% endfor %}
 </table>
 
+
+### Including structured QuestionnaireResponse in the payload ###
+
+The following requirements describe how QuestionnaireResponse is included in the payload:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'urgent' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+### Including structured Consent in the payload ###
+
+The following requirements describe how Consent is included in the payload:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'urgent' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+### Including structured Location in the payload ###
+
+The following requirements describe how Location is included in the payload:
+
+<table class="requirement-box">
+  {% for item in site.data.senddoc_requirements.requirements %}
+  {% if item.area == 'urgent' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
 
 <br>
 

@@ -4,33 +4,27 @@ keywords: use-case
 tags: [use-case]
 sidebar: senddocument_sidebar
 permalink: sendmessage_oc_process.html
-summary: "Process map for Send Consultation Report"
+summary: "Process map for Online Consultation Report"
 ---
 
 ## Purpose ##
 
-This page describes the business process for the Send Consultation Report use case in order to fully understand the business requirements.
- 
+This page describes the business process for the Online Consultation Report use case in order to fully understand the business requirements.
+
 ## Process ##
 
-This process describes the steps/actions involved in the Consultation Report use case where a consultation is written within the provider system and is sent to the consumer system at the patient’s registered GP practice.
+This process describes the steps/actions involved in the Online Consultation Report use case where a online consultation is written within the OC system and is sent to the consumer system either at the patient’s registered GP practice, or a community pharmacy.
 
-Two common requirements must be met for this process to proceed:
-- the clinician writes a consultation for a patient; and
-- the patient being treated is not registered at the practice where the consultation is written AND is registered at a GP practice elsewhere
-
-Consultation reports will be sent three hours (locally configurable) after the consultation is saved and committed to the patient’s clinical record.
- 
-Where a clinician makes further updates to the consultation notes before the three-hour gap, a single report is sent.
-
-Where the consultation notes are edited after the report has already been sent, an updated version of the report is sent.
+Where the online consultation notes are edited after the message has already been sent, an updated version of the report is sent.
  
 Additional reports are clearly marked with a version number. 
  
  
 ### Process map ###
 
-![Send Consultation Report process map](images/senddocument/process.png "Send Consultation Report process map") 
+<a href="/images/senddocument/full_oc_process.png" target="_blank">Open process flow in new tab</a>
+
+![Online Consultation Report process map](images/senddocument/full_oc_process.png "Online Consultation Report process map") 
 
  
 ### Steps ###

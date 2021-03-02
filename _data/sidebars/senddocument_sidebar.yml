@@ -52,9 +52,6 @@ children:
     - title: User stories
       url: /senddocument_userstories.html
       output: web
-    - title: Requirements list
-      url: /senddocument_fedcon_reqs.html
-      output: web
     - title: PDF layout
       url: /senddocument_fedcon_busreq_pdf.html 
       output: web
@@ -86,12 +83,6 @@ children:
       output: web
     - title: User stories
       url: /senddocument_oc_userstories.html
-      output: web
-    - title: Requirements list
-      url: /senddocument_oc_reqs.html
-      output: web
-    - title: PDF layout
-      url: /senddocument_oc_busreq_pdf.html 
       output: web
     - title: Clinical engagement
       url: /senddocument_oc_busreq_clinical.html 

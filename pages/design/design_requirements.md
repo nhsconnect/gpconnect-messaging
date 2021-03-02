@@ -21,9 +21,9 @@ Where specific mandated requirements exist in the GP Connect Messaging specifica
 
 The Requirement ID provides a unique requirement identifier within this specification, as is constructed according to the following format:
 
-`GPCM-{SD|ST|SU}-N` 
+`GPCM-{SD|ST|SU}{CS|OC|GE}-N` 
 
-The second section, `{C|SD|ST|SU}` provides a capability identifier where `SD` refers to [Send Document](senddocument.html), `ST` refers to [Send Task](sendtask.html), `SU` refers to [Send Update](sendupdate.html). Requirements which apply to all capabilities are indicated by `C` (common)
+The second section, `{C|SD|ST|SU}` provides a capability identifier where `SD` refers to [Send Document](senddocument.html), `ST` refers to [Send Task](sendtask.html), `SU` refers to [Send Update](sendupdate.html). Requirements which apply to all capabilities are indicated by `C` (common). Following the capability is the use case reference `CS` refers to `Consultation Summary`, `OC` refers to `Online Consultation` and `GE` refers to `Generic`. The use case reference is only used to identify requirements that relate to that use case only.
 
 The keywords ‘**MUST**’ and ‘**MUST NOT**’ on this site are to be interpreted as described in [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
 

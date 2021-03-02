@@ -18,7 +18,7 @@ The PDF layout defines the requirements of the document layout and detailed info
 Requirements are given below which define how the PDF is populated for this use case:
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.cs_requirements.requirements %}
   {% if item.area == 'pdf' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

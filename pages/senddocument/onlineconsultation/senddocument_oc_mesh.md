@@ -37,6 +37,61 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
   {% endfor %}
 </table>
 
+## Using RESTful API interface to find a mailbox ##
+
+Sending organisations *MUST* use the MESH API to search for MESH mailbox through the method described in this section.
+
+To use the API interface to the MESH endpoint lookup service, one of the following Uniform Resource Locators (URLs) are used.
+
+If using a MESH certificate;
+
+https://mesh-sync.national.ncrs.nhs.uk/messageexchange/endpointlookup/<odscode>/<workflowid>
+
+If using a Spine certificate;
+
+https://simple-sync.national.ncrs.nhs.uk/endpointlookup/mesh/<ODS_Code>/<WorkflowId>
+
+An example URL search (using a Spine certificate) for the ODS code of “X26” and the WorkflowId of “TOC_AE_DMA” would be:
+
+https://simple-sync.national.ncrs.nhs.uk/endpointlookup/mesh/X26/TOC_AE_DMS
+
+This would return the following three results in JavaScript Object Notation (JSON) format:
+
+{   "query_id" : "20170110161927234224_25A3CC_1429036893",   -- Message Response ID
+"results" : [
+      {
+         "description" : "16-08regression",
+         "address" : "X26OT018",
+         "endpoint_type" : "MESH"
+      },
+      {
+         "endpoint_type" : "MESH",
+         "description" : "R16-07 Regression",
+         "address" : "X26OT015"
+      },
+      {
+         "description" : "StuartTest1",
+         "address" : "X26PM001",
+         "endpoint_type" : "MESH"
+      }
+   ]
+ }
+
+### MESH API configuration ###
+
+When using the [MESH API](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a sending organisation API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'mesh3' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
 ### MESH client configuration 
 
 When using the MESH client to send a message to the MESH server, the `.CTL` file will contain the following metadata about the message:
@@ -75,17 +130,4 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 </DTSControl>
 ```
 
-### MESH API configuration ###
 
-When using the [MESH API](https://meshapi.docs.apiary.io/) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a practice API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
-
-<table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'mesh3' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>

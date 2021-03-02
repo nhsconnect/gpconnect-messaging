@@ -30,7 +30,7 @@ This extension of the FHIR messaging framework provides some messaging options s
 - the ability for a sender to request a positive or negative "business" acknowledgement message to be returned which indicates the success or failure of the processing of the message at a business process level
 - various message meta-data elements
 
-Please refer to the [messaging capability](senddocument.html) and [messaging use case](senddocument_fedcon_overview.html) pages for details of which of these options is mandated or recommended for the particular message being created.
+Please refer to the [messaging capability](senddocument.html) and specific use case pages for details of which of these options is mandated or recommended for the particular message being created.
 
 ### ITK3 response processing ###
 
