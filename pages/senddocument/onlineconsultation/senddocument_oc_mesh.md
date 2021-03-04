@@ -9,7 +9,11 @@ summary: "Consultation - MESH configuration"
 
 Please refer to [Integration to MESH](integration_mesh.html) for an introduction to the use of MESH for GP Connect Messaging use cases.
 
-## MESH message routing ##
+
+{% include important.html content="The preferred method for sending Online Consultation Reports is the <strong>MESH API</strong>, this is because the MESH API is more easily integrated into sending systems, and the <strong>MESH API Address Lookup</strong> function needs to used to identify MESH mailbox IDs for community pharmacies.<br/><br/>The <strong>MESH client</strong> can be used to send the message, but the <strong>MESH API Address Lookup</strong> is still required if sending to a community pharmacy.<br/><br/>The [Message routing to registered practice](integration_mesh.html#message-routing-to-registered-practice) can be used if only ever sending to the patient's registered GP practice. " %}
+
+
+## MESH API Address Lookup ##
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -21,8 +25,6 @@ Please refer to [Integration to MESH](integration_mesh.html) for an introduction
   {% endif %}
   {% endfor %}
 </table>
-
-Please refer to [Message routing to registered practice](integration_mesh.html#message-routing-to-registered-practice) for details of how to use this facility.
 
 ## Workflow groups and Workflow ID ##
 
@@ -37,49 +39,9 @@ Please refer to [Message routing to registered practice](integration_mesh.html#m
   {% endfor %}
 </table>
 
-## Using RESTful API interface to find a mailbox ##
+## MESH API configuration ##
 
-Sending organisations *MUST* use the MESH API to search for MESH mailbox through the method described in this section.
-
-To use the API interface to the MESH endpoint lookup service, one of the following Uniform Resource Locators (URLs) are used.
-
-If using a MESH certificate;
-
-https://mesh-sync.national.ncrs.nhs.uk/messageexchange/endpointlookup/<odscode>/<workflowid>
-
-If using a Spine certificate;
-
-https://simple-sync.national.ncrs.nhs.uk/endpointlookup/mesh/<ODS_Code>/<WorkflowId>
-
-An example URL search (using a Spine certificate) for the ODS code of “X26” and the WorkflowId of “TOC_AE_DMA” would be:
-
-https://simple-sync.national.ncrs.nhs.uk/endpointlookup/mesh/X26/TOC_AE_DMS
-
-This would return the following three results in JavaScript Object Notation (JSON) format:
-
-{   "query_id" : "20170110161927234224_25A3CC_1429036893",   -- Message Response ID
-"results" : [
-      {
-         "description" : "16-08regression",
-         "address" : "X26OT018",
-         "endpoint_type" : "MESH"
-      },
-      {
-         "endpoint_type" : "MESH",
-         "description" : "R16-07 Regression",
-         "address" : "X26OT015"
-      },
-      {
-         "description" : "StuartTest1",
-         "address" : "X26PM001",
-         "endpoint_type" : "MESH"
-      }
-   ]
- }
-
-### MESH API configuration ###
-
-When using the [MESH API](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api) the [Send Message API call](https://meshapi.docs.apiary.io/#reference/0/mesh-messages/send-a-message) will be used by a sending organisation API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
+When using the [MESH API](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api) the [Send Message API call](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api#api-Endpoints-sendMessage-0) will be used by a sending organisation API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -92,7 +54,7 @@ When using the [MESH API](https://digital.nhs.uk/developer/api-catalogue/message
   {% endfor %}
 </table>
 
-### MESH client configuration 
+## MESH client configuration  ##
 
 When using the MESH client to send a message to the MESH server, the `.CTL` file will contain the following metadata about the message:
 
@@ -117,7 +79,7 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 <MessageType>Data</MessageType>
 <From_DTS>GP0001</From_DTS>
 <To_DTS>GPPROVIDER_1234567890_09011955_Smith</To_DTS>
-<Subject>GP consultation report for patient Mr Richard Smith , NHS Number 1234567890, with details of encounter which at practice GP0001</Subject>
+<Subject>Online consultation report for patient Mr Richard Smith , NHS Number 1234567890, GP0001</Subject>
 <LocalId></LocalId>
 <DTSId></DTSId>
 <PartnerId></PartnerId>

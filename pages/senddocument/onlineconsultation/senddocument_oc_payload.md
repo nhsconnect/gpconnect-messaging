@@ -13,7 +13,9 @@ The following sections describe the resources which form the payload. These are 
 
 A [message example](senddocument_oc_example) is provided which illustrates these requirements to aid understanding.
 
-## Composition resource ##
+## Resource population requirements ##
+
+### Composition resource ###
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -40,7 +42,6 @@ The following requirements describe how the Composition resource is populated:
 </table>
 	
 
-<br/>
 
 **Additional input elements**
 
@@ -57,7 +58,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
   {% endfor %}
 </table>
 
-## Patient resource ##
+### Patient resource ###
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -83,7 +84,7 @@ The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
   {% endfor %}
 </table>
 
-## Organization resource ##
+### Organization resource ###
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -96,7 +97,7 @@ The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
   {% endfor %}
 </table>
 
-The table below outlines how these resources are populated:
+The [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) resource present in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -109,7 +110,7 @@ The table below outlines how these resources are populated:
   {% endfor %}
 </table>
 
-## Practitioner resource ##
+### Practitioner resource ###
 
 The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) resource present in the payload is populated as follows:
 
@@ -124,7 +125,7 @@ The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
   {% endfor %}
 </table>
 
-## Device resource ##
+### Device resource ###
 
 The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1) resource present in the payload is populated as follows:
 
@@ -140,7 +141,7 @@ The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-
 </table>
 
 
-## Observation resource ##
+### List/Observation resource ###
 
 The [CareConnect-GPC-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1) in the payload is populated as follows:
 
@@ -169,7 +170,7 @@ Each [CareConnect-GPC-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinitio
 </table>
 
 
-## QuestionnaireResponse resource ##
+### QuestionnaireResponse resource ###
 
 The [CareConnect-GPC-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-QuestionnaireResponse-1) in the payload is populated as follows:
 
@@ -184,7 +185,7 @@ The [CareConnect-GPC-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/Structure
   {% endfor %}
 </table>
 
-## Location resource ##
+### Location resource ###
 
 The [CareConnect-GPC-Location-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Location-1) in the payload is populated as follows:
 
@@ -199,17 +200,82 @@ The [CareConnect-GPC-Location-1](https://fhir.nhs.uk/STU3/StructureDefinition/Ca
   {% endfor %}
 </table>
 
-## Consent resource ##
 
-The [CONSENT??]() in the payload is populated as follows:
+## Resource optionality and cardinality ##
 
-<table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload12' %}
+The following table lists the optionality and cardinality for each resource:
+
+<table>
+  <thead>
   <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
+    <th>Resource</th>
+    <th>Optionality</th>
+	<th>Cardinality</th>
   </tr>
-  {% endif %}
-  {% endfor %}
+  </thead>
+  <tbody>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1)ITK-Payload-Bundle">ITK-Payload-Bundle</a></td>
+    <td>Mandatory</td>
+	<td>1..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1">CareConnect-Composition-1</a></td>
+    <td>Mandatory</td>
+	<td>1..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1">ITK-Attachment-Binary-1</a></td>
+    <td>Mandatory</td>
+	<td>1..*</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1">CareConnect-Patient-1</a></td>
+    <td>Mandatory</td>
+	<td>1..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1">CareConnect-Organization-1</a></td>
+    <td>Mandatory</td>
+	<td>1..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1">CareConnect-Practitioner-1</a></td>
+    <td>Required</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1">GPConnect-Device-1</a></td>
+    <td>Required</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1">CareConnect-GPC-List-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1">CareConnect-GPC-Observation-1</a></td>
+    <td>Optional</td>
+	<td>0..*</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-QuestionnaireResponse-1">CareConnect-GPC-QuestionnaireResponse-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Location-1">CareConnect-GPC-Location-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  </tbody>
 </table>
+
+
+
+
+
+
+
+

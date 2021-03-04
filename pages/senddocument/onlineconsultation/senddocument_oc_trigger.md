@@ -12,7 +12,7 @@ This page provides guidance on how systems which send a consultation report shou
 
 ## Guiding principles ##
 
-The following two principles should guide the implementation choice:
+The following principle should guide the implementation choice:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}

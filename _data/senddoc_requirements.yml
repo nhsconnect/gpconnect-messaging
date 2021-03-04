@@ -79,8 +79,8 @@ requirements:
 #ITK3 requirements
 - id: GPCM-SD-039
   area: itk
-  description: "<code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> ('For action') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take the action of attaching the payload contents to the patient record. (\"For information\" is analogous to an email \"CC\" where no action is expected from the recipient, and the message could be deleted.) <br/>  <br/>  This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
-  tooltip: "'RecipientType' MUST be set to fixed value of 'FA<' (For action) taken from FHIR ValueSet ITK-RecipientType-1"
+  description: "when sending to the primary recipient (the care provider expected to action the message) the <code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> ('For action') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take  action. <br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
+  tooltip: "'RecipientType' MUST be set to fixed value of 'FA<' (For action) taken from FHIR ValueSet ITK-RecipientType-1 when sending to primary recipient"
   page: senddocument_fedcon_itk3.html
 
 - id: GPCM-SD-040

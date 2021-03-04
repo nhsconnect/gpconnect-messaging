@@ -24,6 +24,12 @@ This use case follows this process:
 3.	the OC system sends the message (containing a PDF of the online consultation) to the care provider
 4.  the care provider receives the message and takes the appropriate action.
 
+
+### Admin items ####
+
+COMPLETE SECTION
+
+
 ## Message flows in Send Consultation use case ##
 
 The following diagram illustrates how a message can flow between the sending (originating) organisation and the receiving care provider via MESH to fulfil this use case:

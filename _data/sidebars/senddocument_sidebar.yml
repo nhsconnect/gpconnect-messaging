@@ -20,12 +20,6 @@ children:
   - title: Message payload
     url: /senddocument_payload.html
     output: web
-  - title: ITK3 header requirements
-    url: /senddocument_fedcon_itk3.html      
-    output: web
-  - title: MESH message configuration
-    url: /senddocument_fedcon_mesh.html      
-    output: web
   - title: Document replacement
     url: /senddocument_fedcon_resend.html      
     output: web
@@ -61,6 +55,12 @@ children:
   - title: Payload requirements
     url: /senddocument_fedcon_payload.html      
     output: web    
+  - title: ITK3 header requirements
+    url: /senddocument_fedcon_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_fedcon_mesh.html      
+    output: web
   - title: Triggering message creation
     url: /senddocument_fedcon_trigger.html      
     output: web
@@ -89,6 +89,12 @@ children:
       output: web
   - title: Payload requirements
     url: /senddocument_oc_payload.html      
+    output: web
+  - title: ITK3 header requirements
+    url: /senddocument_oc_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_oc_mesh.html      
     output: web    
   - title: Triggering message creation
     url: /senddocument_oc_trigger.html      
@@ -113,17 +119,17 @@ children:
     - title: User stories
       url: /senddocument_generic_userstories.html
       output: web
-    - title: Requirements list
-      url: /senddocument_generic_reqs.html
-      output: web
-    - title: PDF layout
-      url: /senddocument_generic_busreq_pdf.html 
-      output: web
     - title: Clinical engagement
       url: /senddocument_generic_busreq_clinical.html 
       output: web
   - title: Payload requirements
     url: /senddocument_generic_payload.html      
+    output: web  
+  - title: ITK3 header requirements
+    url: /senddocument_generic_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_generic_mesh.html      
     output: web    
   - title: Triggering message creation
     url: /senddocument_generic_trigger.html      

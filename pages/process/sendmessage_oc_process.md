@@ -19,7 +19,10 @@ Where the online consultation notes are edited after the message has already bee
  
 Additional reports are clearly marked with a version number. 
  
- 
+### Process flows ###
+
+ADD PROCESS FLOWS
+
 ### Process map ###
 
 <a href="/images/senddocument/full_oc_process.png" target="_blank">Open process flow in new tab</a>
@@ -28,6 +31,8 @@ Additional reports are clearly marked with a version number.
 
  
 ### Steps ###
+
+UPDATE STEPS!!!!!!!!!!!!!! BREAKDOWN BY PROCESS FLOW
 
 **1. Write consultation**
 

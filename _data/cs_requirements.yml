@@ -181,6 +181,25 @@ requirements:
   tooltip: "a configurable control MUST perform a final check to ensure that the sender wants to send the Consultation Report"
   page: senddocument_fedcon_trigger.html
 
+- id: GPCM-SD-096
+  area: trigger3
+  description: "the message sender system <strong>MUST</strong> send the Consultation Report within 3 hours after the consultation was created or last update"
+  tooltip: "the message sender system MUST send the Consultation Report within 3 hours after the consultation was created or last update"
+  page: senddocument_fedcon_trigger.html
+  
+- id: GPCM-SD-142
+  area: trigger3
+  description: "the message sender system <strong>MUST</strong> only send the most recent version of the Consultation Report within the 3 hour window"
+  tooltip: "the message sender system MUST send the most recent version of the Consultation Report within the 3 hour window"
+  page: senddocument_fedcon_trigger.html
+
+- id: GPCM-SD-135
+  area: trigger4
+  description: "the sender system <strong>MUST</strong> give a warning message to the user. The warning message <strong>MUST</strong> include the <code>patient name</code>, <code>NHS number</code>, <code>consultation date</code> and the patient's <code>registered GP practice</code>"
+  tooltip: "when a user deletes a consultation where a Consultation Report has been sent, the sender system must give a warning message to the user"
+  page: senddocument_fedcon_trigger.html
+
+
 #PDF requirements
 - id: GPCM-SD-086
   area: pdf
@@ -229,24 +248,6 @@ requirements:
   description: "the <em>message receiver</em> <strong>MUST</strong> make any attachments included with the Consultation Report available to the end user"
   tooltip: "the message receiver MUST make any attachments included with the Consultation Report available to the end user"
   page: senddocument_fedcon_payload.html
-
-- id: GPCM-SD-096
-  area: trigger3
-  description: "the message sender system <strong>MUST</strong> send the Consultation Report within 3 hours after the consultation was created or last update"
-  tooltip: "the message sender system MUST send the Consultation Report within 3 hours after the consultation was created or last update"
-  page: senddocument_fedcon_trigger.html
-  
-- id: GPCM-SD-142
-  area: trigger3
-  description: "the message sender system <strong>MUST</strong> only send the most recent version of the Consultation Report within the 3 hour window"
-  tooltip: "the message sender system MUST send the most recent version of the Consultation Report within the 3 hour window"
-  page: senddocument_fedcon_trigger.html
-
-- id: GPCM-SD-135
-  area: trigger4
-  description: "the sender system <strong>MUST</strong> give a warning message to the user. The warning message <strong>MUST</strong> include the <code>patient name</code>, <code>NHS number</code>, <code>consultation date</code> and the patient's <code>registered GP practice</code>"
-  tooltip: "when a user deletes a consultation where a Consultation Report has been sent, the sender system must give a warning message to the user"
-  page: senddocument_fedcon_trigger.html
   
 - id: GPCM-SD-098
   area: pdf
@@ -307,48 +308,164 @@ requirements:
   description: "<code>Summary Reason</code> <strong>MUST</strong> contain the following text <code>A patient recently consulted with a clinician at an organisation different to the GP practice that they are registered with. The notes contained in this document are a summary of the consultation</code>"
   tooltip: "Summary Reason text must be hard coded"
   page: senddocument_fedcon_busreq_pdf.html
+
+#ITK3 requirements
+- id: GPCM-SD-039
+  area: itk
+  description: "when sending to the primary recipient (the care provider expected to action the message) the <code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> ('For action') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take  action. <br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
+  tooltip: "'RecipientType' MUST be set to fixed value of 'FA<' (For action) taken from FHIR ValueSet ITK-RecipientType-1 when sending to primary recipient"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-040
+  area: itk
+  description: "<code>BusAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 30001 to 30003.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'BusAckRequested' MUST be set to fixed value of 'true'"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-041
+  area: itk
+  description: "<code>InfAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 10001 to 20013.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'InfAckRequested' MUST be set to fixed value of 'true'"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-042
+  area: itk
+  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the sender organisation.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST be set to the unique identifier of the encounter which has taken place at the sender organisation"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-043
+  area: itk
+  description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'MessageDefinition' MUST be set to fixed value of 'https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1'"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-044
+  area: itk
+  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-Generic</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'LocalExtension' MUST be set to fixed value of 'SendDocument-ConsultationReport'"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-045
+  area: itk
+  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle"
+  tooltip: "'Sender' MUST contain a reference to the CareConnect-ITK-Header-Organization-1 resource present in the FHIR message bundle"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-046
+  area: itk
+  description: "<code>Source</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender"
+  tooltip: "'Source' MUST contain the MESH mailbox ID of the sender"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-047
+  area: itk
+  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK007C</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"
+  tooltip: "'Event' MUST contain a fixed value of 'ITK007C' from code system ITK-MessageEvent-2"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-048
+  area: itk
+  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the message was generated. (A separate process such as the MESH client may be responsible for sending the message at a later date/time.)"
+  tooltip: "'Timestamp' MUST contain the date/time when the message was generated"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-049
+  area: itk1
+  description: "<code>destination</code> and <code>receiver</code> <strong>MUST NOT</strong> be present. Rather, <a href=\"senddocument_fedcon_mesh.html\">MESH message routing</a> will be used to route message to registered GP practice by NHS Number, DOB and Surname"
+  tooltip: "'destination' and 'receiver' MUST NOT be present"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-050
+  area: itk2
+  description: "<code>BusAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'BusAckRequested' MUST contain a fixed value of 'false'"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-051
+  area: itk2
+  description: "<code>InfAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'InfAckRequested' MUST contain a fixed value of 'false'"
+  page: senddocument_fedcon_itk3.html
+
+- id: GPCM-SD-052
+  area: itk2
+  description: "<code>SenderReference</code> <strong>MUST</strong> contain the same unique identifier generated by GPCM-SD-042.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  tooltip: "'SenderReference' MUST contain the same unique identifier generated by GPCM-SD-042"
+  page: senddocument_fedcon_itk3.html
   
-- id: GPCM-SD-126
-  area: resend
-  description: "Receivers of replacement documents <strong>MUST</strong> process the replacement document and archive the replaced document"
-  tooltip: "Receivers of replacement documents MUST process the replacement document and archive the replaced document"
-  page: senddocument_fedcon_resend.html
+- id: GPCM-SD-053
+  area: itk2
+  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to an <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle" 
+  tooltip: "'Sender' MUST contain a reference to an CareConnect-ITK-Header-Organization-1 resource present in the FHIR message bundle" 
+  page: senddocument_fedcon_itk3.html
+ 
+- id: GPCM-SD-054
+  area: itk2
+  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK008M</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"  
+  tooltip: "'Event<' MUST contain a fixed value of 'ITK008M' from code system ITK-MessageEvent-2"
+  page: senddocument_fedcon_itk3.html
 
-- id: GPCM-SD-127
-  area: resend2
-  description: "the receiver of the new document <strong>SHOULD</strong> mark the original and replacement document as null and void and report a error to the sender using the ITK Response message and appropriate code see <a href=\"https://developer.nhs.uk/apis/itk3messagedistribution/explore_response_codes.html\">ITK3 response codes</a> for further information"
-  tooltip: "the receiver of the new document SHOULD mark the original and replacement document as null and void and report a error to the sender using the ITK Response message and appropriate code see ITK3 response codes for further information"
-  page: senddocument_fedcon_resend.html
+- id: GPCM-SD-055
+  area: itk2
+  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
+  tooltip: "'Timestamp' MUST contain the date/time when the message was generated"
+  page: senddocument_fedcon_itk3.html
 
-- id: GPCM-SD-128
-  area: resend2
-  description: "the sender of the new document <strong>SHOULD</strong> mark the original and replacement document as null and void once it receives the ITK3 Response indicating that the replacement document could not be processed"
-  tooltip: "the sender of the new document SHOULD mark the original and replacement document as null and void once it receives the ITK3 Response indicating that the replacement document could not be processed"
-  page: senddocument_fedcon_resend.html
-  
-- id: GPCM-SD-129
-  area: resend3
-  description: "replacements <strong>MAY</strong> be done more than once and the new document always refers to the previous document, multiple replacements <strong>SHOULD</strong> be avoided due to complexity of maintaining the audit trail"
-  tooltip: "replacements MAY be done more than once and the new document always refers to the previous document, multiple replacements SHOULD be avoided due to complexity of maintaining the audit trail"
-  page: senddocument_fedcon_resend.html
+#MESH requirements 
+- id: GPCM-SD-056
+  area: mesh
+  description: "all messages sent through this use case <strong>MUST</strong> use MESH automated message routing in order to ensure that the message is routed correctly to the registered practice of the patient"
+  tooltip: "all messages sent through this use case MUST use MESH automated message routing in order to ensure that the message is routed correctly to the registered practice of the patient"
+  page: senddocument_fedcon_mesh.html
 
-- id: GPCM-SD-130
-  area: resend3
-  description: "replacement documents <strong>SHOULD</strong> be sent within 24 hours of the original document"
-  tooltip: "replacement documents <strong>SHOULD</strong> be sent within 24 hours of the original document"
-  page: senddocument_fedcon_resend.html
+- id: GPCM-SD-057
+  area: mesh1
+  description: "each instance of a Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
+  tooltip: "each instance of a Consultation Report message MUST include the following MESH Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT'"
+  page: senddocument_fedcon_mesh.html
 
-- id: GPCM-SD-131
-  area: resend4
-  description: "<code>Composition.relatesTo.code</code> <strong>MUST</strong> contain the fixed value <code>replaces</code>"
-  tooltip: "Composition.relatesTo.code MUST contain the fixed value replaces"
-  page: senddocument_fedcon_resend.html
+- id: GPCM-SD-058
+  area: mesh1
+  description: "each instance of an acknowledgement message generated as a result of receipt of a Consultation Report message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
+  tooltip: "each instance of an acknowledgement message generated as a result of receipt of a Consultation Report message MUST include the following Workflow ID in the MESH message metadata: 'GPFED_CONSULT_REPORT_ACK'"
+  page: senddocument_fedcon_mesh.html
 
-- id: GPCM-SD-132
-  area: resend4
-  description: "<code>Composition.relatesTo.targetIdentifier</code> <strong>MUST</strong> contain the identifier of the old document - UUID of original document"
-  tooltip: "Composition.relatesTo.targetIdentifier MUST contain the identifier of the old document - UUID of original document"
-  page: senddocument_fedcon_resend.html
+- id: GPCM-SD-059
+  area: mesh2
+  description: "<code>From_DTS</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
+  tooltip: "'From_DTS' MUST contain the MESH mailbox ID of the sender of the message"
+  page: senddocument_fedcon_mesh.html
+
+- id: GPCM-SD-060
+  area: mesh2
+  description: "<code>To_DTS</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_'. This enables automatic routing of the message to the registered GP MESH mailbox"
+  tooltip: "'To_DTS' MUST contain the NHS Number, DOB and Surname of the patient delimited by the underscore character '_'"
+  page: senddocument_fedcon_mesh.html
+
+- id: GPCM-SD-061
+  area: mesh2
+  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  tooltip: "'Subject' MUST contain 'To 'text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  page: senddocument_fedcon_mesh.html
+
+- id: GPCM-SD-062
+  area: mesh3
+  description: "<code>Mex-From</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
+  tooltip: "'Mex-From' MUST contain the MESH mailbox ID of the sender of the message"
+  page: senddocument_fedcon_mesh.html
+
+- id: GPCM-SD-063
+  area: mesh3
+  description: "<code>Mex-To</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_'. This enables automatic routing of the message to the registered GP MESH mailbox"
+  tooltip: "'Mex-To' MUST contain the NHS Number, DOB and Surname of the patient delimited by the underscore character '_'"
+  page: senddocument_fedcon_mesh.html
+
+- id: GPCM-SD-064
+  area: mesh3
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  page: senddocument_fedcon_mesh.html
     
 - id: "None"
   area: na
