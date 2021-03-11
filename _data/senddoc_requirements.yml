@@ -14,61 +14,61 @@ requirements:
   page: integration_itk3.html
 
 #Core Send Document payload requirements  
-- id: GPCM-SD-103
+- id: GPCM-SD-001
   area: senddocpayload
   description: "the ITK3 <code>MessageHeader.focus</code> element <strong>MUST</strong> be a reference to a <a href=\"https://www.hl7.org/fhir/STU3/bundle.html\">Bundle</a> resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1\">ITK-Document-Bundle</a> profile"
   tooltip: "the ITK3 MessageHeader.focus element MUST be a reference to a Bundle resource which conforms to the ITK-Document-Bundle profile"
   page: senddocument_payload.html
 
-- id: GPCM-SD-104
+- id: GPCM-SD-002
   area: senddocpayload
   description: "the <code>ITK-Document-Bundle</code> <strong>MUST</strong> contain a Composition resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> base resource"
   tooltip: "the ITK-Document-Bundle MUST contain a Composition resource profiled to CareConnect-Composition-1 base resource"
   page: senddocument_payload.html
 
-- id: GPCM-SD-105
+- id: GPCM-SD-003
   area: senddocpayload
   description: "the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.custodian</code> element <strong>MUST</strong> contain an Organization resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a> profile describing the organisation which sends the message"
   tooltip: "the CareConnect-Composition-1 MUST contain an Organization resource which conforms to the CareConnect-Organization-1 profile describing the organisation which sends the message"
   page: senddocument_payload.html
 
-- id: GPCM-SD-106
+- id: GPCM-SD-004
   area: senddocpayload
   description: "where the message contains patient information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.subject</code> element <strong>MUST</strong> contain a patient resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a> profile"
   tooltip: "where the message contains patient information, for example as a result of a healthcare event, a patient resource MUST be present which conforms to the CareConnect-Patient-1"
   page: senddocument_payload.html
 
-- id: GPCM-SD-107
+- id: GPCM-SD-005
   area: senddocpayload
   description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
   tooltip: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource MUST be present which conforms to the CareConnect-Practitioner-1 profile. This resource describes the primary practitioner who delivered care."
   page: senddocument_payload.html  
   
-- id: GPCM-SD-108
+- id: GPCM-SD-006
   area: senddocpayload
   description: "all <code>Meta</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
   tooltip: "all Meta elements MUST be treated as mandatory and populated with the associated resource"
   page: senddocument_payload.html
 
-- id: GPCM-SD-109
+- id: GPCM-SD-007
   area: senddocpayload2
   description: "each binary document sent in the payload <strong>MUST</strong> be included as an instance of the <code>Composition.section</code> element"
   tooltip: "each binary document sent in the payload MUST be included as an instance of the Composition.section element"
   page: senddocument_payload.html
 
-- id: GPCM-SD-110
+- id: GPCM-SD-008
   area: senddocpayload3
   description: "each <code>Composition.section.entry</code> <strong>MUST</strong> be a FHIR Reference containing a reference to an attachment profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1\">ITK-Attachment-Binary-1</a>"
   tooltip: "each 'Composition.section.entry' MUST be a FHIR Reference containing a reference to an attachment profiled to ITK-Attachment-Binary-1"
   page: senddocument_payload.html
 
-- id: GPCM-SD-111
+- id: GPCM-SD-009
   area: senddocpayload3
   description: "all attachments <strong>MUST</strong> be Base64 encoded"
   tooltip: "all attachments MUST be Base64 encoded"
   page: senddocument_payload.html
   
-- id: GPCM-SD-112
+- id: GPCM-SD-010
   area: senddocpayload3
   description: "the primary attachment <strong>MUST</strong> be the first <code>Composition.section.entry</code> in the payload"
   tooltip: "the primary attachment MUST be the first 'Composition.section.entry' in the payload"

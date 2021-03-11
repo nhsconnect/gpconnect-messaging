@@ -7,7 +7,7 @@
   sender: "<ol type=\"1\"><li>the sender system must send a consultation report when the patient in question is registered at another GP practice <ol type=\"i\"><li>the sender system must follow the method stated in the specification to determine whether a patient is registered at another GP practice. Details can be found <a href=\"senddocument_fedcon_trigger.html#defining-whether-message-should-be-sent\">here</a></li></ol></li><li>where the sender system supports an alternative method for communicating the consultation information back to the patient's registered GP practice, this method may be used in the place of GP Connect Messaging (based on local agreement)<ol type=\"i\"><li>where an alternative method is used, the GP Connect Messaging requirements do not apply</li></ol></li></ol>"
   receiver: "N/A"
   requirements: GPCM-SD-083,GPCM-SD-084
-  technical: GPCM-SD-103,GPCM-SD-104,GPCM-SD-105,GPCM-SD-106,GPCM-SD-107,GPCM-SD-108,GPCM-SD-109,GPCM-SD-110,GPCM-SD-111,GPCM-SD-112,GPCM-SD-113,GPCM-SD-114,GPCM-SD-115,GPCM-SD-116,GPCM-SD-117,GPCM-SD-118,GPCM-SD-119,GPCM-SD-120,GPCM-SD-121,GPCM-SD-122,GPCM-SD-123,GPCM-SD-124,GPCM-SD-125,GPCM-SD-028,GPCM-SD-029,GPCM-SD-030,GPCM-SD-031,GPCM-SD-032,GPCM-SD-033,GPCM-SD-034,GPCM-SD-035,GPCM-SD-036,GPCM-SD-037,GPCM-SD-038
+  technical: GPCM-SD-001,GPCM-SD-002,GPCM-SD-003,GPCM-SD-004,GPCM-SD-005,GPCM-SD-006,GPCM-SD-007,GPCM-SD-008,GPCM-SD-009,GPCM-SD-010,GPCM-SD-113,GPCM-SD-114,GPCM-SD-115,GPCM-SD-116,GPCM-SD-117,GPCM-SD-118,GPCM-SD-119,GPCM-SD-120,GPCM-SD-121,GPCM-SD-122,GPCM-SD-123,GPCM-SD-124,GPCM-SD-125,GPCM-SD-028,GPCM-SD-029,GPCM-SD-030,GPCM-SD-031,GPCM-SD-032,GPCM-SD-033,GPCM-SD-034,GPCM-SD-035,GPCM-SD-036,GPCM-SD-037,GPCM-SD-038
 
 - id: GPC-SD02
   title: "Routing the report to the correct practice"
