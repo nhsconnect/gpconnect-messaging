@@ -21,7 +21,10 @@ Additional reports are clearly marked with a version number.
  
 ### Process flows ###
 
-ADD PROCESS FLOWS
+OC auto triage to CP
+OC auto triage to GP, manual triage to CP
+OC manual triage to GP or CP
+
 
 ### Process map ###
 

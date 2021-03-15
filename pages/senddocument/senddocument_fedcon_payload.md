@@ -17,7 +17,7 @@ A [message example](senddocument_payload) is provided which illustrates these re
 ## Composition resource ##
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -30,7 +30,7 @@ A [message example](senddocument_payload) is provided which illustrates these re
 The following requirements describe how the Composition resource is populated:
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload1' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -48,7 +48,7 @@ The following requirements describe how the Composition resource is populated:
 Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the composition.section as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -61,7 +61,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
 ## Organization resources ##
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload4' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -74,7 +74,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
 The table below outlines how these resources are populated:
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload5' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -89,7 +89,7 @@ The table below outlines how these resources are populated:
 The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) resource present in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload6' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -104,7 +104,7 @@ The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.cs_requirements.requirements %}
+  {% for item in site.data.senddoc_requirements.requirements %}
   {% if item.area == 'payload7' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

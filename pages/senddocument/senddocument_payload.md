@@ -52,82 +52,6 @@ Each instance of a binary document will be included as follows:
 </table>
 
 
-### Including structured Observations in the payload ###
-
-The following requirements describe how structured Observations are included in the payload:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'urgent' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-Each instance of an Observation will be included as follows:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'urgent1' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-
-### Including structured QuestionnaireResponse in the payload ###
-
-The following requirements describe how QuestionnaireResponse is included in the payload:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'urgent' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-### Including structured Consent in the payload ###
-
-The following requirements describe how Consent is included in the payload:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'urgent' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-### Including structured Location in the payload ###
-
-The following requirements describe how Location is included in the payload:
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'urgent' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-<br>
-
 {% include note.html content="Please refer to the particular use case in question for detailed requirements on the population of these payload resources. Example FHIR&reg; Messages illustrating how payloads look on-the-wire are available for each use case." %} 
 
 
@@ -151,6 +75,6 @@ The FHIR MessageDefinition resource provides a formal, machine-readable definiti
 
 The GP Connect Send Document capability has defined a MessageDefinition resource instance which describes the *payload* of the FHIR Message, as defined at [ITK3 Message Definition Patterns](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/explore_defs_overview.html#message-definition-patterns).
 
-The Message Definition for the GP Connect Send Document message payload is provided below. This definition can be used by FHIR tools such as [FHIR Check](http://clarotech.co.uk/products/tool-fhir-check/) to verify that particular instance of a Send Document message is conformant. 
+The Message Definition for the GP Connect Send Document message payload is provided below. This definition can be used by FHIR tools to verify that a particular instance of a Send Document message is conformant. 
 
 {% include senddocument/definition.xml %}
