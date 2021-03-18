@@ -96,5 +96,5 @@ Deletions are rare but do happen. For example, where a consultation was recorded
 
 ## PDF Format and business process ##
 
-Please refer to [Send Consultation Report - Business Requirements](senddocument_userstories.html) for business requirement context for the creation of the message together with details of the PDF format to be used.
+Please refer to [Consultation Summary Report - Business Requirements](senddocument_userstories.html) for business requirement context for the creation of the message together with details of the PDF format to be used.
 

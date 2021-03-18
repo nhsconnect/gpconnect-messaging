@@ -6,8 +6,7 @@
   sothat: "the patient's medical record is kept up to date with a full treatment history."
   sender: "<ol type=\"1\"><li>the sender system must send a consultation report when the patient in question is registered at another GP practice <ol type=\"i\"><li>the sender system must follow the method stated in the specification to determine whether a patient is registered at another GP practice. Details can be found <a href=\"senddocument_fedcon_trigger.html#defining-whether-message-should-be-sent\">here</a></li></ol></li><li>where the sender system supports an alternative method for communicating the consultation information back to the patient's registered GP practice, this method may be used in the place of GP Connect Messaging (based on local agreement)<ol type=\"i\"><li>where an alternative method is used, the GP Connect Messaging requirements do not apply</li></ol></li></ol>"
   receiver: "N/A"
-  requirements: GPCM-SD-083,GPCM-SD-084
-  technical: GPCM-SD-001,GPCM-SD-002,GPCM-SD-003,GPCM-SD-004,GPCM-SD-005,GPCM-SD-006,GPCM-SD-007,GPCM-SD-008,GPCM-SD-009,GPCM-SD-010,GPCM-SD-113,GPCM-SD-114,GPCM-SD-115,GPCM-SD-116,GPCM-SD-117,GPCM-SD-118,GPCM-SD-119,GPCM-SD-120,GPCM-SD-121,GPCM-SD-122,GPCM-SD-123,GPCM-SD-124,GPCM-SD-125,GPCM-SD-028,GPCM-SD-029,GPCM-SD-030,GPCM-SD-031,GPCM-SD-032,GPCM-SD-033,GPCM-SD-034,GPCM-SD-035,GPCM-SD-036,GPCM-SD-037,GPCM-SD-038
+  technical: "<ul><li><a href=\"senddocument_payload.html\">Send Document - payload structure</a></li><li><a href=\"senddocument_fedcon_trigger.html\">Triggering message creation</a></li></ul>"
 
 - id: GPC-SD02
   title: "Routing the report to the correct practice"
@@ -17,8 +16,7 @@
   sothat: "the patient's medical record is kept up to date with a full history."
   sender: "<ol type=\"1\"><li>all consultation reports will use MESH automated message routing in order to ensure that the message is routed correctly to the registered practice of the patient. It is not necessary for the sender system to specify a destination MESH mailbox ID</li><li>the sender system must specify the patient's NHS Number, Surname and Date of Birth in the message header and use these to populate the Mex-To HTTP header in the MESH endpoint lookup service</li><li>the sender system must use the allocated MESH Workflow ID associated solely with the GP Connect Send Document capability</li></ol>"
   receiver: "<ol type=\"1\"><li>where the message received is for a patient who is not registered at the GP practice, the receiver system must send a response back to the sending GP practice</li><li>the receiver system must use the allocated MESH Workflow ID associated solely with the GP Connect Send Document capability</li></ol>"
-  requirements: GPCM-C-01,GPCM-SD-056,GPCM-SD-018,GPCM-SD-057,GPCM-C-02,GPCM-SD-058
-  technical: GPCM-SD-039,GPCM-SD-040,GPCM-SD-041,GPCM-SD-042,GPCM-SD-043,GPCM-SD-044,GPCM-SD-045,GPCM-SD-046,GPCM-SD-047,GPCM-SD-048,GPCM-SD-049,GPCM-SD-050,GPCM-SD-051,GPCM-SD-052,GPCM-SD-053,GPCM-SD-054,GPCM-SD-055,GPCM-SD-059,GPCM-SD-060,GPCM-SD-061,GPCM-SD-062,GPCM-SD-063,GPCM-SD-064
+  technical: "<ul><li><a href=\"senddocument_payload.html\">Send Document - payload structure</a></li><li><a href=\"senddocument_fedcon_itk3.html\">ITK3 header requirements</a></li><li><a href=\"senddocument_fedcon_mesh.html\">MESH requirements</a></li></ul>"
   
 - id: GPC-SD03
   title: "Generate PDF and associated metadata"
@@ -28,8 +26,7 @@
   sothat: "the patient's medical record is kept up to date with a full history."
   sender: "<ol type=\"1\"><li>the sender system must include all data entered by the clinician at the originating practice into the 'Clinical notes [notes]' section of the PDF document; this includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation</li><li>the sender system must include in the message all attachments relating to the consultation</li><li>where the system does not have a concept of a consultation in its architecture, then the sender system will consider all data asserted about the patient for a specified date as part of the same consultation (this follows the same model as GP2GP)</li><li>the layout and content of the PDF must conform to the template and logical field model contained within this requirements catalogue</li><li>the version number must be displayed in the PDF in the relevant field and within the Subject of the MESH .CTL file<ol type=\"i\"><li>version 1 is the original report with each subsequent report that relates to the same consultation incrementing by 1</li></ol></li></ol>"
   receiver: "N/A"
-  requirements: GPCM-SD-086,GPCM-SD-087,GPCM-SD-088,GPCM-SD-089,GPCM-SD-090,GPCM-SD-091
-  technical: GPCM-SD-124,GPCM-SD-125,GPCM-SD-080,GPCM-SD-081,GPCM-SD-082
+  technical: "<ul><li><a href=\"senddocument_fedcon_busreq_pdf.html\">PDF requirements</a></li></ul>"
 
 - id: GPC-SD04
   title: "Receiving the consultation report"
@@ -39,8 +36,7 @@
   sothat: "the patient's medical record is kept up to date with a full history."
   sender: "N/A <br/>"
   receiver: "<ol type=\"1\"><li>the receiver system must route consultation reports into the practice workflow and display it as a task</li><li>when displaying the consultation report in the practice workflow/task list, the receiver system must display the Subject from the MESH .CTL file: \"Consultation report for {patient name}, NHS Number {NHS Number}, seen at {Practice name}, {ODS Code}, Version {Version Number}\"</li><li>the receiver system must display all data in the same form as supplied by the sender system</li><li>the receiver system must make any attachments included with the consultation report available to the end user</li></ol>"
-  requirements:  GPCM-SD-090,GPCM-SD-093
-  technical: GPCM-SD-092
+  technical: "<ul><li><a href=\"senddocument_fedcon_payload.html\">Payload requirements</a></li></ul>" 
   
 - id: GPC-SD05
   title: "Alert staff of errors"
@@ -50,8 +46,7 @@
   sothat: "I can take appropriate measures to get the data to the patient's registered practice."
   sender: "<ol type=\"1\"><li>where a consultation report is not successfully received/managed by the receiver system, the sender system must inform an appropriate person</li><li>where either the infrastructure or business acknowledgements, or both, are not received for a consultation report, the sender system must inform an appropriate person</li></ol>"
   receiver: "<ol type=\"1\"><li>the receiver system must return an error code when the processing of the message is unsuccessful</li></ol>"
-  requirements: GPCM-SD-094,GPCM-SD-095,GPCM-SD-066
-  technical: GPCM-SD-065,GPCM-SD-066,GPCM-SD-074,GPCM-SD-075
+  technical: "<ul><li><a href=\"senddocument_fedcon_errors.html\">Error handling</a></li></ul>" 
   
 - id: GPC-SD06
   title: "Report version number"
@@ -61,19 +56,17 @@
   sothat: "I am informed of updates to previous consultation reports and to understand that there are earlier versions that can be discarded/updated."
   sender: "<ol type=\"1\"><li>the sender system must identify if there are multiple consultation report documents sent for a specific consultation and patient. The version number must be displayed within the relevant section of the PDF document and in the subject of the MESH .CTL file in the format \"Consultation report for {patient name}, NHS Number {NHS Number}, seen at {Practice code}, {ODS Code}, Version {Version Number}\"<ol type=\"i\"><li>version 1 is the original report with each subsequent report that relates to the same consultation incrementing by 1</li></ol></li></ol>"
   receiver: "<ol type=\"1\"><li>when displaying the consultation report in the practice workflow/task list, the receiving system must display the Subject of the MESH .CTL file in the format \"Consultation report for {patient name}, NHS Number {NHS Number}, seen at {Practice code}, {ODS Code}, Version {Version Number}\"</li></ol>"
-  requirements: GPCM-SD-018,GPCM-SD-091,GPCM-SD-092
-  technical: GPCM-SD-098
+  technical: "<ul><li><a href=\"senddocument_fedcon_busreq_pdf.html\">PDF requirements</a></li></ul>"
   
 - id: GPC-SD07
-  title: "Send consultation report"
+  title: "Consultation Summary report"
   source: "<a href=\"sendmessage_process.html\">Process 4.1</a>"
   as: "the authoring clinician"
   iwant: "the system to automate the process of generating and sending the consultation report to the registered practice"
   sothat: "the consultation report document is sent for 100% of consultations."
   sender: "<ol type=\"1\"><li>the sender system must send the consultation report a configurable time period after the consultation was created or last updated<ol type=\"i\"><li>where a consultation is updated within the configurable time period of the last update, the time delay to sending the consultation report will be from the later update</li><li>where a consultation is updated after the configurable time period (and therefore the consultation report has already been sent) a new consultation report will be sent (after the configurable time period)</li><li>each GP practice must be able to set its own a configurable time period</li><li>where a GP practice has not set its own configurable time period the value will default to three hours</li></ol></li></ol>"
   receiver: "N/A"
-  requirements: GPCM-SD-096,GPCM-SD-097,GPCM-SD-099,GPCM-SD-100,GPCM-SD-101
-  technical: "None"
+  technical: "<ul><li><a href=\"senddocument_fedcon_trigger.html\">Triggering message creation</a></li></ul>" 
   
 - id: GPC-SD08
   title: "Patient confidentiality"
@@ -84,8 +77,7 @@
   sender: "<ol type=\"1\"><li>the clinician must be able to set a consultation as confidential (or the clinical system's equivalent)</li><li>the consultation record held at the GP practice is recorded as confidential (or equivalent) and its access restricted to the clinician who made the record</li><li>where a consultation has been marked as confidential, the message is still sent to the patient's GP practice stating the consultation took place; it will contain no information on what took place in the consultation<ol type=\"i\"><li>information on the patient and when the consultation took place are still included</li><li>information on the clinician and where the consultation took place are not included</li><li>the clinical notes are replaced by the text 'The details of this consultation have been set as confidential'</li></ol></li><li>confidentially is applied on a per consultation basis. A request for confidentiality for one consultation will have no impact on the messages sent for any other consultation</li></ol>"
   receiver: "N/A"
   notes: <br/><p><strong>Notes</strong></p><p>This is the equivalent of a clinician setting a consultation as confidential and restricting the members of the GP practice who can view the details</p>
-  requirements: "GPCM-SD-102"
-  technical: "GPCM-SD-018,GPCM-SD-092"
+  technical: "<ul><li><a href=\"senddocument_fedcon_busreq_pdf.html\">PDF requirements</a></li></ul>"
   
 - id: GPC-SD09
   title: "Local record retention"
@@ -117,8 +109,7 @@
   sothat: "the data is not shared with someone I do not want to see it."
   sender: "<ol type=\"1\"><li>the clinician may be able to set items in a consultation as confidential (this will depend on the local clinical system)</li><li>the items in the consultation record held at the originating GP practice are recorded as confidential (or equivalent) and its access restricted following the local clinical system's processes and standards</li><li>each confidential item in a consultation will be replaced in the consultation report with the warning text \"Confidential item\"</li><li>where there are multiple confidential items in a consultation, the warning text will be repeated for each item</li></ol>"
   receiver: "N/A"
-  requirements: "GPCM-SD-133,GPCM-SD-134"
-  technical: "None" 
+  technical: "<ul><li><a href=\"senddocument_fedcon_busreq_pdf.html\">PDF requirements</a></li></ul>" 
   
 - id: GPC-SD12
   title: "Deleted consultation"
@@ -128,5 +119,4 @@
   sothat: "the patient's medical record is kept up-to-date."
   sender: "<ol type=\"1\"><li>when a user deletes a consultation where a consultation report has been sent, the sending system must give a warning message to the user <ol type=\"i\"><li>the warning message must include the patient name and NHS number, the consultation date and the GP practice the consultation report has been sent to(the patient's registered GP practice)</li></ol></li><li>where a consultation is deleted it is the responsibility of the GP practice that recorded the consultation to inform the registered GP practice<ol type=\"i\"><li>there is no requirement for the sending system to send an automated messages to inform the registered GP practice about the deletion</li><li>the sending system should assist the GP practice in managing and tracking the process of informing other organisations</li></ol></li></ol>"
   receiver: "N/A"
-  requirements: "GPCM-SD-135"
-  technical: "None" 
+  technical: "<ul><li><a href=\"senddocument_fedcon_trigger.html\">Triggering message creation</a></li></ul>" 

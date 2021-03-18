@@ -13,112 +13,203 @@ This page describes the business process for the Online Consultation Report use 
 
 ## Process ##
 
-This process describes the steps/actions involved in the Online Consultation Report use case where a online consultation is written within the OC system and is sent to the consumer system either at the patient’s registered GP practice, or a community pharmacy.
-
-Where the online consultation notes are edited after the message has already been sent, an updated version of the report is sent.
+This process describes the steps/actions involved in the Online Consultation Report use case where a online consultation is written within the OC system and is sent to the consumer system either at the patient’s registered GP practice, or an alternative care provider (for example, a community pharmacy).
  
-Additional reports are clearly marked with a version number. 
- 
-### Process flows ###
+## Process flows ##
 
-OC auto triage to CP
-OC auto triage to GP, manual triage to CP
-OC manual triage to GP or CP
+The following process flows have be investigated and mapped out:
+
+1. Online Consultation auto triage to an alternative care provider - the OC system has the ability to auto triage based on the information entered by the patient. The OC system makes the decision to send to an alternative care provider (in this case a community pharmacy).
+2. Online Consultation auto triage to GP - the OC system has auto triaged the OC and made a decision to send back to the patient's registered GP practice.
+3. Online Consultation manual triage to GP or an alternative care provider - the OC system has workflow functionality and OCs are worked on in the system. A decision is then made manually to either send the OC back to the patient's registered GP, or to forward to an alternative care provider (in this case a community pharmacy)
 
 
-### Process map ###
+## Process map ##
 
-<a href="/images/senddocument/full_oc_process.png" target="_blank">Open process flow in new tab</a>
+Send Document – Online Consultation Report – Full process flow
 
 ![Online Consultation Report process map](images/senddocument/full_oc_process.png "Online Consultation Report process map") 
 
+<a href="/images/senddocument/full_oc_process.png" target="_blank">Open process flow in new tab</a>
+
+Each of the process flows covered in this diagram are broken down into their own diagrams with step explanations in the sections below.
+
+### Process flow 1 ###
+
+Send Document - Online Consultation Report - Process flow 1  (OC auto triage to alternative care provider, for example community pharmacy (CP))
+
+![Online Consultation Report process map](images/senddocument/oc_process_1.png "Online Consultation Report process flow 1")
+
+<a href="/images/senddocument/oc_process_1.png" target="_blank">Open process flow in new tab</a>
  
-### Steps ###
+#### Steps ####
 
-UPDATE STEPS!!!!!!!!!!!!!! BREAKDOWN BY PROCESS FLOW
+**1. Auto triage decision**
 
-**1. Write consultation**
+The OC system makes the decision to send the Online Consultation Report to a community pharmacy.
 
-Clinician inputs the details of the consultation into the GP provider system. Data inputted could be free text or clinical codes which may be entered manually or through the use of clinical templates. It could include adding attachments/documents (for example, pain point diagram, ECG, photo). This is no different from the normal method of writing a consultation for a patient registered at the GP practice.
+**2. OC Payload generation**
 
-**2. Save consultation**
+The OC payload is created, containing a PDF of the Online Consultation Report and any FHIR coded resources applicable.
 
-The clinician manually saves the consultation notes and commits them to the patient record.
+**3. Send copy to GP practice**
 
-**3. Save consultation into patient record**
+A copy of the OC payload is sent to the patient's registered GP practice.
 
-The provider system saves the consultation notes into the patient’s electronic record at the GP practice.
+**4. Copy received by GP practice**
 
-**4. Wait three hours (locally configurable)**
+The copy OC payload is received by the GP practice. The payload is labelled as "For Information".
 
-The provider system waits three hours before the process moves on. This gives time for the clinician to make any necessary updates to the consultation to reduce the chance of the report being sent multiple times.
+**5. Save online consultation into patient record**
 
-The period of time that the clinical system waits before sending a message can be configured by each GP practice to meet their local needs.
+The provider system saves the Online Consultation Report into the patient’s electronic record at the GP practice.
 
-**5. Further updates to the consultation?**
+**6. Send OC payload to CP**
 
-If the user makes changes to the consultation notes in the patient record within three hours, the process moves back to step 1.
+The OC payload is sent to the community pharmacy requested by the patient.
 
-Otherwise, the process moves on to step 6.
+**7. Payload received by CP**
 
-There may be many reasons why the consultation is not completed when initially saved: 
-- the clinician may not have time to finish the consultation notes and must continue with treating other patients
-- the clinician may wish to ask a colleague for advice
-- the clinician may be off-site and will finish writing the consultation notes when they have returned to the GP practice
-- the results of a test may be required before the clinician can complete their notes
-- the clinician may have forgotten to add some important information when originally writing the consultation notes
+The OC payload is received by the community pharmacy. The payload is labelled as "For Action".
 
-**6. Generate PDF and metadata**
+**8. DECISION A - CP accepts the OC**
 
-A FHIR message is generated which contains a PDF which contains all the information recorded in the consultation (including free text, clinical coding and other data entered relating to the consultation).
+The community pharmacy accepts the OC and saves the Online Consultation Report in the CP system.
 
-The ITK3 FHIR Message is generated, which must include:
-- FHIR MessageHeader
-- FHIR STU3 composition
-- PDF file, its contents and metadata
-- all attachments/documents recorded with the consultation
+**9. CP actions the OC**
 
-Further details on the message content can be found at:
-[Send Document Payload](senddocument_payload.html)
+The community pharmacy provides care for the patient.
 
-When the PDF is generated, the provider system checks for previous versions of the PDF linked to this consultation. A previous version will exist if the clinician updates the consultation more than three hours after it was initially saved and committed. If there are no previous versions, the PDF is designated as [version 1]. If there are previous versions, the PDF is designated [version 2/3/4…n]. The version number is displayed in the title of the PDF ("Consultation Report Version x") and version field within the document itself. 
+**10. DECISION B - CP escalates the OC**
 
-**7. Send message via MESH**
+The community pharmacy does not accepts the OC and escalates the OC back to the patient's registered GP practice.
 
-The provider system passes the message to the MESH client.
+**10. Send OC payload to GP**
 
-**8. MESH file transfer**
+The OC payload is sent to the patient's registered GP practice.
 
-The MESH client transfers the message to the MESH inbox of the patient’s registered GP practice.
+**11. Payload received by GP**
 
-**9. Retrieve message from MESH**
+The OC payload is received by the patient's registered GP practice. The payload is labelled as "For Action".
 
-The consumer system of the registered practice retrieves the message from their MESH inbox.
+**12. GP actions the OC**
 
-**10. Send infrastructure acknowledgement**
+The patient's registered GP practice accepts the OC and provides care for the patient.
 
-The consumer system sends an ITK3 FHIR Message to the provider system containing:
-- FHIR MessageHeader
-- FHIR OperationOutcome (ITK3 response with response code 10001 to 20013)
+### Process flow 2 ###
+Send Document - Online Consultation Report - Process flow 2  (OC auto triage to GP practice)
 
-**11. Receive infrastructure acknowledgement**
+![Online Consultation Report process map](images/senddocument/oc_process_2.png "Online Consultation Report process flow 2")
 
-The provider system records the infrastructure acknowledgement. If no acknowledgement is received within a reasonable timeframe (to be defined by system supplier), the provider system notifies an appropriate end user.
+<a href="/images/senddocument/oc_process_1.png" target="_blank">Open process flow in new tab</a>
 
-**12.	Add message into workflow**
+#### Steps ####
 
-The consumer system matches the message to a registered GP patient and presents the message to an appropriate user in a designated workflow.
+**1. Auto triage decision**
 
-**13. Send business acknowledgement**
+The OC system makes the decision to send the Online Consultation Report to the patient's registered GP practice.
 
-The consumer system sends an ITK3 FHIR Message to the provider system containing:
-- FHIR MessageHeader
-- FHIR OperationOutcome (ITK3 response with response code 30001 to 30003)
+**2. OC Payload generation**
 
-**14. Receive business acknowledgement**
+The OC payload is created, containing a PDF of the Online Consultation Report and any FHIR coded resources applicable.
 
-The provider system records the business acknowledgement. If no acknowledgement is received within a reasonable timeframe (configurable), the provider system notifies an appropriate end user.
+**3. Send OC to GP practice**
 
+The OC payload is sent to the patient's registered GP practice.
 
+**4. Payload received by GP practice**
 
+The OC payload is received by the GP practice. The payload is labelled as "For Action".
 
+**5. Save online consultation into patient record**
+
+The provider system saves the Online Consultation Report into the patient’s electronic record at the GP practice.
+
+**6. GP actions the OC**
+
+The patient's registered GP practice provides care for the patient.
+
+### Process flow 3 ###
+Send Document - Online Consultation Report - Process flow 3  (Manual triage to GP or alternative care provider, for example community pharmacy (CP))
+
+![Online Consultation Report process map](images/senddocument/oc_process_3.png "Online Consultation Report process flow 3")
+
+<a href="/images/senddocument/oc_process_1.png" target="_blank">Open process flow in new tab</a>
+
+#### Steps ####
+
+**1. DECISON A - Manual triage decision to community pharmacy**
+
+The clinician working in the OC system makes the decision to send the Online Consultation Report to a community pharmacy.
+
+**2. OC Payload generation**
+
+The OC payload is created, containing a PDF of the Online Consultation Report and any FHIR coded resources applicable.
+
+**3. Send copy to GP practice**
+
+A copy of the OC payload is sent to the patient's registered GP practice.
+
+**4. Copy received by GP practice**
+
+The copy OC payload is received by the GP practice. The payload is labelled as "For Information".
+
+**5. Save online consultation into patient record**
+
+The provider system saves the Online Consultation Report into the patient’s electronic record at the GP practice.
+
+**6. Send OC payload to CP**
+
+The OC payload is sent to the community pharmacy requested by the patient.
+
+**7. Payload received by CP**
+
+The OC payload is received by the community pharmacy. The payload is labelled as "For Action".
+
+**8. DECISION C - CP accepts the OC**
+
+The community pharmacy accepts the OC and saves the Online Consultation Report in the CP system.
+
+**9. CP actions the OC**
+
+The community pharmacy provides care for the patient.
+
+**10. DECISION D - CP escalates the OC**
+
+The community pharmacy does not accepts the OC and escalates the OC back to the patient's registered GP practice.
+
+**10. Send OC payload to GP**
+
+The OC payload is sent to the patient's registered GP practice.
+
+**11. Payload received by GP**
+
+The OC payload is received by the patient's registered GP practice. The payload is labelled as "For Action".
+
+**12. GP actions the OC**
+
+The patient's registered GP practice accepts the OC and provides care for the patient.
+
+**13. DECISON B - Manual triage decision to GP practice**
+
+The clinician working in the OC system makes the decision to send the Online Consultation Report to the GP practice.
+
+**14. OC Payload generation**
+
+The OC payload is created, containing a PDF of the Online Consultation Report and any FHIR coded resources applicable.
+
+**15. Send OC to GP practice**
+
+The OC payload is sent to the patient's registered GP practice.
+
+**16. Payload received by GP practice**
+
+The OC payload is received by the GP practice. The payload is labelled as "For Action".
+
+**17. Save online consultation into patient record**
+
+The provider system saves the Online Consultation Report into the patient’s electronic record at the GP practice.
+
+**18. GP actions the OC**
+
+The patient's registered GP practice provides care for the patient.

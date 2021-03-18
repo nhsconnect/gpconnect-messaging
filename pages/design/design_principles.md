@@ -41,7 +41,7 @@ Messages flowing into GP practices on MESH will arise mainly from the following 
 
 Where the message sender knows which party or parties the message is intended for, a point-to-point event notification is often used. Here the sender directs the message to a known recipient or set of recipients.
 
-For example, the [Send Consultation Report](senddocument_fedcon_overview.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The sending practice knows that the consultation report is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern.
+For example, the [Consultation Summary Report](senddocument_fedcon_overview.html) use case of the [Send Document](senddocument.html) capability uses this pattern. The sending practice knows that the consultation report is intended only for a single known recipient organisation - the registered practice of the patient. Therefore, this pattern is used for this use case, and the MESH Endpoint Lookup Service is used as a broker to facilitate this message delivery pattern.
 
 
 #### 2. Publish/Subscribe event notification ####
@@ -74,4 +74,4 @@ ITK3 also makes available a number of message metadata elements which enable bet
 
 In designing a payload to meet a particular use case, care has been taken to design the payload in such a way that it may be re-used to fulfil other identified use cases through configuration change only.
 
-For example, the [Send Consultation Report](senddocument_fedcon_overview.html) use case makes use of the more general payload type [Send Document](senddocument.html). Should a future use case arise where a document needs to be sent, the same payload can be re-used.
+For example, the [Consultation Summary Report](senddocument_fedcon_overview.html) use case makes use of the more general payload type [Send Document](senddocument.html). Should a future use case arise where a document needs to be sent, the same payload can be re-used.

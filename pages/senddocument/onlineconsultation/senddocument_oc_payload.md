@@ -172,7 +172,7 @@ Each [CareConnect-GPC-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinitio
 
 ### QuestionnaireResponse resource ###
 
-The [CareConnect-GPC-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-QuestionnaireResponse-1) in the payload is populated as follows:
+The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -260,7 +260,7 @@ The following table lists the optionality and cardinality for each resource:
 	<td>0..*</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-QuestionnaireResponse-1">CareConnect-GPC-QuestionnaireResponse-1</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1">CareConnect-QuestionnaireResponse-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>

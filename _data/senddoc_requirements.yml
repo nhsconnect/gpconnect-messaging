@@ -49,7 +49,7 @@ requirements:
 
 - id: GPCM-SD-008
   area: senddocpayload
-  description: "where a message contains questionnaire response information, a <code>Composition.section.entry</code> referencing a <a href=\"http://hl7.org/fhir/stu3/questionnaireresponse.html\">QuestionnaireResponse</a> <strong>MUST</strong> be present. This resource describes all the questions asked to the patient and all the responses given."
+  description: "where a message contains questionnaire response information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1\">CareConnect-QuestionnaireResponse-1</a> <strong>MUST</strong> be present. This resource describes all the questions asked to the patient and all the responses given."
   page: senddocument_payload.html 
   
 - id: GPCM-SD-009

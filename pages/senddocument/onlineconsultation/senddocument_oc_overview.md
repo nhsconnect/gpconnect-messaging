@@ -4,7 +4,7 @@ keywords: document, use-case
 tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_oc_overview.html
-summary: "Overview of the use case to send an online consultation report to a care provider"
+summary: "Overview of the use case to send an Online Consultation Report to a care provider"
 ---
 
 ## Introduction ##
@@ -52,12 +52,12 @@ The diagram above depicts a successful message flow where the receiving care pro
 | 2d   | The community pharmacy uses the MESH API Download Message function to retrieve the message from the MESH mailbox.|
 | 2e   | The message is processed at the community pharmacy. |
 | 2    | **Infrastructure acknowledgement ITK Response** |
-| 2a   | When the online consultation report message is passed from MESH for processing at the community pharmacy, the message is first validated to ensure that its structure is correct. An ITK3 Response message is generated which indicates the success of message processing at a technical level - this is known as an "infrastructure acknowledgement".  |
+| 2a   | When the Online Consultation Report message is passed from MESH for processing at the community pharmacy, the message is first validated to ensure that its structure is correct. An ITK3 Response message is generated which indicates the success of message processing at a technical level - this is known as an "infrastructure acknowledgement".  |
 | 2b   | The community pharmacy uses the MESH API Send Message function to send the acknowledgement message to the MESH server where it awaits collection by the OC system. |
 | 2c   | The OC system uses the MESH API Download Message function to collect the acknowledgement message. The ITK Response is then available to the OC system components for onward processing. |
 | 2d   | The acknowledgement message is processed as appropriate by the OC system.  |
 | 3    | **Business acknowledgement ITK Response** |
-| 3a   | When the online consultation report message is passed from MESH for processing at the community pharmacy, after successful message validation, the subject of the message contents are landed in the workflow of the community pharmacy. An ITK3 Response message is generated which indicates the success of consuming the message - this is known as a "business acknowledgement".  |
+| 3a   | When the Online Consultation Report message is passed from MESH for processing at the community pharmacy, after successful message validation, the subject of the message contents are landed in the workflow of the community pharmacy. An ITK3 Response message is generated which indicates the success of consuming the message - this is known as a "business acknowledgement".  |
 | 3b   | The community pharmacy uses the MESH API Send Message function to send the acknowledgement message to the MESH server where it awaits collection by the OC system. |
 | 3c   | The OC system uses the MESH API Download Message function to collect the acknowledgement message. The ITK Response is then available to the OC system components for onward processing. |
 | 3d   | The acknowledgement message is processed as appropriate by the OC system.  |
@@ -69,7 +69,7 @@ The following processing steps must take place at the originating organisation s
 
 | Step | Description |
 |------|-------------|
-| 1   | Initiate process to create for online consultation report message. |	
+| 1   | Initiate process to create for Online Consultation Report message. |	
 | 2   | Create [ITK3 payload](senddocument_oc_payload.html): Construct a PDF description of the encounter. |
 | 3   | Wrap the payload as an [ITK3 message](senddocument_oc_itk3.html), requesting infrastructure and business acknowledgements. |
 | 4   | Create [MESH message](senddocument_oc_mesh.html). |

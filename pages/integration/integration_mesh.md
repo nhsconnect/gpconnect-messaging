@@ -79,7 +79,7 @@ Each GP Connect Messaging use case will be grouped and associated with a single 
 
 Where the use case requires some form of ITK acknowledgement, an additional Workflow ID will be created to be used for acknowledgement messages generated for the use case.
 
-Please refer to the applicable messaging use case details page for information on the Workflow ID to be used when generating particular messages. For example, when generating a message for the "Send Consultation Report" use case, please refer to [Send Consultation Report](senddocument_fedcon_mesh.html).
+Please refer to the applicable messaging use case details page for information on the Workflow ID to be used when generating particular messages. For example, when generating a message for the "Consultation Summary Report" use case, please refer to [Consultation Summary Report](senddocument_fedcon_mesh.html).
 
 ## Configuring MESH to enable message flow ##
 

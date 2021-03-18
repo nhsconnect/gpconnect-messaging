@@ -4,7 +4,7 @@ keywords: document, use-case
 tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_oc_example.html
-summary: "Send Consultation Report - example message."
+summary: "Consultation Summary Report - example message."
 ---
 
 The message given below arises from the following fictional scenario:

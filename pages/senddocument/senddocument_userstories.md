@@ -4,14 +4,14 @@ keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_userstories.html
-summary: "User stories for Send Consultation Report"
+summary: "User stories for Consultation Summary"
 toc: true
 ---
 
 
 ## Purpose ##
 
-The purpose of this page is to document the user stories that apply across all of GP Connect Send Document capability. To avoid duplication, links to the requirements within the specification have been provided where applicable.
+The purpose of this page is to document the user stories that apply to the Consultation Summary use case. To avoid duplication, links to the requirements within the specification have been provided where applicable.
 
 ## User stories ##
 
@@ -48,13 +48,9 @@ The purpose of this page is to document the user stories that apply across all o
 	<div>	
 		{{item.notes}}
 	</div>	
-	<div class="bs-callout bs-callout-success">
-		<p><strong>Linked requirements</strong></p>
-		<p style="font-size:14px">{% include requirements.html type=item.requirements %} </p>
-	</div>
 	<div class="bs-callout bs-callout-primary">
-		<p><strong>Supporting technical requirements</strong></p>
-		<p style="font-size:14px">{% include requirements.html type=item.technical %} </p>
+		<p><strong>Requirements references:</strong></p>
+		<p style="font-size:14px">{{item.technical}}</p>
 	</div>
 	
 	<hr style="width:100%">

@@ -4,7 +4,7 @@ keywords: itk3
 tags: [itk3, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_itk3.html
-summary: "Details of how the ITK3 header is populated to fulfil the Send Consultation Report use case"
+summary: "Details of how the ITK3 header is populated to fulfil the Consultation Summary Report use case"
 ---
 
 Please refer to [Using ITK3 to support GP Connect Messaging](integration_itk3.html) for an overview of the use of ITK3 in this context.

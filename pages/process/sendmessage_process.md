@@ -4,12 +4,12 @@ keywords: use-case
 tags: [use-case]
 sidebar: senddocument_sidebar
 permalink: sendmessage_process.html
-summary: "Process map for Send Consultation Report"
+summary: "Process map for Consultation Summary Report"
 ---
 
 ## Purpose ##
 
-This page describes the business process for the Send Consultation Report use case in order to fully understand the business requirements.
+This page describes the business process for the Consultation Summary Report use case in order to fully understand the business requirements.
 
 ## Process ##
 
@@ -30,7 +30,7 @@ Additional reports are clearly marked with a version number.
  
 ### Process map ###
 
-![Send Consultation Report process map](images/senddocument/process.png "Send Consultation Report process map") 
+![Consultation Summary Report process map](images/senddocument/process.png "Consultation Summary Report process map") 
 
  
 ### Steps ###

@@ -4,7 +4,7 @@ keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_busreq.html
-summary: "Business requirements for Send Consultation Report use case"
+summary: "Business requirements for Consultation Summary Report use case"
 ---
 
 ## User stories and PDF layout ##
@@ -17,7 +17,7 @@ The PDF layout defines the document layout and the data in that document. The PD
 
 ## Business process ##
 
-The business process defines how the Send Consultation Report functionality will be used in a clinical context. It contains the following key components:
+The business process defines how the Consultation Summary Report functionality will be used in a clinical context. It contains the following key components:
 
 - process description
 - process map

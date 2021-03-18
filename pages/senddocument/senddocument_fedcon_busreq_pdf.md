@@ -4,7 +4,7 @@ keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_busreq_pdf.html
-summary: "PDF layout for Send Consultation Report use case"
+summary: "PDF layout for Consultation Summary Report use case"
 toc: true
 ---
 

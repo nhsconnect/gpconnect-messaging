@@ -39,9 +39,9 @@ The steps shown in the diagram are detailed below:
 | 6   | The **Registered practice GP system** picks up the message from the `/IN` directory and updates the GP system. This is likely to be done through raising a workflow task containing the message contents. |
 
 
-## Example 2: Integrate with Spine to send an online consultation report as a document to a non-GP practice organisation ##
+## Example 2: Integrate with Spine to send an Online Consultation Report as a document to a non-GP practice organisation ##
 
-The following diagram illustrates the systems involved, and their responsibilities, in sending the online consultation report document:
+The following diagram illustrates the systems involved, and their responsibilities, in sending the Online Consultation Report document:
 
 ![Integration illustrated - send example 2](images/integration/spine_integration_send2.png "System integration illustration - example 2") 
 <br/> 

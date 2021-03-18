@@ -1,0 +1,791 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		width="22.3858in" height="15.5354in" viewBox="0 0 1611.78 1118.55" xml:space="preserve" color-interpolation-filters="sRGB"
+		class="st29">
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;fill-opacity:0;stroke:#002060;stroke-dasharray:7,5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st2 {fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st3 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st4 {fill:#000000;font-family:Arial;font-size:1.00001em}
+		.st5 {fill:#ffffff;fill-opacity:0}
+		.st6 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;visibility:hidden}
+		.st7 {fill:#000000;font-family:Arial;font-size:0.833336em}
+		.st8 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;visibility:hidden}
+		.st9 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st10 {fill:#ffff00;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st11 {fill:#000000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st12 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st13 {fill:#000000;font-family:Calibri Light;font-size:0.666664em}
+		.st14 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st15 {font-size:1em}
+		.st16 {fill:#f59d56;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st17 {marker-end:url(#mrkr4-106);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st18 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.28571428571429}
+		.st19 {fill:#ffffff;stroke:none;stroke-linecap:butt}
+		.st20 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
+		.st21 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st22 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st23 {fill:#000000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
+		.st24 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st25 {fill:#000000;font-family:Arial;font-size:0.916672em;font-weight:bold}
+		.st26 {marker-end:url(#mrkr16-309);marker-start:url(#mrkr20-307);stroke:#000000;stroke-dasharray:5.04,3.6;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st27 {fill:#f59d56;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st28 {fill:#ffffff;stroke:#1f477d;stroke-dasharray:7,5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st29 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-106" class="st18" refX="-7" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.5,-3.5) "/>
+		</marker>
+		<g id="lend20">
+			<path
+					d="M 0 0.75 C -0.414214 0.75 -0.75 0.414214 -0.75 0 -0.75 -0.414214 -0.414214 -0.75 0 -0.75 0.414214 -0.75 0.75 -0.414214 0.75 0 0.75 0.414214 0.414214 0.75 0 0.75 Z "
+					style="stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+		</g>
+		<marker id="mrkr20-307" class="st18" refX="2.125" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend20" transform="scale(3.5) "/>
+		</marker>
+		<g id="lend16">
+			<path d="M 0 0 L 2 -1 L 2 1 L 0 0 " style="stroke-linecap:round;stroke-linejoin:round;fill:none"/>
+		</g>
+		<marker id="mrkr16-309" class="st18" refX="-7" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend16" transform="scale(-3.5,-3.5) "/>
+		</marker>
+	</defs>
+	<g>
+		<title>PF3 - spec</title>
+		<g id="shape1124-1" transform="translate(739.357,-714.144)">
+			<title>Rectangle.1285</title>
+			<desc>​</desc>
+			<path d="M0 1118.55 L378.14 1118.55 L378.14 1024.27 L0 1024.27 L0 1118.55 Z" class="st1"/>
+		</g>
+		<g id="group212-3" transform="translate(18,-325.827)">
+			<title>CFF Container</title>
+			<g id="shape213-4">
+				<title>Sheet.213</title>
+				<rect x="0" y="394.652" width="1119.74" height="723.899" class="st2"/>
+			</g>
+			<g id="shape214-6" transform="translate(-1082.55,1118.55) rotate(-90)">
+				<title>Sheet.214</title>
+				<desc>Complete online consultation Triage &#38; send payload</desc>
+				<path d="M0 1118.55 L723.9 1118.55 L723.9 1082.55 L0 1082.55 L0 1118.55 Z" class="st3"/>
+				<text x="223.19" y="1104.15" class="st4">Complete online consultation Triage &#38; send payload</text>			</g>
+		</g>
+		<g id="shape215-9" transform="translate(54,-325.827)">
+			<title>Swimlane List</title>
+			<rect x="0" y="394.652" width="1083.74" height="723.899" class="st5"/>
+			<rect x="0" y="394.652" width="1083.74" height="723.899" class="st6"/>
+		</g>
+		<g id="group208-12" transform="translate(54,-955.378)">
+			<title>Pool / Lane</title>
+			<g id="shape209-13">
+				<title>Sheet.209</title>
+				<rect x="0" y="1024.2" width="1083.74" height="94.349" class="st2"/>
+			</g>
+			<g id="shape210-15" transform="translate(555.372,0)">
+				<title>Sheet.210</title>
+			</g>
+			<g id="shape211-17" transform="translate(-1082.55,1118.55) rotate(-90)">
+				<title>Sheet.211</title>
+				<desc>OC Frontend</desc>
+				<path d="M0 1118.55 L94.35 1118.55 L94.35 1082.55 L0 1082.55 L0 1118.55 Z" class="st3"/>
+				<text x="18.27" y="1103.55" class="st7">OC Frontend</text>			</g>
+		</g>
+		<g id="group240-20" transform="translate(54,-678.118)">
+			<title>Pool / Lane.240</title>
+			<g id="shape241-21">
+				<title>Sheet.241</title>
+				<rect x="0" y="841.291" width="1083.74" height="277.26" class="st2"/>
+			</g>
+			<g id="shape242-23" transform="translate(555.372,0)">
+				<title>Sheet.242</title>
+			</g>
+			<g id="shape243-25" transform="translate(-1082.55,1118.55) rotate(-90)">
+				<title>Sheet.243</title>
+				<desc>OC Bakend</desc>
+				<path d="M0 1118.55 L277.26 1118.55 L277.26 1082.55 L0 1082.55 L0 1118.55 Z" class="st3"/>
+				<text x="112.78" y="1103.55" class="st7">OC Bakend</text>			</g>
+		</g>
+		<g id="group257-28" transform="translate(54,-559.033)">
+			<title>Swimlane.257</title>
+			<g id="shape258-29">
+				<title>Sheet.258</title>
+				<rect x="0" y="999.467" width="1083.74" height="119.085" class="st2"/>
+			</g>
+			<g id="shape259-31" transform="translate(-1082.55,1118.55) rotate(-90)">
+				<title>Sheet.259</title>
+				<desc>GP system</desc>
+				<path d="M0 1118.55 L119.08 1118.55 L119.08 1082.55 L0 1082.55 L0 1118.55 Z" class="st3"/>
+				<text x="35.09" y="1103.55" class="st7">GP system</text>			</g>
+		</g>
+		<g id="group613-34" transform="translate(54,-325.827)">
+			<title>Swimlane.613</title>
+			<g id="shape614-35">
+				<title>Sheet.614</title>
+				<rect x="0" y="885.345" width="1083.74" height="233.206" class="st2"/>
+			</g>
+			<g id="shape615-37" transform="translate(-1082.55,1118.55) rotate(-90)">
+				<title>Sheet.615</title>
+				<desc>CP System</desc>
+				<path d="M0 1118.55 L233.21 1118.55 L233.21 1082.55 L0 1082.55 L0 1118.55 Z" class="st3"/>
+				<text x="91.6" y="1103.55" class="st7">CP System</text>			</g>
+		</g>
+		<g id="shape216-40" transform="translate(90,-325.827)">
+			<title>Phase List</title>
+			<rect x="0" y="394.652" width="1047.74" height="723.899" class="st8"/>
+		</g>
+		<g id="group217-42" transform="translate(90,-325.827)">
+			<title>Separator</title>
+			<g id="shape218-43">
+				<title>Sheet.218</title>
+			</g>
+			<g id="shape219-45" transform="translate(-36,-723.899)">
+				<title>Sheet.219</title>
+				<desc>Phase</desc>
+				<path d="M0 1118.55 L1083.74 1118.55 L0 1118.55 Z" class="st9"/>
+			</g>
+		</g>
+		<g id="group10-47" transform="translate(108,-1048.24)">
+			<title>Sheet.10</title>
+		</g>
+		<g id="group220-48" transform="translate(101.451,-991.302)">
+			<title>Start Event</title>
+			<desc>Start</desc>
+			<g id="shape221-49">
+				<title>Sheet.221</title>
+				<ellipse cx="11.25" cy="1107.3" rx="11.25" ry="11.25" class="st9"/>
+			</g>
+			<g id="shape222-51">
+				<title>Sheet.222</title>
+				<ellipse cx="11.25" cy="1107.3" rx="9" ry="9" class="st10"/>
+			</g>
+			<g id="shape223-53" transform="translate(4.77,-4.77)">
+				<title>Sheet.223</title>
+				<ellipse cx="6.48" cy="1112.07" rx="6.48" ry="6.48" class="st11"/>
+			</g>
+			<g id="shape224-55" transform="translate(2.25,-2.25)">
+				<title>Sheet.224</title>
+				<ellipse cx="9" cy="1109.55" rx="9" ry="9" class="st12"/>
+			</g>
+			<g id="shape225-57" transform="translate(5.0625,-6.75)">
+				<title>Sheet.225</title>
+			</g>
+			<g id="shape226-59" transform="translate(18.3707,-6.78919) scale(-1,1)">
+				<title>Sheet.226</title>
+			</g>
+			<g id="shape227-61" transform="translate(5.14219,-5.14219)">
+				<title>Sheet.227</title>
+			</g>
+			<g id="shape228-63" transform="translate(4.77,-7.72558)">
+				<title>Sheet.228</title>
+			</g>
+			<g id="shape229-65" transform="translate(4.77,-5.6694)">
+				<title>Sheet.229</title>
+			</g>
+			<g id="shape230-67" transform="translate(5.0625,-6.75)">
+				<title>Sheet.230</title>
+			</g>
+			<g id="shape231-69" transform="translate(6.16741,-5.34375)">
+				<title>Sheet.231</title>
+			</g>
+			<g id="shape232-71" transform="translate(4.5,-4.5)">
+				<title>Sheet.232</title>
+			</g>
+			<g id="shape220-73">
+				<text x="3.55" y="1127.75" class="st13">Start</text>			</g>
+		</g>
+		<g id="shape1288-76" transform="translate(145.256,-982.342)">
+			<title>Rounded Rectangle.1288</title>
+			<desc>Patient accesses OC, (Patient or GP initiated) ​</desc>
+			<path d="M7.87 1118.55 L70.85 1118.55 A7.87165 7.87165 -180 0 0 78.72 1110.68 L78.72 1086 A7.87165 7.87165 -180 0 0 70.85
+						 1078.13 L7.87 1078.13 A7.87165 7.87165 -180 0 0 -0 1086 L0 1110.68 A7.87165 7.87165 -180 0 0 7.87 1118.55
+						 Z" class="st9"/>
+			<text x="6.13" y="1091.14" class="st14">Patient accesses OC, <tspan x="16.57" dy="1.2em" class="st15">(Patient or GP </tspan><tspan
+						x="23.7" dy="1.2em" class="st15">initiated)</tspan></text>		</g>
+		<g id="shape1290-81" transform="translate(375.656,-982.648)">
+			<title>Rounded Rectangle.1290</title>
+			<desc>Patient completes OC</desc>
+			<path d="M7.74 1118.55 L69.67 1118.55 A7.74134 7.74134 -180 0 0 77.41 1110.81 L77.41 1086.48 A7.74134 7.74134 -180 0
+						 0 69.67 1078.74 L7.74 1078.74 A7.74134 7.74134 -180 0 0 0 1086.48 L0 1110.81 A7.74134 7.74134 -180 0 0 7.74
+						 1118.55 Z" class="st9"/>
+			<text x="9.23" y="1096.25" class="st14">Patient completes <tspan x="33.93" dy="1.2em" class="st15">OC</tspan></text>		</g>
+		<g id="shape1289-85" transform="translate(261.896,-982.342)">
+			<title>Rounded Rectangle.1289</title>
+			<desc>Patient enters demographic details </desc>
+			<path d="M7.43 1118.55 L66.85 1118.55 A7.42814 7.42814 -180 0 0 74.28 1111.12 L74.28 1085.56 A7.42814 7.42814 -180 0
+						 0 66.85 1078.13 L7.43 1078.13 A7.42814 7.42814 -180 0 0 -0 1085.56 L0 1111.12 A7.42814 7.42814 -180 0 0
+						 7.43 1118.55 Z" class="st9"/>
+			<text x="14.18" y="1091.14" class="st14">Patient enters <tspan x="15.74" dy="1.2em" class="st15">demographic </tspan><tspan
+						x="25.49" dy="1.2em" class="st15">details</tspan></text>		</g>
+		<g id="shape1292-90" transform="translate(145.249,-861.163)">
+			<title>Rounded Rectangle.1292</title>
+			<desc>OC system presents online form for completion​</desc>
+			<path d="M7.87 1118.55 L70.85 1118.55 A7.87165 7.87165 -180 0 0 78.72 1110.68 L78.72 1079.35 A7.87165 7.87165 -180 0
+						 0 70.85 1071.48 L7.87 1071.48 A7.87165 7.87165 -180 0 0 -0 1079.35 L0 1110.68 A7.87165 7.87165 -180 0 0
+						 7.87 1118.55 Z" class="st9"/>
+			<text x="7.26" y="1087.81" class="st14">OC system presents <tspan x="14.77" dy="1.2em" class="st15">online form for </tspan><tspan
+						x="20.88" dy="1.2em" class="st15">completion</tspan></text>		</g>
+		<g id="shape1574-95" transform="translate(1007.99,-736.163)">
+			<title>Rounded Rectangle.1574</title>
+			<desc>OC Payload created (including consent and preferred CP) and s...</desc>
+			<path d="M8.13 1118.55 L73.13 1118.55 A8.12509 8.12509 -180 0 0 81.25 1110.43 L81.25 1076.43 A8.12509 8.12509 -180 0
+						 0 73.13 1068.3 L8.13 1068.3 A8.12509 8.12509 -180 0 0 0 1076.43 L0 1110.43 A8.12509 8.12509 -180 0 0 8.13
+						 1118.55 Z" class="st16"/>
+			<text x="8.77" y="1081.43" class="st14">OC Payload created <tspan x="10.88" dy="1.2em" class="st15">(including consent </tspan><tspan
+						x="4.68" dy="1.2em" class="st15">and preferred CP) and </tspan><tspan x="24.17" dy="1.2em" class="st15">sent to CP</tspan></text>		</g>
+		<g id="shape595-101" transform="translate(123.951,-993.552)">
+			<title>Sequence Flow.595</title>
+			<path d="M0 1109.55 L16.26 1109.55" class="st17"/>
+		</g>
+		<g id="shape596-107" transform="translate(223.967,-884.7)">
+			<title>Sequence Flow.596</title>
+			<path d="M0 1118.55 L9 1118.55 A4.5 4.5 -180 0 0 13.5 1114.05 L13.5 1005.2 A4.5 4.5 0 0 1 18 1000.7 L32.89 1000.7"
+					class="st17"/>
+		</g>
+		<g id="shape598-112" transform="translate(193.611,-982.342)">
+			<title>Sequence Flow.598</title>
+			<path d="M-9 1118.55 L-9 1132.05 a0.0036 0.0036 0 0 1 -0.0036 0.0036 L-9 1132.05 a0.0036 0.0036 -180 0 0 -0.0036 0.0036
+						 L-9 1187.62" class="st17"/>
+		</g>
+		<g id="shape599-117" transform="translate(336.636,-886.037)">
+			<title>Sequence Flow.599</title>
+			<desc>Yes</desc>
+			<path d="M0 1118.55 L9 1118.55 A4.5 4.5 -180 0 0 13.5 1114.05 L13.5 1006.54 A4.5 4.5 0 0 1 18 1002.04 L33.98 1002.04"
+					class="st17"/>
+			<rect x="7.99619" y="1049.48" width="11.0078" height="9.59985" class="st19"/>
+			<text x="8" y="1056.68" class="st14">Yes</text>		</g>
+		<g id="shape1294-124" transform="translate(789.793,-984.937)">
+			<title>Rounded Rectangle.1294</title>
+			<desc>Clinician works on OC</desc>
+			<path d="M7.42 1118.55 L66.79 1118.55 A7.42094 7.42094 -180 0 0 74.21 1111.13 L74.21 1090.74 A7.42094 7.42094 -180 0
+						 0 66.79 1083.32 L7.42 1083.32 A7.42094 7.42094 -180 0 0 0 1090.74 L0 1111.13 A7.42094 7.42094 -180 0 0 7.42
+						 1118.55 Z" class="st16"/>
+			<text x="7.72" y="1098.54" class="st14">Clinician works on <tspan x="32.32" dy="1.2em" class="st15">OC</tspan></text>		</g>
+		<g id="shape931-128" transform="translate(480.956,-973.378)">
+			<title>Diamond.931</title>
+			<desc>Patient consent for Direct Care Y/N </desc>
+			<path d="M39.45 1118.55 L78.89 1089.38 L39.45 1060.2 L0 1089.38 L39.45 1118.55 Z" class="st9"/>
+			<text x="27.77" y="1082.18" class="st14">Patient <tspan x="10.22" dy="1.2em" class="st15">consent</tspan> for Direct <tspan
+						x="24.13" dy="1.2em" class="st15">Care Y/N</tspan></text>		</g>
+		<g id="shape829-133" transform="translate(453.071,-993.552)">
+			<title>Sequence Flow.829</title>
+			<path d="M0 1109.55 L22.85 1109.55" class="st17"/>
+		</g>
+		<g id="shape1296-138" transform="translate(262.425,-862.791)">
+			<title>Diamond.1296</title>
+			<desc>OC system matches Patient ?</desc>
+			<path d="M37.11 1118.55 L74.21 1095.31 L37.11 1072.06 L0 1095.31 L37.11 1118.55 Z" class="st9"/>
+			<text x="19.96" y="1088.11" class="st14">OC system  <tspan x="23.31" dy="1.2em" class="st15">matches </tspan><tspan
+						x="22.68" dy="1.2em" class="st15">Patient ?</tspan></text>		</g>
+		<g id="shape831-143" transform="translate(290.284,-982.342)">
+			<title>Sequence Flow.831</title>
+			<path d="M8.75 1118.55 L8.75 1131.8 a0.246624 0.246624 -180 0 0 0.246624 0.246624 L9 1132.05 a0.246624 0.246624 0 0 1
+						 0.246624 0.246624 L9.25 1186.57" class="st17"/>
+		</g>
+		<g id="shape1575-148" transform="translate(903.589,-735.04)">
+			<title>Rounded Rectangle.1575</title>
+			<desc>Copy OC Payload created (including consent and preferred CP) ...</desc>
+			<path d="M7.89 1118.55 L71 1118.55 A7.88893 7.88893 -180 0 0 78.89 1110.66 L78.89 1073.94 A7.88893 7.88893 -180 0 0 71
+						 1066.06 L7.89 1066.06 A7.88893 7.88893 -180 0 0 0 1073.94 L0 1110.66 A7.88893 7.88893 -180 0 0 7.89 1118.55
+						 Z" class="st16"/>
+			<text x="11.86" y="1075.5" class="st14">Copy OC Payload <tspan x="10.17" dy="1.2em" class="st15">created (including </tspan><tspan
+						x="19.52" dy="1.2em" class="st15">consent and </tspan><tspan x="10.53" dy="1.2em" class="st15">preferred CP) and </tspan><tspan
+						x="22.99" dy="1.2em" class="st15">sent to CP</tspan></text>		</g>
+		<g id="shape910-155" transform="translate(896.011,-976.305)">
+			<title>Diamond.910</title>
+			<desc>Manual triage decision GP/CP</desc>
+			<path d="M38.71 1118.55 L77.41 1092.3 L38.71 1066.06 L0 1092.3 L38.71 1118.55 Z" class="st16"/>
+			<text x="15.99" y="1085.1" class="st14">Manual triage <tspan x="25.31" dy="1.2em" class="st15">decision </tspan><tspan
+						x="28.37" dy="1.2em" class="st15">GP/CP</tspan></text>		</g>
+		<g id="shape911-160" transform="translate(973.425,-1002.55)">
+			<title>Sequence Flow.911</title>
+			<desc>CP</desc>
+			<path d="M0 1118.55 L20.07 1118.55 A4.5 4.5 0 0 1 24.57 1123.05 L24.57 1263.06" class="st17"/>
+			<rect x="20.3744" y="1177.56" width="8.3985" height="9.59985" class="st20"/>
+			<text x="20.37" y="1184.76" class="st14">CP</text>		</g>
+		<g id="shape1573-167" transform="translate(752.857,-733.866)">
+			<title>Rounded Rectangle.1573</title>
+			<desc>OC Payload created (including consent and preferred CP) and s...</desc>
+			<path d="M9.27 1118.55 L83.47 1118.55 A9.27419 9.27419 -180 0 0 92.74 1109.28 L92.74 1072.98 A9.27419 9.27419 -180 0
+						 0 83.47 1063.71 L9.27 1063.71 A9.27419 9.27419 -180 0 0 0 1072.98 L0 1109.28 A9.27419 9.27419 -180 0 0 9.27
+						 1118.55 Z" class="st16"/>
+			<text x="14.52" y="1079.13" class="st14">OC Payload created <tspan x="9.6" dy="1.2em" class="st15">(including consent and </tspan><tspan
+						x="4.06" dy="1.2em" class="st15">preferred CP) and sent GP </tspan><tspan x="33.33" dy="1.2em" class="st15">practice</tspan></text>		</g>
+		<g id="shape916-173" transform="translate(934.718,-976.305)">
+			<title>Sequence Flow.916</title>
+			<desc>GP</desc>
+			<path d="M0 1118.55 L0 1215.86 A4.5 4.5 0 0 1 -4.5 1220.36 L-130.99 1220.36 A4.5 4.5 -180 0 0 -135.49 1224.86 L-135.49
+						 1301.11" class="st17"/>
+			<rect x="-92.347" y="1215.78" width="9.17963" height="9.59985" class="st20"/>
+			<text x="-92.35" y="1222.98" class="st14">GP</text>		</g>
+		<g id="shape932-180" transform="translate(559.847,-1002.55)">
+			<title>Sequence Flow.932</title>
+			<desc>Yes</desc>
+			<path d="M0 1118.55 L9 1118.55 A4.5 4.5 0 0 1 13.5 1123.05 L13.5 1195.3 A4.5 4.5 -180 0 0 18 1199.8 L22.23 1199.8"
+					class="st17"/>
+			<rect x="7.99619" y="1154.51" width="11.0078" height="9.59985" class="st20"/>
+			<text x="8" y="1161.71" class="st14">Yes</text>		</g>
+		<g id="shape1295-187" transform="translate(586.393,-984.937)">
+			<title>Rectangle.264</title>
+			<desc>Patient shown a list of CP&#39;s in their area to choose from</desc>
+			<path d="M7.89 1118.55 L71 1118.55 A7.88893 7.88893 -180 0 0 78.89 1110.66 L78.89 1091.21 A7.88893 7.88893 -180 0 0 71
+						 1083.32 L7.89 1083.32 A7.88893 7.88893 -180 0 0 -0 1091.21 L0 1110.66 A7.88893 7.88893 -180 0 0 7.89 1118.55
+						 Z" class="st21"/>
+			<text x="7.67" y="1093.74" class="st14">Patient shown a list <tspan x="7.87" dy="1.2em" class="st15">of CP&#39;s in their area </tspan><tspan
+						x="14.7" dy="1.2em" class="st15">to choose from</tspan></text>		</g>
+		<g id="shape1119-192" transform="translate(665.284,-993.552)">
+			<title>Sequence Flow.824</title>
+			<path d="M0 1109.55 L22.68 1109.55" class="st17"/>
+		</g>
+		<g id="shape1291-197" transform="translate(693,-983.397)">
+			<title>Rectangle.825</title>
+			<desc>Patient enters preferred CP </desc>
+			<path d="M6.88 1118.55 L61.92 1118.55 A6.88023 6.88023 -180 0 0 68.8 1111.67 L68.8 1087.12 A6.88023 6.88023 -180 0 0
+						 61.92 1080.24 L6.88 1080.24 A6.88023 6.88023 -180 0 0 0 1087.12 L0 1111.67 A6.88023 6.88023 -180 0 0 6.88
+						 1118.55 Z" class="st21"/>
+			<text x="11.45" y="1097" class="st14">Patient enters <tspan x="12.82" dy="1.2em" class="st15">preferred CP</tspan></text>		</g>
+		<g id="shape1123-201" transform="translate(718.413,-983.397)">
+			<title>Sequence Flow.1123</title>
+			<path d="M8.99 1118.55 L8.99 1132.04 a0.0119673 0.0119673 -180 0 0 0.0119673 0.0119673 L9 1132.05 a0.0119673 0.0119673
+						 0 0 1 0.0119673 0.0119673 L9.01 1160.67" class="st17"/>
+		</g>
+		<g id="shape1126-206" transform="translate(831.744,-784.276)">
+			<title>Sheet.1126</title>
+			<desc>​GP CONNECT PAYLOADS</desc>
+			<rect x="0" y="1096.05" width="96.1776" height="22.5" class="st22"/>
+			<text x="0.95em" y="1109.7" class="st23">​GP CONNECT PAYLOADS</text>		</g>
+		<g id="group1129-209" transform="translate(261.641,-443.094)">
+			<title>End Event</title>
+			<desc>End</desc>
+			<g id="shape1130-210">
+				<title>Sheet.1130</title>
+				<ellipse cx="11.25" cy="1107.3" rx="11.25" ry="11.25" class="st24"/>
+			</g>
+			<g id="shape1131-212">
+				<title>Sheet.1131</title>
+				<ellipse cx="11.25" cy="1107.3" rx="9" ry="9" class="st10"/>
+			</g>
+			<g id="shape1132-214" transform="translate(4.77,-4.77)">
+				<title>Sheet.1132</title>
+				<ellipse cx="6.48" cy="1112.07" rx="6.48" ry="6.48" class="st11"/>
+			</g>
+			<g id="shape1133-216" transform="translate(2.25,-2.25)">
+				<title>Sheet.1133</title>
+				<ellipse cx="9" cy="1109.55" rx="9" ry="9" class="st9"/>
+			</g>
+			<g id="shape1134-218" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1134</title>
+			</g>
+			<g id="shape1135-220" transform="translate(18.3707,-6.78919) scale(-1,1)">
+				<title>Sheet.1135</title>
+			</g>
+			<g id="shape1136-222" transform="translate(5.14219,-5.14219)">
+				<title>Sheet.1136</title>
+			</g>
+			<g id="shape1137-224" transform="translate(4.77,-7.72558)">
+				<title>Sheet.1137</title>
+			</g>
+			<g id="shape1138-226" transform="translate(4.77,-5.6694)">
+				<title>Sheet.1138</title>
+			</g>
+			<g id="shape1139-228" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1139</title>
+			</g>
+			<g id="shape1140-230" transform="translate(6.16741,-5.34375)">
+				<title>Sheet.1140</title>
+			</g>
+			<g id="shape1141-232" transform="translate(4.5,-4.5)">
+				<title>Sheet.1141</title>
+			</g>
+			<g id="shape1129-234">
+				<text x="5.14" y="1127.75" class="st13">End</text>			</g>
+		</g>
+		<g id="shape1578-237" transform="translate(143.175,-360.812)">
+			<title>Rounded Rectangle.1578</title>
+			<desc>Send message back to GP Practice (assumption CPCS)</desc>
+			<path d="M7.96 1118.55 L71.64 1118.55 A7.95949 7.95949 -180 0 0 79.6 1110.59 L79.6 1088.2 A7.95949 7.95949 -180 0 0 71.64
+						 1080.24 L7.96 1080.24 A7.95949 7.95949 -180 0 0 -0 1088.2 L0 1110.59 A7.95949 7.95949 -180 0 0 7.96 1118.55
+						 Z" class="st9"/>
+			<text x="8.33" y="1092.2" class="st14">Send message back <tspan x="16.94" dy="1.2em" class="st15">to GP Practice </tspan><tspan
+						x="9.39" dy="1.2em" class="st15">(assumption CPCS)</tspan></text>		</g>
+		<g id="shape1145-242" transform="translate(261.641,-370.964)">
+			<title>Sequence Flow.1145</title>
+			<desc>Yes</desc>
+			<path d="M0 1109.55 L-13.5 1109.55 a0.0036 0.0036 0 0 1 -0.0036 -0.0036 L-13.5 1109.55 a0.0036 0.0036 -180 0 0 -0.0036
+						 -0.0036 L-33.83 1109.55" class="st17"/>
+			<rect x="-24.9368" y="1104.75" width="11.0078" height="9.59985" class="st20"/>
+			<text x="-24.94" y="1111.95" class="st14">Yes</text>		</g>
+		<g id="shape1146-249" transform="translate(307.281,-416.094)">
+			<title>Sequence Flow.1125</title>
+			<desc>No</desc>
+			<path d="M0 1118.55 L0 1084.8 A4.5 4.5 -180 0 0 -4.5 1080.3 L-18.1 1080.3" class="st17"/>
+			<rect x="-4.69138" y="1084.37" width="9.38287" height="9.59985" class="st20"/>
+			<text x="-4.69" y="1091.57" class="st14">No</text>		</g>
+		<g id="shape1297-256" transform="translate(308.459,-862.791)">
+			<title>Sequence Flow.1297</title>
+			<desc>No</desc>
+			<path d="M-8.93 1118.55 L-8.93 1131.98 a0.072 0.072 0 0 1 -0.072 0.072 L-9 1132.05 a0.072 0.072 -180 0 0 -0.072 0.072
+						 L-9.07 1141.66" class="st17"/>
+			<rect x="-13.7634" y="1127.79" width="9.38287" height="9.59985" class="st20"/>
+			<text x="-13.76" y="1134.99" class="st14">No</text>		</g>
+		<g id="group1560-263" transform="translate(288.137,-812.147)">
+			<title>End Event.1560</title>
+			<desc>X</desc>
+			<g id="shape1561-264">
+				<title>Sheet.1561</title>
+				<ellipse cx="11.25" cy="1107.3" rx="11.25" ry="11.25" class="st24"/>
+			</g>
+			<g id="shape1562-266">
+				<title>Sheet.1562</title>
+				<ellipse cx="11.25" cy="1107.3" rx="9" ry="9" class="st10"/>
+			</g>
+			<g id="shape1563-268" transform="translate(4.77,-4.77)">
+				<title>Sheet.1563</title>
+				<ellipse cx="6.48" cy="1112.07" rx="6.48" ry="6.48" class="st11"/>
+			</g>
+			<g id="shape1564-270" transform="translate(2.25,-2.25)">
+				<title>Sheet.1564</title>
+				<ellipse cx="9" cy="1109.55" rx="9" ry="9" class="st9"/>
+			</g>
+			<g id="shape1565-272" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1565</title>
+			</g>
+			<g id="shape1566-274" transform="translate(18.3707,-6.78919) scale(-1,1)">
+				<title>Sheet.1566</title>
+			</g>
+			<g id="shape1567-276" transform="translate(5.14219,-5.14219)">
+				<title>Sheet.1567</title>
+			</g>
+			<g id="shape1568-278" transform="translate(4.77,-7.72558)">
+				<title>Sheet.1568</title>
+			</g>
+			<g id="shape1569-280" transform="translate(4.77,-5.6694)">
+				<title>Sheet.1569</title>
+			</g>
+			<g id="shape1570-282" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1570</title>
+			</g>
+			<g id="shape1571-284" transform="translate(6.16741,-5.34375)">
+				<title>Sheet.1571</title>
+			</g>
+			<g id="shape1572-286" transform="translate(4.5,-4.5)">
+				<title>Sheet.1572</title>
+			</g>
+			<g id="shape1560-288">
+				<text x="7.58" y="1130.45" class="st25">X</text>			</g>
+		</g>
+		<g id="shape1719-291" transform="translate(587.113,-905.222)">
+			<title>Rounded Rectangle.1341</title>
+			<desc>OC system searches for CP&#39;s local to the patient</desc>
+			<path d="M7.79 1118.55 L70.11 1118.55 A7.78958 7.78958 -180 0 0 77.9 1110.76 L77.9 1094.19 A7.78958 7.78958 -180 0 0
+						 70.11 1086.4 L7.79 1086.4 A7.78958 7.78958 -180 0 0 0 1094.19 L0 1110.76 A7.78958 7.78958 -180 0 0 7.79
+						 1118.55 Z" class="st9"/>
+			<text x="6.68" y="1095.27" class="st14">OC system searches <tspan x="7.53" dy="1.2em" class="st15">for CP&#39;s local to the </tspan><tspan
+						x="27.24" dy="1.2em" class="st15">patient</tspan></text>		</g>
+		<g id="shape1720-296" transform="translate(634.95,-937.378)">
+			<title>Sequence Flow.1720</title>
+			<path d="M-8.89 1118.55 L-8.89 1105.16 a0.1116 0.1116 -180 0 0 -0.1116 -0.1116 L-9 1105.05 a0.1116 0.1116 0 0 1 -0.1116
+						 -0.1116 L-9.11 1076.03" class="st17"/>
+		</g>
+		<g id="shape1724-301" transform="translate(1048.61,-736.163)">
+			<title>Sequence Flow.1724</title>
+			<path d="M0 1120.08 L0 1120.44 L0 1391.14 A4.5 4.5 0 0 1 -4.5 1395.64 L-246.3 1395.64" class="st26"/>
+		</g>
+		<g id="shape1729-310" transform="translate(261.641,-343.827)">
+			<title>Rectangle.1122</title>
+			<desc>Does CP want to send information  back to GP practice? Y/N </desc>
+			<path d="M45.64 1118.55 L91.28 1082.42 L45.64 1046.28 L0 1082.42 L45.64 1118.55 Z" class="st9"/>
+			<text x="37.52" y="1060.82" class="st14">Does <tspan x="32.32" dy="1.2em" class="st15">CP</tspan> want <tspan x="13.3"
+						dy="1.2em" class="st15">to send information </tspan><tspan x="32.86" dy="1.2em" class="st15"> </tspan>back to  <tspan
+						x="25.25" dy="1.2em" class="st15">GP practice?  </tspan><tspan x="38.66" dy="1.2em" class="st15">Y/N</tspan></text>		</g>
+		<g id="shape1730-318" transform="translate(717.675,-445.376)">
+			<title>Rounded Rectangle.1423</title>
+			<desc>OC received by CP</desc>
+			<path d="M7.96 1118.55 L71.64 1118.55 A7.95949 7.95949 -180 0 0 79.6 1110.59 L79.6 1099.11 A7.95949 7.95949 -180 0 0
+						 71.64 1091.16 L7.96 1091.16 A7.95949 7.95949 -180 0 0 -0 1099.11 L0 1110.59 A7.95949 7.95949 -180 0 0 7.96
+						 1118.55 Z" class="st16"/>
+			<text x="10.31" y="1107.25" class="st14">OC received by CP</text>		</g>
+		<g id="shape1731-321" transform="translate(661.194,-445.543)">
+			<title>Diamond.1391</title>
+			<path d="M19.99 1118.55 L39.97 1104.85 L19.99 1091.16 L0 1104.85 L19.99 1118.55 Z" class="st9"/>
+		</g>
+		<g id="shape1732-323" transform="translate(718.422,-450.158)">
+			<title>Sequence Flow.1732</title>
+			<path d="M-0.75 1109.63 L-7.41 1109.63 a0.0833333 0.0833333 0 0 1 -0.0833333 -0.0833333 L-7.5 1109.55 a0.0833333 0.0833333
+						 -180 0 0 -0.0833333 -0.0833333 L-12.21 1109.47" class="st17"/>
+		</g>
+		<g id="shape1733-328" transform="translate(469.066,-469.647)">
+			<title>Rectangle.1152</title>
+			<desc>OC Payload created and sent to GP (Original payload with GP I...</desc>
+			<path d="M8.01 1118.55 L72.06 1118.55 A8.00701 8.00701 -180 0 0 80.07 1110.54 L80.07 1079.69 A8.00701 8.00701 -180 0
+						 0 72.06 1071.68 L8.01 1071.68 A8.00701 8.00701 -180 0 0 0 1079.69 L0 1110.54 A8.00701 8.00701 -180 0 0 8.01
+						 1118.55 Z" class="st27"/>
+			<text x="8.18" y="1083.12" class="st14">OC Payload created <tspan x="21.66" dy="1.2em" class="st15">and sent to </tspan><tspan
+						x="6.85" dy="1.2em" class="st15">GP</tspan> (Original payload <tspan x="5.51" dy="1.2em" class="st15">with GP ITK wrapper)</tspan></text>		</g>
+		<g id="shape1734-334" transform="translate(568.685,-417.582)">
+			<title>Rectangle.1153</title>
+			<desc>Accept OC</desc>
+			<path d="M5.51 1118.55 L49.57 1118.55 A5.50721 5.50721 -180 0 0 55.07 1113.04 L55.07 1105.54 A5.50721 5.50721 -180 0
+						 0 49.57 1100.03 L5.51 1100.03 A5.50721 5.50721 -180 0 0 -0 1105.54 L0 1113.04 A5.50721 5.50721 -180 0 0
+						 5.51 1118.55 Z" class="st27"/>
+			<text x="10.72" y="1111.69" class="st14">Accept OC</text>		</g>
+		<g id="shape1735-337" transform="translate(661.194,-459.241)">
+			<title>Sequence Flow.1155</title>
+			<path d="M0 1118.55 L-9 1118.55 A4.5 4.5 0 0 1 -13.5 1114.05 L-13.5 1089.21 A4.5 4.5 -180 0 0 -18 1084.71 L-32.4 1084.71"
+					class="st17"/>
+		</g>
+		<g id="shape1736-342" transform="translate(661.194,-459.241)">
+			<title>Sequence Flow.1156</title>
+			<path d="M0 1118.55 L-9 1118.55 A4.5 4.5 -180 0 0 -13.5 1123.05 L-13.5 1146.45 A4.5 4.5 0 0 1 -18 1150.95 L-32.4 1150.95"
+					class="st17"/>
+		</g>
+		<g id="shape1739-347" transform="translate(568.685,-483.824)">
+			<title>Rectangle.1457</title>
+			<desc>Escalate OC</desc>
+			<path d="M5.51 1118.55 L49.57 1118.55 A5.50721 5.50721 -180 0 0 55.07 1113.04 L55.07 1105.54 A5.50721 5.50721 -180 0
+						 0 49.57 1100.04 L5.51 1100.04 A5.50721 5.50721 -180 0 0 0 1105.54 L0 1113.04 A5.50721 5.50721 -180 0 0 5.51
+						 1118.55 Z" class="st27"/>
+			<text x="8.56" y="1111.69" class="st14">Escalate OC</text>		</g>
+		<g id="shape1740-350" transform="translate(568.685,-484.081)">
+			<title>Sequence Flow.1459</title>
+			<path d="M0 1109.55 L-14.51 1109.55" class="st17"/>
+		</g>
+		<g id="shape1743-355" transform="translate(596.222,-417.582)">
+			<title>Sequence Flow.1743</title>
+			<path d="M0 1118.55 L0 1151.66 A4.5 4.5 0 0 1 -4.5 1156.16 L-126.77 1156.16" class="st17"/>
+		</g>
+		<g id="shape1744-360" transform="translate(447.933,-404.663)">
+			<title>Rectangle.1402</title>
+			<desc>​</desc>
+			<path d="M0 1118.55 L357.98 1118.55 L357.98 982.18 L0 982.18 L0 1118.55 Z" class="st1"/>
+		</g>
+		<g id="shape1745-362" transform="translate(398.081,-368.718)">
+			<title>Rounded Rectangle.1759</title>
+			<desc>Actioned by CP</desc>
+			<path d="M6.63 1118.55 L59.69 1118.55 A6.63255 6.63255 -180 0 0 66.33 1111.92 L66.33 1102.68 A6.63255 6.63255 -180 0
+						 0 59.69 1096.05 L6.63 1096.05 A6.63255 6.63255 -180 0 0 0 1102.68 L0 1111.92 A6.63255 6.63255 -180 0 0 6.63
+						 1118.55 Z" class="st27"/>
+			<text x="8.68" y="1109.7" class="st14">Actioned by CP</text>		</g>
+		<g id="shape1746-365" transform="translate(398.081,-388.964)">
+			<title>Sequence Flow.1746</title>
+			<path d="M0 1127.55 L-13.5 1127.55 a0.0036 0.0036 -180 0 0 -0.0036 0.0036 L-13.5 1127.55 a0.0036 0.0036 0 0 1 -0.0036
+						 0.0036 L-40.12 1127.55" class="st17"/>
+		</g>
+		<g id="shape1747-370" transform="translate(959.504,-823.745)">
+			<title>Rounded Rectangle.1894</title>
+			<desc>OC Payload creation (for CP and copy version for GP)</desc>
+			<path d="M7.7 1118.55 L69.29 1118.55 A7.69886 7.69886 -180 0 0 76.99 1110.85 L76.99 1096.99 A7.69886 7.69886 -180 0 0
+						 69.29 1089.29 L7.7 1089.29 A7.69886 7.69886 -180 0 0 -0 1096.99 L0 1110.85 A7.69886 7.69886 -180 0 0 7.7
+						 1118.55 Z" class="st16"/>
+			<text x="5.61" y="1096.72" class="st14">OC Payload creation <tspan x="11.81" dy="1.2em" class="st15">(for CP and</tspan> copy <tspan
+						x="14.27" dy="1.2em" class="st15">version</tspan> for GP)</text>		</g>
+		<g id="shape1748-375" transform="translate(997.999,-823.745)">
+			<title>Sequence Flow.1748</title>
+			<path d="M0 1118.55 L0 1127.55 A4.5 4.5 -180 0 0 4.5 1132.05 L46.11 1132.05 A4.5 4.5 0 0 1 50.61 1136.55 L50.61 1150.84"
+					class="st17"/>
+		</g>
+		<g id="shape1749-380" transform="translate(997.999,-823.745)">
+			<title>Sequence Flow.1749</title>
+			<path d="M0 1118.55 L0 1127.55 A4.5 4.5 0 0 1 -4.5 1132.05 L-50.46 1132.05 A4.5 4.5 -180 0 0 -54.96 1136.55 L-54.96 1149.72"
+					class="st17"/>
+		</g>
+		<g id="shape1750-385" transform="translate(762.243,-623.401)">
+			<title>Rounded Rectangle.1302</title>
+			<desc>OC Copy received by GP Practice</desc>
+			<path d="M7.43 1118.55 L66.85 1118.55 A7.42814 7.42814 -180 0 0 74.28 1111.12 L74.28 1089.27 A7.42814 7.42814 -180 0
+						 0 66.85 1081.84 L7.43 1081.84 A7.42814 7.42814 -180 0 0 -0 1089.27 L0 1111.12 A7.42814 7.42814 -180 0 0
+						 7.43 1118.55 Z" class="st16"/>
+			<text x="8.51" y="1097.79" class="st14">OC Copy received <tspan x="13.82" dy="1.2em" class="st15">by GP Practice</tspan></text>		</g>
+		<g id="group1751-389" transform="translate(249.853,-630.508)">
+			<title>End Event.804</title>
+			<desc>End</desc>
+			<g id="shape1752-390">
+				<title>Sheet.1752</title>
+				<ellipse cx="11.25" cy="1107.3" rx="11.25" ry="11.25" class="st24"/>
+			</g>
+			<g id="shape1753-392">
+				<title>Sheet.1753</title>
+				<ellipse cx="11.25" cy="1107.3" rx="9" ry="9" class="st10"/>
+			</g>
+			<g id="shape1754-394" transform="translate(4.77,-4.77)">
+				<title>Sheet.1754</title>
+				<ellipse cx="6.48" cy="1112.07" rx="6.48" ry="6.48" class="st11"/>
+			</g>
+			<g id="shape1755-396" transform="translate(2.25,-2.25)">
+				<title>Sheet.1755</title>
+				<ellipse cx="9" cy="1109.55" rx="9" ry="9" class="st9"/>
+			</g>
+			<g id="shape1756-398" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1756</title>
+			</g>
+			<g id="shape1757-400" transform="translate(18.3707,-6.78919) scale(-1,1)">
+				<title>Sheet.1757</title>
+			</g>
+			<g id="shape1758-402" transform="translate(5.14219,-5.14219)">
+				<title>Sheet.1758</title>
+			</g>
+			<g id="shape1759-404" transform="translate(4.77,-7.72558)">
+				<title>Sheet.1759</title>
+			</g>
+			<g id="shape1760-406" transform="translate(4.77,-5.6694)">
+				<title>Sheet.1760</title>
+			</g>
+			<g id="shape1761-408" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1761</title>
+			</g>
+			<g id="shape1762-410" transform="translate(6.16741,-5.34375)">
+				<title>Sheet.1762</title>
+			</g>
+			<g id="shape1763-412" transform="translate(4.5,-4.5)">
+				<title>Sheet.1763</title>
+			</g>
+			<g id="shape1751-414">
+				<text x="5.14" y="1127.75" class="st13">End</text>			</g>
+		</g>
+		<g id="shape1764-417" transform="translate(762.243,-632.758)">
+			<title>Sequence Flow.1016</title>
+			<path d="M0 1109.55 L-21.51 1109.55" class="st17"/>
+		</g>
+		<g id="shape1765-422" transform="translate(382.086,-630.101)">
+			<title>Rounded Rectangle.1301</title>
+			<desc>OC received by GP Practice</desc>
+			<path d="M7.02 1118.55 L63.15 1118.55 A7.01631 7.01631 -180 0 0 70.16 1111.53 L70.16 1102.25 A7.01631 7.01631 -180 0
+						 0 63.15 1095.24 L7.02 1095.24 A7.01631 7.01631 -180 0 0 0 1102.25 L0 1111.53 A7.01631 7.01631 -180 0 0 7.02
+						 1118.55 Z" class="st16"/>
+			<text x="5.2" y="1104.49" class="st14">OC received by GP <tspan x="22.07" dy="1.2em" class="st15">Practice</tspan></text>		</g>
+		<g id="shape1766-426" transform="translate(299.683,-632.758)">
+			<title>Sequence Flow.1022</title>
+			<path d="M0 1109.55 L-22.29 1109.55" class="st17"/>
+		</g>
+		<g id="shape1767-431" transform="translate(299.683,-632.506)">
+			<title>Rounded Rectangle.1344</title>
+			<desc>Actioned</desc>
+			<path d="M5.51 1118.55 L49.57 1118.55 A5.50721 5.50721 -180 0 0 55.07 1113.04 L55.07 1105.55 A5.50721 5.50721 -180 0
+						 0 49.57 1100.05 L5.51 1100.05 A5.50721 5.50721 -180 0 0 0 1105.55 L0 1113.04 A5.50721 5.50721 -180 0 0 5.51
+						 1118.55 Z" class="st16"/>
+			<text x="12.97" y="1111.7" class="st14">Actioned</text>		</g>
+		<g id="shape1768-434" transform="translate(665.525,-623.473)">
+			<title>Rounded Rectangle.1346</title>
+			<desc>Saved to patient record</desc>
+			<path d="M7.02 1118.55 L63.15 1118.55 A7.01631 7.01631 -180 0 0 70.16 1111.53 L70.16 1089 A7.01631 7.01631 -180 0 0 63.15
+						 1081.98 L7.02 1081.98 A7.01631 7.01631 -180 0 0 -0 1089 L0 1111.53 A7.01631 7.01631 -180 0 0 7.02 1118.55
+						 Z" class="st16"/>
+			<text x="8.47" y="1097.87" class="st14">Saved to patient <tspan x="24.4" dy="1.2em" class="st15">record</tspan></text>		</g>
+		<g id="shape1769-438" transform="translate(382.086,-632.758)">
+			<title>Sequence Flow.1347</title>
+			<path d="M0 1109.55 L-22.29 1109.55" class="st17"/>
+		</g>
+		<g id="shape1770-443" transform="translate(143.632,-628.258)">
+			<title>Rectangle.1124</title>
+			<desc>CP message received by GP Practice</desc>
+			<path d="M7.89 1118.55 L71 1118.55 A7.88893 7.88893 -180 0 0 78.89 1110.66 L78.89 1099.44 A7.88893 7.88893 -180 0 0 71
+						 1091.55 L7.89 1091.55 A7.88893 7.88893 -180 0 0 -0 1099.44 L0 1110.66 A7.88893 7.88893 -180 0 0 7.89 1118.55
+						 Z" class="st9"/>
+			<text x="5.45" y="1102.65" class="st14">CP message received <tspan x="16.13" dy="1.2em" class="st15">by GP Practice</tspan></text>		</g>
+		<g id="shape1771-447" transform="translate(222.523,-632.758)">
+			<title>Sequence Flow.1376</title>
+			<path d="M0 1109.55 L22.29 1109.55" class="st17"/>
+		</g>
+		<g id="group1772-452" transform="translate(689.357,-577.033)">
+			<title>End Event.1395</title>
+			<desc>End</desc>
+			<g id="shape1773-453">
+				<title>Sheet.1773</title>
+				<ellipse cx="11.25" cy="1107.3" rx="11.25" ry="11.25" class="st24"/>
+			</g>
+			<g id="shape1774-455">
+				<title>Sheet.1774</title>
+				<ellipse cx="11.25" cy="1107.3" rx="9" ry="9" class="st10"/>
+			</g>
+			<g id="shape1775-457" transform="translate(4.77,-4.77)">
+				<title>Sheet.1775</title>
+				<ellipse cx="6.48" cy="1112.07" rx="6.48" ry="6.48" class="st11"/>
+			</g>
+			<g id="shape1776-459" transform="translate(2.25,-2.25)">
+				<title>Sheet.1776</title>
+				<ellipse cx="9" cy="1109.55" rx="9" ry="9" class="st9"/>
+			</g>
+			<g id="shape1777-461" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1777</title>
+			</g>
+			<g id="shape1778-463" transform="translate(18.3707,-6.78919) scale(-1,1)">
+				<title>Sheet.1778</title>
+			</g>
+			<g id="shape1779-465" transform="translate(5.14219,-5.14219)">
+				<title>Sheet.1779</title>
+			</g>
+			<g id="shape1780-467" transform="translate(4.77,-7.72558)">
+				<title>Sheet.1780</title>
+			</g>
+			<g id="shape1781-469" transform="translate(4.77,-5.6694)">
+				<title>Sheet.1781</title>
+			</g>
+			<g id="shape1782-471" transform="translate(5.0625,-6.75)">
+				<title>Sheet.1782</title>
+			</g>
+			<g id="shape1783-473" transform="translate(6.16741,-5.34375)">
+				<title>Sheet.1783</title>
+			</g>
+			<g id="shape1784-475" transform="translate(4.5,-4.5)">
+				<title>Sheet.1784</title>
+			</g>
+			<g id="shape1772-477">
+				<text x="5.14" y="1127.75" class="st13">End</text>			</g>
+		</g>
+		<g id="shape1785-480" transform="translate(691.607,-623.473)">
+			<title>Sequence Flow.1408</title>
+			<path d="M9 1118.55 L9 1137.45" class="st17"/>
+		</g>
+		<g id="shape1787-485" transform="translate(174.026,-399.124)">
+			<title>Sequence Flow.1787</title>
+			<path d="M8.95 1117.02 L8.95 1116.66 L8.95 1105.1 a0.0520866 0.0520866 0 0 1 0.0520866 -0.0520866 L9 1105.05 a0.0520866
+						 0.0520866 -180 0 0 0.0520866 -0.0520866 L9.05 894.46" class="st26"/>
+		</g>
+		<g id="shape1789-492" transform="translate(943.034,-735.04)">
+			<title>Sequence Flow.1141</title>
+			<path d="M0 1120.08 L0 1120.44 L0 1207.33 A4.5 4.5 0 0 1 -4.5 1211.83 L-101.47 1211.83" class="st26"/>
+		</g>
+		<g id="shape1791-499" transform="translate(687.98,-877.888)">
+			<title>Diamond.1791</title>
+			<desc>OC auto triages information (Y/N)</desc>
+			<path d="M39.45 1118.55 L78.89 1089.38 L39.45 1060.2 L0 1089.38 L39.45 1118.55 Z" class="st9"/>
+			<text x="14.38" y="1086.98" class="st14">OC auto triages <tspan x="10.71" dy="1.2em" class="st15">information (Y/N)</tspan></text>		</g>
+		<g id="shape1792-503" transform="translate(766.871,-907.062)">
+			<title>Sequence Flow.1792</title>
+			<desc>No</desc>
+			<path d="M0 1118.55 L55.53 1118.55 A4.5 4.5 -180 0 0 60.03 1114.05 L60.03 1045.72" class="st17"/>
+			<rect x="55.3362" y="1103.51" width="9.38287" height="9.59985" class="st20"/>
+			<text x="55.34" y="1110.71" class="st14">No</text>		</g>
+		<g id="shape1793-510" transform="translate(790.307,-733.866)">
+			<title>Sequence Flow.1793</title>
+			<path d="M8.92 1120.08 L8.92 1120.44 L8.92 1131.97 a0.0779067 0.0779067 -180 0 0 0.0779067 0.0779067 L9 1132.05 a0.0779067
+						 0.0779067 0 0 1 0.0779067 0.0779067 L9.08 1187.26" class="st26"/>
+		</g>
+		<g id="shape1794-517" transform="translate(864.004,-993.552)">
+			<title>Sequence Flow.1794</title>
+			<path d="M0 1109.55 L26.97 1109.55" class="st17"/>
+		</g>
+		<g id="shape1795-522" transform="translate(469.066,-493.081)">
+			<title>Sequence Flow.1795</title>
+			<path d="M-1.53 1118.55 L-1.89 1118.55 L-47.4 1118.55 A4.5 4.5 0 0 1 -51.9 1114.05 L-51.9 986.57" class="st26"/>
+		</g>
+		<g id="shape1738-529" transform="translate(447.933,-518.533)">
+			<title>Sheet.1738</title>
+			<desc>ESCALATE TO GP FUNCTION</desc>
+			<rect x="0" y="1096.05" width="110.067" height="22.5" class="st22"/>
+			<text x="8.94" y="1109.7" class="st23">ESCALATE TO GP FUNCTION</text>		</g>
+		<g id="shape1797-532" transform="translate(1051.34,-1055.18)">
+			<title>Rounded Rectangle</title>
+			<desc>GP Connect deliverable</desc>
+			<path d="M8.64 1118.55 L77.76 1118.55 A8.63986 8.63986 -180 0 0 86.4 1109.91 L86.4 1092.09 A8.63986 8.63986 -180 0 0
+						 77.76 1083.45 L8.64 1083.45 A8.63986 8.63986 -180 0 0 0 1092.09 L0 1109.91 A8.63986 8.63986 -180 0 0 8.64
+						 1118.55 Z" class="st28"/>
+			<text x="5.29" y="1103.4" class="st14">GP Connect deliverable</text>		</g>
+	</g>
+</svg>

@@ -94,7 +94,5 @@ Deletions are rare but do happen. For example, where a consultation was recorded
 
 {% include note.html content="It is the responsibility of the GP practice that recorded the consultation to inform the registered GP practice. There is no requirement for the sending system to send an automated message to inform the registered GP practice about the deletion. The sender system should assist the GP practice in managing and tracking the process of informing other organisations." %} 
 
-## PDF Format and business process ##
 
-Please refer to [Send Consultation Report - Business Requirements](senddocument_userstories.html) for business requirement context for the creation of the message together with details of the PDF format to be used.
 
