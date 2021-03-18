@@ -9,7 +9,7 @@ summary: "Send Document capability - the structure of the payload to be used for
 
 ## Payload message requirements ##
 
-The following requirements describe the structure of the Send Document payload:
+The following requirements describe the structure of the Send Document payload. These requirements are applicable to each use case covered in the specification:
 
 <table class="requirement-box">
   {% for item in site.data.senddoc_requirements.requirements %}

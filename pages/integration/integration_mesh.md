@@ -41,9 +41,9 @@ Rather than specifying the destination mailbox ID, the message sender simply spe
 
 Refer to details below in the MESH API and MESH client sections for how to do this. 
 
-### To other organisations ###
+### To alternative care providers ###
 
-Where message senders create messages destined for alternative organisations, for example a Community Pharmacy, the MESH API **MUST** be used lookup the receiving organisation's MESH mailbox ID.
+Where message senders create messages destined for alternative care providers, for example a community pharmacy, the MESH API **MUST** be used lookup the receiving organisation's MESH mailbox ID.
 
 Details on how to use the MESH address lookup function can be found in the [MESH API specification](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api#api-Endpoints-meshAddressLookup-0).
 

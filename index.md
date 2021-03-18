@@ -34,13 +34,8 @@ Update messages will:
 
 Two main audiences will be interested in this specification:
 
-1. message senders: NHS organisations seeking to send messages
-2. message receivers: GP practices seeking to receive and process messages
+1. message senders: NHS organisations or software application developers seeking to send messages
+2. message receivers: GP practices and alternative care providers (for example, community pharmacies) seeking to receive and process messages 
 
 This specification is primarily aimed at message senders. Where the specification contains information for message receivers, this is explicitly stated.
-
-
-{% include twitterfollow.html %}
-
-{% include gitterbadge.html %}
 
