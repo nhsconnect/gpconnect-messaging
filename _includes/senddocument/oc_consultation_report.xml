@@ -1,3 +1,5 @@
+{% highlight xml %}
+
 <Bundle xmlns="http://hl7.org/fhir">
   <!-- =====START of the ITK FHIR message (bundle of type "message"  ===== -->
   <id value="d12dc439-ca5c-4177-bb70-4fece88edab0" />
@@ -1113,3 +1115,5 @@
 </Bundle>
 <!-- end of message bundle -->
 <!-- =============END OF FHIR Message bundle==================== -->
+
+{% endhighlight %}

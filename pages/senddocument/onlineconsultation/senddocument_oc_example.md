@@ -11,7 +11,7 @@ The message given below arises from the following fictional scenario:
 
 >*Miss Mary Contrary has completed an online consultation survey as requested by her GP. Her registered practice is Osprey Medical Centre.*
 
->*After the online consultation, the online consultation system used by Osprey Starling Medical Centre sends a message to the clinical system used by Osprey with details of the online consultation, in order that Miss Contrary's care record is updated.*
+>*After the online consultation, the online consultation system used by Osprey Starling Medical Centre sends a message to the clinical system used by Osprey Starling Medical Centre with details of the online consultation, in order that Miss Contrary's care record is updated.*
 
 ### Message example ###
 
