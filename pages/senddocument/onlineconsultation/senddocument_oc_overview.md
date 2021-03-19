@@ -92,7 +92,7 @@ The diagram above depicts a successful message flow where the receiving care pro
 2.  **Online Consultation Report message**
 
     1. A trigger at the OC system results in a FHIR Message being constructed labelled "For Action" which includes a PDF describing the online consultation (as a minimum).
-    2. The MESH API Send Message function is used to send the message to the mailbox acquired in step 1.2
+    2. The MESH API Send Message function is used to send the message to the mailbox acquired in step 1.b
     3. The MESH server places the message in the community pharmacy's MESH mailbox awaiting collection.
     4. The community pharmacy uses the MESH API Download Message function to retrieve the message from the MESH mailbox.
     5. The message is processed at the community pharmacy.
@@ -114,7 +114,7 @@ The diagram above depicts a successful message flow where the receiving care pro
 5.  **Copy Online Consultation Report message**
 
     1. A trigger at the OC system results in a FHIR Message being constructed labelled "For Information" which includes a PDF describing the online consultation (as a minimum).
-    2. The MESH API Send Message function is used to send the message to the mailbox acquired in step 1.4
+    2. The MESH API Send Message function is used to send the message to the mailbox acquired in step 1.d
     3. The MESH server places the message in the GP practice's MESH mailbox awaiting collection.
     4. The GP practice uses the MESH API Download Message function to retrieve the message from the MESH mailbox.
     5. The message is saved at the GP practice.

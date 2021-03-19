@@ -4,7 +4,7 @@
   as: "member of staff at a GP practice"
   iwant: "the Online Consultation Report to be sent directly to the GP clinical system"
   sothat: "I don't have to manually move or copy the Online Consultation Report."
-  sender: "<ol type=\"1\"><li>the sender system must send an online consultation report to the patient's registered GP practice<ol type=\"i\"><li>the sender system must flag the online consultation report as <strong>FOR ACTION</strong> if the GP practice is identified as the primary recipient</li><li>the send system must flag as <strong>FOR INFORMATION</strong> and send a copy message if an alternative care provider is identified as the primary recipient</li></ol></li><li>where the sender system supports an alternative method for communicating the online consultation information back to the patient's registered GP practice, this method may be used in the place of GP Connect Messaging<ol type=\"i\"><li>where an alternative method is used, the GP Connect Messaging requirements do not apply</li></ol></li></ol>"
+  sender: "<ol type=\"1\"><li>the sender system must send an Online Consultation Report to the patient's registered GP practice<ol type=\"i\"><li>the sender system must flag the Online Consultation Report as <strong>FOR ACTION</strong> if the GP practice is identified as the primary recipient</li><li>the send system must flag as <strong>FOR INFORMATION</strong> and send a copy message if an alternative care provider is identified as the primary recipient</li></ol></li><li>where the sender system supports an alternative method for communicating the online consultation information back to the patient's registered GP practice, this method may be used in the place of GP Connect Messaging<ol type=\"i\"><li>where an alternative method is used, the GP Connect Messaging requirements do not apply</li></ol></li></ol>"
   receiver: "N/A"
   requirements: 
   technical: "<ul><li><a href=\"senddocument_payload.html\">Send Document - payload structure</a></li><li><a href=\"senddocument_oc_itk3.html\">ITK3 header requirements</a></li></ul>"
@@ -15,7 +15,7 @@
   as: "member of staff at a GP practice"
   iwant: "the Online Consultation Report to be sent directly to an alternative care provider selected by the patient"
   sothat: "the care provider can offer a service to the patient."
-  sender: "<ol type=\"1\"><li>the sender system must send an online consultation report to the patient's chosen alternative care provider (currently only community pharmacies)<ol type=\"i\"><li>the sender system must flag the online consultation report as <strong>FOR ACTION</strong></li><li>a copy message must be sent to the patient's registered GP practice flagged as <strong>FOR INFORMATION</strong></li></ol></li></ol>"
+  sender: "<ol type=\"1\"><li>the sender system must send an Online Consultation Report to the patient's chosen alternative care provider (currently only community pharmacies)<ol type=\"i\"><li>the sender system must flag the Online Consultation Report as <strong>FOR ACTION</strong></li><li>a copy message must be sent to the patient's registered GP practice flagged as <strong>FOR INFORMATION</strong></li></ol></li></ol>"
   receiver: "N/A"
   requirements: 
   technical: "<ul><li><a href=\"senddocument_payload.html\">Send Document - payload structure</a></li><li><a href=\"senddocument_oc_itk3.html\">ITK3 header requirements</a></li></ul>"
