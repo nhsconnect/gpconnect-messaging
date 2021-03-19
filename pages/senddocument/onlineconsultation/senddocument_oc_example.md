@@ -4,6 +4,7 @@ keywords: document, use-case
 tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_oc_example.html
+toc: false
 summary: "Consultation Summary Report - example message."
 ---
 
