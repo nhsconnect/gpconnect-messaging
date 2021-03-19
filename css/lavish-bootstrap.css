@@ -250,7 +250,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Frutiger W01,Arial,Sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   /*color: #77777a; */
@@ -271,7 +271,7 @@ textarea {
   background-image: none;
 }
 a {
-  color: #248EC2;
+  color: #002db3;
   text-decoration: none;
 }
 a:hover,

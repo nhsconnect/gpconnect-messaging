@@ -4,7 +4,7 @@ keywords: document, use-case
 tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_overview.html
-summary: "Overview of the use case to send a consultation report to the registered practice of a patient"
+summary: "Overview of the use case to send a Consultation Summary Report to the registered practice of a patient"
 ---
 
 ## Introduction ##
@@ -49,9 +49,6 @@ A patient under the direct care of a district nurse. Clinically relevant encount
 ### School Nursing use case ###
 
 A patient receives medical attention while at school. If the encounter contains clinically relevant information the Send Document capability should be used to send this information back to the patient's registered practice so that the registered practice patient record continues to provide an up-to-date view of care which the patient receives in a GP practice setting.
-
-
-
 
 
 ## Message flows in Send Consultation use case ##

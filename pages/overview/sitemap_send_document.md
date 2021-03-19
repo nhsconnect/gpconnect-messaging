@@ -35,22 +35,39 @@ toc: false
     	<p><a href="senddocument_fedcon_itk3.html">ITK3 header requirements</a></p>
     	<p><a href="senddocument_fedcon_mesh.html">MESH message configuration</a></p>
     	<p><a href="senddocument_fedcon_resend.html">Document replacement</a></p>
-    	<p><a href="senddocument_fedcon_errors.html">Error handling</a></p>      
-  </div>
-  <div class="column">
-    <p style="font-size:18px">Use case - Consultation</p>
+    	<p><a href="senddocument_fedcon_errors.html">Error handling</a></p>
+    <p style="font-size:18px">Use case - Consultation Summary</p>
     	<p><a href="senddocument_fedcon_overview">Overview</a></p>
     	<p><a href="senddocument_fedcon_payload.html">Payload requirements</a></p>
     	<p><a href="senddocument_fedcon_trigger">Triggering message creation</a></p>
-    	<p><a href="senddocument_fedcon_example.html">Message example</a></p>  
+    	<p><a href="senddocument_fedcon_example.html">Message example</a></p> 
+    <p>Business requirements</p>
+    	<p><a href="sendmessage_oc_process.html">Process map</a></p>
+    	<p><a href="senddocument_userstories.html">User stories</a></p>
+    	<p><a href="senddocument_fedcon_busreq_pdf.html">PDF layout</a></p>
+    	<p><a href="senddocument_fedcon_busreq_clinical.html">Clinical engagement</a></p>		
+  </div>
+  <div class="column">
+    <p style="font-size:18px">Use case - Online Consultation</p>
+    	<p><a href="senddocument_oc_overview">Overview</a></p>
+    	<p><a href="senddocument_oc_payload.html">Payload requirements</a></p>
+    	<p><a href="senddocument_oc_trigger">Triggering message creation</a></p>
+    	<p><a href="senddocument_oc_example.html">Message example</a></p>
+    <p>Business requirements</p>
+    	<p><a href="sendmessage_oc_process.html">Process map</a></p>
+    	<p><a href="senddocument_oc_userstories.html">User stories</a></p>
+    	<p><a href="senddocument_oc_busreq_clinical.html">Clinical engagement</a></p>		
   </div> 
   <div class="column">
-   <p>Business requirements</p>
-    	<p><a href="sendmessage_process.html">Process map</a></p>
-    	<p><a href="senddocument_userstories.html">User stories</a></p>
-    	<p><a href="senddocument_fedcon_reqs.html">Requirements list</a></p>
-    	<p><a href="senddocument_fedcon_busreq_pdf.html">PDF layout</a></p>
-    	<p><a href="senddocument_fedcon_busreq_clinical.html">Clinical engagement</a></p>
-  </div>
+    <p style="font-size:18px">Use case - Generic Send</p>
+    	<p><a href="senddocument_generic_overview">Overview</a></p>
+    	<p><a href="senddocument_generic_payload.html">Payload requirements</a></p>
+    	<p><a href="senddocument_generic_trigger">Triggering message creation</a></p>
+    	<p><a href="senddocument_generic_example.html">Message example</a></p>
+    <p>Business requirements</p>
+    	<p><a href="sendmessage_generic_process.html">Process map</a></p>
+    	<p><a href="senddocument_generic_userstories.html">User stories</a></p>
+    	<p><a href="senddocument_generic_busreq_clinical.html">Clinical engagement</a></p>		
+  </div> 
 </div>
 

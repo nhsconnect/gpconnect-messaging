@@ -13,7 +13,7 @@ This page describes the business process for the Consultation Summary Report use
 
 ## Process ##
 
-This process describes the steps/actions involved in the Consultation Report use case where a consultation is written within the a provider system and is sent to the consumer system at the patient’s registered GP practice.
+This process describes the steps/actions involved in the Consultation Summary Report use case where a consultation is written within the a provider system and is sent to the consumer system at the patient’s registered GP practice.
 
 Two common requirements must be met for this process to proceed:
 - the clinician writes a consultation for a patient; and
