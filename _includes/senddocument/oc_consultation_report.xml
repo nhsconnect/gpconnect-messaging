@@ -1,0 +1,1115 @@
+<Bundle xmlns="http://hl7.org/fhir">
+  <!-- =====START of the ITK FHIR message (bundle of type "message"  ===== -->
+  <id value="d12dc439-ca5c-4177-bb70-4fece88edab0" />
+  <meta>
+    <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Message-Bundle-1" />
+  </meta>
+  <identifier>
+    <system value="https://tools.ietf.org/html/rfc4122" />
+    <value value="0bcb5098-ce5a-4a85-a547-2574f90310e4" />
+  </identifier>
+  <type value="message" />
+  <!-- =====ITK message header (always the first resource in the FHIR message bundle)===== -->
+  <entry>
+    <fullUrl value="urn:uuid:ea7221b8-3cc0-4b11-bc95-585b056b5428" />
+    <resource>
+      <MessageHeader>
+        <id value="ea7221b8-3cc0-4b11-bc95-585b056b5428" />
+        <meta>
+          <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2" />
+        </meta>
+        <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ITK-MessageHandling-2">
+          <!-- Request Business ACK -->
+          <extension url="BusAckRequested">
+            <valueBoolean value="true" />
+          </extension>
+          <!-- Request Infrastructure ACK -->
+          <extension url="InfAckRequested">
+            <valueBoolean value="true" />
+          </extension>
+          <!-- For Information / For Action -->
+          <extension url="RecipientType">
+            <valueCoding>
+              <system value="https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1" />
+              <code value="FA" />
+              <display value="For Action" />
+            </valueCoding>
+          </extension>
+          <!-- Message payload definition for GP Connect -->
+          <extension url="MessageDefinition">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1" />
+            </valueReference>
+          </extension>
+          <!-- Sender Reference - unique identifier of consultation -->
+          <extension url="SenderReference">
+            <valueString value="846ebe66-5ff8-4499-bc57-a112d3d0daa3" />
+          </extension>
+          <!-- LocalExtension - Conveys the identifier of the GP Connect Send Document health or social care use case -->
+          <extension url="LocalExtension">
+            <valueString value="SendDocument-ConsultationSummary" />
+          </extension>
+        </extension>
+        <!-- MESH mailbox ID of message sender -->
+        <source>
+          <endpoint value="MESHGP0001" />
+        </source>
+        <event>
+          <system value="https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2" />
+          <code value="ITK007C" />
+          <display value="ITK GP Connect Send Document" />
+        </event>
+        <sender>
+          <reference value="urn:uuid:c0bee62f-9932-4468-9508-71c67a9f0c2c" />
+        </sender>
+        <timestamp value="2018-07-12T10:30:16+00:00" />
+        <!--- The ITK3 message payload contained within the resource referenced -->
+        <focus>
+          <reference value="urn:uuid:70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <!--- ITK3 message header reference to message sender  -->
+  <entry>
+    <fullUrl value="urn:uuid:c0bee62f-9932-4468-9508-71c67a9f0c2c" />
+    <resource>
+      <Organization>
+        <id value="c0bee62f-9932-4468-9508-71c67a9f0c2c" />
+        <meta>
+          <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1" />
+        </meta>
+        <identifier>
+          <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+          <value value="GP0001" />
+        </identifier>
+      </Organization>
+    </resource>
+  </entry>
+  <!--- ITK3 payload bundle, referenced from ITK3 message header focus -->
+  <entry>
+    <fullUrl value="urn:uuid:70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
+    <resource>
+      <Bundle>
+        <id value="70c35c4a-65f4-4a03-bcf7-d1041ab999fd" />
+        <meta>
+          <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1" />
+        </meta>
+        <identifier>
+          <system value="https://tools.ietf.org/html/rfc4122" />
+          <value value="0bcb5098-ce5a-4a85-a547-2574f90310e4" />
+        </identifier>
+        <type value="document" />
+        <!-- =====Composition in Payload Bundle ===== -->
+        <entry>
+          <fullUrl value="urn:uuid:e1580b71-99bd-4c5b-8d54-9b420418135f" />
+          <resource>
+            <Composition>
+              <id value="e1580b71-99bd-4c5b-8d54-9b420418135f" />
+              <meta>
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1" />
+              </meta>
+              <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122" />
+                <value value="e1580b71-99bd-4c5b-8d54-9b420418135f" />
+              </identifier>
+              <status value="final" />
+              <type>
+                <!--Consultation report document type-->
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="273479001" />
+                  <display value=" General health questionnaire" />
+                </coding>
+              </type>
+              <date value="2020-09-27T21:32:15+00:00" />
+              <confidentiality value="N" />
+              <title value="Online Consultation report" />
+              <text>
+                <status value="generated" />
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                  <p>Online consultation report for MARY CONTRARY , NHS Number 9989453457, ODS Code {ODS Code}</p>
+                </div>
+              </text>
+              <!-- Patient reference -->
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <!-- Patient entry -->
+              <section>
+                <title value="Patient Details" />
+                <entry>
+                  <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+                </entry>
+              </section>
+              <!-- Practice Practitioner reference -->
+              <author>
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+              </author>
+              <!-- Practice Organization reference -->
+              <custodian>
+                <reference value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
+              </custodian>
+              <!-- Questionnaire response reference -->
+              <section>
+                <title value="Questionnaire Response" />
+                <entry>
+                  <reference value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
+                </entry>
+              </section>
+              <!-- Observation List reference -->
+              <section>
+                <title value="Coded Observations List" />
+                <entry>
+                  <reference value="urn:uuid:635230e2-6e87-11ea-bc55-0242ac130004" />
+                </entry>
+              </section>
+            </Composition>
+          </resource>
+        </entry>
+        
+		<!-- Observation List -->
+        <entry>
+          <fullUrl value="urn:uuid:635230e2-6e87-11ea-bc55-0242ac130004" />
+          <resource>
+            <List>
+              <id value="635230e2-6e87-11ea-bc55-0242ac130004" />
+              <meta>
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1" />
+              </meta>
+              <status value="current" />
+              <mode value="snapshot" />
+              <title value="Miscellaneous record" />
+              <code>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="826501000000100" />
+                  <display value="Miscellaneous record" />
+                </coding>
+              </code>
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <date value="2019-03-01T10:57:34+00:00" />
+              <orderedBy>
+                <coding>
+                  <system value="http://hl7.org/fhir/list-order" />
+                  <code value="event-date" />
+                </coding>
+              </orderedBy>
+              <entry>
+                <item>
+                  <reference value="urn:uuid:OC-Observation-1" />
+                </item>
+              </entry>
+              <entry>
+                <item>
+                  <reference value="urn:uuid:OC-Observation-2" />
+                </item>
+              </entry>
+              <entry>
+                <item>
+                  <reference value="urn:uuid:OC-Observation-3" />
+                </item>
+              </entry>
+			  <entry>
+                <item>
+                  <reference value="urn:uuid:OC-Observation-4" />
+                </item>
+              </entry>
+			  <entry>
+                <item>
+                  <reference value="urn:uuid:OC-Observation-5" />
+                </item>
+              </entry>
+            </List>
+          </resource>
+        </entry>
+        
+		
+		<!-- =====Questionnaire Response report===== -->
+        <entry>
+          <fullUrl value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
+          <resource>
+            <QuestionnaireResponse>
+              <id value="caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
+              <meta>
+                <versionId value="1" />
+                <lastUpdated value="2020-10-27T04:50:48.000-04:00" />
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/careconnect-questionnaireresponse-1" />
+                <tag>
+                  <code value="Test questionnaire" />
+                </tag>
+              </meta>
+			  <authored value="2020-09-27T20:32:15+00:00" />
+              <status value="completed" />
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+                <display value="MARY CONTRARY" />
+              </subject>
+              <item>
+                <linkId value="conv-1" />
+				<text value="IDEAS, CONCERNS AND EXPECTATIONS" />
+                <item>
+                  <linkId value="conv-1-1" />
+                  <text value="Please tell us in a few words how we can help." />
+                  <answer>
+                    <valueString value="Short of breath at rest" />
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-1-2" />
+                  <text value="Have you tried anything for this?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-1-3" />
+                  <text value="Is there any particular help you would like?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="Y" />
+                      <display value="Yes" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-1-4" />
+                  <text value="Please tell us what help you would like." />
+                  <answer>
+                    <valueString value="Reiki" />
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-1-5" />
+                  <text value="Would you like help from a particular person at the surgery? If the person that you requested is not available, another member of the team at the practice will contact you" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="Y" />
+                      <display value="Yes" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-1-6" />
+                  <text value="Please tell us the name of the person you would like help from" />
+                  <answer>
+                    <valueString value="Dr Good" />
+                  </answer>
+                </item>
+              </item>
+              <item>
+                <linkId value="conv-2" />
+				<text value="CLINICAL QUESTIONS" />
+                <item>
+                  <linkId value="conv-2-1" />
+                  <text value="How long have you had these symptoms?" />
+                  <answer>
+                    <valueString value="More than 6 weeks" />
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-2" />
+                  <text value="Do you feel like your throat is closing or something is stuck?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-3" />
+                  <text value="Are your lips or tongue swollen?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-4" />
+                  <text value="Have you been on a journey lasting more than 4 hours in the last 2 weeks?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-5" />
+                  <text value="Have you had any surgery in the last 12 weeks?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-6" />
+                  <text value="Have you had a plaster cast on your arm(s) or leg(s) in the last 12 weeks?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-7" />
+                  <text value="Are you pregnant, or have you given birth in the last 12 weeks?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-8" />
+                  <text value="Do you have a parent(s) or sibling(s) who has ever had a blood clot?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-9" />
+                  <text value="Do you have chest pain or tightness?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-10" />
+                  <text value="Does it hurt in your chest or your back when you take a deep breath in?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-11" />
+                  <text value="Have you had a high temperature?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-12" />
+                  <text value="Have you had any uncontrollable shivering?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-13" />
+                  <text value="Are you currently taking chemotherapy for cancer or other drugs that suppress your immune system?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-14" />
+                  <text value="Are you feeling dizzy or faint?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-15" />
+                  <text value="Are you feeling cold and sweaty?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-16" />
+                  <text value="Does your skin look blue, mottled or abnormally pale?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-17" />
+                  <text value="Are you feeling drowsy?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-18" />
+                  <text value="Are you feeling confused?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-19" />
+                  <text value="Are you slurring your speech?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-20" />
+                  <text value="Have you passed urine (peed) in the last 12 hours?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="Y" />
+                      <display value="Yes" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-21" />
+                  <text value="Have you previously been diagnosed with asthma by a doctor?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-22" />
+                  <text value="Do you think you might have asthma?" />
+                  <answer>
+                    <valueString value="Don't know" />
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-23" />
+                  <text value="Can you speak in full sentences without getting short of breath?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="Y" />
+                      <display value="Yes" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-24" />
+                  <text value="Are you working harder than normal to breathe?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-25" />
+                  <text value="Are you so breathless that you've stopped doing some of your usual daily activities?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-26" />
+                  <text value="Is your breathing making you feel tired?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-27" />
+                  <text value="Does your breathing wake you at night?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-28" />
+                  <text value="Are your legs or feet swollen?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-29" />
+                  <text value="Have you used inhalers to control your wheeze?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-30" />
+                  <text value="In the last 12 months, have you attended an accident and emergency (AE) department for urgent treatment of your breathing difficulties?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-31" />
+                  <text value="In the last 12 months, have you needed a course of steroid tablets for treatment of your breathing difficulties?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-32" />
+                  <text value="Does anything trigger your breathing difficulties?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-33" />
+                  <text value="Do you currently have a cough?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-34" />
+                  <text value="Are you coughing up any blood?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-35" />
+                  <text value="Have you travelled abroad in the last 6 weeks?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-36" />
+                  <text value="Have you felt worried, anxious or sad in the last 4 weeks?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-2-37" />
+                  <text value="Is there anything else you would like to tell us that we have not asked?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+              </item>
+              <item>
+                <linkId value="conv-3" />
+				<text value="HEALTH HISTORY AND QOF QUESTIONS" />
+                <item>
+                  <linkId value="conv-3-1" />
+                  <text value="Are you taking any drugs or medicines that your practice doesn't know about?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="N" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-3-2" />
+                  <text value="How many units of alcohol do you drink each week? (1 pint of beer is approximately two units and one small glass of wine is 1 unit)" />
+                  <answer>
+                    <valueString value="Prefer not to say" />
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-3-3" />
+                  <text value="Do you smoke?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="No" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-3-4" />
+                  <text value="Do you have any allergies?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="No" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+                <item>
+                  <linkId value="conv-3-5" />
+                  <text value="Are you breastfeeding?" />
+                  <answer>
+                    <valueCoding>
+                      <system value="http://loinc.org" />
+                      <code value="No" />
+                      <display value="No" />
+                    </valueCoding>
+                  </answer>
+                </item>
+              </item>
+            </QuestionnaireResponse>
+          </resource>
+        </entry>
+        
+		<!-- =====Observation in list Payload Bundle===== -->
+        <entry>
+          <fullUrl value="urn:uuid:OC-Observation-1" />
+          <resource>
+            <Observation>
+              <id value="OC-Observation-1" />
+              <meta>
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
+              </meta>
+              <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122" />
+                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
+              </identifier>
+              <status value="final" />
+              <category>
+                <coding>
+                  <system value="http://hl7.org/fhir/observation-category" />
+                  <code value="vital-signs" />
+                  <display value="Vital Signs" />
+                  <userSelected value="true" />
+                </coding>
+                <text value="Vital Signs" />
+              </category>
+              <code>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="27113001" />
+                  <display value="Body weight" />
+                </coding>
+                <text value="Body weight" />
+              </code>
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <effectiveDateTime value="2020-09-27T20:32:15+00:00" />
+              <issued value="2020-09-27T20:32:15+00:00" />
+              <valueQuantity>
+                <value value="85" />
+                <unit value="kg" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="kg" />
+              </valueQuantity>
+              <performer>
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+              </performer>
+            </Observation>
+          </resource>
+        </entry>
+        
+		<!-- =====Observation in list Payload Bundle===== -->
+        <entry>
+          <fullUrl value="urn:uuid:OC-Observation-2" />
+          <resource>
+            <Observation>
+              <id value="OC-Observation-2" />
+              <meta>
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
+              </meta>
+              <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122" />
+                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
+              </identifier>
+              <status value="final" />
+              <category>
+                <coding>
+                  <system value="http://hl7.org/fhir/observation-category" />
+                  <code value="vital-signs" />
+                  <display value="Vital Signs" />
+                  <userSelected value="true" />
+                </coding>
+                <text value="Vital Signs" />
+              </category>
+              <code>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="364075005" />
+                  <display value="Heart rate" />
+                </coding>
+                <text value="Heart rate" />
+              </code>
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <effectiveDateTime value="2020-09-27T20:32:15+00:00" />
+              <issued value="2020-09-27T20:32:15+00:00" />
+              <valueQuantity>
+                <value value="76" />
+                <unit value="{beats}/min" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="{beats}/min" />
+              </valueQuantity>
+              <performer>
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+              </performer>
+            </Observation>
+          </resource>
+        </entry>
+        
+		<!-- =====Observation in list Payload Bundle===== -->
+        <entry>
+          <fullUrl value="urn:uuid:OC-Observation-3" />
+          <resource>
+            <Observation>
+              <id value="OC-Observation-3" />
+              <meta>
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
+              </meta>
+              <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122" />
+                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
+              </identifier>
+              <status value="final" />
+              <category>
+                <coding>
+                  <system value="http://hl7.org/fhir/observation-category" />
+                  <code value="vital-signs" />
+                  <display value="Vital Signs" />
+                  <userSelected value="true" />
+                </coding>
+                <text value="Vital Signs" />
+              </category>
+              <code>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="703421000" />
+                  <display value="Temperature" />
+                </coding>
+                <text value="Temperature" />
+              </code>
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <effectiveDateTime value="2020-09-27T20:32:15+00:00" />
+              <issued value="2020-09-27T20:32:15+00:00" />
+              <valueQuantity>
+                <value value="36.9" />
+                <unit value="Cel" />
+                <system value="http://unitsofmeasure.org" />
+                <code value="Cel" />
+              </valueQuantity>
+              <performer>
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+              </performer>
+            </Observation>
+          </resource>
+        </entry>
+
+		<!-- =====Observation in list Payload Bundle===== -->
+        <entry>
+          <fullUrl value="urn:uuid:OC-Observation-4" />
+          <resource>
+            <Observation>
+              <id value="OC-Observation-4" />
+              <meta>
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
+              </meta>
+              <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122" />
+                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
+              </identifier>
+              <status value="final" />
+              <category>
+                <coding>
+                  <system value="http://hl7.org/fhir/observation-category" />
+                  <code value="survey" />
+                  <display value="Survey" />
+                  <userSelected value="true" />
+                </coding>
+                <text value="Survey" />
+              </category>
+              <code>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="8392000" />
+                  <display value="Non-smoker" />
+                </coding>
+                <text value="Non-smoker" />
+              </code>
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <effectiveDateTime value="2020-09-27T20:32:15+00:00" />
+              <issued value="2020-09-27T20:32:15+00:00" />
+              <performer>
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+              </performer>
+            </Observation>
+          </resource>
+        </entry>
+
+		<!-- =====Observation in list Payload Bundle===== -->
+        <entry>
+          <fullUrl value="urn:uuid:OC-Observation-5" />
+          <resource>
+            <Observation>
+              <id value="OC-Observation-5" />
+              <meta>
+                <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1" />
+              </meta>
+              <identifier>
+                <system value="https://tools.ietf.org/html/rfc4122" />
+                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
+              </identifier>
+              <status value="final" />
+              <category>
+                <coding>
+                  <system value="http://hl7.org/fhir/observation-category" />
+                  <code value="survey" />
+                  <display value="Survey" />
+                  <userSelected value="true" />
+                </coding>
+                <text value="Survey" />
+              </category>
+              <code>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="716186003" />
+                  <display value="No known allergy" />
+                </coding>
+                <text value="No known allergy" />
+              </code>
+              <subject>
+                <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+              </subject>
+              <effectiveDateTime value="2020-09-27T20:32:15+00:00" />
+              <issued value="2020-09-27T20:32:15+00:00" />
+              <performer>
+                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+              </performer>
+            </Observation>
+          </resource>
+        </entry>
+
+        
+		<!-- =====Practitioner in Payload Bundle - Practitioner who delivered care===== -->
+        <entry>
+          <fullUrl value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
+          <resource>
+            <Practitioner>
+              <id value="d0269177-3edc-468b-9f70-971189158bcb" />
+              <meta>
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1" />
+              </meta>
+              <identifier>
+                <system value="https://fhir.nhs.uk/Id/sds-user-id" />
+                <value value="033345750518" />
+              </identifier>
+              <name>
+                <family value="generated" />
+                <given value="system" />
+                <prefix value="eConsult" />
+                <use value="official" />
+              </name>
+              <telecom>
+                <system value="phone" />
+                <value value="01136323200" />
+                <use value="work" />
+              </telecom>
+            </Practitioner>
+          </resource>
+        </entry>
+        
+		
+		<!-- =====Organization in Payload Bundle - organisation where encounter took place===== -->
+        <entry>
+          <fullUrl value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
+          <resource>
+            <Organization>
+              <id value="ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
+              <meta>
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+              </meta>
+              <identifier>
+                <system value="https://fhir.nhs.uk/Id/ods-organization-code" />
+                <value value="8JJ28" />
+              </identifier>
+              <name value="eConsult" />
+              <telecom>
+                <system value="phone" />
+                <value value="01136323200" />
+                <use value="work" />
+              </telecom>
+            </Organization>
+          </resource>
+        </entry>
+        
+		
+		<!-- =====Patient in Payload Bundle- Subject of encounter at practice===== -->
+        <entry>
+          <fullUrl value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
+          <resource>
+            <Patient>
+              <id value="31686b67-9f20-4644-9a54-193d2f91de11" />
+              <meta>
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+              </meta>
+              <active value="true" />
+              <identifier>
+                <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1">
+                  <valueCodeableConcept>
+                    <coding>
+                      <system value="https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1" />
+                      <code value="01" />
+                      <display value="Number present and verified" />
+                    </coding>
+                  </valueCodeableConcept>
+                </extension>
+                <system value="https://fhir.nhs.uk/Id/nhs-number" />
+                <value value="9989453457" />
+              </identifier>
+              <name>
+                <use value="official" />
+                <family value="Contrary" />
+                <given value="Mary" />
+                <prefix value="Miss" />
+              </name>
+              <birthDate value="1975-09-27" />
+              <gender value="female" />
+              <address>
+                <line value="2 Lendrum" />
+                <line value="Balmellie Road" />
+                <city value="Turriff" />
+                <district value="Aberdeenshire" />
+                <postalCode value="AB534DQ" />
+              </address>
+              <telecom>
+                <system value="email" />
+                <value value="mousemickey@yahoo.com" />
+              </telecom>
+              <telecom>
+                <system value="phone" />
+                <value value="01888552211" />
+              </telecom>
+              <generalPractitioner>
+                <display value="Dr Good" />
+              </generalPractitioner>
+            </Patient>
+          </resource>
+        </entry>
+      </Bundle>
+      <!---end of payload bundle -->
+    </resource>
+  </entry>
+</Bundle>
+<!-- end of message bundle -->
+<!-- =============END OF FHIR Message bundle==================== -->
