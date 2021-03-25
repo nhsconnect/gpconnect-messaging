@@ -125,6 +125,21 @@ The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
   {% endfor %}
 </table>
 
+### RelatedPerson resource ###
+
+The [CareConnect-GPC-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload11' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
 ### Device resource ###
 
 The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1) resource present in the payload is populated as follows:
@@ -177,21 +192,6 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefi
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'payload10' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-### Location resource ###
-
-The [CareConnect-GPC-Location-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Location-1) in the payload is populated as follows:
-
-<table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload11' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>

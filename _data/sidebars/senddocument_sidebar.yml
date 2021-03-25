@@ -94,9 +94,6 @@ children:
   - title: MESH message configuration
     url: /senddocument_oc_mesh.html      
     output: web    
-  - title: Triggering message creation
-    url: /senddocument_oc_trigger.html      
-    output: web
   - title: Message example
     url: /senddocument_oc_example.html      
     output: web
@@ -128,9 +125,6 @@ children:
   - title: MESH message configuration
     url: /senddocument_generic_mesh.html      
     output: web    
-  - title: Triggering message creation
-    url: /senddocument_generic_trigger.html      
-    output: web
   - title: Message example
     url: /senddocument_generic_example.html      
     output: web    

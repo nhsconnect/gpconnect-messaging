@@ -34,7 +34,7 @@ requirements:
 
 - id: GPCM-SD-005
   area: senddocpayload
-  description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
+  description: "the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.author</code> element <strong>MUST</strong> contain one or more references to the individual or device that has authored the data in the payload. This includes the following resources: <ul><li>a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a></li><li>a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a></li><li>a RelatedPerson resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1\">CareConnect-RelatedPerson-1</a></li><li>a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1\">GPConnect-Device-1</a></li></ul>"
   page: senddocument_payload.html  
 
 - id: GPCM-SD-006

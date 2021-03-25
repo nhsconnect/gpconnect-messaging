@@ -43,7 +43,7 @@ requirements:
 
 - id: GPCM-SD-OC-009
   area: payload1
-  description: "<code>Composition.author</code> <strong>MUST</strong> contain a reference to a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a>, or a reference to a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1\">GPConnect-Device-1</a>"
+  description: "<code>Composition.author</code> <strong>MUST</strong> contain a reference to one or more of the following resources: <ul><li>a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a></li><li>a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a></li><li>a RelatedPerson resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1\">CareConnect-RelatedPerson-1</a></li><li>a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1\">GPConnect-Device-1</a></li></ul>"
   page: senddocument_oc_payload.html
 
 - id: GPCM-SD-OC-010
@@ -139,6 +139,28 @@ requirements:
   area: payload6
   description: "telephone contact details <strong>MUST</strong> be present if available in the <code>telecom</code> element. i.e. <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number"
   page: senddocument_oc_payload.html
+  
+# RelatedPerson resource requirements
+
+- id: GPCM-SD-OC-028
+  area: payload11
+  description: "the <code>identifier (odsSiteCode)</code> element <strong>MUST</strong> contain the ODS code of the patient's preferred alternative care provider"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-029
+  area: payload11
+  description: "the name of the related person <strong>MUST</strong> be present in the single instance of the <code>name</code> element"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-030
+  area: payload11
+  description: "the date of birth of the related person <strong>MUST</strong> be specified in <code>YYYY-MM-DD</code> format in the <code>birthDate</code> element. Birth time is not required"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-031
+  area: payload11
+  description: "telephone contact details <strong>MUST</strong> be present if available in the <code>telecom</code> element"
+  page: senddocument_oc_payload.html  
 
 # Device resource requirements
 - id: GPCM-SD-OC-028
@@ -264,16 +286,7 @@ requirements:
   description: "the <code>item.answer.value[x]</code> element <strong>MUST</strong> contain the answer being given by the patient"
   page: senddocument_oc_payload.html 
   
-#Location resource requirements
-- id: GPCM-SD-OC-052
-  area: payload11
-  description: "the <code>identifier (odsSiteCode)</code> element <strong>MUST</strong> contain the ODS code of the patient's preferred alternative care provider"
-  page: senddocument_oc_payload.html
-
-- id: GPCM-SD-OC-053
-  area: payload11
-  description: "telephone contact details <strong>MUST</strong> be present if available in the <code>telecom</code> element. i.e. <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number"
-  page: senddocument_oc_payload.html
+#Location resource requirements removed
 
 #Consent resource requirements  
 #Add if required  
