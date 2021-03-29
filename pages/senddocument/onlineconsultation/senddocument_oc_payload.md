@@ -19,7 +19,7 @@ A [message example](senddocument_oc_example) is provided which illustrates these
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload' %}
+  {% if item.area == 'payload_comp' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -32,7 +32,7 @@ The following requirements describe how the Composition resource is populated:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload1' %}
+  {% if item.area == 'payload_comp_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -49,7 +49,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload3' %}
+  {% if item.area == 'payload_additional' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -62,7 +62,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload8a' %}
+  {% if item.area == 'payload_patient' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -75,7 +75,7 @@ The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload8' %}
+  {% if item.area == 'payload_patient_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -88,7 +88,7 @@ The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload4' %}
+  {% if item.area == 'payload_org' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -101,7 +101,7 @@ The [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload5' %}
+  {% if item.area == 'payload_org_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -116,7 +116,7 @@ The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload6' %}
+  {% if item.area == 'payload_prac_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -131,7 +131,7 @@ The [CareConnect-GPC-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefi
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload11' %}
+  {% if item.area == 'payload_related_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -146,7 +146,7 @@ The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload7' %}
+  {% if item.area == 'payload_device_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -162,7 +162,7 @@ The [CareConnect-GPC-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareCo
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload9a' %}
+  {% if item.area == 'payload_list_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -175,7 +175,7 @@ Each [CareConnect-GPC-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinitio
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload9' %}
+  {% if item.area == 'payload_obs_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -191,7 +191,7 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefi
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload10' %}
+  {% if item.area == 'payload_quest_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
