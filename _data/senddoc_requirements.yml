@@ -39,7 +39,7 @@ requirements:
 
 - id: GPCM-SD-006
   area: senddocpayload
-  description: "where the message contains encounter information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1\">CareConnect-GPC-Encounter-1</a> <strong>SHOULD</strong> be present."
+  description: "where the message contains encounter information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1\">CareConnect-GPC-Encounter-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html 
 
 - id: GPCM-SD-007
@@ -49,17 +49,17 @@ requirements:
   
 - id: GPCM-SD-008
   area: senddocpayload
-  description: "observations referenced in the the <code>CareConnect-GPC-List-1</code> <strong>SHOULD</strong> each populate a <code>Composition.section.entry</code> referencing an Observation resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1\">CareConnect-GPC-Observation-1</a> profile, describing each observation."
+  description: "observations referenced in the the <code>CareConnect-GPC-List-1</code> <strong>SHOULD</strong> each populate a <code>Composition.section.entry</code> referencing an Observation resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1\">CareConnect-GPC-Observation-1</a> profile, describing each observation"
   page: senddocument_payload.html 
 
 - id: GPCM-SD-009
   area: senddocpayload
-  description: "where a message contains questionnaire response information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1\">CareConnect-QuestionnaireResponse-1</a> <strong>SHOULD</strong> be present. This resource describes all the questions asked to the patient and all the responses given."
+  description: "where a message contains questionnaire response information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1\">CareConnect-QuestionnaireResponse-1</a> <strong>SHOULD</strong> be present. This resource describes all the questions asked to the patient and all the responses given"
   page: senddocument_payload.html 
   
 - id: GPCM-SD-010
   area: senddocpayload
-  description: "where a message contains a referral request, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ReferralRequest-1\">CareConnect-GPC-ReferralRequest-1</a> <strong>SHOULD</strong> be present."
+  description: "where a message contains a referral request, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ReferralRequest-1\">CareConnect-GPC-ReferralRequest-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html
   
 - id: GPCM-SD-011
@@ -69,7 +69,7 @@ requirements:
   
 - id: GPCM-SD-012
   area: senddocpayload
-  description: "all <code>id</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
+  description: "all <code>id</code> elements <strong>MUST</strong> be treated as mandatory, except when the resource is being created (initial creation call)"
   page: senddocument_payload.html
 
 - id: GPCM-SD-013
