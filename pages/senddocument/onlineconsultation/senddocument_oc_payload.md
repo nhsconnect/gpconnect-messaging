@@ -156,6 +156,21 @@ The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-
 </table>
 
 
+### Encounter resource ###
+
+The [CareConnect-GPC-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_encounter_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
 ### List/Observation resource ###
 
 The [CareConnect-GPC-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1) in the payload is populated as follows:
@@ -192,6 +207,22 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefi
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'payload_quest_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
+### ReferralRequest resource ###
+
+The [CareConnect-GPC-ReferralRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ReferralRequest-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_referral_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -250,6 +281,11 @@ The following table lists the optionality and cardinality for each resource:
 	<td>0..1</td>
   </tr>
   <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1">CareConnect-GPC-Encounter-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
     <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1">CareConnect-GPC-List-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
@@ -265,7 +301,7 @@ The following table lists the optionality and cardinality for each resource:
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Location-1">CareConnect-GPC-Location-1</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ReferralRequest-1">CareConnect-GPC-ReferralRequest-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
