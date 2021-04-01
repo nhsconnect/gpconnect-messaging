@@ -15,6 +15,8 @@ A [message example](senddocument_oc_example) is provided which illustrates these
 
 ## Resource population requirements ##
 
+The following requirements identify the data elements that **MUST** or **SHOULD** be populated when generating the payload. Data items not explicitly referenced in this section can be populated if the source system has captured this information.
+
 ### Composition resource ###
 
 <table class="requirement-box">
@@ -127,7 +129,7 @@ The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 
 ### RelatedPerson resource ###
 
-The [CareConnect-GPC-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1) in the payload is populated as follows:
+The [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -142,7 +144,7 @@ The [CareConnect-GPC-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefi
 
 ### Device resource ###
 
-The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1) resource present in the payload is populated as follows:
+The [ITK-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1) resource present in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -158,7 +160,7 @@ The [GPConnect-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-
 
 ### Encounter resource ###
 
-The [CareConnect-GPC-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1) in the payload is populated as follows:
+The [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -173,7 +175,7 @@ The [CareConnect-GPC-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/C
 
 ### List/Observation resource ###
 
-The [CareConnect-GPC-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1) in the payload is populated as follows:
+The [CareConnect-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-List-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -186,11 +188,26 @@ The [CareConnect-GPC-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareCo
   {% endfor %}
 </table>
 
-Each [CareConnect-GPC-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1) in the payload is populated as follows:
+Each [CareConnect-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'payload_obs_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+### Questionnaire resource ###
+
+The [CareConnect-Questionnaire-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_quest_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -206,7 +223,7 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefi
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
-  {% if item.area == 'payload_quest_pop' %}
+  {% if item.area == 'payload_questresp_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -218,7 +235,7 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefi
 
 ### ReferralRequest resource ###
 
-The [CareConnect-GPC-ReferralRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ReferralRequest-1) in the payload is populated as follows:
+The [CareConnect-ReferralRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -276,24 +293,34 @@ The following table lists the optionality and cardinality for each resource:
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/GPConnect-Device-1">GPConnect-Device-1</a></td>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1">CareConnect-RelatedPerson-1</a></td>
     <td>Required</td>
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Encounter-1">CareConnect-GPC-Encounter-1</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1">ITK-Device-1</a></td>
+    <td>Required</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1">CareConnect-Encounter-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-List-1">CareConnect-GPC-List-1</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-List-1">CareConnect-List-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Observation-1">CareConnect-GPC-Observation-1</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1">CareConnect-Observation-1</a></td>
     <td>Optional</td>
 	<td>0..*</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1">CareConnect-Questionnaire-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
   </tr>
   <tr>
     <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1">CareConnect-QuestionnaireResponse-1</a></td>
@@ -301,7 +328,7 @@ The following table lists the optionality and cardinality for each resource:
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-ReferralRequest-1">CareConnect-GPC-ReferralRequest-1</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1">CareConnect-ReferralRequest-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
