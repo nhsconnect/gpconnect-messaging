@@ -9,7 +9,7 @@ summary: "Details of the FHIR&reg; resources which make up the payload for the O
 
 Please refer to [Send Document - Payload structure](senddocument_payload) for a definition of the payload structure to be used to fulfil the Online Consultation use case.
 
-The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) resource, which acts as a container for the payload. 
+The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Document-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1) resource, which acts as a container for the payload. 
 
 A [message example](senddocument_oc_example) is provided which illustrates these requirements to aid understanding.
 
@@ -263,7 +263,7 @@ The following table lists the optionality and cardinality for each resource:
   </thead>
   <tbody>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1)ITK-Payload-Bundle">ITK-Payload-Bundle</a></td>
+    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1">ITK-Document-Bundle</a></td>
     <td>Mandatory</td>
 	<td>1..1</td>
   </tr>
