@@ -175,7 +175,7 @@ The [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/C
 
 ### List/Observation resource ###
 
-The [CareConnect-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-List-1) in the payload is populated as follows:
+The [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -188,7 +188,7 @@ The [CareConnect-List-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnec
   {% endfor %}
 </table>
 
-Each [CareConnect-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1) in the payload is populated as follows:
+Each [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -203,7 +203,7 @@ Each [CareConnect-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/Ca
 
 ### Questionnaire resource ###
 
-The [CareConnect-Questionnaire-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1) in the payload is populated as follows:
+The [CareConnect-Questionnaire-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -219,7 +219,7 @@ The [CareConnect-Questionnaire-1](https://fhir.nhs.uk/STU3/StructureDefinition/C
 
 ### QuestionnaireResponse resource ###
 
-The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1) in the payload is populated as follows:
+The [CareConnect-QuestionnaireResponse-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -235,7 +235,7 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefi
 
 ### ReferralRequest resource ###
 
-The [CareConnect-ReferralRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1) in the payload is populated as follows:
+The [CareConnect-ReferralRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1) in the payload is populated as follows:
 
 <table class="requirement-box">
   {% for item in site.data.oc_requirements.requirements %}
@@ -308,27 +308,27 @@ The following table lists the optionality and cardinality for each resource:
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-List-1">CareConnect-List-1</a></td>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1">CareConnect-List-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1">CareConnect-Observation-1</a></td>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1">CareConnect-Observation-1</a></td>
     <td>Optional</td>
 	<td>0..*</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1">CareConnect-Questionnaire-1</a></td>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1">CareConnect-Questionnaire-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1">CareConnect-QuestionnaireResponse-1</a></td>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1">CareConnect-QuestionnaireResponse-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
   <tr>
-    <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1">CareConnect-ReferralRequest-1</a></td>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1">CareConnect-ReferralRequest-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
   </tr>

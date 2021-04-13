@@ -39,17 +39,17 @@ requirements:
 
 - id: GPCM-SD-006
   area: senddocpayload
-  description: "where the message contains encounter information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Encounter-1\">CareConnect-Encounter-1</a> <strong>SHOULD</strong> be present"
+  description: "where the message contains encounter information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1\">CareConnect-Encounter-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html 
 
 - id: GPCM-SD-007
   area: senddocpayload
-  description: "where the message contains observation information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-List-1\">CareConnect-List-1</a> <strong>SHOULD</strong> be present. This resource lists all the observations present in the payload."
+  description: "where the message contains observation information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1\">CareConnect-List-1</a> <strong>SHOULD</strong> be present. This resource lists all the observations present in the payload."
   page: senddocument_payload.html 
   
 - id: GPCM-SD-008
   area: senddocpayload
-  description: "observations referenced in the the <code>CareConnect-GPC-List-1</code> <strong>SHOULD</strong> each populate a <code>Composition.section.entry</code> referencing an Observation resource which conforms to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1\">CareConnect-Observation-1</a> profile, describing each observation"
+  description: "observations referenced in the the <code>CareConnect-GPC-List-1</code> <strong>SHOULD</strong> each populate a <code>Composition.section.entry</code> referencing an Observation resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1\">CareConnect-Observation-1</a> profile, describing each observation"
   page: senddocument_payload.html 
 
 - id: GPCM-SD-009
@@ -64,7 +64,7 @@ requirements:
   
 - id: GPCM-SD-011
   area: senddocpayload
-  description: "where a message contains a referral request, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1\">CareConnect-ReferralRequest-1</a> <strong>SHOULD</strong> be present"
+  description: "where a message contains a referral request, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1\">CareConnect-ReferralRequest-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html
   
 - id: GPCM-SD-012
