@@ -15,7 +15,7 @@ A [message example](senddocument_oc_example) is provided which illustrates these
 
 ## Resource population requirements ##
 
-The following requirements identify the data elements that **MUST** or **SHOULD** be populated when generating the payload. Data items not explicitly referenced in this section can be populated if the source system has captured this information.
+The following requirements identify the data elements that **MUST** or **SHOULD** be populated when generating the payload. Data items not explicitly referenced in this section can be populated if the source system has captured this information, and the resource being populated supports it.
 
 ### Composition resource ###
 
@@ -249,6 +249,70 @@ The [CareConnect-ReferralRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefini
 </table>
 
 
+### DocumentReference resource ###
+
+The [CareConnect-DocumentReference-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_docref_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
+### AllergyIntolerance resource ###
+
+The [CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_allergy_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
+### FamilyMemberHistory resource ###
+
+The [CareConnect-FamilyMemberHistory-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_family_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
+### Task resource ###
+
+The [CareConnect-Task-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_task_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
 ## Resource optionality and cardinality ##
 
 The following table lists the optionality and cardinality for each resource:
@@ -332,6 +396,26 @@ The following table lists the optionality and cardinality for each resource:
     <td>Optional</td>
 	<td>0..1</td>
   </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1">CareConnect-DocumentReference-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1">CareConnect-AllergyIntolerance-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1">CareConnect-FamilyMemberHistory-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1">CareConnect-Task-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>  
   </tbody>
 </table>
 
