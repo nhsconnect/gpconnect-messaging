@@ -313,6 +313,22 @@ The [CareConnect-Task-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareCo
 </table>
 
 
+### Consent resource ###
+
+The [CareConnect-Consent-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1) in the payload is populated as follows:
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'payload_consent_pop' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
 ## Resource optionality and cardinality ##
 
 The following table lists the optionality and cardinality for each resource:
@@ -415,14 +431,11 @@ The following table lists the optionality and cardinality for each resource:
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1">CareConnect-Task-1</a></td>
     <td>Optional</td>
 	<td>0..1</td>
-  </tr>  
+  </tr>
+  <tr>
+    <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1">CareConnect-Consent-1</a></td>
+    <td>Optional</td>
+	<td>0..1</td>
+  </tr>    
   </tbody>
 </table>
-
-
-
-
-
-
-
-

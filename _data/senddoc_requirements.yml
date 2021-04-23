@@ -66,113 +66,138 @@ requirements:
   area: senddocpayload
   description: "where a message contains a referral request, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1\">CareConnect-ReferralRequest-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html
-  
+ 
 - id: GPCM-SD-012
+  area: senddocpayload
+  description: "where a message contains a document, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1\">CareConnect-DocumentReference-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-013
+  area: senddocpayload
+  description: "where a message contains an allergy or intolerance, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1\">CareConnect-AllergyIntolerance-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-014
+  area: senddocpayload
+  description: "where a message contains any family member history, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1\">CareConnect-FamilyMemberHistory-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-015
+  area: senddocpayload
+  description: "where a message contains a task, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1\">CareConnect-Task-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-016
+  area: senddocpayload
+  description: "where a message contains patient consent, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1\">CareConnect-Consent-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+  
+- id: GPCM-SD-017
   area: senddocpayload
   description: "all <code>meta</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
   page: senddocument_payload.html
   
-- id: GPCM-SD-013
+- id: GPCM-SD-018
   area: senddocpayload
   description: "all <code>id</code> elements <strong>MUST</strong> be treated as mandatory, except when the resource is being created (initial creation call)"
   page: senddocument_payload.html
 
-- id: GPCM-SD-014
+- id: GPCM-SD-019
   area: senddocpayload2
   description: "each binary document sent in the payload <strong>MUST</strong> be included as an instance of the <code>Composition.section</code> element"
   page: senddocument_payload.html
 
-- id: GPCM-SD-015
+- id: GPCM-SD-020
   area: senddocpayload3
   description: "each <code>Composition.section.entry</code> <strong>MUST</strong> be a FHIR Reference containing a reference to an attachment profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1\">ITK-Attachment-Binary-1</a>"
   page: senddocument_payload.html
 
-- id: GPCM-SD-016
+- id: GPCM-SD-021
   area: senddocpayload3
   description: "all attachments <strong>MUST</strong> be Base64 encoded"
   page: senddocument_payload.html
   
-- id: GPCM-SD-017
+- id: GPCM-SD-022
   area: senddocpayload3
   description: "the primary attachment <strong>MUST</strong> be the first <code>Composition.section.entry</code> in the payload"
   page: senddocument_payload.html  
 
 
 #Resend requirements
-- id: GPCM-SD-018
+- id: GPCM-SD-023
   area: resend
   description: "Receivers of replacement documents <strong>MUST</strong> process the replacement document and archive the replaced document"
   tooltip: "Receivers of replacement documents MUST process the replacement document and archive the replaced document"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-019
+- id: GPCM-SD-024
   area: resend2
   description: "the receiver of the new document <strong>SHOULD</strong> mark the original and replacement document as null and void and report a error to the sender using the ITK Response message and appropriate code see <a href=\"https://developer.nhs.uk/apis/itk3messagedistribution/explore_response_codes.html\">ITK3 response codes</a> for further information"
   tooltip: "the receiver of the new document SHOULD mark the original and replacement document as null and void and report a error to the sender using the ITK Response message and appropriate code see ITK3 response codes for further information"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-020
+- id: GPCM-SD-025
   area: resend2
   description: "the sender of the new document <strong>SHOULD</strong> mark the original and replacement document as null and void once it receives the ITK3 Response indicating that the replacement document could not be processed"
   tooltip: "the sender of the new document SHOULD mark the original and replacement document as null and void once it receives the ITK3 Response indicating that the replacement document could not be processed"
   page: senddocument_fedcon_resend.html
   
-- id: GPCM-SD-021
+- id: GPCM-SD-026
   area: resend3
   description: "replacements <strong>MAY</strong> be done more than once and the new document always refers to the previous document, multiple replacements <strong>SHOULD</strong> be avoided due to complexity of maintaining the audit trail"
   tooltip: "replacements MAY be done more than once and the new document always refers to the previous document, multiple replacements SHOULD be avoided due to complexity of maintaining the audit trail"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-022
+- id: GPCM-SD-027
   area: resend3
   description: "replacement documents <strong>SHOULD</strong> be sent within 24 hours of the original document"
   tooltip: "replacement documents <strong>SHOULD</strong> be sent within 24 hours of the original document"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-023
+- id: GPCM-SD-028
   area: resend4
   description: "<code>Composition.relatesTo.code</code> <strong>MUST</strong> contain the fixed value <code>replaces</code>"
   tooltip: "Composition.relatesTo.code MUST contain the fixed value replaces"
   page: senddocument_fedcon_resend.html
 
-- id: GPCM-SD-024
+- id: GPCM-SD-029
   area: resend4
   description: "<code>Composition.relatesTo.targetIdentifier</code> <strong>MUST</strong> contain the identifier of the old document - UUID of original document"
   tooltip: "Composition.relatesTo.targetIdentifier MUST contain the identifier of the old document - UUID of original document"
   page: senddocument_fedcon_resend.html
 
 #Error handling requirements
-- id: GPCM-SD-025
+- id: GPCM-SD-030
   area: error
   description: "where the received message does not conform to the requirements stated for <a href=\"senddocument_fedcon_itk3.html\">ITK3 header</a>, or for the payload, the message <strong>MUST</strong> be considered invalid"
   tooltip: "where the received message does not conform to the requirements stated for ITK3 header, or for the payload, the message MUST be considered invalid"
   page: senddocument_fedcon_errors.html
   
-- id: GPCM-SD-026
+- id: GPCM-SD-031
   area: error
   description: "where a received message is invalid, an ITK3 Response <strong>MUST</strong> be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message <strong>MUST NOT</strong> be accepted for downstream processing"
   tooltip: "where a received message is invalid, an ITK3 Response MUST be generated, with the corresponding Negative ITK3 Response Code which indicates the nature of the error, and the message MUST NOT be accepted for downstream processing"
   page: senddocument_fedcon_errors.html
   
-- id: GPCM-SD-027
+- id: GPCM-SD-032
   area: error3
   description: "error context and description <strong>MUST</strong> be provided in the <code>OperationOutcome.diagnostic</code> element to enable the sender to correctly identify the error which has been found in their sent message"
   tooltip: "error context and description MUST be provided in the 'OperationOutcome.diagnostic' element"
   page: senddocument_fedcon_errors.html
      
-- id: GPCM-SD-028
+- id: GPCM-SD-033
   area: error4
   description: "the following errors, when encountered, <strong>MUST</strong> be handled gracefully by the message sending system"
   tooltip:
   page: senddocument_fedcon_errors.html
 
-- id: GPCM-SD-029
+- id: GPCM-SD-034
   area: error5
   description: "where a Consultation Report is not successfully received/managed by the message receiver, the sender system <strong>MUST</strong> inform an appropriate person"
   tooltip: "where a Consultation Report is not successfully received/managed by the message receiver, the sender system MUST inform an appropriate person"
   page: senddocument_fedcon_errors.html
 
-- id: GPCM-SD-030
+- id: GPCM-SD-035
   area: error5
   description: "where either the infrastructure or business acknowledgements, or both, are not received for a Consultation Report, the sender system <strong>MUST</strong> inform an appropriate person"
   tooltip: "where either the infrastructure or business acknowledgements, or both, are not received for a Consultation Report, the sender system MUST inform an appropriate person"
