@@ -39,7 +39,7 @@ requirements:
 
 - id: GPCM-SD-006
   area: senddocpayload
-  description: "where the message contains encounter information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1\">CareConnect-Encounter-1</a> <strong>SHOULD</strong> be present"
+  description: "where the message contains encounter information, a <code>Composition.encounter</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1\">CareConnect-Encounter-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html 
 
 - id: GPCM-SD-007
