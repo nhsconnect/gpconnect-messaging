@@ -127,14 +127,14 @@
                   <p>Online consultation report for RICHARD SMITH , NHS Number 9989453457, ODS Code {ODS Code}</p>
                 </div>
               </text>
-			  <!-- Patient reference -->
+              <!-- Patient reference -->
               <subject>
                 <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
               </subject>
-			  <!-- Encounter reference -->
-			  <encounter>
-				<reference value="urn:uuid:6dc58cae-f77e-497d-8e74-85f7a53e53ef"/>
-			  </encounter>
+              <!-- Encounter reference -->
+              <encounter>
+                <reference value="urn:uuid:6dc58cae-f77e-497d-8e74-85f7a53e53ef" />
+              </encounter>
               <!-- Practice Practitioner reference -->
               <author>
                 <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
@@ -143,7 +143,7 @@
               <custodian>
                 <reference value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
               </custodian>
-			  <!-- Questionnaire response reference -->
+              <!-- Questionnaire response reference -->
               <section>
                 <title value="Questionnaire Response" />
                 <entry>
@@ -157,7 +157,7 @@
                   <reference value="urn:uuid:635230e2-6e87-11ea-bc55-0242ac130004" />
                 </entry>
               </section>
-			  <!-- Online Consultation report pdf attachment -->
+              <!-- Online Consultation report pdf attachment -->
               <section>
                 <title value="Online Consultation report" />
                 <entry>
@@ -167,8 +167,7 @@
             </Composition>
           </resource>
         </entry>
-        
-		<!-- Encounter for online consultation -->
+        <!-- Encounter for online consultation -->
         <entry>
           <fullUrl value="urn:uuid:6dc58cae-f77e-497d-8e74-85f7a53e53ef" />
           <resource>
@@ -183,27 +182,26 @@
               </identifier>
               <status value="finished" />
               <type>
-				<coding>
-				<system value="http://snomed.info/sct"/>
-				<code value="xxxxxxxx"/>
-				<display value="Clinical Online Consultation Submission - Via Patient"/>
-				</coding>
-			  </type>
+                <coding>
+                  <system value="http://snomed.info/sct" />
+                  <code value="xxxxxxxx" />
+                  <display value="Clinical Online Consultation Submission - Via Patient" />
+                </coding>
+              </type>
               <subject>
                 <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
               </subject>
-			  <period>
-				<start value="2021-04-29T10:35:00+00:00"/>
-				<end value="2021-04-29T10:35:00+00:00"/>
-			  </period>
+              <period>
+                <start value="2021-04-29T10:35:00+00:00" />
+                <end value="2021-04-29T10:35:00+00:00" />
+              </period>
               <performer>
                 <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
               </performer>
             </Encounter>
           </resource>
         </entry>
-		
-		<!-- Observation List -->
+        <!-- Observation List -->
         <entry>
           <fullUrl value="urn:uuid:635230e2-6e87-11ea-bc55-0242ac130004" />
           <resource>
@@ -247,12 +245,12 @@
                   <reference value="urn:uuid:OC-Observation-3" />
                 </item>
               </entry>
-			  <entry>
+              <entry>
                 <item>
                   <reference value="urn:uuid:OC-Observation-4" />
                 </item>
               </entry>
-			  <entry>
+              <entry>
                 <item>
                   <reference value="urn:uuid:OC-Observation-5" />
                 </item>
@@ -260,9 +258,7 @@
             </List>
           </resource>
         </entry>
-        
-		
-		<!-- =====Questionnaire Response report===== -->
+        <!-- =====Questionnaire Response report===== -->
         <entry>
           <fullUrl value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
           <resource>
@@ -276,7 +272,7 @@
                   <code value="Test questionnaire" />
                 </tag>
               </meta>
-			  <authored value="2021-04-29T10:35:00+00:00" />
+              <authored value="2021-04-29T10:35:00+00:00" />
               <status value="completed" />
               <subject>
                 <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
@@ -284,7 +280,7 @@
               </subject>
               <item>
                 <linkId value="conv-1" />
-				<text value="IDEAS, CONCERNS AND EXPECTATIONS" />
+                <text value="IDEAS, CONCERNS AND EXPECTATIONS" />
                 <item>
                   <linkId value="conv-1-1" />
                   <text value="Please tell us in a few words how we can help." />
@@ -342,7 +338,7 @@
               </item>
               <item>
                 <linkId value="conv-2" />
-				<text value="CLINICAL QUESTIONS" />
+                <text value="CLINICAL QUESTIONS" />
                 <item>
                   <linkId value="conv-2-1" />
                   <text value="How long have you had these symptoms?" />
@@ -745,7 +741,7 @@
               </item>
               <item>
                 <linkId value="conv-3" />
-				<text value="HEALTH HISTORY AND QOF QUESTIONS" />
+                <text value="HEALTH HISTORY AND QOF QUESTIONS" />
                 <item>
                   <linkId value="conv-3-1" />
                   <text value="Are you taking any drugs or medicines that your practice doesn't know about?" />
@@ -801,8 +797,7 @@
             </QuestionnaireResponse>
           </resource>
         </entry>
-        
-		<!-- =====Observation in list Payload Bundle===== -->
+        <!-- =====Observation in list Payload Bundle===== -->
         <entry>
           <fullUrl value="urn:uuid:OC-Observation-1" />
           <resource>
@@ -850,8 +845,7 @@
             </Observation>
           </resource>
         </entry>
-        
-		<!-- =====Observation in list Payload Bundle===== -->
+        <!-- =====Observation in list Payload Bundle===== -->
         <entry>
           <fullUrl value="urn:uuid:OC-Observation-2" />
           <resource>
@@ -899,8 +893,7 @@
             </Observation>
           </resource>
         </entry>
-        
-		<!-- =====Observation in list Payload Bundle===== -->
+        <!-- =====Observation in list Payload Bundle===== -->
         <entry>
           <fullUrl value="urn:uuid:OC-Observation-3" />
           <resource>
@@ -948,8 +941,7 @@
             </Observation>
           </resource>
         </entry>
-
-		<!-- =====Observation in list Payload Bundle===== -->
+        <!-- =====Observation in list Payload Bundle===== -->
         <entry>
           <fullUrl value="urn:uuid:OC-Observation-4" />
           <resource>
@@ -991,8 +983,7 @@
             </Observation>
           </resource>
         </entry>
-
-		<!-- =====Observation in list Payload Bundle===== -->
+        <!-- =====Observation in list Payload Bundle===== -->
         <entry>
           <fullUrl value="urn:uuid:OC-Observation-5" />
           <resource>
@@ -1034,8 +1025,7 @@
             </Observation>
           </resource>
         </entry>
-
-		<!-- =====Attachment consultation report===== -->
+        <!-- =====Attachment consultation report===== -->
         <entry>
           <fullUrl value="urn:uuid:caf5f17d-e73d-4aaa-a406-dab1717da0c4" />
           <resource>
@@ -1050,8 +1040,7 @@
             </Binary>
           </resource>
         </entry>
-        
-		<!-- =====Practitioner in Payload Bundle - Practitioner who delivered care===== -->
+        <!-- =====Practitioner in Payload Bundle - Practitioner who delivered care===== -->
         <entry>
           <fullUrl value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
           <resource>
@@ -1078,9 +1067,7 @@
             </Practitioner>
           </resource>
         </entry>
-        
-		
-		<!-- =====Organization in Payload Bundle - organisation where encounter took place===== -->
+        <!-- =====Organization in Payload Bundle - organisation where encounter took place===== -->
         <entry>
           <fullUrl value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
           <resource>
@@ -1102,9 +1089,7 @@
             </Organization>
           </resource>
         </entry>
-        
-		
-		<!-- =====Patient in Payload Bundle- Subject of encounter at practice===== -->
+        <!-- =====Patient in Payload Bundle- Subject of encounter at practice===== -->
         <entry>
           <fullUrl value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
           <resource>
