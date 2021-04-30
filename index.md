@@ -8,8 +8,6 @@ toc: false
 summary: A brief introduction to getting started with GP Connect Messaging capabilities 
 ---
 
-{% include warning.html content="This site is intended primarily for those engaged with NHS Digital in First of Type activities. Other parties are advised not to develop against these specifications until a formal announcement has been made." %}
-
 {% comment %}
 [![Semver](http://img.shields.io/badge/semver-2.0.0-yellow.svg)](http://semver.org/spec/v2.0.0.html){:target="_blank" class="no_icon"} [![License](http://img.shields.io/:license-apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html){:target="_blank" class="no_icon"} 
 {% endcomment %}
