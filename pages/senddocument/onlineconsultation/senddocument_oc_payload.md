@@ -7,7 +7,7 @@ permalink: senddocument_oc_payload.html
 summary: "Details of the FHIR&reg; resources which make up the payload for the Online Consultation Report use case."
 ---
 
-Please refer to [Send Document - Payload structure](senddocument_payload.html) for a definition of the payload structure to be used to fulfil the Online Consultation use case.
+Please refer to [Send Document - Payload structure](/senddocument_payload.html) for a definition of the payload structure to be used to fulfil the Online Consultation use case.
 
 The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Document-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1) resource, which acts as a container for the payload. 
 
