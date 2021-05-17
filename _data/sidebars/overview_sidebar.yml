@@ -105,30 +105,6 @@ children:
   - title: Communication channels
     url: /support_communications.html
     output: web
-  - title: External links
-    output: web
-    children:    
-    - title: GPC  - FHIR&reg; APIs
-      url: https:&#47;&#47;nhsconnect.github.io&#47;gpconnect
-      output: web
-    - title: GPC Messaging repository
-      url: https:&#47;&#47;github.com&#47;nhsconnect&#47;gpconnect-messaging
-      output: web
-    - title: GPC NHS Digital
-      url: https:&#47;&#47;digital.nhs.uk&#47;services&#47;gp-connect
-      output: web
-    - title: GPC Developer Network
-      url: https:&#47;&#47;developer.nhs.uk&#47;library&#47;interoperability&#47;gp-connect
-      output: web
-    - title: MESH
-      url: https:&#47;&#47;digital.nhs.uk&#47;services&#47;message-exchange-for-social-care-and-health-mesh
-      output: web
-    - title: MESH API
-      url: https:&#47;&#47;meshapi.docs.apiary.io&#47;
-      output: web
-    - title: ITK3
-      url: https:&#47;&#47;nhsconnect.github.io&#47;ITK3-FHIR-Messaging-Distribution
-      output: web
   - title: Tags
     output: web
     children:
