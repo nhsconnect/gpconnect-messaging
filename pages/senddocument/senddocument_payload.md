@@ -67,7 +67,12 @@ The payload of a GP Connect message which uses the Send Document capability **MU
 <br/>
 <object type="image/svg+xml" data="images/senddocument/payload.svg">
     <!-- Your fall back here -->
-    <img src="images/senddocument/payload.png" />
+    <img src="images/senddocument/payload.png" usemap="#image-map"/>
+	
+<map name="image-map">
+    <area target="_self" alt="CareConnect-Patient-1" title="CareConnect-Patient-1" href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" coords="230,343,11,281" shape="rect">
+</map>
+	
 </object>
 <br/>
 
