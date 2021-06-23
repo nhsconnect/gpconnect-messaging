@@ -22,35 +22,6 @@ The following section describes error scenarios and associated error codes for t
   {% endfor %}
 </table>
 
-Details are given below of the ITK3 Negative Response which is used per error scenario:
-
-### ITK3 Header errors ### 
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'error1' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
-
-### ITK3 Payload business rules errors ###
-
-<table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
-  {% if item.area == 'error2' %}
-  <tr>
-    <td id="{{item.id}}">{{item.id}}</td>
-    <td>{{item.description}}</td>
-  </tr>
-  {% endif %}
-  {% endfor %}
-</table>
-
 ## Diagnostic information ##
 
 <table class="requirement-box">
