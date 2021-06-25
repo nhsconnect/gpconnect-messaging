@@ -415,8 +415,8 @@ requirements:
 
 - id: GPCM-SD-084
   area: trigger2
-  description: "<strong>Step 2</strong> - a PDS lookup of the patient <strong>MUST</strong> be performed to determine the ODS code of the registered practice of the patient"
-  tooltip: "a PDS lookup of the patient MUST be performed to determine the ODS code of the registered practice of the patient"
+  description: "<strong>Step 2</strong> - if using the MESH API, a PDS lookup of the patient <strong>MUST</strong> be performed to determine the ODS code of the registered practice of the patient"
+  tooltip: "if using the MESH API, a PDS lookup of the patient MUST be performed to determine the ODS code of the registered practice of the patient"
   page: senddocument_fedcon_trigger.html
 
 - id: GPCM-SD-140
