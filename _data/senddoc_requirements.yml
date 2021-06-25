@@ -43,7 +43,7 @@ requirements:
   
 - id: GPCM-SD-108
   area: senddocpayload
-  description: "all <code>Meta</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
+  description: "every populated resource <strong>MUST</strong> have the <code>Meta</code> element populated with the associated resource profile"
   tooltip: "all Meta elements MUST be treated as mandatory and populated with the associated resource"
   page: senddocument_payload.html
 
