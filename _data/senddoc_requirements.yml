@@ -367,8 +367,8 @@ requirements:
 
 - id: GPCM-SD-064
   area: mesh3
-  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
-  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}</code>"
+  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-065
