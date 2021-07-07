@@ -62,7 +62,7 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 <MessageType>Data</MessageType>
 <From_DTS>GP0001</From_DTS>
 <To_DTS>GPPROVIDER_1234567890_09011955_Smith</To_DTS>
-<Subject>GP consultation report for patient Mr Richard Smith , NHS Number 1234567890, with details of encounter which at practice GP0001</Subject>
+<Subject>GP consultation report for patient Mr Richard Smith , NHS Number 1234567890, with details of encounter which at practice GP0001, Version 1</Subject>
 <LocalId></LocalId>
 <DTSId></DTSId>
 <PartnerId></PartnerId>
