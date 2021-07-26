@@ -737,7 +737,36 @@ requirements:
   
   
 #Location resource requirements removed
-  
+- id: GPCM-SD-OC-168
+  area: payload_location_pop
+  description: "the <code>identifier</code> element <strong>MUST</strong> contain a Site ODS code to identify the organization at site level."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-169
+  area: payload_location_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>active</code>."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-170
+  area: payload_location_pop
+  description: "the <code>name</code> element <strong>MUST</strong> contain the name of the location used by humans."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-171
+  area: payload_location_pop
+  description: "the <code>type</code> element <strong>SHOULD</strong> contain the type of function being performed at this location."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-172
+  area: payload_location_pop
+  description: "the <code>telecom</code> element <strong>MUST</strong> contain the telephone number of that location. i.e. where <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-173
+  area: payload_location_pop
+  description: "the <code>address</code> element <strong>SHOULD</strong> contain the physical address of the location"
+  page: senddocument_oc_payload.html
+ 
 #ITK3 requirements
 - id: GPCM-SD-OC-141
   area: itk
