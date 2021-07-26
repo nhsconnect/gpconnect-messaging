@@ -91,6 +91,11 @@ requirements:
   area: senddocpayload
   description: "where a message contains patient consent, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1\">CareConnect-Consent-1</a> <strong>SHOULD</strong> be present"
   page: senddocument_payload.html
+
+- id: GPCM-SD-037
+  area: senddocpayload
+  description: "where a message contains a location, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1\">CareConnect-Location-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
   
 - id: GPCM-SD-017
   area: senddocpayload
