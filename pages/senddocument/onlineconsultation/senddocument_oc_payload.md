@@ -395,17 +395,17 @@ The following table lists the optionality and cardinality for each resource:
   <tr>
     <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1">ITK-Device-1</a></td>
     <td>Required</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1">CareConnect-Encounter-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1">CareConnect-List-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1">CareConnect-Observation-1</a></td>
@@ -415,47 +415,47 @@ The following table lists the optionality and cardinality for each resource:
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1">CareConnect-Questionnaire-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1">CareConnect-QuestionnaireResponse-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1">CareConnect-ReferralRequest-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1">CareConnect-DocumentReference-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1">CareConnect-AllergyIntolerance-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1">CareConnect-FamilyMemberHistory-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1">CareConnect-Task-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1">CareConnect-Consent-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1">CareConnect-Location-1</a></td>
     <td>Optional</td>
-	<td>0..1</td>
+	<td>0..*</td>
   </tr>     
   </tbody>
 </table>
