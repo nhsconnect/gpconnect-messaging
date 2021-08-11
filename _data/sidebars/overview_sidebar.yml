@@ -1,165 +1,146 @@
-entries:
-- title: GP Connect Messaging
-  levels: one
-  folders:
+## definition of `menuitem`===========
+# title: string
+# url: string
+# output: [ enum{web, pdf} ] (expressed as comma separated string in YAML)
+# children?: [ menuitem ]
 
-  - title: Overview
-    output: web
-    folderitems:
-    - title: Introduction
-      url: /index.html
-      output: web, pdf
-      type: homepage
-    - title: Capabilities
-      url: /overview_priority_capabilities.html
-      output: web
-    - title: Sitemap
-      url: /sitemap.html
-      output: web
-      
-      subfolders:
-      - title: Release notes
-        output: web
-        subfolderitems:
-        - title: 1.3.0
-          url: /overview_release_notes_1_3_0.html
-          output: web  
-        - title: 1.2.0
-          url: /overview_release_notes_1_2_0.html
-          output: web          
-        - title: 1.1.0
-          url: /overview_release_notes_1_1_0.html
-          output: web
-        - title: 1.0.0
-          url: /overview_release_notes_1_0_0.html
-          output: web
- 
-  - title: Design approach
-    output: web
-    folderitems:
+## top level property=================
+# entries: [ menuitem ]
 
-    - title: Design principles
-      url: /design_principles.html
-      output: web
-      type: homepage
-    - title: Specification versioning
-      url: /design_product_versioning.html
-      output: web
-    - title: Requirements
-      url: /design_requirements.html
-      output: web      
-          
-  - title: Implement a capability
+title: GP Connect Messaging
+levels: one
+children:
+
+- title: Overview
+  output: web
+  children:
+  - title: Introduction
+    url: /index.html
+    output: web, pdf
+    type: homepage
+  - title: Capabilities
+    url: /overview_priority_capabilities.html
     output: web
-    folderitems:
+  - title: Sitemap
+    url: /sitemap.html
+    output: web
+  - title: Release notes
+    output: web
+    children:
+    - title: 1.4.0
+      url: /overview_release_notes_1_4_0.html
+      output: web
+    - title: 1.3.0
+      url: /overview_release_notes_1_3_0.html
+      output: web  
+    - title: 1.2.0
+      url: /overview_release_notes_1_2_0.html
+      output: web          
+    - title: 1.1.0
+      url: /overview_release_notes_1_1_0.html
+      output: web
+    - title: 1.0.0
+      url: /overview_release_notes_1_0_0.html
+      output: web
+
+- title: Design approach
+  output: web
+  children:
+  - title: Design principles
+    url: /design_principles.html
+    output: web
+    type: homepage
+  - title: Specification versioning
+    url: /design_product_versioning.html
+    output: web
+  - title: Requirements
+    url: /design_requirements.html
+    output: web      
+        
+- title: Implement a capability
+  output: web
+  children:
+  - title: Send Document
+    url: /senddocument.html
+    output: web
+  - title: <strong class="capability-not-available">Send Task</strong>
+    url: /sendtask.html
+    output: web
+  - title: <strong class="capability-not-available">Send Update</strong>
+    url: /sendupdate.html
+    output: web
+
+- title: Integrate with Spine
+  output: web
+  children:
+  - title: Spine integration illustrated
+    url: /integration_illustrated.html
+    output: web           
+  - title: Using MESH
+    url: /integration_mesh.html
+    output: web
+  - title: Using ITK3
+    url: /integration_itk3.html
+    output: web
+    
+- title: Test and assure
+  output: web
+  children:
+  - title: Message Sender testing
+    url: /testing_sender.html
+    output: web
+  - title: Message Receiver testing
+    url: /testing_receiver.html
+    output: web
+  - title: Test environments
+    url: /testing_environments.html
+    output: web
+
+- title: Help and support
+  output: web
+  children:
+  - title: Glossary
+    url: /overview_glossary.html
+    output: web
+  - title: Communication channels
+    url: /support_communications.html
+    output: web
+  - title: Tags
+    output: web
+    children:
+    - title: Overview
+      url: /tag_overview.html
+      output: web
+    - title: MESH
+      url: /tag_mesh.html
+      output: web
+    - title: ITK3
+      url: /tag_itk3.html
+      output: web
+    - title: Use case
+      url: /tag_use-case.html
+      output: web
     - title: Send Document
-      url: /senddocument.html
+      url: /tag_send-document.html
       output: web
-    - title: <strong class="capability-not-available">Send Task</strong>
-      url: /sendtask.html
+    - title: Messaging
+      url: /tag_messaging.html
       output: web
-    - title: <strong class="capability-not-available">Send Update</strong>
-      url: /sendupdate.html
+    - title: Design
+      url: /tag_design.html
+      output: web   
+    - title: Development
+      url: /tag_development.html
       output: web
-
-  - title: Integrate with Spine
-    output: web
-    folderitems:
-    - title: Spine integration illustrated
-      url: /integration_illustrated.html
-      output: web           
-    - title: Using MESH
-      url: /integration_mesh.html
+    - title: Integration
+      url: /tag_integration.html
       output: web
-    - title: Using ITK3
-      url: /integration_itk3.html
+    - title: Testing
+      url: /tag_testing.html
       output: web
-      
-  - title: Test and assure
-    output: web
-    folderitems:
-    - title: Message Sender testing
-      url: /testing_sender.html
+    - title: Deployment
+      url: /tag_deployment.html
       output: web
-    - title: Message Receiver testing
-      url: /testing_receiver.html
+    - title: Support
+      url: /tag_support.html
       output: web
-    - title: Test environments
-      url: /testing_environments.html
-      output: web
-
-  - title: Help and support
-    output: web
-    folderitems:
-    - title: Glossary
-      url: /overview_glossary.html
-      output: web
-    - title: Communication channels
-      url: /support_communications.html
-      output: web
-      
-      subfolders:
-      - title: External links
-        output: web
-        subfolderitems:    
-        - title: GPC  - FHIR&reg; APIs
-          url: https:&#47;&#47;nhsconnect.github.io&#47;gpconnect
-          output: web
-        - title: GPC Messaging repository
-          url: https:&#47;&#47;github.com&#47;nhsconnect&#47;gpconnect-messaging
-          output: web
-        - title: GPC NHS Digital
-          url: https:&#47;&#47;digital.nhs.uk&#47;services&#47;gp-connect
-          output: web
-        - title: GPC Developer Network
-          url: https:&#47;&#47;developer.nhs.uk&#47;library&#47;interoperability&#47;gp-connect
-          output: web
-        - title: MESH
-          url: https:&#47;&#47;digital.nhs.uk&#47;services&#47;message-exchange-for-social-care-and-health-mesh
-          output: web
-        - title: MESH API
-          url: https:&#47;&#47;meshapi.docs.apiary.io&#47;
-          output: web
-        - title: ITK3
-          url: https:&#47;&#47;nhsconnect.github.io&#47;ITK3-FHIR-Messaging-Distribution
-          output: web
-
-      - title: Tags
-        output: web
-        subfolderitems:
-        - title: Overview
-          url: /tag_overview.html
-          output: web
-        - title: MESH
-          url: /tag_mesh.html
-          output: web
-        - title: ITK3
-          url: /tag_itk3.html
-          output: web
-        - title: Use case
-          url: /tag_use-case.html
-          output: web
-        - title: Send Document
-          url: /tag_send-document.html
-          output: web
-        - title: Messaging
-          url: /tag_messaging.html
-          output: web
-        - title: Design
-          url: /tag_design.html
-          output: web   
-        - title: Development
-          url: /tag_development.html
-          output: web
-        - title: Integration
-          url: /tag_integration.html
-          output: web
-        - title: Testing
-          url: /tag_testing.html
-          output: web
-        - title: Deployment
-          url: /tag_deployment.html
-          output: web
-        - title: Support
-          url: /tag_support.html
-          output: web

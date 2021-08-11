@@ -106,7 +106,7 @@ url: https://developer.nhs.uk/apis/gpconnect-messaging
 
 repository: nhsconnect/gpconnect-messaging
 
-gems:
+plugins:
    - jekyll-github-metadata
    - jekyll-redirect-from
    - jekyll-seo-tag
