@@ -68,8 +68,54 @@ entries:
     - title: Triggering message creation
       url: /senddocument_fedcon_trigger.html      
       output: web
+<<<<<<< Updated upstream
       
     - title: Message example
       url: /senddocument_fedcon_example.html      
       output: web      
           
+=======
+  - title: Payload requirements
+    url: /senddocument_oc_payload.html      
+    output: web
+  - title: ITK3 header requirements
+    url: /senddocument_oc_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_oc_mesh.html      
+    output: web    
+  - title: Message example
+    url: /senddocument_oc_example.html      
+    output: web
+
+- title: Use case - Generic Send
+  output: web  
+  children: 
+  - title: Overview
+    url: /senddocument_generic_overview.html      
+    output: web
+  - title: Business requirements
+    output: web
+    children:
+    - title: Process map
+      url: /sendmessage_generic_process.html
+      output: web
+    - title: User stories
+      url: /senddocument_generic_userstories.html
+      output: web
+    - title: Clinical engagement
+      url: /senddocument_generic_busreq_clinical.html 
+      output: web
+  - title: Payload requirements
+    url: /senddocument_generic_payload.html      
+    output: web  
+  - title: ITK3 header requirements
+    url: /senddocument_generic_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_generic_mesh.html      
+    output: web    
+  - title: Message example
+    url: /senddocument_generic_example.html      
+    output: web        
+>>>>>>> Stashed changes

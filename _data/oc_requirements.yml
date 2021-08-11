@@ -1,0 +1,924 @@
+requirements:
+
+# OC general payload requirements
+- id: GPCM-SD-OC-001
+  area: payload_comp
+  description: "a Composition resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition-1</a> resource <strong>MUST</strong> be present in the payload"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-002
+  area: payload_comp_pop
+  description: "<code>Composition.status</code> <strong>MUST</strong> contain fixed value <strong><code>final</code></strong>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-003
+  area: payload_comp_pop
+  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>xxxxxxxxxx</code> (Online consultation report)"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-004
+  area: payload_comp_pop
+  description: "<code>Composition.date</code> <strong>MUST</strong> contain the date/time the message was created"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-005
+  area: payload_comp_pop
+  description: "<code>Composition.confidentiality</code> <strong>MUST</strong> contain the fixed value <code>N</code> (Normal), or <code>R</code> (Restricted) if the consultation is classed as confidential"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-006
+  area: payload_comp_pop
+  description: "<code>Composition.title</code> <strong>MUST</strong> contain the fixed value <code>Online consultation report</code>"
+  page: senddocument_oc_payload.html  
+  
+- id: GPCM-SD-OC-007
+  area: payload_comp_pop
+  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, Version {Version Number}</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-008
+  area: payload_comp_pop
+  description: "<code>Composition.subject</code> <strong>MUST</strong> contain a reference to Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-009
+  area: payload_comp_pop
+  description: "<code>Composition.author</code> <strong>MUST</strong> contain a reference to one or more of the following resources: <ul><li>a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a></li><li>a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a></li><li>a RelatedPerson resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1\">CareConnect-RelatedPerson-1</a></li><li>a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1\">ITK-Device-1</a></li></ul>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-010
+  area: payload_comp_pop
+  description: "<code>Composition.custodian</code> <strong>MUST</strong> contain a reference to the sender Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a>"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-011
+  area: payload_comp_pop
+  description: "<code>Composition.relatesTo</code> <strong>MUST</strong> contain the UUID of the previous message if a replacement document is being sent"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-012
+  area: payload_comp_pop
+  description: "<code>Composition.section.entry</code> <strong>MUST</strong> reference a binary document which provides a report of the full online consultation in PDF format profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1\">ITK-Attachment-Binary-1</a>"
+  page: senddocument_oc_payload.html
+
+  
+# Additional input elements
+- id: GPCM-SD-OC-013
+  area: payload_additional
+  description: "where binary documents are included in the payload in addition to the Online Consultation Report, the <em>message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-014
+  area: payload_additional
+  description: "when displaying the Consultation Report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-015
+  area: payload_additional
+  description: "the <em>message receiver</em> <strong>MUST</strong> make any attachments included with the Consultation Report available to the end user"
+  page: senddocument_oc_payload.html
+
+
+#Patient resource requirements
+- id: GPCM-SD-OC-016
+  area: payload_patient
+  description: "as described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain a patient resource describing the patient"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-017
+  area: payload_patient_pop
+  description: "the NHS Number of the patient <strong>MUST</strong> be specified in the <code>nhsNumber</code> slice of the <code>identifier</code> element"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-018
+  area: payload_patient_pop
+  description: "the name of the patient <strong>MUST</strong> be present in the single instance of the <code>name</code> element where <code>name.use</code> is set to <code>official</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-019
+  area: payload_patient_pop
+  description: "the date of birth of the patient <strong>MUST</strong> be specified in <code>YYYY-MM-DD</code> format in the <code>birthDate</code> element. Birth time is not required"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-020
+  area: payload_patient_pop
+  description: "values specified in the patient resource for surname, date of birth and NHS Number <strong>MUST</strong> match those specified in MESH metadata <code>Mex_To</code> (for the MESH API) or <code>To_DTS</code> field (for the MESH client) as described in <a href=\"senddocument_oc_mesh.html\">MESH message configuration</a>"
+  page: senddocument_oc_payload.html
+
+
+# Organization resource requirements
+- id: GPCM-SD-OC-021
+  area: payload_org
+  description: "as described in <a href=\"senddocument_payload.html\">Send Document - Payload structure</a>, the payload <strong>MUST</strong> contain an organization resource describing the sender organisation (the originating organisation)"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-022
+  area: payload_org_pop
+  description: "the <code>odsOrganisationCode</code> slice of the <code>identifier</code> element <strong>MUST</strong> contain the ODS code"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-023
+  area: payload_org_pop
+  description: "the <code>name</code> element <strong>MUST</strong> contain the name of the organisation"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-024
+  area: payload_org_pop
+  description: "the <code>telecom</code> element <strong>MUST</strong> contain the telephone number of that organization. i.e. where <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number"
+  page: senddocument_oc_payload.html
+
+
+# Practitioner resource requirements
+- id: GPCM-SD-OC-025
+  area: payload_prac_pop
+  description: "the SDS User ID of the practitioner <strong>MUST</strong> be present in the <code>sdsUserID</code> slice of the <code>identifier</code> element"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-026
+  area: payload_prac_pop
+  description: "the name of the practitioner <strong>MUST</strong> be present in the single instance of the <code>name</code> element where <code>name.use</code> is set to <code>official</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-027
+  area: payload_prac_pop
+  description: "telephone contact details <strong>MUST</strong> be present if available in the <code>telecom</code> element. i.e. <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number"
+  page: senddocument_oc_payload.html
+
+
+# RelatedPerson resource requirements
+- id: GPCM-SD-OC-028
+  area: payload_related_pop
+  description: "the name of the related person <strong>MUST</strong> be present in the single instance of the <code>name</code> element"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-029
+  area: payload_related_pop
+  description: "the date of birth of the related person <strong>MUST</strong> be specified in <code>YYYY-MM-DD</code> format in the <code>birthDate</code> element. Birth time is not required"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-030
+  area: payload_related_pop
+  description: "telephone contact details <strong>MUST</strong> be present if available in the <code>telecom</code> element"
+  page: senddocument_oc_payload.html  
+
+
+# Device resource requirements
+- id: GPCM-SD-OC-031
+  area: payload_device_pop
+  description: "a SNOMED code describing the type of device <strong>MUST</strong> be present in the <code>type</code> element"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-032
+  area: payload_device_pop
+  description: "the manufacturer of the device <strong>MUST</strong> be present in the <code>manufacturer</code> element"
+  page: senddocument_oc_payload.html
+
+
+# Encounter resource requirements
+- id: GPCM-SD-OC-033
+  area: payload_encounter_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>finished</code>"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-034
+  area: payload_encounter_pop
+  description: "the <code>type</code> element <strong>MUST</strong> contain a valid SNOMED code for the type encounter being sent"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-035
+  area: payload_encounter_pop
+  description: "the <code>subject</code> element <strong>MUST</strong> reference the <code>Patient</code> profile representing the Patient who is the subject of the encounter"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-036
+  area: payload_encounter_pop
+  description: "the <code>participant</code> element <strong>SHOULD</strong> reference the <code>Practitioner</code> profile or the <code>RelatedPerson</code> profile if applicable"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-037
+  area: payload_encounter_pop
+  description: "the <code>priority</code> element <strong>SHOULD</strong> reference a priority code, by default this value should be <code>R</code> meaning routine"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-038
+  area: payload_encounter_pop
+  description: "the <code>period</code> element <strong>SHOULD</strong> be populated with the start and end time of the encounter captured in the source system"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-039
+  area: payload_encounter_pop
+  description: "the <code>serviceProvider</code> element <strong>SHOULD</strong> contain a reference to the organisation responsible for the encounter"
+  page: senddocument_oc_payload.html
+
+
+# List requirements
+- id: GPCM-SD-OC-040
+  area: payload_list_pop
+  description: "a <code>List</code> containing references to all Observation resources that are captured <strong>MUST</strong> be populated if coded Observations are being sent. The <code>List</code> resource in FHIR is used to manage collections of resources."
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-041
+  area: payload_list_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>current</code>"
+  page: senddocument_oc_payload.html  
+  
+- id: GPCM-SD-OC-042
+  area: payload_list_pop
+  description: "the <code>mode</code> element <strong>MUST</strong> contain a fixed value of <code>snapshot</code>"
+  page: senddocument_oc_payload.html   
+
+- id: GPCM-SD-OC-043
+  area: payload_list_pop
+  description: "the <code>title</code> element <strong>MUST</strong> contain the <code>display</code> element from the <code>code</code> field"
+  page: senddocument_oc_payload.html 
+
+- id: GPCM-SD-OC-044
+  area: payload_list_pop
+  description: "the <code>code</code> element <strong>MUST</strong> contain <code>826501000000100</code> - Miscellaneous record"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-045
+  area: payload_list_pop
+  description: "the <code>subject</code> element <strong>MUST</strong> reference the <code>Patient</code> profile representing the Patient against whom the data was recorded"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-046
+  area: payload_list_pop
+  description: "the <code>entry.item</code> element <strong>MUST</strong> be populated to reference each <code>Observation</code> in the message"
+  page: senddocument_oc_payload.html  
+
+
+# Observation resource requirements
+- id: GPCM-SD-OC-047
+  area: payload_obs_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>preliminary</code> if unchecked by a clinician, or <code>final</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-048
+  area: payload_obs_pop
+  description: "the <code>category</code> element <strong>SHOULD</strong> contain high level category that represents the data in the <code>Observation</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-049
+  area: payload_obs_pop
+  description: "the <code>code</code> element <strong>MUST</strong> contain a clinical code that represents the data in the <code>Observation</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-050
+  area: payload_obs_pop
+  description: "the <code>subject</code> element <strong>MUST</strong> reference the <code>Patient</code> profile representing the Patient against whom the data was recorded"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-051
+  area: payload_obs_pop
+  description: "the <code>issued</code> element <strong>MUST</strong> contain an audit trail timestamp representing when the data was recorded"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-052
+  area: payload_obs_pop
+  description: "to ensure the <code>Observation</code> can be identified as patient entered data, the <code>performer</code> element <strong>MUST</strong> contain a reference to patient resource of the patient completing the Online Consultation"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-053
+  area: payload_obs_pop
+  description: "the <code>value[x]</code> element <strong>SHOULD</strong> contain the value of the <code>Observation</code>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-054
+  area: payload_obs_pop
+  description: "the <code>component</code> element <strong>SHOULD</strong> be populated if recording a pair of results"
+  page: senddocument_oc_payload.html
+
+
+# Questionnaire resource requirements
+- id: GPCM-SD-OC-055
+  area: payload_quest_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>active</code>"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-056
+  area: payload_quest_pop
+  description: "the <code>version</code> element <strong>SHOULD</strong> contain the business version of the questionnaire"
+  page: senddocument_oc_payload.html  
+  
+- id: GPCM-SD-OC-057
+  area: payload_quest_pop
+  description: "the <code>name</code> element <strong>SHOULD</strong> contain the name of the questionnaire"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-058
+  area: payload_quest_pop
+  description: "the <code>title</code> element <strong>SHOULD</strong> contain the title of the questionnaire"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-059
+  area: payload_quest_pop
+  description: "the <code>date</code> element <strong>SHOULD</strong> contain the date the questionnaire was last updated"
+  page: senddocument_oc_payload.html   
+  
+- id: GPCM-SD-OC-060
+  area: payload_quest_pop
+  description: "the <code>description</code> element <strong>SHOULD</strong> contain a human readable description of the questionnaire"
+  page: senddocument_oc_payload.html  
+ 
+- id: GPCM-SD-OC-061
+  area: payload_quest_pop
+  description: "the <code>effectivePeriod</code> element <strong>SHOULD</strong> contain the period when the questionnaire is expected to be used"
+  page: senddocument_oc_payload.html   
+
+- id: GPCM-SD-OC-062
+  area: payload_quest_pop
+  description: "the <code>item</code> elements <strong>MUST</strong> be completed to contain the questions and sections of the questionnaire"
+  page: senddocument_oc_payload.html  
+
+
+# QuestionnaireResponse resource requirements
+- id: GPCM-SD-OC-063
+  area: payload_questresp_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>completed</code>"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-064
+  area: payload_questresp_pop
+  description: "the <code>subject</code> element <strong>MUST</strong> reference the <code>Patient</code> profile representing the Patient against whom the data was recorded"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-065
+  area: payload_questresp_pop
+  description: "the <code>authored</code> element <strong>SHOULD</strong> contain an audit trail timestamp representing when the data was recorded"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-066
+  area: payload_questresp_pop
+  description: "a set of <code>item</code> elements <strong>MUST</strong> contain the full online consultation questionnaire details"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-067
+  area: payload_questresp_pop
+  description: "the <code>item.linkId</code> element <strong>MUST</strong> contain a pointer specific to the questionnaire"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-068
+  area: payload_questresp_pop
+  description: "the <code>item.text</code> element <strong>MUST</strong> contain the question being asked"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-069
+  area: payload_questresp_pop
+  description: "the <code>item.answer.value[x]</code> element <strong>MUST</strong> contain the answer being given by the patient"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-070
+  area: payload_questresp_pop
+  description: "the <code>item.answer.value[x].valueReference</code> element <strong>SHOULD</strong> contain a reference to a resource, if applicable"
+  page: senddocument_oc_payload.html 
+
+
+# ReferralRequest resource requirements
+- id: GPCM-SD-OC-071
+  area: payload_referral_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>unknown</code>"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-072
+  area: payload_referral_pop
+  description: "the <code>intent</code> element <strong>MUST</strong> contain a fixed value of <code>order</code>"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-073
+  area: payload_referral_pop
+  description: "the <code>priority</code> element <strong>SHOULD</strong> reference a priority code. A mapping is applied to the priority codes to align it to the e-Referral Service priority types. This <strong>MUST</strong> be populated where the source system has a referral priority which matches the e-Referral Service priority codes or can be mapped to those priority codes. If there is a priority code for the referral but it is incompatible with the e-Referral Service priorities, this element <strong>MUST</strong> be excluded and the priority <strong>MUST</strong> be supplied in the note element."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-074
+  area: payload_referral_pop
+  description: "the <code>subject</code> element <strong>MUST</strong> reference the <code>Patient</code> profile representing the Patient who is the subject of the referral"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-075
+  area: payload_referral_pop
+  description: "the <code>context</code> element <strong>SHOULD</strong> reference the <code>Encounter</code> within which the referral was recorded"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-076
+  area: payload_referral_pop
+  description: "the <code>requester</code> element <strong>SHOULD</strong> reference the details of the person, practitioner or organisation responsible for the decision to refer the patient or, if is not attributed specifically, then populate with the recorder"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-077
+  area: payload_referral_pop
+  description: "the <code>requester.agent</code> element <strong>MUST</strong> reference one of the following: <ul><li>a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a></li><li>an Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a></li><li>a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a></li><li>a RelatedPerson resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1\">CareConnect-RelatedPerson-1</a></li><li>a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1\">ITK-Device-1</a></li></ul>"
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-078
+  area: payload_referral_pop
+  description: "the <code>recipient</code> element <strong>SHOULD</strong> be populated with the practitioner and/or organisation the patient has been referred to, if that is recorded in a suitable coded format"
+  page: senddocument_oc_payload.html  
+  
+- id: GPCM-SD-OC-079
+  area: payload_referral_pop
+  description: "the <code>reasonCode</code> element <strong>SHOULD</strong> be populated with the source system’s main coded entry for the referral"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-080
+  area: payload_referral_pop
+  description: "the <code>description</code> element <strong>SHOULD</strong> be populated with a free text description associated with the referral"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-081
+  area: payload_referral_pop
+  description: "the <code>supportingInfo</code> element <strong>SHOULD</strong> contain a reference to the referral letter(s) and any other supporting documents or resources which are not covered by other more specific elements, for instance this could include reference to linked observations"
+  page: senddocument_oc_payload.html
+
+
+# DocumentReference resource requirements
+- id: GPCM-SD-OC-082
+  area: payload_docref_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of either <code>current</code>, <code>superseded</code> or <code>entered-in-error</code>"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-083
+  area: payload_docref_pop
+  description: "the <code>type</code> element <strong>MUST</strong> contain a coded entry that references the type of document, this <strong>SHOULD</strong> be taken from SNOMED refset 1127551000000109. Other classifications should be sent as <code>text</code>."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-084
+  area: payload_docref_pop
+  description: "the <code>subject</code> element <strong>MUST</strong> reference the <code>Patient</code> profile representing the Patient who is the subject of the document"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-085
+  area: payload_docref_pop
+  description: "the <code>author</code> element <strong>SHOULD</strong> reference one of the following: <ul><li>a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a></li><li>an Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a></li><li>a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a></li><li>a RelatedPerson resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1\">CareConnect-RelatedPerson-1</a></li><li>a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1\">ITK-Device-1</a></li></ul>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-086
+  area: payload_questresp_pop
+  description: "the <code>content</code> element <strong>MUST</strong> contain details about the document being referenced"
+  page: senddocument_oc_payload.html 
+
+- id: GPCM-SD-OC-087
+  area: payload_questresp_pop
+  description: "the <code>context</code> element <strong>SHOULD</strong> contain details about the clinical context of the document being referenced"
+  page: senddocument_oc_payload.html 
+
+  
+# AllergyIntolerance resource requirements
+- id: GPCM-SD-OC-088
+  area: payload_allergy_pop
+  description: "the <code>extension[encounter]</code> element <strong>SHOULD</strong> contain a reference to an associated encounter"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-089
+  area: payload_allergy_pop
+  description: "the <code>extension[allergyEnd]</code> element <strong>MUST</strong> contain the date the allergy or intolerance was recorded as resolved, if the <code>clinicalStatus</code> is set to <code>resolved.</code>"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-090
+  area: payload_allergy_pop
+  description: "the <code>extension[allergyEnd].endReason</code> element <strong>MUST</strong> contain the reason why the allergy or intolerance has been resolved. In exceptional cases where for legacy data there is no endReason recorder in the system then this <strong>MUST</strong> be populated with the text ‘No information available’."
+  page: senddocument_oc_payload.html 
+
+- id: GPCM-SD-OC-091
+  area: payload_allergy_pop
+  description: "the <code>clinicalStatus</code> element <strong>MUST</strong> be populated with <code>active</code> for all active allergies, or <code>resolved</code> for resolved allergies."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-092
+  area: payload_allergy_pop
+  description: "the <code>verificationStatus</code> element <strong>MUST</strong> contain a fixed value of <code>unconfirmed</code>."
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-093
+  area: payload_allergy_pop
+  description: "the <code>type</code> element <strong>SHOULD</strong> be set to <code>allergy</code> for reactions which are allergenic in nature (immunological), a value of <code>intolerance</code> <strong>MAY</strong> be used to indicate adverse reactions (not immunologic in nature). Where the type is unknown the type element may be omitted."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-094
+  area: payload_allergy_pop
+  description: "the <code>category</code> element <strong>MUST</strong> use <code>medication</code> for all drug allergy types, <code>environment</code> for all non-drug allergies. The other values in the ValueSet (food and biologic) <strong>MUST NOT</strong> be used."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-095
+  area: payload_allergy_pop
+  description: "the <code>criticality</code> element <strong>SHOULD</strong> used to distinguish between life-threatening (high) and non-life-threatening (low) potential as well as unable-to-assess. It <strong>MAY</strong> be used in addition to severity within the reaction element to express severity - for example, systems that support a severity of life-threatening <strong>MAY</strong> set criticality to high."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-096
+  area: payload_allergy_pop
+  description: "the <code>criticality</code> element <strong>SHOULD</strong> used to distinguish between life-threatening (high) and non-life-threatening (low) potential as well as unable-to-assess. It <strong>MAY</strong> be used in addition to severity within the reaction element to express severity - for example, systems that support a severity of life-threatening <strong>MAY</strong> set criticality to high."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-097
+  area: payload_allergy_pop
+  description: "the <code>code</code> element <strong>MUST</strong> contain the causative agent such as food, drug or substances that has caused or may cause an allergy, intolerance or adverse reaction in this patient."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-098
+  area: payload_allergy_pop
+  description: "the <code>patient</code> element <strong>MUST</strong> contain a reference to the Patient who has, or had, the allergy or intolerance specified."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-099
+  area: payload_allergy_pop
+  description: "the <code>onset.DateTime</code> element <strong>SHOULD</strong> contain a date when allergy/intolerance first manifested. Currently restricted to values of dateTime for GP Connect."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-100
+  area: payload_allergy_pop
+  description: "the <code>assertedDate</code> element <strong>MUST</strong> contain a the datetime the record was believed to be true."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-101
+  area: payload_allergy_pop
+  description: "the <code>recorder</code> element <strong>MUST</strong> contain a reference to who recorded the allergy."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-102
+  area: payload_allergy_pop
+  description: "the <code>asserter</code> element <strong>SHOULD</strong> contain a reference to the source of the information about the allergy."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-103
+  area: payload_allergy_pop
+  description: "the <code>lastOccurrence</code> element <strong>SHOULD</strong> contain the date and/or time of the last known occurrence of a reaction event."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-104
+  area: payload_allergy_pop
+  description: "the <code>note</code> element <strong>SHOULD</strong> contain all text associated with the AllergyIntolerance including user-entered notes and qualifiers is grouped together and expressed in this field, which ensures unmapped coded values or qualifiers are not lost. <strong>MUST</strong> be used to contain any textual data relevant to the allergy."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-105
+  area: payload_allergy_pop
+  description: "the <code>reaction.manifestation</code> element <strong>SHOULD</strong> contain the reaction resulting from the allergy/intolerance as a code."
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-106
+  area: payload_allergy_pop
+  description: "the <code>reaction.description</code> element <strong>SHOULD</strong> contain the textual description of the manifestation where no code is available."
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-107
+  area: payload_allergy_pop
+  description: "the <code>reaction.severity</code> element <strong>SHOULD</strong> contain severities of <code>Mild</code>, <code>Moderate</code>, <code>Severe</code> are mapped directly to the ValueSet. Map life threatening to <code>Severe</code> and populate criticality with <code>high</code>."
+  page: senddocument_oc_payload.html
+  
+- id: GPCM-SD-OC-108
+  area: payload_allergy_pop
+  description: "the <code>reaction.exposureRoute</code> element <strong>SHOULD</strong> contain the route by which exposure to the substance causing the reaction occurred. Utilise the dm+d route codes."
+  page: senddocument_oc_payload.html
+
+
+# FamilyMemberHistory resource requirements
+- id: GPCM-SD-OC-109
+  area: payload_family_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of either <code>partial</code>, <code>completed</code>, <code>entered-in-error</code>, or <code>health-unknown</code>"
+  page: senddocument_oc_payload.html 
+  
+- id: GPCM-SD-OC-110
+  area: payload_family_pop
+  description: "the <code>patient</code> element <strong>MUST</strong> contain a reference to the Patient that the history is about."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-111
+  area: payload_family_pop
+  description: "the <code>relationship</code> element <strong>MUST</strong> contain a coded entry describing the nature of the relationship between the patient and the related person being described in the family history."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-112
+  area: payload_family_pop
+  description: "the <code>reasonReference</code> element <strong>SHOULD</strong> reference one of the following: <ul><li>a QuestionnaireResponse resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionniareResponse-1\">CareConnect-QuestionnaireResponse-1</a></li><li>an Observation resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1\">CareConnect-Observation-1</a></li><li>a AllergyIntolerance resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1\">CareConnect-AllergyIntolerance-1</a></li></ul>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-113
+  area: payload_family_pop
+  description: "the <code>note</code> element <strong>SHOULD</strong> contain all text associated with the related person."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-114
+  area: payload_family_pop
+  description: "the <code>condition</code> element <strong>SHOULD</strong> contain the details of the condition that the related person had."
+  page: senddocument_oc_payload.html
+  
+
+# Task resource requirements
+- id: GPCM-SD-OC-115
+  area: payload_task_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>requested</code>."
+  page: senddocument_oc_payload.html 
+
+- id: GPCM-SD-OC-116
+  area: payload_task_pop
+  description: "the <code>statusReason</code> element <strong>SHOULD</strong> contain a code to identify the reason for the current status."
+  page: senddocument_oc_payload.html 
+
+- id: GPCM-SD-OC-117
+  area: payload_task_pop
+  description: "the <code>intent</code> element <strong>MUST</strong> contain a fixed value of either <code>proposal</code>, <code>plan</code>, or <code>order</code>, to distinguish whether the task is a proposal, plan or full order."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-118
+  area: payload_task_pop
+  description: "the <code>priority</code> element <strong>SHOULD</strong> contain a fixed value of either <code>normal</code>, <code>urgent</code>, <code>asap</code>, or <code>stat</code>."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-119
+  area: payload_task_pop
+  description: "the <code>code</code> element <strong>SHOULD</strong> contain codes to identify what the task involves. These will typically be specific to a particular workflow."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-120
+  area: payload_task_pop
+  description: "the <code>for</code> element <strong>SHOULD</strong> contain a reference to the Patient."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-121
+  area: payload_task_pop
+  description: "the <code>context</code> element <strong>SHOULD</strong> contain a reference to the Encounter which this task originated."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-122
+  area: payload_task_pop
+  description: "the <code>requester.agent</code> element <strong>SHOULD</strong> reference one of the following: <ul><li>a Practitioner resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a></li><li>an Organization resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1\">CareConnect-Organization-1</a></li><li>a Patient resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1\">CareConnect-Patient-1</a></li><li>a RelatedPerson resource profiled to <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1\">CareConnect-RelatedPerson-1</a></li><li>a Device resource profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1\">ITK-Device-1</a></li></ul>"
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-123
+  area: payload_task_pop
+  description: "the <code>owner</code> element <strong>SHOULD</strong> contain a reference a resource responsible for the task execution."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-124
+  area: payload_task_pop
+  description: "the <code>reason</code> element <strong>SHOULD</strong> contain details explaining why the task is needed."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-125
+  area: payload_task_pop
+  description: "the <code>note</code> element <strong>SHOULD</strong> contain comments made about the task."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-126
+  area: payload_task_pop
+  description: "the <code>restriction</code> element <strong>SHOULD</strong> be populated if there are any limitations on what parts of the referenced request should be actioned."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-127
+  area: payload_task_pop
+  description: "the <code>input</code> element <strong>SHOULD</strong> contain additional information that may be needed in the execution of the task."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-128
+  area: payload_task_pop
+  description: "the <code>output</code> element <strong>SHOULD</strong> contain any outputs produced by the task."
+  page: senddocument_oc_payload.html
+
+
+#Consent resource requirements 
+- id: GPCM-SD-OC-129
+  area: payload_consent_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of either <code>proposed</code>, <code>active</code>, or <code>rejected</code>."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-130
+  area: payload_consent_pop
+  description: "the <code>category</code> element <strong>SHOULD</strong> contain a classification of the type of consent found in the statement."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-131
+  area: payload_consent_pop
+  description: "the <code>patient</code> element <strong>MUST</strong> contain a reference to the Patient the consent applies to."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-132
+  area: payload_consent_pop
+  description: "the <code>period</code> element <strong>SHOULD</strong> contain a the period this consent applies to."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-133
+  area: payload_consent_pop
+  description: "the <code>consentingParty</code> element <strong>SHOULD</strong> contain a reference to who is agreeing to the policy and exceptions."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-134
+  area: payload_consent_pop
+  description: "the <code>action</code> element <strong>SHOULD</strong> contain any actions controlled by this consent."
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-135
+  area: payload_consent_pop
+  description: "the <code>source[x]</code> element <strong>SHOULD</strong> reference the source from which the consent was taken."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-136
+  area: payload_consent_pop
+  description: "the <code>policy</code> element <strong>SHOULD</strong> contain any policies covered by this consent."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-137
+  area: payload_consent_pop
+  description: "the <code>purpose</code> element <strong>SHOULD</strong> contain the context of activities for which the agreement is made."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-138
+  area: payload_consent_pop
+  description: "the <code>datePeriod</code> element <strong>SHOULD</strong> contain timeframe for data controlled by this consent."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-139
+  area: payload_consent_pop
+  description: "the <code>data</code> element <strong>SHOULD</strong> contain the data controlled by this consent."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-140
+  area: payload_consent_pop
+  description: "the <code>except</code> element <strong>SHOULD</strong> contain any exceptions to the base policy of this consent. An exception can be an addition or removal of access permissions."
+  page: senddocument_oc_payload.html  
+  
+  
+#Location resource requirements removed
+- id: GPCM-SD-OC-168
+  area: payload_location_pop
+  description: "the <code>identifier</code> element <strong>MUST</strong> contain a Site ODS code to identify the organization at site level."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-169
+  area: payload_location_pop
+  description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>active</code>."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-170
+  area: payload_location_pop
+  description: "the <code>name</code> element <strong>MUST</strong> contain the name of the location used by humans."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-171
+  area: payload_location_pop
+  description: "the <code>type</code> element <strong>SHOULD</strong> contain the type of function being performed at this location."
+  page: senddocument_oc_payload.html
+
+- id: GPCM-SD-OC-172
+  area: payload_location_pop
+  description: "the <code>telecom</code> element <strong>MUST</strong> contain the telephone number of that location. i.e. where <code>telecom.system</code> is set to a fixed value of <code>phone</code>, and <code>telecom.value</code> contains the telephone number"
+  page: senddocument_oc_payload.html  
+
+- id: GPCM-SD-OC-173
+  area: payload_location_pop
+  description: "the <code>address</code> element <strong>SHOULD</strong> contain the physical address of the location"
+  page: senddocument_oc_payload.html
+ 
+#ITK3 requirements
+- id: GPCM-SD-OC-141
+  area: itk
+  description: "when sending to the primary recipient (the care provider expected to action the message) the <code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> ('For action') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take  action. <br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-142
+  area: itk
+  description: "when sending a copy message to the patient's registered GP practice the <code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FI</code> ('For information') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>\"For information\" in this case indicates that the recipient is not expected to take action but should attach the payload contents to the patient record.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-143
+  area: itk
+  description: "<code>BusAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 30001 to 30003.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-144
+  area: itk
+  description: "<code>InfAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 10001 to 20013.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-145
+  area: itk
+  description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the sender organisation.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-146
+  area: itk
+  description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-147
+  area: itk
+  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-OnlineConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-148
+  area: itk
+  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-149
+  area: itk
+  description: "<code>Source</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-150
+  area: itk
+  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK007C</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-151
+  area: itk
+  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the message was generated. (A separate process such as the MESH client may be responsible for sending the message at a later date/time.)"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-152
+  area: itk1
+  description: "<code>destination</code> and <code>receiver</code> <strong>MUST NOT</strong> be present. Rather, <a href=\"senddocument_oc_mesh.html\">MESH message routing</a> will be used to route message to registered GP practice by NHS Number, DOB and Surname"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-153
+  area: itk2
+  description: "<code>BusAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-154
+  area: itk2
+  description: "<code>InfAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-155
+  area: itk2
+  description: "<code>SenderReference</code> <strong>MUST</strong> contain the same unique identifier generated by GPCM-SD-042.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  page: senddocument_oc_itk3.html
+  
+- id: GPCM-SD-OC-156
+  area: itk2
+  description: "<code>Sender</code> <strong>MUST</strong> contain a reference to an <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle" 
+  page: senddocument_oc_itk3.html
+ 
+- id: GPCM-SD-OC-157
+  area: itk2
+  description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK008M</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"  
+  page: senddocument_oc_itk3.html
+
+- id: GPCM-SD-OC-158
+  area: itk2
+  description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
+  page: senddocument_oc_itk3.html
+
+#MESH requirements 
+- id: GPCM-SD-OC-159
+  area: mesh
+  description: "all messages sent through this use case to non-GP practice care providers <strong>MUST</strong> use the MESH API Address Lookup function to lookup the MESH mailbox ID of the receiving care provider. <br/><br/>Details of how to use Address Lookup can be found on the <a href=\"https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api#api-Endpoints-meshAddressLookup-0\">MESH API page</a>"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-160
+  area: mesh1
+  description: "each instance of a Online Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-161
+  area: mesh1
+  description: "each instance of an acknowledgement message generated as a result of receipt of a Online Consultation Report message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-162
+  area: mesh3
+  description: "<code>Mex-From</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-163
+  area: mesh3
+  description: "<code>Mex-To</code> <strong>MUST</strong> contain the MESH mailbox ID of the receiver of the message – in this case either the mailbox ID for the patient's registered GP practice, or chosen community pharmacy"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-164
+  area: mesh3
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-165
+  area: mesh2
+  description: "<code>From_DTS</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-166
+  area: mesh2
+  description: "<code>To_DTS</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_'. This enables automatic routing of the message to the registered GP MESH mailbox"
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-167
+  area: mesh2
+  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
+  page: senddocument_oc_mesh.html 
+  
+#Trigger requirements
+
+
+#Miscellaneous requirements  
+- id: "None"
+  area: na
+  description: "None applicable"
+  page:
+  
+- id: "GFR"
+  area: na
+  description: "Generic FHIR receiver"
+  page: 
+  
+- id: "ITK"
+  area: na
+  description: "ITK"
+  page: 

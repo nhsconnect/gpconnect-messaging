@@ -40,6 +40,74 @@ requirements:
   description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
   tooltip: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource MUST be present which conforms to the CareConnect-Practitioner-1 profile. This resource describes the primary practitioner who delivered care."
   page: senddocument_payload.html  
+<<<<<<< Updated upstream
+=======
+
+- id: GPCM-SD-006
+  area: senddocpayload
+  description: "where the message contains encounter information, a <code>Composition.encounter</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1\">CareConnect-Encounter-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html 
+
+- id: GPCM-SD-007
+  area: senddocpayload
+  description: "where the message contains observation information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1\">CareConnect-List-1</a> <strong>SHOULD</strong> be present. This resource lists all the observations present in the payload."
+  page: senddocument_payload.html 
+  
+- id: GPCM-SD-008
+  area: senddocpayload
+  description: "observations referenced in the the <code>CareConnect-GPC-List-1</code> <strong>SHOULD</strong> each populate a <code>Composition.section.entry</code> referencing an Observation resource which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1\">CareConnect-Observation-1</a> profile, describing each observation"
+  page: senddocument_payload.html 
+
+- id: GPCM-SD-009
+  area: senddocpayload
+  description: "where a message contains questionnaire information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1\">CareConnect-Questionnaire-1</a> <strong>SHOULD</strong> be present. This resource fully describes questionnaire being completed"
+  page: senddocument_payload.html 
+
+- id: GPCM-SD-010
+  area: senddocpayload
+  description: "where a message contains questionnaire response information, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1\">CareConnect-QuestionnaireResponse-1</a> <strong>SHOULD</strong> be present. This resource describes all the questions asked to the patient and all the responses given"
+  page: senddocument_payload.html 
+  
+- id: GPCM-SD-011
+  area: senddocpayload
+  description: "where a message contains a referral request, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1\">CareConnect-ReferralRequest-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+ 
+- id: GPCM-SD-012
+  area: senddocpayload
+  description: "where a message contains a document, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1\">CareConnect-DocumentReference-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-013
+  area: senddocpayload
+  description: "where a message contains an allergy or intolerance, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1\">CareConnect-AllergyIntolerance-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-014
+  area: senddocpayload
+  description: "where a message contains any family member history, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1\">CareConnect-FamilyMemberHistory-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-015
+  area: senddocpayload
+  description: "where a message contains a task, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1\">CareConnect-Task-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-016
+  area: senddocpayload
+  description: "where a message contains patient consent, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1\">CareConnect-Consent-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+
+- id: GPCM-SD-037
+  area: senddocpayload
+  description: "where a message contains a location, a <code>Composition.section.entry</code> referencing a <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1\">CareConnect-Location-1</a> <strong>SHOULD</strong> be present"
+  page: senddocument_payload.html
+  
+- id: GPCM-SD-017
+  area: senddocpayload
+  description: "all <code>meta</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
+  page: senddocument_payload.html
+>>>>>>> Stashed changes
   
 - id: GPCM-SD-108
   area: senddocpayload
