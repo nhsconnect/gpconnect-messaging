@@ -107,9 +107,6 @@ children:
   - title: Business requirements
     output: web
     children:
-    - title: Process map
-      url: /sendmessage_generic_process.html
-      output: web
     - title: User stories
       url: /senddocument_generic_userstories.html
       output: web
