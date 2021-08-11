@@ -15,3 +15,4 @@ Use cases covered in this version of the specification:
 
 1.  [Consultation Summary](senddocument_fedcon_overview.html) - supports sending a PDF summary of a patient encounter from a care organisation (GP, community nurse etc...) back to the patient's registered GP practice.
 2.  [Online Consultation](senddocument_oc_overview.html) - supports sending an online consultation back to the patient's registered GP practice, or to a patient selected alternative care provider. A PDF must be sent, but additional FHIR resources can be populated.
+3.  [Generic Send](senddocument_generic_overview.html) - supports sending generic documents in PDF format back to the patient's registered GP practice.
