@@ -3,20 +3,20 @@ title: User stories
 keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
-permalink: senddocument_userstories.html
-summary: "User stories for Consultation Summary"
+permalink: senddocument_oc_userstories.html
+summary: "User stories for Online Consultation Report"
 toc: true
 ---
 
 
 ## Purpose ##
 
-The purpose of this page is to document the user stories that apply to the Consultation Summary use case. To avoid duplication, links to the requirements within the specification have been provided where applicable.
+The purpose of this page is to document the user stories that apply to the Online Consultation Report use case. To avoid duplication, links to the requirements within the specification have been provided where applicable.
 
 ## User stories ##
 
 <div>
-{% assign stories = site.data.senddoc_user_stories | sort:'id' %}
+{% assign stories = site.data.oc_user_stories | sort:'id' %}
 {% for item in stories %}
 
 <h3> {{item.title}} </h3>

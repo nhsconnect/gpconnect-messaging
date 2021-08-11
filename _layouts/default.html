@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-{% seo %}
-{% include head.html %}
+    {% seo %}
+    {% include head.html %}
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -41,6 +39,17 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
     </script>
+	
+
+	<link rel="stylesheet" href="css/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>
+        $(document).ready(function(){
+		hljs.initHighlightingOnLoad();
+		});
+    </script>
+
+	
     {% if page.datatable == true %}
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
@@ -54,14 +63,10 @@
             );
     </script>
     {% endif %}
-	 <script>
-    var shiftWindow = function() { scrollBy(0, -50) };
-    window.addEventListener("hashchange", shiftWindow);
-    function load() { if (window.location.hash) shiftWindow(); }
-  </script>
-</head>
 
-<body onload="load()">
+	
+</head>
+<body>
 {% include topnav.html %}
 <!-- Page Content -->
 <div class="container">

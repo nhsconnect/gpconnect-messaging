@@ -4,7 +4,7 @@ keywords: document, mesh
 tags: [messaging, mesh, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_mesh.html
-summary: "Consultation - MESH configuration"
+summary: "MESH configuration"
 ---
 
 Please refer to [Integration to MESH](integration_mesh.html) for an introduction to the use of MESH for GP Connect Messaging use cases.

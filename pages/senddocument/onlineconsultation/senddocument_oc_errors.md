@@ -3,8 +3,8 @@ title: Error handling
 keywords: use-case, itk3, mesh
 tags: [use-case, itk3, mesh, send-document]
 sidebar: senddocument_sidebar
-permalink: senddocument_fedcon_errors.html
-summary: "Error handling details for the Consultation Summary Report use case"
+permalink: senddocument_oc_errors.html
+summary: "Error handling details for the Online Consultation Report use case"
 ---
 
 The following section describes error scenarios and associated error codes for this messaging use case.
@@ -12,7 +12,7 @@ The following section describes error scenarios and associated error codes for t
 ## ITK3 errors ##
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'error' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -25,7 +25,7 @@ The following section describes error scenarios and associated error codes for t
 ## Diagnostic information ##
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'error3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -40,7 +40,7 @@ The following section describes error scenarios and associated error codes for t
 The following table describes error codes returned from the MESH server as a result of issues encountered using the facility to [route a message automatically to the registered practice](integration_mesh.html#message-routing-to-registered-practice). 
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'error4' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -78,7 +78,7 @@ For example, where an invalid NHS Number has been supplied in the `Mex_To` HTTP 
 ``` 
 
 <table class="requirement-box">
-  {% for item in site.data.senddoc_requirements.requirements %}
+  {% for item in site.data.oc_requirements.requirements %}
   {% if item.area == 'error5' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
