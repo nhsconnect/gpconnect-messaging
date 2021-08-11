@@ -16,7 +16,7 @@ The purpose of this page is to document the user stories that apply to the Gener
 ## User stories ##
 
 <div>
-{% assign stories = site.data.oc_user_stories | sort:'id' %}
+{% assign stories = site.data.ge_user_stories | sort:'id' %}
 {% for item in stories %}
 
 <h3> {{item.title}} </h3>

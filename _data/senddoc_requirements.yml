@@ -40,8 +40,6 @@ requirements:
   description: "where the message contains practitioner information, for example as a result of a healthcare event, the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1\">CareConnect-Composition</a> <code>Composition.author</code> element <strong>MUST</strong> be present which conforms to the <a href=\"https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1\">CareConnect-Practitioner-1</a> profile. This resource describes the primary practitioner who delivered care."
   tooltip: "where the message contains practitioner information, for example as a result of a healthcare event, a practitioner resource MUST be present which conforms to the CareConnect-Practitioner-1 profile. This resource describes the primary practitioner who delivered care."
   page: senddocument_payload.html  
-<<<<<<< Updated upstream
-=======
 
 - id: GPCM-SD-006
   area: senddocpayload
@@ -107,7 +105,6 @@ requirements:
   area: senddocpayload
   description: "all <code>meta</code> elements <strong>MUST</strong> be treated as mandatory and populated with the associated resource"
   page: senddocument_payload.html
->>>>>>> Stashed changes
   
 - id: GPCM-SD-108
   area: senddocpayload

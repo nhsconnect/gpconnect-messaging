@@ -1,80 +1,90 @@
-entries:
-- title: GP Connect Messaging
-  product: Send Document
-  levels: one
-  folders:
+## definition of `menuitem`===========
+# title: string
+# url: string
+# output: [ enum{web, pdf} ] (expressed as comma separated string in YAML)
+# children?: [ menuitem ]
 
+## top level property=================
+# entries: [ menuitem ]
+
+title: Send Document
+product: Send Document
+children:
+
+- title: Overview
+  output: web, pdf
+  children:
+  - title: Introduction
+    url: /senddocument.html
+    output: web
+  - title: Message payload
+    url: /senddocument_payload.html
+    output: web
+  - title: Document replacement
+    url: /senddocument_fedcon_resend.html      
+    output: web
+  - title: Error handling
+    url: /senddocument_fedcon_errors.html      
+    output: web       
+  - title: Sitemap
+    url: /sitemap_send_document.html     
+    output: web       
+    
+- title: Use case - Consultation Summary
+  output: web  
+  children: 
   - title: Overview
-    output: web, pdf
-    folderitems:
+    url: /senddocument_fedcon_overview.html      
+    output: web
+  - title: Business requirements
+    output: web
+    children:
+    - title: Process map
+      url: /sendmessage_process.html
+      output: web
+    - title: User stories
+      url: /senddocument_userstories.html
+      output: web
+    - title: PDF layout
+      url: /senddocument_fedcon_busreq_pdf.html 
+      output: web
+    - title: Clinical engagement
+      url: /senddocument_fedcon_busreq_clinical.html 
+      output: web
+  - title: Payload requirements
+    url: /senddocument_fedcon_payload.html      
+    output: web    
+  - title: ITK3 header requirements
+    url: /senddocument_fedcon_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_fedcon_mesh.html      
+    output: web
+  - title: Triggering message creation
+    url: /senddocument_fedcon_trigger.html      
+    output: web
+  - title: Message example
+    url: /senddocument_fedcon_example.html      
+    output: web
 
-    - title: Introduction
-      url: /senddocument.html
+- title: Use case - Online Consultation
+  output: web  
+  children: 
+  - title: Overview
+    url: /senddocument_oc_overview.html      
+    output: web
+  - title: Business requirements
+    output: web
+    children:
+    - title: Process map
+      url: /sendmessage_oc_process.html
       output: web
-    - title: Message payload
-      url: /senddocument_payload.html
+    - title: User stories
+      url: /senddocument_oc_userstories.html
       output: web
-    - title: ITK3 header requirements
-      url: /senddocument_fedcon_itk3.html      
+    - title: Clinical engagement
+      url: /senddocument_oc_busreq_clinical.html 
       output: web
-    - title: MESH message configuration
-      url: /senddocument_fedcon_mesh.html      
-      output: web
-    - title: Document replacement
-      url: /senddocument_fedcon_resend.html      
-      output: web
-    - title: Error handling
-      url: /senddocument_fedcon_errors.html      
-      output: web       
-    - title: Sitemap
-      url: /sitemap_send_document.html     
-      output: web       
-      
-  - title: Use case - Consultation
-    output: web  
-    folderitems:
-      
-    - title: Overview
-      url: /senddocument_fedcon_overview.html      
-      output: web
-
-      subfolders:
-
-      - title: Business requirements
-        url: /senddocument_fedcon_busreq.html
-        output: web
-        subfolderitems:
-
-        - title: Process map
-          url: /sendmessage_process.html
-          output: web
-        - title: User stories
-          url: /senddocument_userstories.html
-          output: web
-        - title: Requirements list
-          url: /senddocument_fedcon_reqs.html
-          output: web
-        - title: PDF layout
-          url: /senddocument_fedcon_busreq_pdf.html 
-          output: web
-        - title: Clinical engagement
-          url: /senddocument_fedcon_busreq_clinical.html 
-          output: web
-
-    - title: Payload requirements
-      url: /senddocument_fedcon_payload.html      
-      output: web   
-      
-    - title: Triggering message creation
-      url: /senddocument_fedcon_trigger.html      
-      output: web
-<<<<<<< Updated upstream
-      
-    - title: Message example
-      url: /senddocument_fedcon_example.html      
-      output: web      
-          
-=======
   - title: Payload requirements
     url: /senddocument_oc_payload.html      
     output: web
@@ -87,7 +97,7 @@ entries:
   - title: Message example
     url: /senddocument_oc_example.html      
     output: web
-
+    
 - title: Use case - Generic Send
   output: web  
   children: 
@@ -117,5 +127,4 @@ entries:
     output: web    
   - title: Message example
     url: /senddocument_generic_example.html      
-    output: web        
->>>>>>> Stashed changes
+    output: web    
