@@ -150,16 +150,21 @@
                   <reference value="urn:uuid:e9ff6399-5bea-4ad0-b06d-77b55a88c40f" />
                 </entry>
               </section>
-              <!-- Observation List reference -->
-              <section>
-                <title value="Coded Observations List" />
-                <entry>
-                  <reference value="urn:uuid:1bca064d-499c-4806-8bf2-c1a5d825c883" />
-                </entry>
-              </section>
               <!-- Online Consultation report pdf attachment -->
               <section>
                 <title value="Online Consultation report" />
+                <entry>
+                  <reference value="urn:uuid:e9ff6399-5bea-4ad0-b06d-77b55a88c40f" />
+                </entry>
+              </section>
+			  <section>
+                <title value="Image 1" />
+                <entry>
+                  <reference value="urn:uuid:e9ff6399-5bea-4ad0-b06d-77b55a88c40f" />
+                </entry>
+              </section>
+			  <section>
+                <title value="Image 2" />
                 <entry>
                   <reference value="urn:uuid:e9ff6399-5bea-4ad0-b06d-77b55a88c40f" />
                 </entry>
@@ -199,63 +204,6 @@
                 <reference value="urn:uuid:6b550117-07d8-4788-a6b1-97e12a9929c2" />
               </performer>
             </Encounter>
-          </resource>
-        </entry>
-        <!-- Observation List -->
-        <entry>
-          <fullUrl value="urn:uuid:1bca064d-499c-4806-8bf2-c1a5d825c883" />
-          <resource>
-            <List>
-              <id value="1bca064d-499c-4806-8bf2-c1a5d825c883" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1" />
-              </meta>
-              <status value="current" />
-              <mode value="snapshot" />
-              <title value="Miscellaneous record" />
-              <code>
-                <coding>
-                  <system value="http://snomed.info/sct" />
-                  <code value="826501000000100" />
-                  <display value="Miscellaneous record" />
-                </coding>
-              </code>
-              <subject>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </subject>
-              <date value="2021-08-09T14:51:00+00:00" />
-              <orderedBy>
-                <coding>
-                  <system value="http://hl7.org/fhir/list-order" />
-                  <code value="event-date" />
-                </coding>
-              </orderedBy>
-              <entry>
-                <item>
-                  <reference value="urn:uuid:OC-Observation-1" />
-                </item>
-              </entry>
-              <entry>
-                <item>
-                  <reference value="urn:uuid:OC-Observation-2" />
-                </item>
-              </entry>
-              <entry>
-                <item>
-                  <reference value="urn:uuid:OC-Observation-3" />
-                </item>
-              </entry>
-              <entry>
-                <item>
-                  <reference value="urn:uuid:OC-Observation-4" />
-                </item>
-              </entry>
-              <entry>
-                <item>
-                  <reference value="urn:uuid:OC-Observation-5" />
-                </item>
-              </entry>
-            </List>
           </resource>
         </entry>
         <!-- =====Questionnaire Response report===== -->
@@ -392,234 +340,6 @@
                 </item>		
               </item>			  
             </QuestionnaireResponse>
-          </resource>
-        </entry>
-        <!-- =====Observation in list Payload Bundle===== -->
-        <entry>
-          <fullUrl value="urn:uuid:OC-Observation-1" />
-          <resource>
-            <Observation>
-              <id value="OC-Observation-1" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-              </meta>
-              <identifier>
-                <system value="https://tools.ietf.org/html/rfc4122" />
-                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
-              </identifier>
-              <status value="final" />
-              <category>
-                <coding>
-                  <system value="http://hl7.org/fhir/observation-category" />
-                  <code value="vital-signs" />
-                  <display value="Vital Signs" />
-                  <userSelected value="true" />
-                </coding>
-                <text value="Vital Signs" />
-              </category>
-              <code>
-                <coding>
-                  <system value="http://snomed.info/sct" />
-                  <code value="27113001" />
-                  <display value="Body weight" />
-                </coding>
-                <text value="Body weight" />
-              </code>
-              <subject>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </subject>
-              <effectiveDateTime value="2021-08-09T14:51:00+00:00" />
-              <issued value="2021-08-09T14:51:00+00:00" />
-              <valueQuantity>
-                <value value="85" />
-                <unit value="kg" />
-                <system value="http://unitsofmeasure.org" />
-                <code value="kg" />
-              </valueQuantity>
-              <performer>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </performer>
-            </Observation>
-          </resource>
-        </entry>
-        <!-- =====Observation in list Payload Bundle===== -->
-        <entry>
-          <fullUrl value="urn:uuid:OC-Observation-2" />
-          <resource>
-            <Observation>
-              <id value="OC-Observation-2" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-              </meta>
-              <identifier>
-                <system value="https://tools.ietf.org/html/rfc4122" />
-                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
-              </identifier>
-              <status value="final" />
-              <category>
-                <coding>
-                  <system value="http://hl7.org/fhir/observation-category" />
-                  <code value="vital-signs" />
-                  <display value="Vital Signs" />
-                  <userSelected value="true" />
-                </coding>
-                <text value="Vital Signs" />
-              </category>
-              <code>
-                <coding>
-                  <system value="http://snomed.info/sct" />
-                  <code value="364075005" />
-                  <display value="Heart rate" />
-                </coding>
-                <text value="Heart rate" />
-              </code>
-              <subject>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </subject>
-              <effectiveDateTime value="2021-08-09T14:51:00+00:00" />
-              <issued value="2021-08-09T14:51:00+00:00" />
-              <valueQuantity>
-                <value value="76" />
-                <unit value="{beats}/min" />
-                <system value="http://unitsofmeasure.org" />
-                <code value="{beats}/min" />
-              </valueQuantity>
-              <performer>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </performer>
-            </Observation>
-          </resource>
-        </entry>
-        <!-- =====Observation in list Payload Bundle===== -->
-        <entry>
-          <fullUrl value="urn:uuid:OC-Observation-3" />
-          <resource>
-            <Observation>
-              <id value="OC-Observation-3" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-              </meta>
-              <identifier>
-                <system value="https://tools.ietf.org/html/rfc4122" />
-                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
-              </identifier>
-              <status value="final" />
-              <category>
-                <coding>
-                  <system value="http://hl7.org/fhir/observation-category" />
-                  <code value="vital-signs" />
-                  <display value="Vital Signs" />
-                  <userSelected value="true" />
-                </coding>
-                <text value="Vital Signs" />
-              </category>
-              <code>
-                <coding>
-                  <system value="http://snomed.info/sct" />
-                  <code value="703421000" />
-                  <display value="Temperature" />
-                </coding>
-                <text value="Temperature" />
-              </code>
-              <subject>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </subject>
-              <effectiveDateTime value="2021-08-09T14:51:00+00:00" />
-              <issued value="2021-08-09T14:51:00+00:00" />
-              <valueQuantity>
-                <value value="36.9" />
-                <unit value="Cel" />
-                <system value="http://unitsofmeasure.org" />
-                <code value="Cel" />
-              </valueQuantity>
-              <performer>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </performer>
-            </Observation>
-          </resource>
-        </entry>
-        <!-- =====Observation in list Payload Bundle===== -->
-        <entry>
-          <fullUrl value="urn:uuid:OC-Observation-4" />
-          <resource>
-            <Observation>
-              <id value="OC-Observation-4" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-              </meta>
-              <identifier>
-                <system value="https://tools.ietf.org/html/rfc4122" />
-                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
-              </identifier>
-              <status value="final" />
-              <category>
-                <coding>
-                  <system value="http://hl7.org/fhir/observation-category" />
-                  <code value="survey" />
-                  <display value="Survey" />
-                  <userSelected value="true" />
-                </coding>
-                <text value="Survey" />
-              </category>
-              <code>
-                <coding>
-                  <system value="http://snomed.info/sct" />
-                  <code value="8392000" />
-                  <display value="Non-smoker" />
-                </coding>
-                <text value="Non-smoker" />
-              </code>
-              <subject>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </subject>
-              <effectiveDateTime value="2021-08-09T14:51:00+00:00" />
-              <issued value="2021-08-09T14:51:00+00:00" />
-              <performer>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </performer>
-            </Observation>
-          </resource>
-        </entry>
-        <!-- =====Observation in list Payload Bundle===== -->
-        <entry>
-          <fullUrl value="urn:uuid:OC-Observation-5" />
-          <resource>
-            <Observation>
-              <id value="OC-Observation-5" />
-              <meta>
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1" />
-              </meta>
-              <identifier>
-                <system value="https://tools.ietf.org/html/rfc4122" />
-                <value value="635230e2-6e87-11ea-bc55-0242ac130003" />
-              </identifier>
-              <status value="final" />
-              <category>
-                <coding>
-                  <system value="http://hl7.org/fhir/observation-category" />
-                  <code value="survey" />
-                  <display value="Survey" />
-                  <userSelected value="true" />
-                </coding>
-                <text value="Survey" />
-              </category>
-              <code>
-                <coding>
-                  <system value="http://snomed.info/sct" />
-                  <code value="716186003" />
-                  <display value="No known allergy" />
-                </coding>
-                <text value="No known allergy" />
-              </code>
-              <subject>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </subject>
-              <effectiveDateTime value="2021-08-09T14:51:00+00:00" />
-              <issued value="2021-08-09T14:51:00+00:00" />
-              <performer>
-                <reference value="urn:uuid:f5002228-b2a7-4d43-96ce-329762b2f120" />
-              </performer>
-            </Observation>
           </resource>
         </entry>
         <!-- =====Attachment consultation report===== -->
