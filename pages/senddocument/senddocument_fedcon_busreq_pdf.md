@@ -46,7 +46,7 @@ The following describe each of the fields used in the PDF:
 |	`Number of related documents`	|	The number of documents attached to the message - for example, pain point diagram, ECG, photo. These will be all documents recorded on the GP system that are linked to the consultation.	|
 |	`Page [x] of [y]`	|	The page number and total pages of the PDF.	|
 |	`Patient Name`	|	The surname, forename(s) and title of the patient. <br>Format all names in the document as follows:<br>`SURNAME <uppercase>, Forename(s), (Title)`<br>This may wrap over multiple lines depending on the length of the name.	|
-|	`DOB`	|	The date of birth of the patient in the format `DD-Mmm-YYYY	`.|
+|	`DOB`	|	The date of birth of the patient in the format `dd-MMM-yyyy	`.|
 |	`NHS No`	|	The NHS Number of the patient in the format `### ### ####`.	|
 |	`Tel No`	|	The patient's contact telephone number.<br> Format all telephone numbers in the document as follows:<br>`Area Code <space> Local Number [‘x’ Extension Number]` <br>For local numbers with more than six digits include a space before the final four digits.	|
 |	`Mobile No`	|	The patient's contact mobile telephone number	|
@@ -58,7 +58,7 @@ The following describe each of the fields used in the PDF:
 |	`Email`	|	The main email address of the organisation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Branch Location`	|	The name of the branch location, if applicable. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Organisation`	|	The name of the organisation and the town specified in its full address. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
-|	`Consultation Date`	|	The date and time of the patient's appointment at the sending organisation in the format `DD-Mmm-YYYY hh:mm`.	|
+|	`Consultation Date`	|	The date and time of the patient's appointment at the sending organisation in the format `dd-MMM-yyyy hh:mm`.	|
 |	`Receiving GP Practice`	|	The name of the GP practice receiving the consultation report.	|
 |	`Summary Reason`	|	A brief description of why the consultation report has been sent to the receiving GP practice entered into the [Summary Reason] section of the PDF document. The text <strong>MUST</strong> be `A patient recently consulted with a clinician at an organisation different to the GP practice that they are registered with. The notes contained in this document are a summary of the consultation`. | x |
 |	`Clinical note section title`	|	The title of the clinical section being displayed |
