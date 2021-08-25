@@ -18,7 +18,7 @@ The following table contains all the requirements associated with the Send Docum
 	<th>Link</th>
 	<th>Requirement description</th>
 </tr>	
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   <tr>
     <td><a href="{{item.page}}#{{item.id}}">{{item.id}}</a></td>
     <td>{{item.description}}</td>

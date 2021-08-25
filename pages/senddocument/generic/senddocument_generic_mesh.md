@@ -15,7 +15,7 @@ Please refer to [Integration to MESH](integration_mesh.html) for an introduction
 ## MESH API Address Lookup ##
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'mesh' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -28,7 +28,7 @@ Please refer to [Integration to MESH](integration_mesh.html) for an introduction
 ## Workflow groups and Workflow ID ##
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'mesh1' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -43,7 +43,7 @@ Please refer to [Integration to MESH](integration_mesh.html) for an introduction
 When using the [MESH API](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api) the [Send Message API call](https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api#api-Endpoints-sendMessage-0) will be used by a sending organisation API client to send a message to the MESH server. MESH metadata items are defined in HTTP header fields as described below:
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'mesh3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

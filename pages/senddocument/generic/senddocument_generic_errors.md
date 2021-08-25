@@ -12,7 +12,7 @@ The following section describes error scenarios and associated error codes for t
 ## ITK3 errors ##
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'error' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -25,7 +25,7 @@ The following section describes error scenarios and associated error codes for t
 ## Diagnostic information ##
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'error3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -40,7 +40,7 @@ The following section describes error scenarios and associated error codes for t
 The following table describes error codes returned from the MESH server as a result of issues encountered using the facility to [route a message automatically to the registered practice](integration_mesh.html#message-routing-to-registered-practice). 
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'error4' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
