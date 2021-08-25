@@ -58,7 +58,7 @@ When using the [MESH API](https://digital.nhs.uk/developer/api-catalogue/message
 When using the MESH client to send a message to the MESH server, the `.CTL` file will contain the following metadata about the message:
 
 <table class="requirement-box">
-  {% for item in site.data.oc_requirements.requirements %}
+  {% for item in site.data.ge_requirements.requirements %}
   {% if item.area == 'mesh2' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -79,7 +79,7 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 <From_DTS>GP0001</From_DTS>
 <To_DTS>GPPROVIDER_1234567890_09011955_Smith</To_DTS>
 <Subject>Online consultation report for patient Mr Richard Smith , NHS Number 1234567890, GP0001</Subject>
-<LocalId></LocalId>
+<LocalId>GP0001</LocalId>
 <DTSId></DTSId>
 <PartnerId></PartnerId>
 <Compress>Y</Compress>
