@@ -56,13 +56,13 @@ The following describe each of the fields used in the PDF:
 |	`Clinician`	|	The full name and role of the treating clinician for the consultation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Tel No`	|	The main telephone number of the organisation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Email`	|	The main email address of the organisation. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
-|	`Branch Location`	|	The name of the branch location, if applicable. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
+|	`Branch Location`	|	The name of the branch location, if applicable. Where the consultation has been set to confidential the data from the consultation is not displayed. If Branch Location is not applicable then the label will not be shown.	| x |
 |	`Organisation`	|	The name of the organisation and the town specified in its full address. Where the consultation has been set to confidential the data from the consultation is not displayed.	| x |
 |	`Consultation Date`	|	The date and time of the patient's appointment at the sending organisation in the format `dd-MMM-yyyy hh:mm`.	|
 |	`Receiving GP Practice`	|	The name of the GP practice receiving the consultation report.	|
 |	`Summary Reason`	|	A brief description of why the consultation report has been sent to the receiving GP practice entered into the [Summary Reason] section of the PDF document. The text <strong>MUST</strong> be `A patient recently consulted with a clinician at an organisation different to the GP practice that they are registered with. The notes contained in this document are a summary of the consultation`. | x |
 |	`Clinical note section title`	|	The title of the clinical section being displayed |
 |	`[notes]`	|	All data entered by the clinician at the sending organisation into the '[notes]' section of the PDF document. This includes all free text, clinical/SNOMED CT codes, dm+d codes and any other data entered relating to the consultation. This data must be displayed in a format that matches how the consultation is displayed on screen or when printed. Each section must have a title in bold text. There must be a carriage return after each section to make the document more easy to read. Where the entire consultation has been set to confidential the data from the consultation is not displayed. It is replaced by the text `The details of this consultation have been set as confidential`. Where individual items in the consultation have been set to confidential those items are not displayed and replaced by the text `Confidential item`. | x |
-|	`Follow-up Actions`	|	Any follow-up actions identified during the encounter entered into the [actions] section of the PDF document. | x |
+|	`Follow-up Actions`	|	A duplicate of any follow-up actions identified during the encounter entered into the [actions] section of the PDF document. | x |
 
 
