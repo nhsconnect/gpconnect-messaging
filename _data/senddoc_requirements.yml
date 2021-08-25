@@ -345,8 +345,8 @@ requirements:
   
 - id: GPCM-SD-CS-023
   area: payload1
-  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*, Version {Version Number}</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as restricted/confidential"
-  tooltip: "'text' MUST contain a summary of request in the following format: Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}"
+  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*, Version {Version Number}</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as restricted/confidential"
+  tooltip: "'text' MUST contain a summary of request in the following format: Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}, Version {Version Number}"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-CS-024
@@ -387,8 +387,8 @@ requirements:
 
 - id: GPCM-SD-CS-030
   area: payload3
-  description: "when displaying the Consultation Report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
-  tooltip: "when displaying the Consultation Report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "when displaying the Consultation Report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  tooltip: "when displaying the Consultation Report in the practice workflow/task list, the message receiver MUST display the Subject contained in the MESH .CTL file: 'Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_payload.html
 
 - id: GPCM-SD-CS-031
@@ -599,8 +599,8 @@ requirements:
 
 - id: GPCM-SD-CS-065
   area: mesh2
-  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
-  tooltip: "'Subject' MUST contain 'To 'text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  tooltip: "'Subject' MUST contain 'To 'text in the following format: 'Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-CS-079
@@ -623,8 +623,8 @@ requirements:
 
 - id: GPCM-SD-CS-068
   area: mesh3
-  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
-  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}</code>"
+  tooltip: "'Mex-Subject' MUST contain 'To' text in the following format: 'Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}, ODS Code {ODS Code}'"
   page: senddocument_fedcon_mesh.html
 
 - id: GPCM-SD-CS-080
