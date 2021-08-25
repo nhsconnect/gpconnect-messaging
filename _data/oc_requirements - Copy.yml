@@ -33,7 +33,7 @@ requirements:
   
 - id: GPCM-SD-OC-007
   area: payload_comp_pop
-  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, Version {Version Number}</code>"
+  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, Version {Version Number}</code>"
   page: senddocument_oc_payload.html
 
 - id: GPCM-SD-OC-008
@@ -70,7 +70,7 @@ requirements:
 
 - id: GPCM-SD-OC-014
   area: payload_additional
-  description: "when displaying the Consultation Report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name}, NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
+  description: "when displaying the Consultation Report in the practice workflow/task list, the <em>message receiver</em> <strong>MUST</strong> display the Subject contained in the MESH .CTL file:<br/> <code>Consultation report for {Patient Name} , NHS Number {NHS Number}, seen at {Practice Name}*, ODS Code {ODS Code}*</code><br /> * these items <strong>MUST NOT</strong> be displayed if the consultation has been flagged as confidential"
   page: senddocument_oc_payload.html
 
 - id: GPCM-SD-OC-015
@@ -886,14 +886,8 @@ requirements:
 
 - id: GPCM-SD-OC-164
   area: mesh3
-  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_oc_mesh.html
-
-- id: GPCM-SD-OC-169
-  area: mesh3
-  description: "<code>Mex-Localid</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
-  tooltip: "'Mex-Localid' MUST contain the ODS code of the sending organisation"
-  page: senddocument_oc_mesh.html  
 
 - id: GPCM-SD-OC-165
   area: mesh2
@@ -907,14 +901,8 @@ requirements:
 
 - id: GPCM-SD-OC-167
   area: mesh2
-  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
-  page: senddocument_oc_mesh.html
-
-- id: GPCM-SD-OC-168
-  area: mesh2
-  description: "<code>LocalID</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
-  tooltip: "'LocalID' MUST contain the ODS code of the sending organisation"
-  page: senddocument_oc_mesh.html
+  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
+  page: senddocument_oc_mesh.html 
   
 #Trigger requirements
 
