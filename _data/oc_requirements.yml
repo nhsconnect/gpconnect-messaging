@@ -889,6 +889,12 @@ requirements:
   description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_oc_mesh.html
 
+- id: GPCM-SD-OC-169
+  area: mesh3
+  description: "<code>Mex-Localid</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
+  tooltip: "'Mex-Localid' MUST contain the ODS code of the sending organisation"
+  page: senddocument_fedcon_mesh.html  
+
 - id: GPCM-SD-OC-165
   area: mesh2
   description: "<code>From_DTS</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
@@ -902,7 +908,13 @@ requirements:
 - id: GPCM-SD-OC-167
   area: mesh2
   description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name} , NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
-  page: senddocument_oc_mesh.html 
+  page: senddocument_oc_mesh.html
+
+- id: GPCM-SD-OC-168
+  area: mesh2
+  description: "<code>LocalID</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
+  tooltip: "'LocalID' MUST contain the ODS code of the sending organisation"
+  page: senddocument_fedcon_mesh.html
   
 #Trigger requirements
 
