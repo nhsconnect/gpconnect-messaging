@@ -33,7 +33,7 @@ requirements:
   
 - id: GPCM-SD-GE-007
   area: payload_comp_pop
-  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, Version {Version Number}</code>"
+  description: "<code>Composition.text</code> <strong>MUST</strong> contain a summary of request in the following format:<br/> <code>{name of report} report for {Patient Name}, NHS Number {NHS Number}, Version {Version Number}</code>"
   page: senddocument_generic_payload.html
 
 - id: GPCM-SD-GE-008
@@ -1516,7 +1516,7 @@ requirements:
 
 - id: GPCM-SD-GE-164
   area: mesh3
-  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
+  description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>{name of report} report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_generic_mesh.html
   
 - id: GPCM-SD-GE-169
@@ -1537,7 +1537,7 @@ requirements:
 
 - id: GPCM-SD-GE-167
   area: mesh2
-  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
+  description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>{name of report} report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_generic_mesh.html
   
 - id: GPCM-SD-GE-168
