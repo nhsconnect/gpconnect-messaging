@@ -37,6 +37,12 @@
               <display value="For Action" />
             </valueCoding>
           </extension>
+		  <!-- Message payload definition for GP Connect -->
+          <extension url="MessageDefinition">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1" />
+            </valueReference>
+          </extension>
           <!-- Sender Reference - unique identifier of consultation -->
           <extension url="SenderReference">
             <valueString value="846ebe66-5ff8-4499-bc57-a112d3d0daa3" />
@@ -195,9 +201,6 @@
                 <start value="2021-04-29T10:35:00+00:00" />
                 <end value="2021-04-29T10:35:00+00:00" />
               </period>
-              <performer>
-                <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
-              </performer>
             </Encounter>
           </resource>
         </entry>
@@ -267,7 +270,7 @@
               <meta>
                 <versionId value="1" />
                 <lastUpdated value="2021-04-29T10:35:00+00:00" />
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Careconnect-QuestionnaireResponse-1" />
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1" />
                 <tag>
                   <code value="Test questionnaire" />
                 </tag>

@@ -35,6 +35,12 @@
               <display value="For Action" />
             </valueCoding>
           </extension>
+		  <!-- Message payload definition for GP Connect -->
+          <extension url="MessageDefinition">
+            <valueReference>
+              <reference value="https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1" />
+            </valueReference>
+          </extension>
           <!-- Sender Reference - unique identifier of consultation -->
           <extension url="SenderReference">
             <valueString value="affb3cf2-a710-4f74-a19a-ba8bd59cbfd3" />
@@ -193,9 +199,6 @@
                 <start value="2021-08-09T14:51:00+00:00" />
                 <end value="2021-08-09T14:51:00+00:00" />
               </period>
-              <performer>
-                <reference value="urn:uuid:6b550117-07d8-4788-a6b1-97e12a9929c2" />
-              </performer>
             </Encounter>
           </resource>
         </entry>
@@ -208,7 +211,7 @@
               <meta>
                 <versionId value="1" />
                 <lastUpdated value="2021-08-09T14:51:00+00:00" />
-                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/Careconnect-QuestionnaireResponse-1" />
+                <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1" />
                 <tag>
                   <code value="Test consent form" />
                 </tag>
@@ -250,13 +253,6 @@
                 <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1" />
               </meta>
               <status value="active" />
-              <scope>
-                <coding>
-                  <system value="http://terminology.hl7.org/CodeSystem/consentscope" />
-                  <code value="patient-privacy" />
-                  <display value="Privacy Consent" />
-                </coding>
-              </scope>
               <category>
                 <coding>
                   <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
@@ -268,15 +264,9 @@
 			    <reference value="urn:uuid:31686b67-9f20-4644-9a54-193d2f91de11" />
 			  </patient>
 			  <dateTime value="2021-08-09T14:51:00+00:00" />
-			  <performer>
-			    <reference value="urn:uuid:d0269177-3edc-468b-9f70-971189158bcb" />
-			  </performer>
 			  <organization>
 			    <reference value="urn:uuid:ab71659b-8b8d-43df-b6ba-7f755e9dca64" />
 			  </organization>
-			  <source>
-			    <reference value="urn:uuid:e9ff6399-5bea-4ad0-b06d-77b55a88c40f" />
-			  </source>
 			  <policy>
 			    <authority value="https://www.exampleauthority.nhs.uk" />
 			    <uri value="https://www.exampleauthority.nhs.uk/policies/xxxxxxxxxxx" />
