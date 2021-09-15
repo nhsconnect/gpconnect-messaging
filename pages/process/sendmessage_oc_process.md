@@ -101,7 +101,7 @@ Send Document - Online Consultation Report - Process flow 2  (OC auto triage to
 
 ![Online Consultation Report process map](images/senddocument/oc_process_2.png "Online Consultation Report process flow 2")
 
-<a href="images/senddocument/oc_process_1.png" target="_blank">Open process flow 2 in new tab</a>
+<a href="images/senddocument/oc_process_2.png" target="_blank">Open process flow 2 in new tab</a>
 
 #### Steps ####
 
@@ -134,7 +134,7 @@ Send Document - Online Consultation Report - Process flow 3  (Manual triage to
 
 ![Online Consultation Report process map](images/senddocument/oc_process_3.png "Online Consultation Report process flow 3")
 
-<a href="images/senddocument/oc_process_1.png" target="_blank">Open process flow 3 in new tab</a>
+<a href="images/senddocument/oc_process_3.png" target="_blank">Open process flow 3 in new tab</a>
 
 #### Steps ####
 
