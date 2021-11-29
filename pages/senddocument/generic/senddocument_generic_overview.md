@@ -4,7 +4,7 @@ keywords: document, use-case
 tags: [mesh, itk3, use-case, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_generic_overview.html
-summary: "Overview of the use case to send an Online Consultation Report to a care provider"
+summary: "Overview of a potential use of the generic payload"
 ---
 
 ## Introduction ##

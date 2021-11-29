@@ -104,15 +104,9 @@ children:
   - title: Overview
     url: /senddocument_generic_overview.html      
     output: web
-  - title: Business requirements
+  - title: User stories
+    url: /senddocument_generic_busreq.html      
     output: web
-    children:
-    - title: User stories
-      url: /senddocument_generic_userstories.html
-      output: web
-    - title: Clinical engagement
-      url: /senddocument_generic_busreq_clinical.html 
-      output: web
   - title: Payload requirements
     url: /senddocument_generic_payload.html      
     output: web  
