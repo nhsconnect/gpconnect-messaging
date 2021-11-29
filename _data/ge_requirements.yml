@@ -770,154 +770,154 @@ requirements:
 
 #Medication resource requirements
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-147
   area: payload_medication_pop
   description: "the <code>code</code> element <strong>MUST</strong> contain the code that identifies the medication or medical device. A SNOMED dm+d code <strong>MUST</strong> be supplied, if available."
   page: senddocument_generic_payload.html
 
 #MedicationRequest resource requirements 
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-148
   area: payload_medication_req_pop
   description: "the <code>extension[repeatInformation]</code> element <strong>SHOULD</strong> contain the extension elements to hold details of repeat authorisation. Only populate for a <code>MedicationRequest</code> with an <code>intent</code> = <code>plan</code>. For a <code>MedicationRequest</code> with an <code>intent</code> = <code>order</code> none of the repeatInformation fields are populated."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-149
   area: payload_medication_req_pop
   description: "the <code>extension[repeatInformation].numberOfRepeatPrescriptionsAllowed</code> element <strong>SHOULD</strong> contain the number of repeat issues authorised if specified. <strong>MUST</strong> be present where a repeat is authorised for a defined number of issues. <strong>MUST NOT</strong> be specified for acute prescriptions or where the number of repeat issues has not been defined. There is no concept of an initial dispense in GP Connect usage. Therefore, the <code>numberOfRepeats</code> allowed is the total number of allowed issues."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-150
   area: payload_medication_req_pop
   description: "the <code>extension[repeatInformation].numberOfRepeatPrescriptionsIssued</code> element <strong>SHOULD</strong> contain the running total of number of issues made against a repeat authorisation. <strong>MUST</strong> be zero, if not yet issued."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-151
   area: payload_medication_req_pop
   description: "the <code>extension[repeatInformation].authorisationExpiryDate</code> element <strong>SHOULD</strong> contain the date a repeat prescription authorisation will expire. Only populate for a <code>MedicationRequest</code> with an <code>intent</code> = <code>plan</code>. For a <code>MedicationRequest</code> with an <code>intent</code> = <code>order</code> this is not populated."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-152
   area: payload_medication_req_pop
   description: "the <code>extension[statusReason]</code> element <strong>SHOULD</strong> contain a reason why a medication/medical device has been stopped (status == ‘stopped’), the reason is provided in the <code>statusReason</code> extension. This is mandatory for authorisations with stopped status. Only populate for a <code>MedicationRequest</code> with an <code>intent</code> = <code>plan</code>. Do not populate for a <code>MedicationRequest</code> with an <code>intent</code> = <code>order</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-153
   area: payload_medication_req_pop
   description: "the <code>extension[statusReason].date</code> element <strong>MUST</strong> contain a the dateTime the medication/medical device was stopped/discontinued. This is mandatory for stopped/discontinued medications/medical devices as the date will always be known. In exceptional cases where for legacy data there is no statusReason recorder in the system then this <strong>MUST</strong> be populated with the text ‘No information available’."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-154
   area: payload_medication_req_pop
   description: "the <code>extension[statusReason].reason</code> element <strong>SHOULD</strong> contain the textual reason either free text or the term of a code for stopping/discontinuing the medication/medical device. <strong>MUST</strong> be populated when <code>StatusReason.date</code> is populated."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-155
   area: payload_medication_req_pop
   description: "the <code>extension[prescriptionType]</code> element <strong>MUST</strong> contain if a medication/medical device is an acute, acute-handwritten, delayed acute, repeat or repeat dispense. This field provides an explicit repeat/acute flag rather than deriving it from presence of extension elements or repeatNumber. In exceptional cases where for legacy data there is no prescriptionType recorded in the system then this <strong>MUST</strong> be populated with the text ‘No information available’."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-156
   area: payload_medication_req_pop
   description: "the <code>identifier</code> element <strong>MUST</strong> be populated with a globally unique and persistent identifier (that is, it doesn’t change between requests and therefore stored with the source data). This <strong>MUST</strong> be scoped by a provider specific namespace for the identifier. Where consuming systems are integrating data from this resource to their local system, they <strong>MUST</strong> also persist this identifier at the same time."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-157
   area: payload_medication_req_pop
   description: "the <code>basedOn</code> element <strong>SHOULD</strong> be used to create the links between MedicationRequest profiles to represent the medication ordering process as described here. This <strong>MUST</strong> be used when a profile has an intent element that is set to order and is basedOn a MedicationRequest profile that has an intent set to plan. <strong>DO NOT USE</strong> for authorisations - that is, for a MedicationRequest with intent of plan."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-158
   area: payload_medication_req_pop
   description: "the <code>groupIdentifier</code> element <strong>SHOULD</strong> identify the composite request this is part of. The element in the Identifier data type that <strong>MUST</strong> be populated when a groupIdentifier is populated is <code>identifier.value</code>. All repeat prescribed and repeat dispensed medications <strong>MUST</strong> have a group identifier that is populated for the ‘plan’ and all ‘orders’ relating to them."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-159
   area: payload_medication_req_pop
   description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of either <code>active</code>, <code>completed</code> or <code>stopped</code>. <code>active</code> represents an active authorisation - used for active repeat medications/medical devices. <code>stopped</code> represents an authorisation which has been discontinued, cancelled or stopped. <code>completed</code> represents an authorisation which has run its course. For repeat and repeat dispensed the status refers to the status of the plan (the entire cycle of prescriptions). For acute, the status refers to the status of the prescription issue."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-160
   area: payload_medication_req_pop
   description: "the <code>intent</code> element <strong>MUST</strong> contain a fixed value of <code>plan</code> or <code>order</code> to distinguish between authorisations and issues. <code>plan</code> represents an authorisation of a medication or medical device. <code>order</code> represents a prescription or issue of a medication or medical device."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-161
   area: payload_medication_req_pop
   description: "the <code>medication</code> element <strong>MUST</strong> reference the medication/medical device the authorisation is for."
   page: senddocument_generic_payload.html 
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-162
   area: payload_medication_req_pop
   description: "the <code>subject</code> element <strong>MUST</strong> reference who the medication/medical device is for - that is, to whom it will be administered."
   page: senddocument_generic_payload.html   
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-163
   area: payload_medication_req_pop
   description: "the <code>context</code> element <strong>SHOULD</strong> contain the consultation when the medication/medical device was authorised. For a <code>MedicationRequest</code> with an <code>intent</code> = <code>plan</code> this is the consultation where the plan was authorised. For a <code>MedicationRequest</code> with an <code>intent</code> = <code>order</code> this is the consultation where the specific issue was authorised."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-164
   area: payload_medication_req_pop
   description: "the <code>authoredOn</code> element <strong>MUST</strong> contain the authorisation date, when the medication/medical device was authorised. Unless there is a distinct user-modifiable date and time for the authorisation, this is the audit trail dateTime for when the authorisation was entered."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-165
   area: payload_medication_req_pop
   description: "the <code>requester</code> element <strong>SHOULD</strong> contain the person and their organization requesting authorisation for prescription."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-166
   area: payload_medication_req_pop
   description: "the <code>recorder</code> element <strong>MUST</strong> reference the responsible Practitioner who authorised the medication/medical device."
   page: senddocument_generic_payload.html    
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-167
   area: payload_medication_req_pop
   description: "the <code>note</code> element <strong>SHOULD</strong> contain all notes that are associated with this medication/medical device record."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-168
   area: payload_medication_req_pop
   description: "the <code>dosageInstruction</code> element <strong>MUST</strong> contain the elements of the dosage datatype as detailed below. All other elements that are part of the dosage datatype are optional."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-169
   area: payload_medication_req_pop
   description: "the <code>dosageInstruction.text</code> element <strong>MUST</strong> contain complete dosage instructions as text. In exceptional cases where for legacy data there is no dosage information recorded in the system then this <strong>MUST</strong> be populated with the text ‘No information available’."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-170
   area: payload_medication_req_pop
   description: "the <code>dosageInstruction.patientInstruction</code> element <strong>SHOULD</strong> contain any additional instructions for the patient - that is, RHS of prescription label."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-171
   area: payload_medication_req_pop
   description: "the <code>dispenseRequest.validityPeriod</code> element <strong>MUST</strong> contain prescription start and end dates. Start date is mandatory. Where there is a defined expiry or end date the end date <strong>MUST</strong> be supplied."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-172
   area: payload_medication_req_pop
   description: "the <code>dispenseRequest.quantity</code> element <strong>SHOULD</strong> contain the quantity to dispense. If the value is text, then the extension <code>dispenseRequest.quantityText</code> <strong>MUST</strong> be used."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-173
   area: payload_medication_req_pop
   description: "the <code>dispenseRequest.quantityText</code> element <strong>SHOULD</strong> contain the units relating to the quantity. For example, ‘tablet(s)’, ‘capsule(s)’ or ‘dose(s)’. It may also be a textual representation of quantity. Only to be used in this way if there is no numerical value."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-174
   area: payload_medication_req_pop
   description: "the <code>dispenseRequest.expectedSupplyDuration</code> element <strong>SHOULD</strong> contain the number of days supply per dispense."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-175
   area: payload_medication_req_pop
   description: "the <code>dispenseRequest.performer</code> element <strong>SHOULD</strong> contain the organisation that dispensed the issue. Can only be completed where the provider organisation knows explicitly which organisation dispensed the issue. It cannot be assumed to be the nominated pharmacy or appliance supplier. Only populate for a <code>medicationRequest</code> with an <code>intent</code> = <code>order</code>. For a <code>medicationRequest</code> with an <code>intent</code> = <code>plan</code> this field is not populated."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-176
   area: payload_medication_req_pop
   description: "the <code>priorPrescription</code> element <strong>SHOULD</strong> reference the prior prescription authorisation. May be used, for example, to reference prior authorisation where prescription is re-authorised or where amendments have been made. May reference the previous authorisation before the amendment."
   page: senddocument_generic_payload.html
@@ -925,72 +925,72 @@ requirements:
 
 #MediationStatement resource requirements 
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-177
   area: payload_medication_statement_pop
   description: "the <code>extension[lastIssueDate]</code> element <strong>SHOULD</strong> contain the date when the latest prescription under this plan was issued. This will not be populated where the Medication/Medical Device is Repeat Dispensed or Prescribed Elsewhere as these do not have issue information recorded in the GP system."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-178
   area: payload_medication_statement_pop
   description: "the <code>extension[prescribingAgency]</code> element <strong>MUST</strong> contain details of the care setting in which the medication or medical device was prescribed."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-179
   area: payload_medication_statement_pop
   description: "the <code>extension[dosagelastchanged]</code> element <strong>SHOULD</strong> contain the date when the dosage instructions were last changed. This should only be populated where the dosage instructions have been changed during the lifetime of the Medication/Medical Device plan."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-180
   area: payload_medication_statement_pop
   description: "the <code>basedOn</code> element <strong>MUST</strong> reference the MedicationRequest that this MedicationStatement is based on. Every MedicationStatement  <strong>MUST</strong> be based on a <code>MedicationRequest</code> with <code>intent</code> set to <code>plan</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-181
   area: payload_medication_statement_pop
   description: "the <code>context</code> element <strong>SHOULD</strong> reference the Encounter within which the medication/medical device was authorised."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-182
   area: payload_medication_statement_pop
   description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of either <code>active</code>, <code>completed</code> or <code>stopped</code>. <code>active</code> represents an active authorisation - used for active repeat medications/medical devices. <code>stopped</code> represents an authorisation which has been discontinued, cancelled or stopped. <code>completed</code> represents an authorisation which has run its course. For repeat and repeat dispensed the status refers to the status of the plan (the entire cycle of prescriptions). For acute, the status refers to the status of the prescription issue."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-183
   area: payload_medication_statement_pop
   description: "the <code>medicationReference</code> element <strong>MUST</strong> reference the medication/medical device the authorisation is for."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-184
   area: payload_medication_statement_pop
   description: "the <code>effective</code> element <strong>MUST</strong> contain the period the medication or medical device is authorised under this medication/medical device plan. For items that are repeats and repeat dispensed this refers to the entire cycle of prescriptions made under the authorisation. For acutes, this refers to the period of the prescription issue."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-185
   area: payload_medication_statement_pop
   description: "the <code>dateAsserted</code> element <strong>MUST</strong> contain when this medication statement was believed true. Unless there is a distinct user-modifiable availability date/time for the authorisation, this is the audit trail date/time for when the authorisation was entered."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-186
   area: payload_medication_statement_pop
   description: "the <code>subject</code> element <strong>MUST</strong> reference the patient who the medication/medical device is for - that is, to whom it will be administered."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-187
   area: payload_medication_statement_pop
   description: "the <code>taken</code> element contains whether a medication/medical device was taken, and <strong>MUST</strong> contain a default value of <code>unk</code> – unknown."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-188
   area: payload_medication_statement_pop
   description: "the <code>note</code> element <strong>SHOULD</strong> contain all notes that are associated with this medication/medical device record."
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-189
   area: payload_medication_statement_pop
   description: "the <code>dosage.text</code> element <strong>MUST</strong> contain the complete dosage instructions as text."
   page: senddocument_generic_payload.html 
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-190
   area: payload_medication_statement_pop
   description: "the <code>dosage.patientInstruction</code> element <strong>SHOULD</strong> contain any additional instructions for patient - that is, RHS of prescription label."
   page: senddocument_generic_payload.html 
@@ -998,152 +998,152 @@ requirements:
 
 #Immunization resource requirements 
 
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-191
   area: payload_immunization_pop
   description: "the <code>extension[parentPresent]</code> element <strong>SHOULD</strong> contain an indicator to whether a parent was present at the immunisation."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-192
   area: payload_immunization_pop
   description: "the <code>extension[recordedDate]</code> element <strong>MUST</strong> contain the date the immunisation record (given or not given) was entered on the sending system"
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-193
   area: payload_immunization_pop
   description: "the <code>extension[vaccinationProcedure]</code> element <strong>MUST</strong> contain the procedure code describing the vaccine that was administered or was intended to be administered."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-194
   area: payload_immunization_pop
   description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>completed</code>."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-195
   area: payload_immunization_pop
   description: "the <code>notGiven</code> element <code>MUST</code> have Value of <code>false</code> for vaccinations which have been given (or reported as given), or a value of <code>true</code> for vaccinations which were intended but not given."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-196
   area: payload_immunization_pop
   description: "the <code>vaccineCode</code> element <strong>MUST</strong> contain the vaccine product administered or intended to be administered."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-197
   area: payload_immunization_pop
   description: "the <code>patient</code> element <strong>MUST</strong> reference the patient due to be immunised."
   page: senddocument_generic_payload.html    
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-198
   area: payload_immunization_pop
   description: "the <code>encounter</code> element <strong>SHOULD</strong> reference the consultation within which this immunisation record was captured. This may represent when the vaccination was administered, intended to be administered or when the registered practice was informed of an immunisation administered elsewhere."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-199
   area: payload_immunization_pop
   description: "the <code>date</code> element <strong>SHOULD</strong> contain a date (and time if applicable) when the immunization was administered or intended to be administered. If the immunisation was administered elsewhere, this may be an estimated or partial date."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-200
   area: payload_immunization_pop
   description: "the <code>primarySource</code> element indicates whether the record is based on information from the person who administered or intended to administer the vaccine. This <strong>MUST</strong> be <code>true</code> where the immunisation record was recorded by the person who administered the vaccine or directly on behalf of the administrator of the vaccine (this includes recording the immunisation based on a complete, original, verifiable document from the administration of the vaccine). This <strong>MUST</strong> be <code>false</code> where it is a secondary report of a vaccination for example the recollection of the patient, the patient’s parent, carer or guardian or a secondary document."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-201
   area: payload_immunization_pop
   description: "the <code>reportOrigin</code> element indicates the source of a secondary reported record. This provides additional context to the source of the immunisation record where it is not based on information from the person who administered the vaccine. The <code>reportOrigin</code> element can be absent if the record is <strong>NOT</strong> from a primary source, but the origin of the record is otherwise not recorded/known. This <strong>MUST</strong> be absent where primarySource is <code>true</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-202
   area: payload_immunization_pop
   description: "the <code>location</code> element <strong>SHOULD</strong> reference the GP practice, branch surgery or other location where the vaccination occurred or was intended to occur, if known."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-203
   area: payload_immunization_pop
   description: "the <code>manufacturer</code> element <strong>SHOULD</strong> reference the manufacturer of the vaccine."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-204
   area: payload_immunization_pop
   description: "the <code>lotNumber</code> element <strong>SHOULD</strong> contain the batch number of the vaccine."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-205
   area: payload_immunization_pop
   description: "the <code>expirationDate</code> element <strong>SHOULD</strong> contain the expiry date of the batch the vaccine is from."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-206
   area: payload_immunization_pop
   description: "the <code>site</code> element <strong>SHOULD</strong> contain the site on the body where the vaccine was administered. This <strong>MUST</strong> be absent for an intended vaccination which was not given."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-207
   area: payload_immunization_pop
   description: "the <code>route</code> element <strong>SHOULD</strong> contain the route through which the vaccine entered the body. This <strong>MUST</strong> be absent for an intended vaccination which was not given."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-208
   area: payload_immunization_pop
   description: "the <code>doseQuantity</code> element <strong>SHOULD</strong> contain the amount of the vaccine administered. This <strong>MUST</strong> be absent for an intended vaccination which was not given."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-209
   area: payload_immunization_pop
   description: "the <code>practitioner</code> element <strong>SHOULD</strong> reference the person who recorded the vaccine as having been administered (or reason for not administering an intended vaccination). This <strong>MUST</strong> also include the practitioner who administered the vaccine if different to who recorded the vaccination."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-210
   area: payload_immunization_pop
   description: "the <code>practitioner.role</code> element <strong>SHOULD</strong> contain the role of the referenced practitioner, if known. Where the role is unknown this <strong>MUST</strong> be absent. The code EP (Entering Provider) <strong>MUST</strong> be used to designate the practitioner as having recorded the vaccination (or reason not given). The code AP (Administering Provider) <strong>MUST</strong> be used to designate the practitioner as having administered the vaccination or intending to if the vaccine was not given."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-211
   area: payload_immunization_pop
   description: "the <code>practitioner.actor</code> element <strong>SHOULD</strong> reference to the practitioner profile for who administered and / or recorded the vaccine. This is mandatory where the practitioner.role is populated."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-212
   area: payload_immunization_pop
   description: "the <code>note</code> element <strong>SHOULD</strong> contain any notes about the immunization."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-213
   area: payload_immunization_pop
   description: "the <code>explanation.reason</code> element <strong>SHOULD</strong> contain the reason why the immunization was given, for example, travel, occupation, and so on. This <strong>MUST</strong> be absent if <code>notGiven</code> is <code>true</code>."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-214
   area: payload_immunization_pop
   description: "the <code>explanation.notGivenReason</code> element <strong>SHOULD</strong> contain the reason why the immunization was not given, such as declined, contra-indicated, unfit or did not attend. This <strong>MUST</strong> be absent if <code>notGiven</code> is <code>false</code>."
   page: senddocument_generic_payload.html 
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-215
   area: payload_immunization_pop
   description: "the <code>vaccinationProtocol</code> element <strong>SHOULD</strong> contain the protocol for the vaccination. This <strong>MUST</strong> be absent if <code>notGiven</code> is <code>true</code>."
   page: senddocument_generic_payload.html 
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-216
   area: payload_immunization_pop
   description: "the <code>vaccinationProtocol.doseSequence</code> element <strong>MUST</strong> contain the position of the vaccine procedure in the series, if the immunisation is achieved via a series of vaccinations."
   page: senddocument_generic_payload.html 
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-217
   area: payload_immunization_pop
   description: "the <code>vaccinationProtocol.description</code> element <strong>SHOULD</strong> contain a description for the vaccination protocol this vaccination is administered under."
   page: senddocument_generic_payload.html   
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-218
   area: payload_immunization_pop
   description: "the <code>vaccinationProtocol.seriesDoses</code> element <strong>SHOULD</strong> contain the number of doses in the series which are required for vaccination given (at the time it was given/not given)."
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-219
   area: payload_immunization_pop
   description: "the <code>vaccinationProtocol.targetDisease</code> element <strong>MUST</strong> contain the disease or diseases the patient is being immunised against."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-220
   area: payload_immunization_pop
   description: "the <code>vaccinationProtocol.doseStatus</code> element <strong>MUST</strong> contain a fixed value of <code>count</code>."
   page: senddocument_generic_payload.html    
@@ -1151,82 +1151,82 @@ requirements:
   
 #ProblemHeader (Condition)  resource requirements
 
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-221
   area: payload_problem_header_pop
   description: "the <code>extension[actualProblem]</code> element <strong>SHOULD</strong> contain a reference to the profile containing the clinical item that has been escalated to create the Problem. References may be created to MedicationRequest, AllergyIntolerance, Immunization or Observation."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-222
   area: payload_problem_header_pop
   description: "the <code>extension[relatedProblemHeader]</code> element <strong>SHOULD</strong> contain the relationship of this ProblemHeader (Condition) profile to another or a number of other ProblemHeader (Condition) profile."
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-223
   area: payload_problem_header_pop
   description: "the <code>extension[relatedProblemHeader.type]</code> element details the type of relationship this ProblemHeader (Condition) profile to another ProblemHeader (Condition) profile. For each <code>relatedProblemHeader.target</code> this <strong>MUST</strong> contain a fixed value of either <code>parent</code>, <code>child</code>, or <code>sibling</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-224
   area: payload_problem_header_pop
   description: "the <code>extension[relatedProblemHeader.target]</code> element <strong>MUST</strong> contains a reference to a related ProblemHeader (Condition) profile."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-225
   area: payload_problem_header_pop
   description: "the <code>extension[relatedClinicalContent]</code> element <strong>MUST</strong> reference any clinical items and consultations that a user in the sending clinical system has chosen to link to this Problem. References may be created to Encounter, MedicationRequest, AllergyIntolerance, Immunization or Observation."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-226
   area: payload_problem_header_pop
   description: "the <code>extension[problemSignificance]</code> element contains the significance of the Problem. All Problems <code>MUST</code> have a severity of <code>major</code> or <code>minor</code>. Where a provider system records more than two levels of severity any level of severity above minor is mapped to major."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-227
   area: payload_problem_header_pop
   description: "the <code>clinicalStatus</code> element <strong>MUST</strong> contain a fixed value of either <code>active</code> or <code>inactive</code>."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-228
   area: payload_problem_header_pop
   description: "the <code>category</code> element <strong>MUST</strong> contain a fixed value of <code>problem-list-item</code>."
   page: senddocument_generic_payload.html    
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-229
   area: payload_problem_header_pop
   description: "the <code>code</code> element <strong>MUST</strong> contain a clinical code or text that represents the Problem."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-230
   area: payload_problem_header_pop
   description: "the <code>subject</code> element <strong>MUST</strong> reference the patient who has, or had, the Problem."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-231
   area: payload_problem_header_pop
   description: "the <code>context</code> element <strong>SHOULD</strong> reference the encounter where the Problem was initially created."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-232
   area: payload_problem_header_pop
   description: "the <code>onset</code> element <strong>SHOULD</strong> contain the datetime when the Problem was first encountered."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-233
   area: payload_problem_header_pop
   description: "the <code>abatement</code> element <strong>SHOULD</strong> contain the datetime when the Problem was no longer considered active."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-234
   area: payload_problem_header_pop
   description: "the <code>assertedDate</code> element <strong>MUST</strong> contain the datetime that the Problem was recorded on the clinical system."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-235
   area: payload_problem_header_pop
   description: "the <code>asserter</code> element <strong>MUST</strong> reference the profile for the practitioner who recorded the Problem."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-236
   area: payload_problem_header_pop
   description: "the <code>note</code> element <strong>SHOULD</strong> contain any notes about the Problem."
   page: senddocument_generic_payload.html
@@ -1236,47 +1236,47 @@ requirements:
 
 #ProcedureRequest resource requirements 
 
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-237
   area: payload_procedure_req_pop
   description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>active</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-238
   area: payload_procedure_req_pop
   description: "the <code>intent</code> element <strong>MUST</strong> contain a fixed value of <code>order</code>."
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-239
   area: payload_procedure_req_pop
   description: "the <code>code</code> element <strong>MUST</strong> contain the tests requested by the requesting HCP. Where no code is available then providers <strong>MUST</strong> populate the code.text field with the text ‘No code available’."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-240
   area: payload_procedure_req_pop
   description: "the <code>subject</code> element <strong>MUST</strong> reference the Patient who the ProcedureRequest is about."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-241
   area: payload_procedure_req_pop
   description: "the <code>performer</code> element <strong>SHOULD</strong> reference the resource for the practitioner or organization that is requested to perform this request the ProcedureRequest."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-242
   area: payload_procedure_req_pop
   description: "the <code>requester</code> element <strong>SHOULD</strong> reference the resource for the practitioner or organization that created the ProcedureRequest."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-243
   area: payload_procedure_req_pop
   description: "the <code>reasonCode</code> element <strong>SHOULD</strong> contain an explanation or justification for why this diagnostic investigation is being requested in coded or textual form."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-244
   area: payload_procedure_req_pop
   description: "the <code>reasonReference</code> element <strong>SHOULD</strong> contain a reference to any conditions the patient has that are supplied by the requesting HCP due to their relevance to the test request."
   page: senddocument_generic_payload.html    
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-245
   area: payload_procedure_req_pop
   description: "the <code>note</code> element <strong>SHOULD</strong> contain a human readable explanation from the requesting HCP containing an explanation on why the test has been requested and any contextual information they considered relevant."
   page: senddocument_generic_payload.html
@@ -1284,263 +1284,263 @@ requirements:
 
 #DiagnosticReport resource requirements 
 
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-246
   area: payload_diagnostic_pop
   description: "the <code>basedOn</code> element <strong>SHOULD</strong> contain a link to the ProcedureRequest that contains details of a request that was made. Where present this may include details of who requested the tests and why the test was requested."
   page: senddocument_generic_payload.html
  
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-247
   area: payload_diagnostic_pop
   description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>registered</code>, <code>partial</code>, <code>preliminary</code> or <code>final</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-248
   area: payload_diagnostic_pop
   description: "the <code>category</code> element <strong>SHOULD</strong> contain the general type of test report. A default value of Laboratory should be used if a more specific value is not available - for example, pathology, microbiology."
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-249
   area: payload_diagnostic_pop
   description: "the <code>code</code> element <strong>MUST</strong> contain the name/code for this DiagnosticReport."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-250
   area: payload_diagnostic_pop
   description: "the <code>subject</code> element <strong>MUST</strong> reference the Patient who the DiagnosticReport is about."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-251
   area: payload_diagnostic_pop
   description: "the <code>issued</code> element <strong>MUST</strong> contain the date and time that the DiagnosticReport was issued by the laboratory or other report provider."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-252
   area: payload_diagnostic_pop
   description: "the <code>performer</code> element <strong>SHOULD</strong> reference the resource for the Organization or Practitioner that produced the DiagnosticReport."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-253
   area: payload_diagnostic_pop
   description: "the <code>specimen</code> element <strong>SHOULD</strong> reference to the specimen(s) on which these results were based."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-254
   area: payload_diagnostic_pop
   description: "the <code>result</code> element <strong>SHOULD</strong> reference the result(s) which are contained in the DiagnosticReport. This may contain references to stand-alone test results, test group headers (which then reference further results) or a mixture of both."
   page: senddocument_generic_payload.html    
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-255
   area: payload_diagnostic_pop
   description: "the <code>codedDiagnosis</code> element <strong>SHOULD</strong> contain a coded finding of the test report. Produced by the organisation that performed the tests."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-256
   area: payload_diagnostic_pop
   description: "the <code>conclusion</code> element <strong>SHOULD</strong> contain a Clinical Interpretation of test results in a text format and notes written by performing organisation in addition to the interpretation. For example, the specimen has haemolysed or has leaked."
   page: senddocument_generic_payload.html  
 
 #Specimen resource requirements 
  
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-257
   area: payload_specimen_pop
   description: "the <code>accessionIdentifier</code> element <strong>SHOULD</strong> contain a business level identifier for the specimen supplied by the performing organisation - for example, the lab performing the test."
   page: senddocument_generic_payload.html
  
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-258
   area: payload_specimen_pop
   description: "the <code>status</code> element <strong>MUST</strong> contain a fixed value of <code>available</code>, <code>unavailable</code>, <code>unsatisfactory</code> or <code>entered-in-error</code>."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-259
   area: payload_specimen_pop
   description: "the <code>type</code> element <strong>SHOULD</strong> contain the kind of material that forms the specimen."
   page: senddocument_generic_payload.html  
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-260
   area: payload_specimen_pop
   description: "the <code>subject</code> element <strong>MUST</strong> reference the Patient who the specimen refers to."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-261
   area: payload_specimen_pop
   description: "the <code>receivedTime</code> element <strong>MUST</strong> contain the time when specimen was received for processing."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-262
   area: payload_specimen_pop
   description: "the <code>collection</code> element <strong>SHOULD</strong> contain the details of when/how the specimen was collected."
   page: senddocument_generic_payload.html
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-263
   area: payload_specimen_pop
   description: "the <code>collection.extension[fastingStatus]</code> element <strong>SHOULD</strong> contain whether or how long patient abstained from food and/or drink."
   page: senddocument_generic_payload.html  
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-264
   area: payload_specimen_pop
   description: "the <code>collection.collector</code> element <strong>SHOULD</strong> reference the resource for the practitioner who collected the specimen."
   page: senddocument_generic_payload.html    
   
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-265
   area: payload_specimen_pop
   description: "the <code>collection.collected</code> element <strong>SHOULD</strong> contain the quantity of the specimen that was collected."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-266
   area: payload_specimen_pop
   description: "the <code>collection.bodysite</code> element <strong>SHOULD</strong> contain the anatomical site of the specimen collection."
   page: senddocument_generic_payload.html
 
-- id: GPCM-SD-GE-141
+- id: GPCM-SD-GE-267
   area: payload_specimen_pop
   description: "the <code>note</code> element <strong>SHOULD</strong> contain any notes/comments relating to the specimen."
   page: senddocument_generic_payload.html
   
  
 #ITK3 requirements
-- id: GPCM-SD-GE-1xx
+- id: GPCM-SD-GE-268
   area: itk
   description: "when sending to the primary recipient (the care provider expected to action the message) the <code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FA</code> ('For action') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>The meaning of <code>RecipientType</code> is applied in a common way across all ITK3 messaging.  \"For action\" in this case indicates that the recipient is expected to take  action. <br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-142
+- id: GPCM-SD-GE-269
   area: itk
   description: "when sending a copy message to the patient's registered GP practice the <code>RecipientType</code> <strong>MUST</strong> be set to fixed value of <code>FI</code> ('For information') taken from FHIR ValueSet <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-RecipientType-1\">ITK-RecipientType-1</a> <br/>  <br/>\"For information\" in this case indicates that the recipient is not expected to take action but should attach the payload contents to the patient record.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>."
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-143
+- id: GPCM-SD-GE-270
   area: itk
   description: "<code>BusAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 30001 to 30003.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-144
+- id: GPCM-SD-GE-271
   area: itk
   description: "<code>InfAckRequested</code> <strong>MUST</strong> be set to fixed value of <code>true</code>. This will request an ITK3 Response with a response code in the range 10001 to 20013.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-145
+- id: GPCM-SD-GE-272
   area: itk
   description: "<code>SenderReference</code> <strong>MUST</strong> be set to the unique identifier of the encounter which has taken place at the sender organisation.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-146
+- id: GPCM-SD-GE-273
   area: itk
   description: "<code>MessageDefinition</code> <strong>MUST</strong> be set to fixed value of <code>https://fhir.nhs.uk/STU3/MessageDefinition/ITK-GPConnectSendDocument-MessageDefinition-1</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-147
+- id: GPCM-SD-GE-274
   area: itk
   description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-OnlineConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-148
+- id: GPCM-SD-GE-275
   area: itk
   description: "<code>Sender</code> <strong>MUST</strong> contain a reference to the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-149
+- id: GPCM-SD-GE-276
   area: itk
   description: "<code>Source</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-150
+- id: GPCM-SD-GE-277
   area: itk
   description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK007C</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-151
+- id: GPCM-SD-GE-278
   area: itk
   description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the message was generated. (A separate process such as the MESH client may be responsible for sending the message at a later date/time.)"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-152
+- id: GPCM-SD-GE-279
   area: itk1
   description: "<code>destination</code> and <code>receiver</code> <strong>MUST NOT</strong> be present. Rather, <a href=\"senddocument_generic_mesh.html\">MESH message routing</a> will be used to route message to registered GP practice by NHS Number, DOB and Surname"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-153
+- id: GPCM-SD-GE-280
   area: itk2
   description: "<code>BusAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-154
+- id: GPCM-SD-GE-281
   area: itk2
   description: "<code>InfAckRequested</code> <strong>MUST</strong> contain a fixed value of <code>false</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-155
+- id: GPCM-SD-GE-282
   area: itk2
   description: "<code>SenderReference</code> <strong>MUST</strong> contain the same unique identifier generated by GPCM-SD-042.<br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
   
-- id: GPCM-SD-GE-156
+- id: GPCM-SD-GE-283
   area: itk2
   description: "<code>Sender</code> <strong>MUST</strong> contain a reference to an <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Header-Organization-1\">CareConnect-ITK-Header-Organization-1</a> resource present in the FHIR message bundle" 
   page: senddocument_generic_itk3.html
  
-- id: GPCM-SD-GE-157
+- id: GPCM-SD-GE-284
   area: itk2
   description: "<code>Event</code> <strong>MUST</strong> contain a fixed value of <code>ITK008M</code> from code system <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-MessageEvent-2\">ITK-MessageEvent-2</a>"  
   page: senddocument_generic_itk3.html
 
-- id: GPCM-SD-GE-158
+- id: GPCM-SD-GE-285
   area: itk2
   description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
   page: senddocument_generic_itk3.html
 
 #MESH requirements 
-- id: GPCM-SD-GE-159
+- id: GPCM-SD-GE-286
   area: mesh
   description: "all messages sent through this use case to non-GP practice care providers <strong>MUST</strong> use the MESH API Address Lookup function to lookup the MESH mailbox ID of the receiving care provider. <br/><br/>Details of how to use Address Lookup can be found on the <a href=\"https://digital.nhs.uk/developer/api-catalogue/message-exchange-for-social-care-and-health-api#api-Endpoints-meshAddressLookup-0\">MESH API page</a>"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-160
+- id: GPCM-SD-GE-287
   area: mesh1
   description: "each instance of a Online Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-161
+- id: GPCM-SD-GE-288
   area: mesh1
   description: "each instance of an acknowledgement message generated as a result of receipt of a Online Consultation Report message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-162
+- id: GPCM-SD-GE-289
   area: mesh3
   description: "<code>Mex-From</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-163
+- id: GPCM-SD-GE-290
   area: mesh3
   description: "<code>Mex-To</code> <strong>MUST</strong> contain the MESH mailbox ID of the receiver of the message – in this case either the mailbox ID for the patient's registered GP practice, or chosen community pharmacy"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-164
+- id: GPCM-SD-GE-291
   area: mesh3
   description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>{name of report} report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_generic_mesh.html
   
-- id: GPCM-SD-GE-169
+- id: GPCM-SD-GE-292
   area: mesh3
   description: "<code>Mex-Localid</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
   tooltip: "'Mex-Localid' MUST contain the ODS code of the sending organisation"
   page: senddocument_generic_mesh.html  
 
-- id: GPCM-SD-GE-165
+- id: GPCM-SD-GE-293
   area: mesh2
   description: "<code>From_DTS</code> <strong>MUST</strong> contain the MESH mailbox ID of the sender of the message – in this case the originating organisation"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-166
+- id: GPCM-SD-GE-294
   area: mesh2
   description: "<code>To_DTS</code> <strong>MUST</strong> contain the NHS Number, DOB and Surname of the patient delimited by the underscore character ‘_'. This enables automatic routing of the message to the registered GP MESH mailbox"
   page: senddocument_generic_mesh.html
 
-- id: GPCM-SD-GE-167
+- id: GPCM-SD-GE-295
   area: mesh2
   description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>{name of report} report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_generic_mesh.html
   
-- id: GPCM-SD-GE-168
+- id: GPCM-SD-GE-296
   area: mesh2
   description: "<code>LocalID</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
   tooltip: "'LocalID' MUST contain the ODS code of the sending organisation"
