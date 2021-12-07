@@ -13,7 +13,7 @@ requirements:
 
 - id: GPCM-SD-GE-003
   area: payload_comp_pop
-  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>xxxxxxxxxx</code> (Online consultation report)"
+  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code relating to the item being sent"
   page: senddocument_generic_payload.html
 
 - id: GPCM-SD-GE-004
@@ -28,7 +28,7 @@ requirements:
 
 - id: GPCM-SD-GE-006
   area: payload_comp_pop
-  description: "<code>Composition.title</code> <strong>MUST</strong> contain the fixed value <code>Online consultation report</code>"
+  description: "<code>Composition.title</code> <strong>MUST</strong> contain a fixed value relating to the item being sent"
   page: senddocument_generic_payload.html  
   
 - id: GPCM-SD-GE-007
