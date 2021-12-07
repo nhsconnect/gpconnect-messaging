@@ -58,14 +58,14 @@ requirements:
 
 - id: GPCM-SD-GE-012
   area: payload_comp_pop
-  description: "<code>Composition.section.entry</code> <strong>MUST</strong> reference a binary document which provides a report of the full online consultation in PDF format profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1\">ITK-Attachment-Binary-1</a>"
+  description: "<code>Composition.section.entry</code> <strong>MUST</strong> reference a binary document profiled to <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1\">ITK-Attachment-Binary-1</a>"
   page: senddocument_generic_payload.html
 
   
 # Additional input elements
 - id: GPCM-SD-GE-013
   area: payload_additional
-  description: "where binary documents are included in the payload in addition to the Online Consultation Report, the <em>message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
+  description: "where binary documents are included in the payload in addition to the primary document, the <em>message receiver</em> <strong>MUST</strong> process these according ensuring all attachments remain in the context of the encounter information delivered to downstream systems"
   page: senddocument_generic_payload.html
 
 - id: GPCM-SD-GE-014
@@ -276,7 +276,7 @@ requirements:
 
 - id: GPCM-SD-GE-052
   area: payload_obs_pop
-  description: "to ensure the <code>Observation</code> can be identified as patient entered data, the <code>performer</code> element <strong>MUST</strong> contain a reference to patient resource of the patient completing the Online Consultation"
+  description: "to ensure the <code>Observation</code> can be identified as patient entered data, the <code>performer</code> element <strong>MUST</strong> contain a reference to patient resource of the patient"
   page: senddocument_generic_payload.html
 
 - id: GPCM-SD-GE-053
@@ -350,7 +350,7 @@ requirements:
 
 - id: GPCM-SD-GE-066
   area: payload_questresp_pop
-  description: "a set of <code>item</code> elements <strong>MUST</strong> contain the full online consultation questionnaire details"
+  description: "a set of <code>item</code> elements <strong>MUST</strong> contain the full questionnaire details"
   page: senddocument_generic_payload.html
 
 - id: GPCM-SD-GE-067
@@ -1430,7 +1430,7 @@ requirements:
 
 - id: GPCM-SD-GE-274
   area: itk
-  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-OnlineConsultationReport</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
+  description: "<code>LocalExtension</code> <strong>MUST</strong> be set to fixed value of <code>SendDocument-Generic</code><br/><br/>This item is found in the <code>ITKMessageHandling</code> extension within the <a href=\"https://fhir.nhs.uk/STU3/StructureDefinition/ITK-MessageHeader-2\">ITK3 Message Header</a>"
   page: senddocument_generic_itk3.html
 
 - id: GPCM-SD-GE-275
@@ -1496,12 +1496,12 @@ requirements:
 
 - id: GPCM-SD-GE-287
   area: mesh1
-  description: "each instance of a Online Consultation Report message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
+  description: "each instance of a Generic message <strong>MUST</strong> include the following MESH Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT</code>"
   page: senddocument_generic_mesh.html
 
 - id: GPCM-SD-GE-288
   area: mesh1
-  description: "each instance of an acknowledgement message generated as a result of receipt of a Online Consultation Report message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
+  description: "each instance of an acknowledgement message generated as a result of receipt of a Generic message <strong>MUST</strong> include the following Workflow ID in the MESH message metadata: <code>GPFED_CONSULT_REPORT_ACK</code>"
   page: senddocument_generic_mesh.html
 
 - id: GPCM-SD-GE-289
