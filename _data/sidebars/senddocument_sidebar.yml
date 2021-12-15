@@ -112,7 +112,4 @@ children:
     output: web
   - title: MESH message configuration
     url: /senddocument_generic_mesh.html      
-    output: web    
-  - title: Message example
-    url: /senddocument_generic_example.html      
-    output: web    
+    output: web      
