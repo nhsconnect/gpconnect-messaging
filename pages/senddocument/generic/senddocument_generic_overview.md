@@ -15,7 +15,7 @@ All use-cases must be approved by the GP Connect programme, however if an organi
 
 Organisation's wanting to send something new back to the patient's registered GP practice will need to contact the GP Connect team to discuss their use-case in more detail to gain approval to proceed.
 
-{% include note.html content="All known published data standards must be adhered to. Senders will be asked to self-certify data standard compliance." %}
+{% include important.html content="All known published data standards must be adhered to. Senders will be asked to self-certify data standard compliance." %}
 
 
 ## Message flow ##
