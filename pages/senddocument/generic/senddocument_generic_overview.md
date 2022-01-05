@@ -9,11 +9,11 @@ summary: "Overview of the generic payload"
 
 ## Introduction ##
 
-The Generic payload has been designed to fill the current gap that is blocking a large number of organisations being able to sent documents back to a patient's registered GP practice.
+The Generic payload has been designed to fill the current gap that is blocking a large number of organisations being able to send documents back to a patient's registered GP practice.
 
 All use-cases must be approved by the GP Connect programme, however if an organisation is already sending the document being received by the patient's registered GP practice then it's likely they'll automatically qualify for using the Generic payload.
 
-Organisation's wanting to send something new back to the patient's registered GP practice will need to contact the GP Connect team to discuss their use-case in more detail to gain approval to proceed.
+Organisations wanting to send something new back to the patient's registered GP practice will need to contact the GP Connect team to discuss their use-case in more detail to gain approval to proceed.
 
 {% include important.html content="All known published data standards must be adhered to. Senders will be asked to self-certify compliance against a data standard, where a standard exists." %}
 
