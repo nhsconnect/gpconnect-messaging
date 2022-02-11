@@ -12,11 +12,11 @@ summary: "Use of ITK3 to support GP Connect Messaging"
 <table class="requirement-box">
   <tr>
     <td><strong>GPCM-C-2</strong></td>
-    <td>All FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.5.0</td>
+    <td>All FHIR Messages <strong>MUST</strong> conform to the ITK3 Message Distribution Standard, v2.10.0</td>
   </tr>
 </table>
 
-As described in [Design Principles](design_principles.html#reliability-itk3), the [ITK3 Message Distribution standard, v2.5.0](https://developer.nhs.uk/apis/itk3messagedistribution-2-5-0/) has been adopted by GP Connect Messaging capabilities to provide message reliability and to facilitate alignment with practice workflow.
+As described in [Design Principles](design_principles.html#reliability-itk3), the [ITK3 Message Distribution standard, v2.10.0](https://developer.nhs.uk/apis/itk3messagedistribution-2-10-0/) has been adopted by GP Connect Messaging capabilities to provide message reliability and to facilitate alignment with practice workflow.
 
 ### FHIR messages ###
 

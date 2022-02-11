@@ -51,3 +51,40 @@ The following specific requirements describe how the [ITK3 Message Header](https
   {% endif %}
   {% endfor %}
 </table>
+
+## ITK3 responses codes ##
+
+The following requirements specify the ITK Response codes associated with Online Consultations send to alternation care provider pilot:
+
+
+<table class="requirement-box">
+  {% for item in site.data.oc_requirements.requirements %}
+  {% if item.area == 'itk3' %}
+  <tr>
+    <td id="{{item.id}}">{{item.id}}</td>
+    <td>{{item.description}}</td>
+  </tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+|  Code | Description |
+|:-----:|-----------|
+| 30001 | Patient known here. (e.g. Patient is registered here)         |
+| 30002 | Patient not known here. (aka 'patient record not present in system')            |
+| 30003 | Patient no longer at this clinical setting            |
+| 30004 | Patient known here and recently deceased (i.e. patient record current in GP practice system at time of patient’s death and deduction subsequently occurred for this reason)            |
+| 30005 | Referral open            |
+| 30006 | Referral completed            |
+| 30007 | Referral escalated back to GP            |
+| 30008 | Signposting to GP (non-urgent)           |
+| 30009 | Clinical escalation to UTC/111/GPOOH            |
+| 30010 | Clinical escalation to A&E or 999            |
+| 30011 | Advised to go elsewhere/self-referral            |
+| 30012 | Unable to contact the patient            |
+| 30013 | Closure (service not needed)            |
+| 30014 | Closure (service not accepted)            |
+| 30015 | Closure (duplicate referral)            |
+| 30016 | Referral accepted            |
+| 30017 | Referral rejected            |
+| 30018 | Did Not Attend            |

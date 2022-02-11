@@ -857,6 +857,11 @@ requirements:
   area: itk2
   description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
   page: senddocument_oc_itk3.html
+  
+- id: GPCM-SD-OC-169
+  area: itk3
+  description: "the <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-ResponseCodes-1\">ITK-ResponseCodes-1</a> business acknowledgements codes <code>30001</code> to <code>30018</code> <strong>MUST</strong> be supported. These codes are listed below:"
+  page: senddocument_oc_itk3.html
 
 #MESH requirements 
 - id: GPCM-SD-OC-159
