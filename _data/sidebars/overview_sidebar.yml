@@ -27,6 +27,9 @@ children:
   - title: Release notes
     output: web
     children:
+    - title: 1.6.0
+      url: /overview_release_notes_1_6_0.html
+      output: web     
     - title: 1.5.1
       url: /overview_release_notes_1_5_1.html
       output: web    
@@ -69,11 +72,11 @@ children:
   - title: Send Document
     url: /senddocument.html
     output: web
+  - title: Send Update
+    url: /sendupdate.html
+    output: web
   - title: <strong class="capability-not-available">Send Task</strong>
     url: /sendtask.html
-    output: web
-  - title: <strong class="capability-not-available">Send Update</strong>
-    url: /sendupdate.html
     output: web
 
 - title: Integrate with Spine

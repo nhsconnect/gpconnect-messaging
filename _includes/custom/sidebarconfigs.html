@@ -8,6 +8,9 @@
 {% elsif page.sidebar == "senddocument_sidebar" %}
 {% assign sidebar = site.data.sidebars.senddocument_sidebar %}
 
+{% elsif page.sidebar == "sendupdate_sidebar" %}
+{% assign sidebar = site.data.sidebars.sendupdate_sidebar %}
+
 {% else %}
 {% assign sidebar = site.data.sidebars.overview_sidebar %}
 {% endif %}
@@ -24,5 +27,9 @@ sidebar configuration for print files
 {% endif %}
 
 {% if site.product == "senddocument" %}
+{% assign sidebar_pdf = site.data.sidebars.senddocument_sidebar.entries %}
+{% endif %}
+
+{% if site.product == "sendupdate" %}
 {% assign sidebar_pdf = site.data.sidebars.senddocument_sidebar.entries %}
 {% endif %}

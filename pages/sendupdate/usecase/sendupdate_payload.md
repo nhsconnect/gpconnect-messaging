@@ -1,15 +1,16 @@
 ---
 title: Payload requirements
 keywords: use-case
-tags: [use-case, send-document]
-sidebar: senddocument_sidebar
-permalink: senddocument_generic_payload.html
-summary: "Details of the FHIR&reg; resources which make up the Generic payload."
+tags: [use-case, send-update]
+sidebar: sendupdate_sidebar
+permalink: sendupdate_payload_requirements.html
+summary: "Details of the FHIR&reg; resources which make up the Send Update payload."
 ---
 
-Please refer to [Send Document - Payload structure](senddocument_payload.html) for a definition of the payload structure to be used to fulfil the Generic use case.
+Please refer to [Send Update - Payload structure](sendupdate_payload.html) for a definition of the payload structure to be used to fulfil the xxxxxxx use case.
 
 The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Document-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1) resource, which acts as a container for the payload. 
+
 
 ## Resource population requirements ##
 
@@ -18,7 +19,7 @@ The following requirements identify the data elements that **MUST** or **SHOULD*
 ### Composition resource ###
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_comp' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -31,7 +32,7 @@ The following requirements identify the data elements that **MUST** or **SHOULD*
 The following requirements describe how the Composition resource is populated:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_comp_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -48,7 +49,7 @@ The following requirements describe how the Composition resource is populated:
 Message senders **MAY** include additional binary documents in the payload as each expressed as an additional instance of the composition.section as described in [Send Document - payload structure](senddocument_payload.html#including-documents-in-the-payload).
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_additional' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -61,7 +62,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
 ### Patient resource ###
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_patient' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -74,7 +75,7 @@ Message senders **MAY** include additional binary documents in the payload as ea
 The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_patient_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -87,7 +88,7 @@ The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
 ### Organization resource ###
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_org' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -100,7 +101,7 @@ The [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
 The [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1) resource present in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_org_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -115,7 +116,7 @@ The [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) resource present in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_prac_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -130,7 +131,7 @@ The [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 The [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_related_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -145,7 +146,7 @@ The [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefiniti
 The [ITK-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1) resource present in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_device_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -161,7 +162,7 @@ The [ITK-Device-1](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Device-1) re
 The [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_encounter_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -176,7 +177,7 @@ The [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/C
 The [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_list_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -189,7 +190,7 @@ The [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareCo
 Each [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_obs_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -204,7 +205,7 @@ Each [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 The [CareConnect-Questionnaire-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Questionnaire-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_quest_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -220,7 +221,7 @@ The [CareConnect-Questionnaire-1](https://fhir.hl7.org.uk/STU3/StructureDefiniti
 The [CareConnect-QuestionnaireResponse-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-QuestionnaireResponse-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_questresp_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -236,7 +237,7 @@ The [CareConnect-QuestionnaireResponse-1](https://fhir.hl7.org.uk/STU3/Structure
 The [CareConnect-ReferralRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_referral_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -252,7 +253,7 @@ The [CareConnect-ReferralRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefini
 The [CareConnect-DocumentReference-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_docref_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -268,7 +269,7 @@ The [CareConnect-DocumentReference-1](https://fhir.hl7.org.uk/STU3/StructureDefi
 The [CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_allergy_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -284,7 +285,7 @@ The [CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDef
 The [CareConnect-FamilyMemberHistory-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_family_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -300,7 +301,7 @@ The [CareConnect-FamilyMemberHistory-1](https://fhir.hl7.org.uk/STU3/StructureDe
 The [CareConnect-Task-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Task-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_task_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -316,7 +317,7 @@ The [CareConnect-Task-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareCo
 The [CareConnect-Consent-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Consent-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_consent_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -332,7 +333,7 @@ The [CareConnect-Consent-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Car
 The [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_location_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -348,7 +349,7 @@ The [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Ca
 The [CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_medication_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -364,7 +365,7 @@ The [CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/
 The [CareConnect-MedicationRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationRequest-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_medication_req_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -380,7 +381,7 @@ The [CareConnect-MedicationRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefi
 The [CareConnect-MediationStatement-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_medication_statement_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -396,7 +397,7 @@ The [CareConnect-MediationStatement-1](https://fhir.hl7.org.uk/STU3/StructureDef
 The [CareConnect-Immunization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_immunization_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -412,7 +413,7 @@ The [CareConnect-Immunization-1](https://fhir.hl7.org.uk/STU3/StructureDefinitio
 The [CareConnect-ProblemHeader-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProblemHeader-Condition-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_problem_header_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -428,7 +429,7 @@ The [CareConnect-ProblemHeader-1](https://fhir.hl7.org.uk/STU3/StructureDefiniti
 The [CareConnect-ProcedureRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_procedure_req_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -444,7 +445,7 @@ The [CareConnect-ProcedureRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefin
 The [CareConnect-DiagnosticReport-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DiagnosticReport-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_diagnostic_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
@@ -460,7 +461,7 @@ The [CareConnect-DiagnosticReport-1](https://fhir.hl7.org.uk/STU3/StructureDefin
 The [CareConnect-Specimen-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Specimen-1) in the payload is populated as follows:
 
 <table class="requirement-box">
-  {% for item in site.data.ge_requirements.requirements %}
+  {% for item in site.data.sendupdate_usecase_requirements.requirements %}
   {% if item.area == 'payload_specimen_pop' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>

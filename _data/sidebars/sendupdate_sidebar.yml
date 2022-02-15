@@ -1,0 +1,47 @@
+## definition of `menuitem`===========
+# title: string
+# url: string
+# output: [ enum{web, pdf} ] (expressed as comma separated string in YAML)
+# children?: [ menuitem ]
+
+## top level property=================
+# entries: [ menuitem ]
+
+title: Send Update
+product: Send Update
+children:
+
+- title: Overview
+  output: web, pdf
+  children:
+  - title: Introduction
+    url: /sendupdate.html
+    output: web
+  - title: Message payload
+    url: /sendupdate_payload_structure.html
+    output: web
+  - title: Document replacement
+    url: /sendupdate_resend.html      
+    output: web
+  - title: Error handling
+    url: /sendupdate_errors.html      
+    output: web       
+  - title: Sitemap
+    url: /sitemap_send_update.html     
+    output: web       
+  
+- title: Use case
+  output: web  
+  children: 
+  - title: Overview
+    url: /sendupdate_overview.html      
+    output: web
+  - title: Payload requirements
+    url: /sendupdate_payload_requirements.html      
+    output: web  
+  - title: ITK3 header requirements
+    url: /sendupdate_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /sendupdate_mesh.html      
+    output: web      
