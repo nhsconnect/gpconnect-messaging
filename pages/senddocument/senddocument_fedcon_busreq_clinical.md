@@ -4,7 +4,7 @@ keywords: use-case, send-document, messaging
 tags: [use-case, send-document, messaging]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_busreq_clinical.html
-summary: "Clinical engagement for Send Consultation Report"
+summary: "Clinical engagement for Consultation Summary Report"
 toc: false
 ---
 

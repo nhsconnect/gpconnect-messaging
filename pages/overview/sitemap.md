@@ -33,7 +33,9 @@ toc: false
     	<p><a href="index.html">Introduction</a></p>
     	<p><a href="overview_priority_capabilities.html">Capabilities</a></p>
 	<p style="padding-top:8px">Release notes</p>
-    	<p><a href="overview_release_notes_1_3_0.html">1.3.0</a></p>
+    	<p><a href="overview_release_notes_1_3_0.html">1.5.0</a></p>
+		<p><a href="overview_release_notes_1_3_0.html">1.4.0</a></p>
+		<p><a href="overview_release_notes_1_3_0.html">1.3.0</a></p>
     	<p><a href="overview_release_notes_1_2_0.html">1.2.0</a></p>
     	<p><a href="overview_release_notes_1_1_0.html">1.1.0</a></p>
     	<p><a href="overview_release_notes_1_0_0.html">1.0.0</a></p>          

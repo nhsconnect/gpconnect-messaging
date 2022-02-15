@@ -4,7 +4,7 @@ keywords: document, mesh
 tags: [messaging, mesh, send-document]
 sidebar: senddocument_sidebar
 permalink: senddocument_fedcon_mesh.html
-summary: "Consultation - MESH configuration"
+summary: "MESH configuration"
 ---
 
 Please refer to [Integration to MESH](integration_mesh.html) for an introduction to the use of MESH for GP Connect Messaging use cases.
@@ -63,7 +63,7 @@ An example `.CTL` file is given below for a Consultation Report message regardin
 <From_DTS>GP0001</From_DTS>
 <To_DTS>GPPROVIDER_1234567890_09011955_Smith</To_DTS>
 <Subject>GP consultation report for patient Mr Richard Smith , NHS Number 1234567890, with details of encounter which at practice GP0001</Subject>
-<LocalId></LocalId>
+<LocalId>GP0001</LocalId>
 <DTSId></DTSId>
 <PartnerId></PartnerId>
 <Compress>Y</Compress>
