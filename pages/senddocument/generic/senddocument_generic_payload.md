@@ -11,8 +11,6 @@ Please refer to [Send Document - Payload structure](senddocument_payload.html) f
 
 The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Document-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Document-Bundle-1) resource, which acts as a container for the payload. 
 
-A [message example](senddocument_generic_example.html) is provided which illustrates these requirements to aid understanding.
-
 ## Resource population requirements ##
 
 The following requirements identify the data elements that **MUST** or **SHOULD** be populated when generating the payload. Data items not explicitly referenced in this section can, and should, be populated if the source system has captured this information, and the resource being populated supports it.
