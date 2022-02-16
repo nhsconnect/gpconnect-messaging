@@ -894,7 +894,7 @@ requirements:
   description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_oc_mesh.html
 
-- id: GPCM-SD-OC-169
+- id: GPCM-SD-OC-175
   area: mesh3
   description: "<code>Mex-Localid</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
   tooltip: "'Mex-Localid' MUST contain the ODS code of the sending organisation"
@@ -915,7 +915,7 @@ requirements:
   description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_oc_mesh.html
 
-- id: GPCM-SD-OC-168
+- id: GPCM-SD-OC-174
   area: mesh2
   description: "<code>LocalID</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
   tooltip: "'LocalID' MUST contain the ODS code of the sending organisation"
