@@ -453,12 +453,12 @@ requirements:
   page: senddocument_oc_payload.html
 
 - id: GPCM-SD-OC-086
-  area: payload_questresp_pop
+  area: payload_docref_pop
   description: "the <code>content</code> element <strong>MUST</strong> contain details about the document being referenced"
   page: senddocument_oc_payload.html 
 
 - id: GPCM-SD-OC-087
-  area: payload_questresp_pop
+  area: payload_docref_pop
   description: "the <code>context</code> element <strong>SHOULD</strong> contain details about the clinical context of the document being referenced"
   page: senddocument_oc_payload.html 
 
