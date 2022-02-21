@@ -12,7 +12,7 @@ Please refer to [Send Document - Payload structure](senddocument_payload.html) f
 
 The following sections describe the resources which form the payload. These are the resources that will be present as entries of the [ITK-Payload-Bundle](https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Payload-Bundle-1) resource, which acts as a container for the payload. 
 
-A [message example](senddocument_payload.html) is provided which illustrates these requirements to aid understanding.
+A [message example](senddocument_fedcon_example.html) is provided which illustrates these requirements to aid understanding.
 
 ## Composition resource ##
 
