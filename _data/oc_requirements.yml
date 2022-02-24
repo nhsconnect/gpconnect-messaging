@@ -13,7 +13,7 @@ requirements:
 
 - id: GPCM-SD-OC-003
   area: payload_comp_pop
-  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>xxxxxxxxxx</code> (Online consultation report)"
+  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>149951000000107</code> (Patient information received using general practice online consultation system (finding))"
   page: senddocument_oc_payload.html
 
 - id: GPCM-SD-OC-004
@@ -182,7 +182,7 @@ requirements:
   
 - id: GPCM-SD-OC-034
   area: payload_encounter_pop
-  description: "the <code>type</code> element <strong>MUST</strong> contain a valid SNOMED code for the type encounter being sent"
+  description: "the <code>type</code> element <strong>MUST</strong> contain a valid SNOMED code for the type encounter being sent, for example <code>149971000000103</code> (Encounter using general practice online consultation system (procedure))"
   page: senddocument_oc_payload.html  
 
 - id: GPCM-SD-OC-035
