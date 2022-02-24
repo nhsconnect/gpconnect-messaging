@@ -13,7 +13,7 @@ requirements:
 
 - id: GPCM-SD-OC-003
   area: payload_comp_pop
-  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>xxxxxxxxxx</code> (Online consultation report)"
+  description: "<code>Composition.type</code> <strong>MUST</strong> contain the SNOMED code <code>149951000000107</code> (Patient information received using general practice online consultation system (finding))"
   page: senddocument_oc_payload.html
 
 - id: GPCM-SD-OC-004
@@ -182,7 +182,7 @@ requirements:
   
 - id: GPCM-SD-OC-034
   area: payload_encounter_pop
-  description: "the <code>type</code> element <strong>MUST</strong> contain a valid SNOMED code for the type encounter being sent"
+  description: "the <code>type</code> element <strong>MUST</strong> contain a valid SNOMED code for the type encounter being sent, for example <code>149971000000103</code> (Encounter using general practice online consultation system (procedure))"
   page: senddocument_oc_payload.html  
 
 - id: GPCM-SD-OC-035
@@ -857,11 +857,6 @@ requirements:
   area: itk2
   description: "<code>Timestamp</code> <strong>MUST</strong> contain the date/time when the response was generated."
   page: senddocument_oc_itk3.html
-  
-- id: GPCM-SD-OC-169
-  area: itk3
-  description: "the <a href=\"https://fhir.nhs.uk/STU3/CodeSystem/ITK-ResponseCodes-1\">ITK-ResponseCodes-1</a> business acknowledgements codes <code>30001</code> to <code>30018</code> <strong>MUST</strong> be supported. These codes are listed below:"
-  page: senddocument_oc_itk3.html
 
 #MESH requirements 
 - id: GPCM-SD-OC-159
@@ -894,11 +889,11 @@ requirements:
   description: "<code>Mex-Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_oc_mesh.html
 
-- id: GPCM-SD-OC-169
+- id: GPCM-SD-OC-175
   area: mesh3
   description: "<code>Mex-Localid</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
   tooltip: "'Mex-Localid' MUST contain the ODS code of the sending organisation"
-  page: senddocument_oc_mesh.html  
+  page: senddocument_fedcon_mesh.html  
 
 - id: GPCM-SD-OC-165
   area: mesh2
@@ -915,11 +910,11 @@ requirements:
   description: "<code>Subject</code> <strong>MUST</strong> contain <code>To</code> text in the following format:<br/><br/><code>Online consultation report for {Patient Name}, NHS Number {NHS Number}, ODS Code {ODS Code}</code>"
   page: senddocument_oc_mesh.html
 
-- id: GPCM-SD-OC-168
+- id: GPCM-SD-OC-174
   area: mesh2
   description: "<code>LocalID</code> <strong>MUST</strong> contain the ODS code of the sending organisation"
   tooltip: "'LocalID' MUST contain the ODS code of the sending organisation"
-  page: senddocument_oc_mesh.html
+  page: senddocument_fedcon_mesh.html
   
 #Trigger requirements
 
