@@ -75,9 +75,6 @@ children:
   - title: Send Update
     url: /sendupdate.html
     output: web
-  - title: <strong class="capability-not-available">Send Task</strong>
-    url: /sendtask.html
-    output: web
 
 - title: Integrate with Spine
   output: web

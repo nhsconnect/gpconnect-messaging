@@ -13,7 +13,7 @@ The following requirements describe the structure of the Send Update payload. Th
 
 <table class="requirement-box">
   {% for item in site.data.sendupdate_requirements.requirements %}
-  {% if item.area == 'senddocpayload' %}
+  {% if item.area == 'sendupdatepayload' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -29,7 +29,7 @@ The following requirements describe how binary documents are included in the pay
 
 <table class="requirement-box">
   {% for item in site.data.sendupdate_requirements.requirements %}
-  {% if item.area == 'senddocpayload2' %}
+  {% if item.area == 'sendupdatepayload2' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>
@@ -42,7 +42,7 @@ Each instance of a binary document will be included as follows:
 
 <table class="requirement-box">
   {% for item in site.data.sendupdate_requirements.requirements %}
-  {% if item.area == 'senddocpayload3' %}
+  {% if item.area == 'sendupdatepayload3' %}
   <tr>
     <td id="{{item.id}}">{{item.id}}</td>
     <td>{{item.description}}</td>

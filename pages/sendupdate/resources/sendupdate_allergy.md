@@ -1,10 +1,10 @@
 ---
-title: Payload requirements
+title: Composition requirements
 keywords: use-case
 tags: [use-case, send-update]
 sidebar: sendupdate_sidebar
-permalink: sendupdate_payload_requirements.html
-summary: "Details of the FHIR&reg; resources which make up the Send Update payload."
+permalink: sendupdate_composition.html
+summary: "Details of the Composition FHIR&reg; resource which make up the Send Update payload."
 ---
 
 Please refer to [Send Update - Payload structure](sendupdate_payload.html) for a definition of the payload structure to be used to fulfil the xxxxxxx use case.
@@ -497,8 +497,8 @@ The following table lists the optionality and cardinality for each resource:
   </tr>
   <tr>
     <td><a href="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-Attachment-Binary-1">ITK-Attachment-Binary-1</a></td>
-    <td>Mandatory</td>
-	<td>1..*</td>
+    <td>Optional</td>
+	<td>0..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1">CareConnect-Patient-1</a></td>
@@ -527,8 +527,8 @@ The following table lists the optionality and cardinality for each resource:
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1">CareConnect-Encounter-1</a></td>
-    <td>Optional</td>
-	<td>0..*</td>
+    <td>Mandatory</td>
+	<td>1..*</td>
   </tr>
   <tr>
     <td><a href="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1">CareConnect-List-1</a></td>

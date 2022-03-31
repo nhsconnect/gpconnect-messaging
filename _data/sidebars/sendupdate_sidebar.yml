@@ -20,6 +20,21 @@ children:
   - title: Message payload
     url: /sendupdate_payload_structure.html
     output: web
+  - title: Resources
+    output: web
+    children:
+    - title: Composition
+      url: /sendupdate_composition.html
+      output: web  
+    - title: Patient
+      url: /sendupdate_patient.html
+      output: web
+    - title: Organization
+      url: /sendupdate_organization.html
+      output: web 
+    - title: Practitioner
+      url: /sendupdate_practitioner.html
+      output: web       
   - title: Document replacement
     url: /sendupdate_resend.html      
     output: web

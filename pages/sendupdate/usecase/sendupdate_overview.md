@@ -9,11 +9,7 @@ summary: "Overview of the payload"
 
 ## Introduction ##
 
-The Generic payload has been designed to fill the current gap that is blocking a large number of organisations being able to send documents back to a patient's registered GP practice.
-
-All use-cases must be approved by the GP Connect programme, however if an organisation is already sending the document being received by the patient's registered GP practice then it's likely they'll automatically qualify for using the Generic payload.
-
-Organisations wanting to send something new back to the patient's registered GP practice will need to contact the GP Connect team to discuss their use-case in more detail to gain approval to proceed.
+The Send Update payload has been designed to (xxx needs updating with specific use case information, based on the programme decision being made)
 
 {% include important.html content="All known published data standards must be adhered to. Senders will be asked to self-certify compliance against a data standard, where a standard exists." %}
 
@@ -23,7 +19,7 @@ Organisations wanting to send something new back to the patient's registered GP 
 The following diagram illustrates how a message can flow between the sending (originating) system and the receiving care provider via MESH to fulfil this use case:
 
 <div style="max-width:100%;max-height:100%;display:block;margin: 0 auto;" >
-	{% include images/senddocument/sequence_oc_gp.svg %}
+	{% include images/sendupdate/sendupdate_sequence.svg %}
 </div>
 <br/>
 
@@ -35,9 +31,9 @@ The diagram above depicts a successful message flow where the receiving care pro
     1. The sending system initiates a MESH Address Lookup request for the patient's registered GP practice.
     2. The sending system receives a response containing the MESH mailbox ID for the patient's registered GP practice.
 
-2.  **Document being sent in payload**
+2.  **Message being sent in payload**
 
-    1. A trigger at the sending system results in a FHIR Message being constructed which includes a document (as a minimum).
+    1. A trigger at the sending system results in a FHIR Message being constructed.
     2. The MESH API Send Message function is used to send the message to the mailbox acquired in step 1.
     3. The MESH server places the message in the GP practice's MESH mailbox awaiting collection.
     4. The GP practice uses the MESH API Download Message function to retrieve the message from the MESH mailbox.
