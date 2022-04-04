@@ -98,6 +98,37 @@ children:
     url: /senddocument_oc_example.html      
     output: web
     
+- title: Use case - Patient Registration
+  output: web  
+  children: 
+  - title: Overview
+    url: /senddocument_pr_overview.html      
+    output: web
+  - title: Business requirements
+    output: web
+    children:
+    - title: Process map
+      url: /sendmessage_pr_process.html
+      output: web
+    - title: User stories
+      url: /senddocument_pr_userstories.html
+      output: web
+    - title: Clinical engagement
+      url: /senddocument_pr_busreq_clinical.html 
+      output: web
+  - title: Payload requirements
+    url: /senddocument_pr_payload.html      
+    output: web
+  - title: ITK3 header requirements
+    url: /senddocument_pr_itk3.html      
+    output: web
+  - title: MESH message configuration
+    url: /senddocument_pr_mesh.html      
+    output: web    
+  - title: Message example
+    url: /senddocument_pr_example.html      
+    output: web 
+
 - title: Use case - Generic Send
   output: web  
   children: 
